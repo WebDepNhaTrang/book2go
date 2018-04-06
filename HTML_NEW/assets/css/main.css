@@ -1,0 +1,185 @@
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+body {
+    font-family: 'Questrial';
+}
+
+/* Mobile and tablet */
+@media (max-width: 991.98px) {
+    /* Section Header */
+    #section-header .navbar-nav{
+        padding-top: 20px;
+    }
+    #section-header li.nav-item a.nav-link{
+        padding: 10px 0;
+        font-size: 16px;
+        color: #555;
+        line-height: 20px;
+    }
+    /* End / Section Header */
+
+    /* Section Banner */
+    #section-banner .jumbotron .promo-caption{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        width: 45%;
+        height: 200px;
+    }
+    #section-banner .jumbotron .promo-caption .caption-title{
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 400;
+        text-align: left;
+        color: #ff6c00;
+    }
+}
+
+/* Desktop and tivi */
+@media (min-width: 992px){
+    /* Section Header */
+    #section-header li.nav-item{
+        position: relative;
+    }
+    #section-header li.nav-item a.nav-link::before{
+        content: '';
+        position: absolute;
+        left: 40%;
+        bottom: 25px;
+        width: 0px;
+        height: 2px;
+        background-color: #374650;
+        -webkit-transition: width .3s, margin-left .3s;
+        transition: width .3s, margin-left .3s;
+    }
+    #section-header li.nav-item:hover a.nav-link::before{
+        content: '';
+        position: absolute;
+        left: 40%;
+        bottom: 25px;
+        width: 20px;
+        height: 2px;
+        background-color: #374650;
+        -webkit-transition: width .3s, margin-left .3s;
+        transition: width .3s, margin-left .3s;
+    }
+    #section-header li.nav-item a.nav-link{
+        padding: 5px 20px;
+        margin: 35px 0;
+        font-size: 16px;
+        color: #555;
+        line-height: 20px;
+    }
+    #section-header li.active a.nav-link::before{
+        content: '';
+        position: absolute;
+        left: 40%;
+        bottom: 25px;
+        width: 20px;
+        height: 2px;
+        background-color: #374650;
+        -webkit-transition: width .3s, margin-left .3s;
+        transition: width .3s, margin-left .3s;
+    }
+    /* End / Section Header */
+
+    /* Section Banner */
+    #section-banner .jumbotron .promo-caption{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        width: 45%;
+        height: 300px;
+    }
+    #section-banner .jumbotron .promo-caption .caption-title{
+        font-family: "Poppins";
+        font-size: 48px;
+        font-weight: 400;
+        text-align: left;
+        color: #ff6c00;
+    }
+    /* End / Section Banner */
+}
+
+/* Section Banner */
+#section-banner .jumbotron{
+    background-color: #fafdff;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+#section-banner .jumbotron .promo-caption .caption-description{
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: #465a66;
+    margin: 10px 0;
+    letter-spacing: 0;
+}
+/* End / Section Banner */
+
+/* Section Destinations */
+#section-destinations .jumbotron{
+    background-color: #fff;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+#section-destinations .jumbotron .promo-caption{
+    text-align: center;
+}
+#section-destinations .jumbotron .promo-caption .caption-number{
+    font-family: Poppins;
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#section-destinations .jumbotron .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-destinations .jumbotron .promo-caption .caption-title{
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: -75px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+}
+#section-destinations .jumbotron .promo-caption .caption-title span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-destinations .jumbotron .promo-caption .caption-description{
+    font-family: Poppins;
+    margin: 0px 0px 30px;
+}
+
+
+
+/* End / Section Destinations */
