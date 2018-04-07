@@ -1,119 +1,11 @@
- /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {}
 
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {}
-
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
-
- /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-}
-
- /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
 
 body {
     font-family: 'Questrial';
-}
-
-/* Mobile and tablet */
-@media (max-width: 991.98px) {
-    /* Section Header */
-    #section-header .navbar-nav{
-        padding-top: 20px;
-    }
-    #section-header li.nav-item a.nav-link{
-        padding: 10px 0;
-        font-size: 16px;
-        color: #555;
-        line-height: 20px;
-    }
-    /* End / Section Header */
-
-    /* Section Banner */
-    #section-banner .jumbotron .promo-caption{
-        position: absolute;
-        right: 5%;
-        top: 5%;
-        width: 45%;
-        height: 200px;
-    }
-    #section-banner .jumbotron .promo-caption .caption-title{
-        font-family: "Poppins";
-        font-size: 24px;
-        font-weight: 400;
-        text-align: left;
-        color: #ff6c00;
-    }
-}
-
-/* Desktop and tivi */
-@media (min-width: 992px){
-    /* Section Header */
-    #section-header li.nav-item{
-        position: relative;
-    }
-    #section-header li.nav-item a.nav-link::before{
-        content: '';
-        position: absolute;
-        left: 40%;
-        bottom: 25px;
-        width: 0px;
-        height: 2px;
-        background-color: #374650;
-        -webkit-transition: width .3s, margin-left .3s;
-        transition: width .3s, margin-left .3s;
-    }
-    #section-header li.nav-item:hover a.nav-link::before{
-        content: '';
-        position: absolute;
-        left: 40%;
-        bottom: 25px;
-        width: 20px;
-        height: 2px;
-        background-color: #374650;
-        -webkit-transition: width .3s, margin-left .3s;
-        transition: width .3s, margin-left .3s;
-    }
-    #section-header li.nav-item a.nav-link{
-        padding: 5px 20px;
-        margin: 35px 0;
-        font-size: 16px;
-        color: #555;
-        line-height: 20px;
-    }
-    #section-header li.active a.nav-link::before{
-        content: '';
-        position: absolute;
-        left: 40%;
-        bottom: 25px;
-        width: 20px;
-        height: 2px;
-        background-color: #374650;
-        -webkit-transition: width .3s, margin-left .3s;
-        transition: width .3s, margin-left .3s;
-    }
-    /* End / Section Header */
-
-    /* Section Banner */
-    #section-banner .jumbotron .promo-caption{
-        position: absolute;
-        right: 5%;
-        top: 5%;
-        width: 45%;
-        height: 300px;
-    }
-    #section-banner .jumbotron .promo-caption .caption-title{
-        font-family: "Poppins";
-        font-size: 48px;
-        font-weight: 400;
-        text-align: left;
-        color: #ff6c00;
-    }
-    /* End / Section Banner */
+    color: #465a66;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 /* Section Banner */
@@ -124,7 +16,6 @@ body {
     margin: 0px;
 }
 #section-banner .jumbotron .promo-caption .caption-description{
-    font-family: "Poppins";
     font-size: 18px;
     font-weight: 400;
     text-align: left;
@@ -159,27 +50,246 @@ body {
     height: auto;
 }
 #section-destinations .jumbotron .promo-caption .caption-title{
-    font-family: Poppins;
-    font-size: 36px;
+    font-size: 38px;
     font-weight: normal;
-    margin-top: -75px;
+    margin-top: -65px;
     background-color: rgb(255, 255, 255);
     word-break: break-word;
     position: relative;
     z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
 }
 #section-destinations .jumbotron .promo-caption .caption-title span{
-    font-size: 1em;
     vertical-align: middle;
     text-align: center;
     width: auto;
     height: auto;
 }
 #section-destinations .jumbotron .promo-caption .caption-description{
-    font-family: Poppins;
     margin: 0px 0px 30px;
 }
-
-
-
+#section-destinations .destinations-list .panel{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+#section-destinations .destinations-list .panel:hover{
+    box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.2);
+}
+#section-destinations .destinations-list .panel .panel-body{
+    display: block;
+}
+#section-destinations .destinations-list .panel .pic-wrapper .block-readmore a{
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: url(../img/icon-plus.png) #959595 center center no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 118px;
+    right: 50px;
+}
+#section-destinations .destinations-list .panel .pic-wrapper .block-readmore a:hover{
+    background-color: #ff6c00;
+}
+#section-destinations .destinations-list .panel .des-information{
+    padding: 26px 0;
+    display: -webkit-box;
+}
+#section-destinations .destinations-list .panel .des-information .des-title-header{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+#section-destinations .destinations-list .panel .des-information .des-title-header a{
+    color: #465a66;
+}
+#section-destinations .destinations-list .panel .des-information .des-title-header a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#section-destinations .destinations-list .panel .des-information .flag-icon{
+    margin: 0;
+}
+#section-destinations .destinations-list .panel .des-information .region-properties{
+    text-transform: uppercase;
+    padding: 6px 0 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#section-destinations .destinations-list .panel .des-information .region-properties a{
+    color: #ff6c00;
+    font-size: 13px;
+}
+#section-destinations .destinations-list .panel .des-information .region-properties a:hover{
+    text-decoration: none;
+}
+#section-destinations .destinations-list .panel .des-information .count-properties{
+    margin: 0px;
+}
+#section-destinations .btn-block .btn-outline{
+    color: #ff6c00;
+    border-color: #ff6c00;
+    font-size: 16px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: none;
+    letter-spacing: 0px;
+    padding: 10px 25px;
+    transition: all 0.3s;
+    font-weight: 100;
+}
+#section-destinations .btn-block .btn-outline:hover{
+    background-color: #ff6c00;
+    color: #fff;
+}
 /* End / Section Destinations */
+
+/* Section Testimonials */
+#section-testimonials .jumbotron{
+    background-color: #fff;
+    position: relative;
+    padding: 70px 0 0 0;
+    margin: 0px;
+}
+#section-testimonials .jumbotron .promo-caption{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#section-testimonials .jumbotron .promo-caption .caption-number{
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#section-testimonials .jumbotron .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-testimonials .jumbotron .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#section-testimonials .jumbotron .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-testimonials .jumbotron .testimonials-list .testimonials-item{
+    margin-bottom: 40px;
+}
+#section-testimonials .jumbotron .testimonials-list .testimonials-info{
+    padding: 20px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-radius: 5px;
+}
+#section-testimonials .jumbotron .testimonials-list .testimonials-info:after{
+    content:'';
+    position: absolute;
+    top: 53%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 10px rgb(221, 221, 221);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+#section-testimonials .jumbotron .testimonials-list .testimonials-img{
+    padding: 15px;
+    margin-top: 16px;
+}
+#section-testimonials .jumbotron .testimonials-list .testimonials-img picture img{
+    width: 90px;
+    height: 90px;
+}
+/* End / Section Testimonials */
+
+
+/* Section Guarantee */
+#section-guarantee .jumbotron{
+    background-color: #fff;
+    position: relative;
+    padding: 70px 0 0 0;
+    margin: 0px;
+}
+#section-guarantee .jumbotron .promo-caption{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#section-guarantee .jumbotron .promo-caption .caption-number{
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#section-guarantee .jumbotron .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-guarantee .jumbotron .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#section-guarantee .jumbotron .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#section-guarantee .jumbotron .promo-caption .caption-description{
+    margin: 0px 0px 30px;
+}
+#section-guarantee .jumbotron .guarantee-list .guarantee-item{
+    padding: 15px;
+}
+#section-guarantee .jumbotron .guarantee-list .guarantee-info{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(236, 240, 243);
+    padding: 30px 15px 0px;
+}
+#section-guarantee .jumbotron .guarantee-list .guarantee-info img{
+    background-color: #ff6c00;
+    width: 55px;
+    height: 55px;
+}
+#section-guarantee .jumbotron .guarantee-list .guarantee-title h2{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600 !important;
+}
+/* End / Section Guarantee */
