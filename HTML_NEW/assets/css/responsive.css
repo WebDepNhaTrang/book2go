@@ -5,14 +5,78 @@
 @media (min-width: 576px) and (max-width: 767.98px) {}
 
  /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+        /* Section Booking */
+    #section-booking{
+        position: relative;
+    }
+    #section-booking .booking-content{
+        position: absolute;
+        bottom: 10px;
+        left: 80px;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .departure-date{
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .form-group{
+        margin: 0;
+    }
+    /* End / Section Booking */
+}
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Section Booking */
+    #section-booking{
+        position: relative;
+    }
+    #section-booking .booking-content{
+        position: absolute;
+        bottom: 40px;
+        left: 110px;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .departure-date{
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .form-group{
+        margin: 0;
+    }
+    /* End / Section Booking */
 }
 
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    /* Section Booking */
+    #section-booking{
+        position: relative;
+    }
+    #section-booking .booking-content{
+        position: absolute;
+        bottom: 40px;
+        left: 120px;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .departure-date{
+        margin: 20px 0;
+    }
+    #section-booking .booking-content .tab-content .tab-content-right .form-group{
+        margin: 0;
+    }
+    /* End / Section Booking */
 }
 
 /* Mobile and tablet */
@@ -43,6 +107,15 @@
         text-align: left;
         color: #ff6c00;
     }
+
+    /* Section Booking */
+    #section-booking .booking-content{
+        margin: 15px 0;
+    }
+    #section-booking .booking-content .tab-content{
+        padding: 15px;
+    }
+    /* End / Section Booking */
 }
 
 /* Desktop and tivi */
@@ -108,4 +181,6 @@
         color: #ff6c00;
     }
     /* End / Section Banner */
+
+
 }
