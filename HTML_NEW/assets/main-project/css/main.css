@@ -804,3 +804,24 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #ff6c00;
 }
 /* End / Khách Sạn Detail Page */
+
+/* Khách Sạn Booking Page */
+#ks-booking{
+    padding-bottom: 40px;
+}
+#ks-booking .ks-booking-form{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+}
+#ks-booking .ks-booking-form button{
+    background-color: #ff6c00;
+    color: #fff;
+    border-color: #ff6c00;
+}
+#ks-booking .ks-booking-info{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+}
+/* End / Khách Sạn Booking Page */
