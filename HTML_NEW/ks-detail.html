@@ -172,40 +172,102 @@
                             <div class="col-md-12 px-3 py-3 room-list-title">
                                 <h5 class="mb-0">Chọn & Đặt phòng</h5>
                             </div>
-                            <div class="col-md-12 px-3 py-3 room-list-content">
-                                <div class="row">
-                                    <div class="col-md-4">Loại phòng</div>
-                                    <div class="col-md-3">Sức chứa : </div>
-                                    <div class="col-md-3">Giá phòng/đêm</div>
-                                    <div class="col-md-2" align="right">Số lượng</div> 
-                                </div>
-                                <div class="well well-small"> 
-                                    <div class="row"> 
-                                        <div class="col-md-4">
-                                            <h4>Room 4 Poster bed</h4> 
-                                            <p> Tariff<br> 
-                                                <span class="label label-warning">Only 3 left!</span> 
-                                            </p> 
-                                        </div> 
-                                        <div class="col-md-3">
-                                            <p>1</p>
-                                        </div> 
-                                        <div class="col-md-3">
-                                            <p class="big-price">48.00€</p>
-                                        </div> 
-                                        <div class="col-md-2" align="right">
-                                            <p>
-                                                <select name="fred" id="fred" class="input-mini" size="1" autocomplete="off" onchange="getResponse_multiroom_select('multiroom_select',this.value);">
-                                                    <option value="0^6">00</option>
-                                                    <option value="9^6,">01</option>
-                                                    <option value="9^6,10^6,">02</option>
-                                                    <option value="9^6,10^6,11^6,">03</option>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Loại phòng</th>
+                                    <th scope="col">Sức chứa</th>
+                                    <th scope="col">Giá phòng/đêm</th>
+                                    <th scope="col">Số lượng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>
+                                        <div>
+                                            <img class="img-fluid" src="./assets/main-project/img/ks-loaiphong1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="room-type">
+                                                Room 4 Poster bed
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="badge">Còn trống 3 phòng</span>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <div>
+                                            <span style="color:#ff6c00;">Tiết kiệm 10% ngay hôm nay!</span>
+                                        </div>
+                                        <div class="price-through">
+                                            <span class="price">2,000,000 </span>
+                                            <span class="currency">₫</span>
+                                        </div>
+                                        <div class="price-show">
+                                            <span class="price">1,700,000 </span>
+                                            <span class="currency">₫</span>
+                                        </div>
+                                        
+                                    </td>
+                                    <td>
+                                        <form action="#">
+                                            <select name="" id="">
+                                                <option value="">0</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                            </select>
+                                            <a href="booking-room.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
+                                        </form>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <img class="img-fluid" src="./assets/main-project/img/ks-loaiphong2.jpg" alt="">
+                                            </div>
+                                            <div>
+                                                <span class="room-type">
+                                                    Room Single
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span class="badge">Còn trống 5 phòng</span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <div>
+                                                <span style="color:#ff6c00;">Tiết kiệm 10% ngay hôm nay!</span>
+                                            </div>
+                                            <div class="price-through">
+                                                <span class="price">1,000,000 </span>
+                                                <span class="currency">₫</span>
+                                            </div>
+                                            <div class="price-show">
+                                                <span class="price">900,000 </span>
+                                                <span class="currency">₫</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <form action="#">
+                                                <select name="" id="">
+                                                    <option value="">0</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
                                                 </select>
-                                            </p>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
+                                                <a href="booking-room.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
+                                            </form>
+                                        </td>
+                                        </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
             </section>
