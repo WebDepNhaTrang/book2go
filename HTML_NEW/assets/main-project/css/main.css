@@ -69,19 +69,19 @@ body {
 #section-destinations .jumbotron .promo-caption .caption-description{
     margin: 0px 0px 30px;
 }
-#section-destinations .destinations-list .panel{
+.destinations-list .panel{
     border: 1px solid #eee;
     border-radius: 5px;
     transition: box-shadow 0.3s ease-in-out;
     margin-bottom: 40px;
 }
-#section-destinations .destinations-list .panel:hover{
+.destinations-list .panel:hover{
     box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.2);
 }
-#section-destinations .destinations-list .panel .panel-body{
+.destinations-list .panel .panel-body{
     display: block;
 }
-#section-destinations .destinations-list .panel .pic-wrapper .block-readmore a{
+.destinations-list .panel .pic-wrapper .block-readmore a{
     font-size: 0;
     width: 40px;
     height: 40px;
@@ -93,43 +93,43 @@ body {
     bottom: 118px;
     right: 50px;
 }
-#section-destinations .destinations-list .panel .pic-wrapper .block-readmore a:hover{
+.destinations-list .panel .pic-wrapper .block-readmore a:hover{
     background-color: #ff6c00;
 }
-#section-destinations .destinations-list .panel .des-information{
+.des-information{
     padding: 26px 0;
     display: -webkit-box;
 }
-#section-destinations .destinations-list .panel .des-information .des-title-header{
+.des-information .des-title-header{
     margin: 0;
     font-size: 18px;
     font-weight: 600;
 }
-#section-destinations .destinations-list .panel .des-information .des-title-header a{
+.des-information .des-title-header a{
     color: #465a66;
 }
-#section-destinations .destinations-list .panel .des-information .des-title-header a:hover{
+.des-information .des-title-header a:hover{
     color: #ff6c00;
     text-decoration: none;
 }
-#section-destinations .destinations-list .panel .des-information .flag-icon{
+.des-information .flag-icon{
     margin: 0;
 }
-#section-destinations .destinations-list .panel .des-information .region-properties{
+.des-information .region-properties{
     text-transform: uppercase;
     padding: 6px 0 0;
     display: block;
     margin: 0;
     padding: 0;
 }
-#section-destinations .destinations-list .panel .des-information .region-properties a{
+.des-information .region-properties a{
     color: #ff6c00;
     font-size: 13px;
 }
-#section-destinations .destinations-list .panel .des-information .region-properties a:hover{
+.des-information .region-properties a:hover{
     text-decoration: none;
 }
-#section-destinations .destinations-list .panel .des-information .count-properties{
+.des-information .count-properties{
     margin: 0px;
 }
 #section-destinations .btn-block .btn-outline{
@@ -540,6 +540,7 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 /* End / Section Footer */
 
+/* Back To Top */
 #return-to-top {
     position: fixed;
     bottom: 20px;
@@ -576,3 +577,62 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #fff;
     top: 3px;
 }
+/* End / Back To Top */
+
+/* Khách Sạn - Căn Hộ List Page */
+#st-ks-ch-list{
+    padding-bottom: 70px;
+}
+#st-ks-ch-list .sub-banner{
+    background-image: url(../img/solidres.jpg);
+    margin-bottom: 40px;
+}
+#st-ks-ch-list .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#st-ks-ch-list .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#st-ks-ch-list .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#st-ks-ch-list .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#st-ks-ch-list .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#st-ks-ch-list .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#st-ks-ch-list .breadcrumb li.active{
+    font-weight: 700;
+}
+#st-ks-ch-list .destinations-list{
+    margin-top: 40px;
+}
+#st-ks-ch-list .btn-block .btn-outline{
+    color: #ff6c00;
+    border-color: #ff6c00;
+    font-size: 16px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: none;
+    letter-spacing: 0px;
+    padding: 10px 25px;
+    transition: all 0.3s;
+    font-weight: 100;
+}
+#st-ks-ch-list .btn-block .btn-outline:hover{
+    background-color: #ff6c00;
+    color: #fff;
+}
+/* End / Khách Sạn - Căn Hộ List Page */
