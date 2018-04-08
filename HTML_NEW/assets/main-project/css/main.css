@@ -766,8 +766,41 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #ks-detail .ks-room-list .room-list-content{
     border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-radius: 0 0 4px 4px;
+}
+#ks-detail .ks-room-list table{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#ks-detail .ks-room-list table img{
+    max-width: 170px;
+    max-height: 90px;
+}
+#ks-detail .ks-room-list table .room-type{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff6c00;
+}
+#ks-detail .ks-room-list table .badge{
+    color: #fff;
+    background-color: #ff6c00;
+}
+#ks-detail .ks-room-list table .btn-datphong{
+    background-color: #ff6c00;
+    color: #fff;
+}
+#ks-detail .ks-room-list table .price-through{
+    text-decoration: line-through;
+}
+#ks-detail .ks-room-list table .price-show .price{
+    color: #ff6c00;
+    font-size: 22px;
+    font-weight: 700;
+}
+#ks-detail .ks-room-list table .price-show .currency{
+    color: #ff6c00;
 }
 /* End / Khách Sạn Detail Page */
