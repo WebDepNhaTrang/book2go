@@ -91,6 +91,9 @@
         color: #555;
         line-height: 20px;
     }
+    #section-header .khuyen-mai a{
+        color: #ff6c00 !important;
+    }
     /* End / Section Header */
 
     /* Section Banner */
@@ -166,6 +169,12 @@
         background-color: #374650;
         -webkit-transition: width .3s, margin-left .3s;
         transition: width .3s, margin-left .3s;
+    }
+    #section-header .khuyen-mai a{
+        border: 1px solid #ff6c00;
+        border-radius: 4px;
+        background-color: #ff6c00;
+        color: #fff !important;
     }
     /* End / Section Header */
 
