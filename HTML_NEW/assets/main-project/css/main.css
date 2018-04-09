@@ -890,3 +890,157 @@ footer .footer-social a:hover .fa-linkedin-in{
     font-size: 12px;
 }
 /* End / Khách Sạn Booking Page */
+
+/* About Us Page */
+#about-us{
+    padding-bottom: 70px;
+}
+#about-us .sub-banner{
+    background-image: url(../img/contact-us.jpg);
+    margin-bottom: 40px;
+}
+#about-us .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#about-us .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#about-us .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#about-us .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#about-us .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#about-us .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#about-us .breadcrumb li.active{
+    font-weight: 700;
+}
+#about-us .promo-caption .caption-number{
+    font-family: Poppins;
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#about-us .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#about-us .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#about-us .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#about-us .testimonials-list .testimonials-item{
+    margin-bottom: 40px;
+}
+#about-us .testimonials-list .testimonials-info{
+    padding: 20px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-radius: 5px;
+}
+#about-us .testimonials-list .testimonials-img{
+    padding: 15px;
+    margin-top: 16px;
+}
+#about-us .testimonials-list .testimonials-img picture img{
+    width: 90px;
+    height: 90px;
+}
+/* End / About Us Page */
+
+/* FAQs Page */
+#faq{
+    padding-bottom: 70px;
+}
+#faq .sub-banner{
+    background-image: url(../img/contact-us.jpg);
+    margin-bottom: 40px;
+}
+#faq .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#faq .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#faq .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#faq .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#faq .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#faq .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#faq .breadcrumb li.active{
+    font-weight: 700;
+}
+#faq .promo-caption .caption-number{
+    font-family: Poppins;
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#faq .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#faq .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#faq .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+/* End / FAQs Page */
