@@ -34,4 +34,7 @@ $(document).ready(function() {
             scrollTop : 0                       // Scroll to top of body
         }, 500);
     });
+
+    // ===== Tooltip cho phần giá tổng ==== 
+    $('[data-toggle="tooltip"]').tooltip();
 });
