@@ -1276,3 +1276,229 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #fff;
 }
 /* End / Get It Page */
+
+/* Tour List Page */
+#tour-list{
+    padding-bottom: 70px;
+}
+#tour-list .sub-banner{
+    background-image: url(../img/solidres.jpg);
+    margin-bottom: 40px;
+}
+#tour-list .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#tour-list .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#tour-list .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#tour-list .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#tour-list .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#tour-list .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#tour-list .breadcrumb li.active{
+    font-weight: 700;
+}
+#tour-list .destinations-list{
+    margin-top: 40px;
+}
+#tour-list .btn-block .btn-outline{
+    color: #ff6c00;
+    border-color: #ff6c00;
+    font-size: 16px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: none;
+    letter-spacing: 0px;
+    padding: 10px 25px;
+    transition: all 0.3s;
+    font-weight: 100;
+}
+#tour-list .btn-block .btn-outline:hover{
+    background-color: #ff6c00;
+    color: #fff;
+}
+/* End / Tour List Page */
+
+/* Tour Detail Page */
+#tour-detail .ks-detail-banner{
+    height: 70vh;
+    min-height: 450px;
+    margin-bottom: 20px;
+}
+#tour-detail .sub-banner{
+    width: 100%;
+    position: absolute;
+    top: inherit;
+    height: 70vh;
+    min-height: 450px;
+}
+#tour-detail .sub-banner .first-image{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+}
+#tour-detail .sub-banner .first-image img, #tour-detail .sub-banner .second-image img, #tour-detail .sub-banner .third-image img, #tour-detail .sub-banner .fourth-image img, #tour-detail .sub-banner .fifth-image img, #tour-detail .sub-banner .sixth-image img, #tour-detail .sub-banner .map-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: object-fit\:cover;
+    object-fit: cover;
+}
+#tour-detail .sub-banner .second-image{
+    position: absolute;
+    right:0;
+    height: 55%;
+    width: calc(40% - 4px);
+}
+#tour-detail .sub-banner .third-image{
+    position: absolute;
+    left: 0;
+    height: calc(30% - 4px);
+    width: 24%;
+    top: calc(70% + 4px);
+}
+#tour-detail .sub-banner .fourth-image{
+    position: absolute;
+    height: calc(30% - 4px);
+    width: calc(36% - 4px);
+    top: calc(70% + 4px);
+    left: calc(24% + 4px);
+}
+#tour-detail .sub-banner .fifth-image{
+    position: absolute;
+    right: calc(16% - 4px);
+    height: calc(100% - 55% - 4px);
+    width: 24%;
+    top: calc(55% + 4px);
+}
+#tour-detail .sub-banner .sixth-image{
+    position: absolute;
+    right:0;
+    height: calc(13.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 31.5% + 4px);
+}
+#tour-detail .sub-banner .map-image{
+    position: absolute;
+    right: 0;
+    height: calc(31.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 4px);
+}
+#tour-detail .ks-info{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+#tour-detail .ks-info .ks-info-1{
+    padding: 15px;
+}
+#tour-detail .ks-info .ks-info-2{
+    padding: 15px;
+}
+#tour-detail .ks-info .ks-info-2 .ks-name{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#tour-detail .ks-info .ks-info-2 .address{
+    margin-bottom: 5px;
+}
+#tour-detail .ks-info .ks-info-2 .tel{
+    margin-bottom: 5px;
+}
+#tour-detail .ks-des{
+    margin-bottom: 40px;
+}
+#tour-detail .ks-des .ks-des-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#tour-detail .ks-des .ks-des-content{
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#tour-detail .tour-dattour{
+    margin-bottom: 40px;
+}
+#tour-detail .tour-dattour .tour-dattour-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#tour-detail .tour-dattour .tour-dattour-content{
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#tour-detail .tour-dattour form .search-block{
+    margin-top: 30px;
+}
+#tour-detail .tour-dattour form .search-block button{
+    background-color: #ff6c00;
+    border-color: #ff6c00;
+}
+#tour-detail .ks-room-list{
+    margin-bottom: 40px;
+}
+#tour-detail .ks-room-list .room-list-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#tour-detail .ks-room-list .room-list-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#tour-detail .ks-room-list table{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#tour-detail .ks-room-list table img{
+    max-width: 170px;
+    max-height: 90px;
+}
+#tour-detail .ks-room-list table .room-type{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff6c00;
+}
+#tour-detail .ks-room-list table .badge{
+    color: #fff;
+    background-color: #ff6c00;
+}
+#tour-detail .ks-room-list table .btn-datphong{
+    background-color: #ff6c00;
+    color: #fff;
+}
+#tour-detail .tour-dattour .price-through{
+    text-decoration: line-through;
+}
+#tour-detail .tour-dattour .price-show .price{
+    color: #ff6c00;
+    font-size: 22px;
+    font-weight: 700;
+}
+#tour-detail .tour-dattour .price-show .currency{
+    color: #ff6c00;
+}
+/* End / Tour Detail Page */
