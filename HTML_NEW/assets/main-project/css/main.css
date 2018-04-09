@@ -1044,3 +1044,81 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: auto;
 }
 /* End / FAQs Page */
+
+/* Contact Page */
+#contact{
+    padding-bottom: 70px;
+}
+#contact .sub-banner{
+    background-image: url(../img/contact-us.jpg);
+    margin-bottom: 40px;
+}
+#contact .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#contact .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#contact .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#contact .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#contact .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#contact .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#contact .breadcrumb li.active{
+    font-weight: 700;
+}
+#contact .promo-caption .caption-number{
+    font-family: Poppins;
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#contact .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#contact .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#contact .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#contact .form-contact{
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#contact .form-contact button{
+    background-color: #ff6c00;
+    color: #fff;
+    border-color: #ff6c00;
+}
+/* End / Contact Page */
