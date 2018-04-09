@@ -1589,3 +1589,89 @@ footer .footer-social a:hover .fa-linkedin-in{
     font-size: 12px;
 }
 /* End / Tour Booking Page */
+
+/* News Detail Page */
+#news-detail{
+    padding-bottom: 70px;
+}
+#news-detail .sub-banner{
+    background-image: url(../img/contact-us.jpg);
+    margin-bottom: 40px;
+}
+#news-detail .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#news-detail .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#news-detail .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#news-detail .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#news-detail .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#news-detail .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#news-detail .breadcrumb li.active{
+    font-weight: 700;
+}
+#news-detail .promo-caption .caption-number{
+    font-family: Poppins;
+    font-size: 86px;
+    font-weight: 400;
+    margin-top: 0px;
+    color: rgb(236, 240, 243);
+}
+#news-detail .promo-caption .caption-number span{
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#news-detail .promo-caption .caption-title{
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -65px;
+    background-color: rgb(255, 255, 255);
+    word-break: break-word;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+    color: #465a66;
+}
+#news-detail .promo-caption .caption-title span{
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#news-detail .testimonials-list .testimonials-item{
+    margin-bottom: 40px;
+}
+#news-detail .testimonials-list .testimonials-info{
+    padding: 20px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-radius: 5px;
+}
+#news-detail .testimonials-list .testimonials-img{
+    padding: 15px;
+    margin-top: 16px;
+}
+#news-detail .testimonials-list .testimonials-img picture img{
+    width: 90px;
+    height: 90px;
+}
+/* End / News Detail Page */
