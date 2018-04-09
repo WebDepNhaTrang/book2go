@@ -1502,3 +1502,90 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #ff6c00;
 }
 /* End / Tour Detail Page */
+
+/* Tour Booking Page */
+#tour-booking{
+    padding-bottom: 40px;
+}
+#tour-booking .login-tip{
+    background-color: #f5f5f5;
+}
+#tour-booking .login-tip .row{
+    position: relative;
+    height: 70px;
+    max-width: 840px;
+    background-image: url(../img/bg-insiderdeal-banner.png);
+    background-repeat: no-repeat;
+    color: #000;
+    cursor: pointer;
+    margin: 40px auto;
+    font-size: 16px;
+}
+#tour-booking .login-tip .col-9{
+    padding-top: 15px;
+    padding-left: 65px;
+    font-weight: 400;
+}
+#tour-booking .login-tip .col-3{
+    font-weight: 700;
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 0;
+}
+
+#tour-booking .insider-banner-tag{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/logo-insiderdeal-banner.png);
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+#tour-booking .ks-booking-form{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+#tour-booking .ks-booking-form button{
+    background-color: #ff6c00;
+    color: #fff;
+    border-color: #ff6c00;
+}
+#tour-booking .ks-booking-info{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+}
+#tour-booking .ks-booking-info .date-time{
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+#tour-booking .ks-booking-info .dd{
+    font-size: 24px;
+}
+#tour-booking .ks-booking-info .icon-arrow{
+    font-size: 50px;
+}
+#tour-booking .ks-booking-info .price-through{
+    text-decoration: line-through;
+}
+#tour-booking .ks-booking-info .price-detail{
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+#tour-booking .ks-booking-info .price-final{
+    padding-top: 10px;
+}
+#tour-booking .ks-booking-info .price-final .giatien{
+    font-size: 18px;
+    font-weight: 600;   
+}
+#tour-booking .ks-booking-info .price-final .price-total{
+    font-size: 18px;
+    font-weight: 600;   
+}
+#tour-booking .ks-booking-info .price-final .baogom{
+    font-size: 12px;
+}
+/* End / Tour Booking Page */
