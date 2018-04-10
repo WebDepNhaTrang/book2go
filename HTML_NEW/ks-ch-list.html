@@ -55,7 +55,7 @@
                                             <a class="nav-link" href="./contact.html">Liên Hệ</a>
                                         </li>
                                         <li class="nav-item khuyen-mai">
-                                            <a class="nav-link" href="./get-it.html">Khuyến Mãi</a>
+                                            <a class="nav-link" href="./get-it.html"><i class="fab fa-hotjar"></i> Khuyến Mãi</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -72,7 +72,96 @@
                         <h3>Khách Sạn - Căn Hộ</h3>
                     </div>
                 </div>
-                <div class="container breadcrumb-list">
+                <section id="section-booking">
+                    <div class="booking-content col-xs-12 col-sm-12 col-md-10">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-hotel" aria-expanded="true">Khách sạn & Căn hộ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-tour-tab" data-toggle="pill" href="#pills-tour" role="tab" aria-controls="pills-tour" aria-expanded="true">Tour</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane show active" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 text-center tab-content-left">
+                                        <h3>Kiểm tra phòng</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-md-9 tab-content-right">
+                                        <form id="search-hotel" action="./ks-ch-list.html" class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 arrival-date">
+                                                <div class="form-group">
+                                                    <label for="arrivalDate" class="control-label">CHECK-IN</label>
+                                                    <div class="input-group">
+                                                        <input id="checkIn" type="text" style="cursor:pointer;" name="arrivalDate" value="" placeholder="Check-in" class="input-small form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 departure-date">
+                                                <div class="form-group">
+                                                    <label for="departureDate" class="control-label">CHECK-OUT</label>
+                                                    <div class="input-group">
+                                                        <input id="checkOut" type="text" style="cursor:pointer; background-color: #FFFFFF;" name="departureDate" value="" placeholder="Check-out" class="input-small form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 search-block">
+                                                
+                                                    <button class="btn btn-primary" type="submit">SEARCH <i class="fa fa-search"></i></button>
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pills-tour" role="tabpanel" aria-labelledby="pills-tour-tab">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 text-center tab-content-left">
+                                        <h3>Kiểm tra tour</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-md-9 tab-content-right">
+                                        <form id="search-tour" action="#" class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 arrival-date">
+                                                <div class="form-group">
+                                                    <label for="arrivalDate" class="control-label">CHECK-IN</label>
+                                                    <div class="input-group">
+                                                        <input id="checkIn" type="text" style="cursor:pointer;" name="arrivalDate" value="" placeholder="Check-in" class="input-small form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 departure-date">
+                                                <div class="form-group">
+                                                    <label for="departureDate" class="control-label">CHECK-OUT</label>
+                                                    <div class="input-group">
+                                                        <input id="checkOut" type="text" style="cursor:pointer; background-color: #FFFFFF;" name="departureDate" value="" placeholder="Check-out" class="input-small form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 search-block">
+                                                <button class="btn btn-primary" type="submit">SEARCH <i class="fa fa-search"></i></button>
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container breadcrumb-list mt-5">
                     <div class="row">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -232,40 +321,18 @@
 
             <!-- Section DoiTac -->
             <section id="section-doitac">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="doitac-content">
-                                    <picture>
-                                        <img class="img-fluid" src="./assets/main-project/img/brand1.jpg" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="doitac-content">
-                                    <picture>
-                                        <img class="img-fluid" src="./assets/main-project/img/brand1.jpg" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="doitac-content">
-                                    <picture>
-                                        <img class="img-fluid" src="./assets/main-project/img/brand1.jpg" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="doitac-content">
-                                    <picture>
-                                        <img class="img-fluid" src="./assets/main-project/img/brand1.jpg" alt="">
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <section class="customer-logos slider container">
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand1.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand2.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand3.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand4.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand1.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand2.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand3.jpg"></div>
+                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand4.jpg"></div>
                 </section>
-                <!-- End / Section DoiTac -->
+            </section>
+            <!-- End / Section DoiTac -->
 
             <!-- Section Footer -->
                 <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
@@ -368,6 +435,8 @@
         <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
         <script src="./assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="./assets/slick/js/slick.js"></script>
         
         <script src="./assets/main-project/js/main.js"></script>
     </body>

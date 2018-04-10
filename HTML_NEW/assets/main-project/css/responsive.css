@@ -1,8 +1,26 @@
  /* Extra small devices (portrait phones, less than 576px) */
- @media (max-width: 575.98px) {}
+ @media (max-width: 575.98px) {
+    #section-banner .jumbotron .promo-caption{
+        position: absolute;
+        right: 7%;
+        top: 20%;
+        width: 45%;
+        height: 130px;
+        padding-left: 20px;
+    }
+ }
 
  /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #section-banner .jumbotron .promo-caption{
+        position: absolute;
+        right: 7%;
+        top: 20%;
+        width: 45%;
+        height: 130px;
+        padding-left: 20px;
+    }
+}
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -10,23 +28,31 @@
     #section-booking{
         position: relative;
     }
-    #section-booking .booking-content{
+    #section-banner .jumbotron .promo-caption{
         position: absolute;
-        bottom: 10px;
-        left: 80px;
+        right: 7%;
+        top: 15%;
+        width: 45%;
+        height: 300px;
+        padding-left: 20px;
     }
     #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
         border-right: 1px solid #ebebeb;
         border-left: 1px solid #ebebeb;
-        margin: 20px 0;
+        margin: 5px 0;
     }
     #section-booking .booking-content .tab-content .tab-content-right .departure-date{
-        margin: 20px 0;
+        margin: 5px 0;
     }
     #section-booking .booking-content .tab-content .tab-content-right .form-group{
         margin: 0;
     }
     /* End / Section Booking */
+
+    .destinations-list .panel .pic-wrapper .block-readmore a {
+        bottom: 140px;
+        right: 30px;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */
@@ -37,7 +63,7 @@
     }
     #section-booking .booking-content{
         position: absolute;
-        bottom: 40px;
+        bottom: 0px;
         left: 110px;
     }
     #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
@@ -62,16 +88,16 @@
     }
     #section-booking .booking-content{
         position: absolute;
-        bottom: 40px;
+        bottom: 0px;
         left: 120px;
     }
     #section-booking .booking-content .tab-content .tab-content-right .arrival-date{
         border-right: 1px solid #ebebeb;
         border-left: 1px solid #ebebeb;
-        margin: 20px 0;
+        margin: 5px 0;
     }
     #section-booking .booking-content .tab-content .tab-content-right .departure-date{
-        margin: 20px 0;
+        margin: 5px 0;
     }
     #section-booking .booking-content .tab-content .tab-content-right .form-group{
         margin: 0;
@@ -97,18 +123,8 @@
     /* End / Section Header */
 
     /* Section Banner */
-    #section-banner .jumbotron .promo-caption{
-        position: absolute;
-        right: 7%;
-        top: 5%;
-        width: 45%;
-        height: 170px;
-        padding-left: 20px;
-        border: 2px solid #ff6c00;
-        border-radius: 20px;
-    }
     #section-banner .jumbotron .promo-caption .caption-title{
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 400;
         text-align: left;
         color: #ff6c00;
@@ -116,10 +132,13 @@
 
     /* Section Booking */
     #section-booking .booking-content{
-        margin: 15px 0;
+        margin: 15px auto;
     }
     #section-booking .booking-content .tab-content{
-        padding: 15px;
+        padding: 5px;
+    }
+    #section-booking .booking-content .tab-content .tab-content-left h3 {
+        font-size: 24px;
     }
     /* End / Section Booking */
 }
@@ -127,6 +146,9 @@
 /* Desktop and tivi */
 @media (min-width: 992px){
     /* Section Header */
+    #section-header .navbar-nav{
+        font-weight: 400;
+    }
     #section-header li.nav-item{
         position: relative;
     }
@@ -171,10 +193,11 @@
         transition: width .3s, margin-left .3s;
     }
     #section-header .khuyen-mai a{
-        border: 1px solid #ff6c00;
+        /* border: 1px solid #ff6c00;
         border-radius: 4px;
-        background-color: #ff6c00;
-        color: #fff !important;
+        background-color: #ff6c00; */
+        color: #ff6c00 !important;
+        font-weight: 700;
     }
     /* End / Section Header */
 
@@ -186,11 +209,9 @@
         width: 45%;
         height: 400px;
         padding-left: 20px;
-        border: 2px solid #ff6c00;
-        border-radius: 20px;
     }
     #section-banner .jumbotron .promo-caption .caption-title{
-        font-size: 48px;
+        font-size: 32px;
         font-weight: 400;
         text-align: left;
         color: #ff6c00;

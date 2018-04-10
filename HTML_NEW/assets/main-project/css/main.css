@@ -1,7 +1,14 @@
-
+@font-face {
+    font-family: 'Verano';
+    src: url('../font/Mallory-Book.woff2');
+    src: url('../font/mallory-light-webfont-v01.woff2'), 
+         url('../font/mallory-medium.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: 'Questrial';
+    font-family: mallory,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #465a66;
     font-weight: 300;
     font-size: 16px;
@@ -36,7 +43,6 @@ body {
     text-align: center;
 }
 #section-destinations .jumbotron .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -232,7 +238,7 @@ body {
 #section-guarantee .jumbotron{
     background-color: #fff;
     position: relative;
-    padding: 70px 0 0 0;
+    padding: 40px 0 0 0;
     margin: 0px;
 }
 #section-guarantee .jumbotron .promo-caption{
@@ -365,7 +371,6 @@ body {
     text-align: center;
 }
 #section-news .jumbotron .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -585,7 +590,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #st-ks-ch-list .sub-banner{
     background-image: url(../img/solidres.jpg);
-    margin-bottom: 40px;
 }
 #st-ks-ch-list .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -612,7 +616,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #st-ks-ch-list .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #st-ks-ch-list .destinations-list{
     margin-top: 40px;
@@ -897,7 +901,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #about-us .sub-banner{
     background-image: url(../img/contact-us.jpg);
-    margin-bottom: 40px;
 }
 #about-us .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -924,10 +927,9 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #about-us .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #about-us .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -983,7 +985,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #faq .sub-banner{
     background-image: url(../img/contact-us.jpg);
-    margin-bottom: 40px;
 }
 #faq .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -1010,10 +1011,9 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #faq .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #faq .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -1051,7 +1051,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #contact .sub-banner{
     background-image: url(../img/contact-us.jpg);
-    margin-bottom: 40px;
 }
 #contact .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -1078,10 +1077,9 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #contact .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #contact .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -1129,7 +1127,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #get-it .sub-banner{
     background-image: url(../img/contact-us.jpg);
-    margin-bottom: 40px;
 }
 #get-it .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -1156,10 +1153,9 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #get-it .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #get-it .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -1283,7 +1279,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #tour-list .sub-banner{
     background-image: url(../img/solidres.jpg);
-    margin-bottom: 40px;
 }
 #tour-list .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -1310,7 +1305,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #tour-list .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #tour-list .destinations-list{
     margin-top: 40px;
@@ -1596,7 +1591,6 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #news-detail .sub-banner{
     background-image: url(../img/contact-us.jpg);
-    margin-bottom: 40px;
 }
 #news-detail .sub-banner .sub-banner-header{
     padding: 160px 0;
@@ -1623,10 +1617,9 @@ footer .footer-social a:hover .fa-linkedin-in{
     text-decoration: none;
 }
 #news-detail .breadcrumb li.active{
-    font-weight: 700;
+    font-weight: 400;
 }
 #news-detail .promo-caption .caption-number{
-    font-family: Poppins;
     font-size: 86px;
     font-weight: 400;
     margin-top: 0px;
@@ -1675,3 +1668,129 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: 90px;
 }
 /* End / News Detail Page */
+
+/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
