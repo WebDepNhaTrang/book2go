@@ -16,6 +16,267 @@ body {
 }
 
 /* Section Banner */
+.top-nav{
+    height: 36px;
+    background-color: #333;
+}
+.top-nav .col-left a{
+    color: #fff;
+    font-size: 12px;
+    line-height: 36px;
+    text-decoration: none;
+    font-weight: 400;
+}
+.top-nav .col-right{
+    text-align: right;
+}
+.top-nav .col-right a{
+    color: #fff;
+    font-size: 12px;
+    line-height: 36px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#lean_overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+}
+
+.popupContainer {
+    position: absolute;
+    width: 330px;
+    height: auto;
+    left: 45%;
+    top: 60px;
+    background: #FFF;
+}
+
+#modal-login .btn {
+    padding: 10px 20px;
+    background: #F4F4F2;
+}
+
+#modal-login .btn_red {
+    background: #ED6347;
+    color: #FFF;
+}
+
+#modal-login .btn:hover {
+    background: #E4E4E2;
+}
+
+#modal-login .btn_red:hover {
+    background: #C12B05;
+}
+
+#modal-login a.btn {
+    color: #666;
+    text-align: center;
+    text-decoration: none;
+}
+
+#modal-login a.btn_red {
+    color: #FFF;
+}
+
+#modal-login .one_half {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+#modal-login .one_half.last {
+    width: 45%;
+    margin-left: 5%;
+}
+/* Popup Styles*/
+
+#modal-login .popupHeader {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#modal-login .popupHeader {
+    background: #F4F4F2;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+#modal-login .popupHeader .modal_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+    background: #E4E4E2;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 16px;
+}
+
+#modal-login .popupBody {
+    padding: 20px;
+}
+/* Social Login Form */
+
+#modal-login .social_login .social_box {
+    display: block;
+    clear: both;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #F4F4F2;
+    overflow: hidden;
+}
+
+#modal-login .social_login .icon {
+    display: block;
+    
+    margin-right: 10px;
+    float: left;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+}
+
+#modal-login .social_login .fb .icon {
+    background: #3B5998;
+    padding: 5px 14px;
+}
+
+#modal-login .social_login .google .icon {
+    background: #DD4B39;
+    padding: 5px 8px;
+}
+
+#modal-login .social_login .icon_title {
+    display: block;
+    padding: 5px 0;
+    float: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: #777;
+}
+
+#modal-login .social_login .social_box:hover {
+    background: #E4E4E2;
+}
+
+#modal-login .centeredText {
+    text-align: center;
+    margin: 20px 0;
+    clear: both;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+#modal-login .action_btns {
+    clear: both;
+    overflow: hidden;
+}
+
+#modal-login .action_btns a {
+    display: block;
+}
+/* User Login Form */
+
+#modal-login .user_login {
+    display: none;
+}
+
+#modal-login .user_login label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modal-login .user_login input[type="text"],
+#modal-login .user_login input[type="email"],
+#modal-login .user_login input[type="password"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    color: #666;
+}
+
+#modal-login .user_login input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#modal-login .user_login input[type="checkbox"]+label {
+    float: left;
+}
+
+#modal-login .user_login .checkbox {
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+#modal-login .forgot_password {
+    display: block;
+    margin: 20px 0 10px;
+    clear: both;
+    overflow: hidden;
+    text-decoration: none;
+    color: #ED6347;
+}
+/* User Register Form */
+
+#modal-login .user_register {
+    display: none;
+}
+
+#modal-login .user_register label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modal-login .user_register input[type="text"],
+#modal-login .user_register input[type="email"],
+#modal-login .user_register input[type="password"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    color: #666;
+}
+
+#modal-login .user_register input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#modal-login .user_register input[type="checkbox"]+label {
+    float: left;
+}
+
+#modal-login .user_register .checkbox {
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #section-banner .jumbotron{
     background-color: #fafdff;
     position: relative;
