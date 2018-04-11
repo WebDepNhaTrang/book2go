@@ -23,8 +23,26 @@
     </head>
     <body>
         <div id="wrapper">
+           
+            
             <!-- Section Header -->
             <section id="section-header">
+                <div class="top-nav">
+                    <div class="container">
+                        <div class="row col-md-12">
+                            <div class="col-md-6 col-left">
+                                <a class="mr-3" href="mailto:contact@book2govn.com"><i class="far fa-envelope"></i> contact@book2govn.com</a>
+                                <a href="tel:0909090909"><i class="fas fa-mobile-alt"></i> 0909 090 909</a>
+                            </div>
+                            <div class="col-md-6 col-right">
+                                <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -677,8 +695,92 @@
             <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up"></i></a>
             <!-- End / Return to Top -->
         </div>
-        
-        
+        <!-- End / wrapper -->
+
+
+
+        <div id="modal-login" class="popupContainer" style="display:none;">
+            <header class="popupHeader">
+                <span class="header_title">Đăng nhập</span>
+                <span class="modal_close"><i class="fa fa-times"></i></span>
+            </header>
+
+            <section class="popupBody">
+                <!-- Social Login -->
+                <div class="social_login">
+                    <div class="">
+                        <a href="#" class="social_box fb">
+                            <span class="icon"><i class="fab fa-facebook-f"></i></span>
+                            <span class="icon_title">Đăng nhập bằng Facebook</span>
+
+                        </a>
+
+                        <a href="#" class="social_box google">
+                            <span class="icon"><i class="fab fa-google-plus-g"></i></span>
+                            <span class="icon_title">Đăng nhập bằng Google</span>
+                        </a>
+                    </div>
+
+                    <div class="centeredText">
+                        <span>Hoặc sử dụng email của bạn</span>
+                    </div>
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" id="login_form" class="btn">Đăng nhập</a></div>
+                        <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
+                    </div>
+                </div>
+
+                <!-- Username & Password Login form -->
+                <div class="user_login">
+                    <form>
+                        <label>Địa chỉ Email</label>
+                        <input type="email" />
+                        <br />
+
+                        <label>Mật khẩu</label>
+                        <input type="password" />
+                        <br />
+
+                        <div class="checkbox">
+                            <input id="remember" type="checkbox" />
+                            <label for="remember">Lưu mật khẩu</label>
+                        </div>
+
+                        <div class="action_btns">
+                            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
+                            <div class="one_half last"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                        </div>
+                    </form>
+
+                    <a href="#" class="forgot_password">Quên mật khẩu?</a>
+                </div>
+
+                <!-- Register Form -->
+                <div class="user_register">
+                    <form>
+                        <label>Họ và tên</label>
+                        <input type="text" />
+                        <br />
+
+                        <label>Địa chỉ Email</label>
+                        <input type="email" />
+                        <br />
+
+                        <label>Mật khẩu</label>
+                        <input type="password" />
+                        <br />
+
+                        <div class="action_btns">
+                            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
+                            <div class="one_half last"><a href="#" class="btn btn_red">Tạo tài khoản</a></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+		</div>
+
+
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -689,6 +791,8 @@
         <script src="./assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
         <script src="./assets/slick/js/slick.js"></script>
+
+        <script src="./assets/lean-modal/js/lean-modal.min.js"></script>
         
         <script src="./assets/main-project/js/main.js"></script>
     </body>

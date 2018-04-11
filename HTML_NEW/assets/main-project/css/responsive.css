@@ -8,6 +8,12 @@
         height: 130px;
         padding-left: 20px;
     }
+    .top-nav .col-left{
+        display: none;
+    }
+    .top-nav .col-right{
+        text-align: center;
+    }
  }
 
  /* Small devices (landscape phones, 576px and up) */
@@ -19,6 +25,12 @@
         width: 45%;
         height: 130px;
         padding-left: 20px;
+    }
+    .top-nav .col-left{
+        display: none;
+    }
+    .top-nav .col-right{
+        text-align: center;
     }
 }
 
