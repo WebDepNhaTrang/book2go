@@ -720,7 +720,7 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 #ks-detail .ks-info .ks-info-2 .ks-name{
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 #ks-detail .ks-info .ks-info-2 .address{
     margin-bottom: 5px;
@@ -779,25 +779,105 @@ footer .footer-social a:hover .fa-linkedin-in{
     border-bottom: 1px solid #ddd;
     border-radius: 0 0 4px 4px;
 }
+#ks-detail .ks-room-list table .table-header th{
+    font-weight: 500;
+    color: #333;
+    background-color: #f7f7f7;
+    border-bottom: none;
+}
 #ks-detail .ks-room-list table img{
     max-width: 170px;
     /* max-height: 90px; */
+}
+#ks-detail .ks-room-list table .col-room-type{
+    width: 10%;
+}
+#ks-detail .ks-room-list table .col-chi-tiet{
+    color: #333;
+}
+#ks-detail .ks-room-list table .col-chi-tiet p{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
 }
 #ks-detail .ks-room-list table .room-type{
     font-size: 18px;
     font-weight: 700;
     color: #ff6c00;
 }
-#ks-detail .ks-room-list table .badge{
+#ks-detail .ks-room-list table .col-suc-chua{
+    border-left: 1px solid #ddd;
+    text-align: center;
+    color: gray;
+    width: 10%;
+}
+#ks-detail .ks-room-list table .col-suc-chua span{
+    font-size: 14px;
+}
+#ks-detail .ks-room-list table .col-gia-phong{
+    border-left: 1px solid #ddd;
+    text-align: right;
+    width: 20%;
+}
+#ks-detail .ks-room-list table .col-so-luong{
+    border-left: 1px solid #ddd;
+    text-align: center;
+    width: 10%;
+}
+#ks-detail .ks-room-list table .tiet-kiem-ngay{
+    font-size: 13px;
+    font-weight: bold;
+    color: #ed5c59;
+}
+#ks-detail .ks-room-list table .col-dat-phong{
+    position: relative;
+    border-left: 1px solid #ddd;
+    text-align: right;
+    width: 15%;
+}
+#ks-detail .ks-room-list table .dang-nhap-giam{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ff6c00;
+    padding: 5px;
+    margin-top: 10px;
+}
+#ks-detail .ks-room-list table .dang-nhap-giam p{
+    margin: 0;
+    font-size: 12px;
+}
+#ks-detail .ks-room-list table .dang-nhap-giam p strong{
+    color: #007adc;
+    font-size: 14px;
+    font-weight: bold;
+}
+#ks-detail .ks-room-list table .gia-thap-nhat{
     color: #fff;
-    background-color: #ff6c00;
+    background-color: #00AF3B;
+    text-align: center;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 5px;
+    font-size: 13px;
+    width: 100%;
+    font-weight: bold;
 }
 #ks-detail .ks-room-list table .btn-datphong{
     background-color: #ff6c00;
     color: #fff;
+    margin-top: 25px;
+    width: 100%;    
+}
+#ks-detail .ks-room-list table .con-trong{
+    color: #ff3131;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
 }
 #ks-detail .ks-room-list table .price-through{
     text-decoration: line-through;
+    margin: 5px 0;
 }
 #ks-detail .ks-room-list table .price-show .price{
     color: #ff6c00;
