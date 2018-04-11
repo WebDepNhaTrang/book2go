@@ -99,15 +99,14 @@
                         </div>
                         <div class="row col-md-9 ks-info-2">
                             <div class="col-md-8">
-                                <h1 class="ks-name">The Costa Nha Trang
-                                    <span>
-                                        <img src="./assets/main-project/img/star.png" border="0" alt="star">
-                                        <img src="./assets/main-project/img/star.png" border="0" alt="star">
-                                        <img src="./assets/main-project/img/star.png" border="0" alt="star">
-                                        <img src="./assets/main-project/img/star.png" border="0" alt="star">
-                                        <img src="./assets/main-project/img/star.png" border="0" alt="star">
-                                    </span>
-                                </h1>
+                                <h1 class="ks-name">The Costa Nha Trang</h1>
+                                <span>
+                                    <img src="./assets/main-project/img/star.png" border="0" alt="star">
+                                    <img src="./assets/main-project/img/star.png" border="0" alt="star">
+                                    <img src="./assets/main-project/img/star.png" border="0" alt="star">
+                                    <img src="./assets/main-project/img/star.png" border="0" alt="star">
+                                    <img src="./assets/main-project/img/star.png" border="0" alt="star">
+                                </span>
                                 <p class="address">Nha Trang, Khánh Hòa</p>
                                 <p class="tel">Tel: 0999 999 999</p>
                                 <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&mobile_iframe=true&appId=1635619343393030&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -172,17 +171,18 @@
                         <form action="#" class="col-md-12 px-0">
                             <table class="table d-none d-md-table">
                                 <thead>
-                                    <tr>
+                                    <tr class="table-header">
                                         <th scope="col">Loại phòng</th>
+                                        <th scope="col">Chi tiết</th>
                                         <th scope="col">Sức chứa</th>
                                         <th scope="col">Giá phòng/đêm</th>
-                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">SL</th>
                                         <th scope="col">Đặt nhiều nhất</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td class="col-room-type">
                                             <div>
                                                 <span class="room-type">Room Single</span>
                                                 <ul class="clearfix photo-gallery">
@@ -190,14 +190,25 @@
                                                     <li class="d-none"><img src="./assets/main-project/img/ks-loaiphong2.jpg"/></li>
                                                 </ul>
                                             </div>
+                                        </td>
+                                        <td class="col-chi-tiet">
                                             <div>
-                                                <span class="badge">Còn trống 5 phòng</span>
+                                                <p><i class="fas fa-check"></i> Hướng phòng: Vườn</p>
+                                                <p><i class="fas fa-check"></i> Diện tích: 100m²</p>
+                                                <p><i class="fas fa-check"></i> Ban công/sân thượng</p>
+                                                <p><i class="fas fa-check"></i> 1 giường King</p>
+                                                <p><i class="fas fa-check"></i> Wifi miễn phí</p>
                                             </div>
                                         </td>
-                                        <td>1</td>
-                                        <td>
+                                        <td class="col-suc-chua">
                                             <div>
-                                                <span style="color:#ff6c00;">Tiết kiệm 10% ngay hôm nay!</span>
+                                                <span>4 x </span><i class="fas fa-user"></i><br>
+                                                <span>2 x </span><i class="fas fa-child"></i>
+                                            </div>
+                                        </td>
+                                        <td class="col-gia-phong">
+                                            <div class="tiet-kiem-ngay">
+                                                <span>Tiết kiệm 10% ngay hôm nay!</span>
                                             </div>
                                             <div class="price-through">
                                                 <span class="price">1,000,000 </span>
@@ -208,8 +219,8 @@
                                                 <span class="currency">₫</span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <select name="" id="">
+                                        <td class="col-so-luong">
+                                            <select class="form-control" name="" id="">
                                                 <option value="">0</option>
                                                 <option value="">1</option>
                                                 <option value="">2</option>
@@ -218,8 +229,17 @@
                                                 <option value="">5</option>
                                             </select>
                                         </td>
-                                        <td>
-                                            <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
+                                        <td class="col-dat-phong">
+                                            <div class="gia-thap-nhat">
+                                                <span class="">Giá thấp nhất</span>
+                                            </div>
+                                            <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng ngay</a>
+                                            <div class="dang-nhap-giam">
+                                                <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
+                                            </div>
+                                            <div class="con-trong">
+                                                <span>Còn trống 5 phòng</span>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
