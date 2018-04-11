@@ -1,0 +1,1 @@
+{!! trans('core.acl::users.email_reminder_template', ['name' => $user, 'link' => $link]) !!}

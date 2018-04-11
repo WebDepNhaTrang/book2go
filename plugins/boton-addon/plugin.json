@@ -1,0 +1,9 @@
+{
+    "name": "BotonAddon",
+    "namespace": "Botble\\BotonAddon\\",
+    "provider": "Botble\\BotonAddon\\Providers\\BotonAddonServiceProvider",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "BotonAddon"
+}
