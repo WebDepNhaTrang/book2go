@@ -1238,7 +1238,7 @@ footer .footer-social a:hover .fa-linkedin-in{
 #get-it .promo-caption .caption-number{
     font-size: 86px;
     font-weight: 400;
-    margin-top: 0px;
+    margin-top: -20px;
     color: rgb(236, 240, 243);
 }
 #get-it .promo-caption .caption-number span{
@@ -1353,6 +1353,13 @@ footer .footer-social a:hover .fa-linkedin-in{
     background-color: #ff6c00;
     color: #fff;
 }
+
+#get-it .search-select{
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+}
+
 /* End / Get It Page */
 
 /* Tour List Page */
