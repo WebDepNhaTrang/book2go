@@ -59,4 +59,14 @@ $(document).ready(function() {
             }
         }]
     });
+
+
+    
+    $('.photo-gallery li img').click(function() {
+        $(this).parent().parent().find("li").picEyes();
+    });
+    $('.room-type').click(function() {
+        // alert('123');
+        $(this).parent(".photo-gallery").find("li").picEyes();
+    });
 });
