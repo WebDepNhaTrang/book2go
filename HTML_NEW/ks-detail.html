@@ -168,71 +168,27 @@
                     </div>
                 </div>
                 <div class="ks-room-list container">
-                        <div class="row">
-                            <div class="col-md-12 px-3 py-3 room-list-title">
-                                <h5 class="mb-0">Chọn & Đặt phòng</h5>
-                            </div>
-                            <table class="table">
+                    <div class="row">
+                        <form action="#" class="col-md-12 px-0">
+                            <table class="table d-none d-md-table">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Loại phòng</th>
-                                    <th scope="col">Sức chứa</th>
-                                    <th scope="col">Giá phòng/đêm</th>
-                                    <th scope="col">Số lượng</th>
+                                        <th scope="col">Loại phòng</th>
+                                        <th scope="col">Sức chứa</th>
+                                        <th scope="col">Giá phòng/đêm</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">Đặt nhiều nhất</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td>
-                                        <div>
-                                            <img class="img-fluid" src="./assets/main-project/img/ks-loaiphong1.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <span class="room-type">
-                                                Room 4 Poster bed
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <span class="badge">Còn trống 3 phòng</span>
-                                        </div>
-                                    </td>
-                                    <td>1</td>
-                                    <td>
-                                        <div>
-                                            <span style="color:#ff6c00;">Tiết kiệm 10% ngay hôm nay!</span>
-                                        </div>
-                                        <div class="price-through">
-                                            <span class="price">2,000,000 </span>
-                                            <span class="currency">₫</span>
-                                        </div>
-                                        <div class="price-show">
-                                            <span class="price">1,700,000 </span>
-                                            <span class="currency">₫</span>
-                                        </div>
-                                        
-                                    </td>
-                                    <td>
-                                        <form action="#">
-                                            <select name="" id="">
-                                                <option value="">0</option>
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
-                                            </select>
-                                            <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
-                                        </form>
-                                        
-                                    </td>
-                                    </tr>
-                                    <tr>
                                         <td>
                                             <div>
-                                                <img class="img-fluid" src="./assets/main-project/img/ks-loaiphong2.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <span class="room-type">
-                                                    Room Single
-                                                </span>
+                                                <span class="room-type">Room Single</span>
+                                                <ul class="clearfix photo-gallery">
+                                                    <li><img src="./assets/main-project/img/ks-loaiphong1.jpg"/></li>
+                                                    <li class="d-none"><img src="./assets/main-project/img/ks-loaiphong2.jpg"/></li>
+                                                </ul>
                                             </div>
                                             <div>
                                                 <span class="badge">Còn trống 5 phòng</span>
@@ -253,23 +209,65 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <form action="#">
-                                                <select name="" id="">
-                                                    <option value="">0</option>
-                                                    <option value="">1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                    <option value="">4</option>
-                                                    <option value="">5</option>
-                                                </select>
-                                                <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
-                                            </form>
+                                            <select name="" id="">
+                                                <option value="">0</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                                <option value="">5</option>
+                                            </select>
                                         </td>
-                                        </tr>
+                                        <td>
+                                            <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
-                        </div>
+                            <table class="table d-md-none">
+                                <thead>
+                                        <tr>
+                                            <th scope="col">Loại phòng</th>
+                                            <th scope="col">Thông tin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <div>
+                                                        <span class="room-type">Room Single</span>
+                                                        <ul class="clearfix photo-gallery">
+                                                            <li><img src="./assets/main-project/img/ks-loaiphong1.jpg"/></li>
+                                                            <li class="d-none"><img src="./assets/main-project/img/ks-loaiphong2.jpg"/></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="badge">Còn trống 5 phòng</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>Sức chứa: 1</span>
+                                                </div>
+                                                <div>
+                                                    <span>Giá phòng:</span>
+                                                </div>
+                                                <div>
+                                                    <span>Số lượng:</span>
+                                                </div>
+                                                <a href="ks-booking.html" class="btn btn-sm btn-datphong">Đặt phòng</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+                        </form>
                     </div>
+                    <div class="row">
+                        
+                    </div>
+                </div>
             </section>
 
             <!-- Section DoiTac -->
@@ -390,6 +388,8 @@
         <script src="./assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
         <script src="./assets/slick/js/slick.js"></script>
+
+        <script src="./assets/photo-gallery-picEyes/jquery.picEyes.js"></script>
         
         <script src="./assets/main-project/js/main.js"></script>
     </body>
