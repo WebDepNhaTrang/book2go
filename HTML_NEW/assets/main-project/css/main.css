@@ -162,7 +162,7 @@ body {
 #section-testimonials .jumbotron{
     background-color: #fff;
     position: relative;
-    padding: 70px 0 0 0;
+    padding: 20px 0 0 0;
     margin: 0px;
 }
 #section-testimonials .jumbotron .promo-caption{
@@ -1012,7 +1012,7 @@ footer .footer-social a:hover .fa-linkedin-in{
 #about-us .promo-caption .caption-number{
     font-size: 86px;
     font-weight: 400;
-    margin-top: 0px;
+    margin-top: -60px;
     color: rgb(236, 240, 243);
 }
 #about-us .promo-caption .caption-number span{
