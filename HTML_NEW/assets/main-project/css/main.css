@@ -1276,6 +1276,8 @@ footer .footer-social a:hover .fa-linkedin-in{
     border: 1px solid #ecf0f3;
     text-align: center;
     min-height: 400px;
+    border-bottom-right-radius: 70px;
+    border-top-left-radius: 70px;
     transition: all 0.3s ease-in-out;
     margin-bottom: 30px;
 }
