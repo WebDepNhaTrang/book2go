@@ -24,7 +24,7 @@ if(!empty($page)) $post = $page; @endphp
         <div class="row my-5">
             <div class="col-md-6 about-img">
                 <picture>
-                    <img class="img-fluid" src="./assets/main-project/img/page-about-us.jpg" alt="">
+                    <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/page-about-us.jpg') }}" alt="">
                 </picture>
             </div>
             <div class="col-md-6 about-content">

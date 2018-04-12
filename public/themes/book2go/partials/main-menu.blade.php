@@ -25,7 +25,7 @@
 <ul {!! $options !!}>
 	@foreach ($menu_nodes as $key => $row)
 		<li class="nav-item {{ $row->css_class }} @if ($row->getRelated()->url == Request::url()) current-menu-item @endif" >
-		    <a class="nav-link" href="{{ $row->getRelated()->url }}" target="{{ $row->target }}">{{ $row->getRelated()->name }}  @if ($row->hasChild()) <span class="fa fa-caret-down"></span> @endif </a>
+            <a class="nav-link" href="{{ $row->getRelated()->url }}" target="{{ $row->target }}">@if ($row->icon_font)<i class='{{ trim($row->icon_font) }}'></i> @endif {{ $row->getRelated()->name }}  @if ($row->hasChild()) <span class="fa fa-caret-down"></span> @endif </a>
 		    @if ($row->hasChild())
 		        {!!
 		            Menu::generateMenu([

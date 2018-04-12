@@ -2,7 +2,12 @@
 
 register_page_template([
     'default' => 'Default',
-    'about-template' => 'About Template'
+    'about-template' => 'About Template',
+    'hotel-template' => 'Hotel Template',
+    'tour-template' => 'Tour Template',
+    'faq-template' => 'FAQ Template',
+    'contact-template' => 'Contact Template',
+    'getit-template' => 'Get It Template',
 ]);
 
 register_sidebar([
