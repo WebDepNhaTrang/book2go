@@ -83,7 +83,6 @@ $(document).ready(function() {
                 $(".user_login").show();
                 return false;
         });
-
         // Calling Register Form
         $("#register_form").click(function() {
                 $(".social_login").hide();
@@ -91,7 +90,6 @@ $(document).ready(function() {
                 $(".header_title").text('Register');
                 return false;
         });
-
         // Going back to Social Forms
         $(".back_btn").click(function() {
                 $(".user_login").hide();
