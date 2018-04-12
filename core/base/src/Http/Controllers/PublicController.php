@@ -66,7 +66,7 @@ class PublicController extends Controller
                     Theme::breadcrumb()->add(__('Home'), route('public.index'))->add($page->name, route('public.single', $slug));
 
                     do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PAGE_MODULE_SCREEN_NAME, $page);
-                    return Theme::scope('page', compact('page'))->render();
+                    return Theme::scope($page->template, compact('page'))->render();
                 }
             }
 
