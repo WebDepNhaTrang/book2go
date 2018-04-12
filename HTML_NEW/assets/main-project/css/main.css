@@ -2158,6 +2158,30 @@ footer .footer-social a:hover .fa-linkedin-in{
 }
 /* End / Slider Đối Tác */
 
+/* Search Result Page*/
+#search-result{
+    padding-bottom: 70px;
+}
+#search-result .sub-banner{
+    background-image: url(../img/contact-us.jpg);
+}
+#search-result .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#search-result .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#search-result .ks-info{
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    padding: 15px;
+}
+/* End / Search Result Page*/
+
+
 /* Photo Gallery Poppup */
 
 .photo-gallery {
