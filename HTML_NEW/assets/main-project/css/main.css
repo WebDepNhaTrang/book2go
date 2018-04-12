@@ -590,6 +590,9 @@ body {
     margin: auto 0;
     color: #ff6c00;
 }
+#section-booking .booking-content .tab-content .tab-content-left input{
+    font-size: 14px;
+}
 #section-booking .booking-content .tab-content .tab-content-left h3{
     font-weight: 100;
     position: relative;
@@ -1085,7 +1088,7 @@ footer .footer-social a:hover .fa-linkedin-in{
 #ks-detail .ks-room-list table .col-so-luong{
     border-left: 1px solid #ddd;
     text-align: center;
-    width: 10%;
+    width: 11%;
 }
 #ks-detail .ks-room-list table .tiet-kiem-ngay{
     font-size: 13px;
