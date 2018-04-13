@@ -34,6 +34,13 @@ class Gallery
             $this->screens[] = CATEGORY_MODULE_SCREEN_NAME;
         }
 
+        if (defined('SERVICER_MODULE_SCREEN_NAME')) {
+            $this->screens[] = HOTEL_MODULE_SCREEN_NAME;
+            $this->screens[] = APARTMENT_MODULE_SCREEN_NAME;
+            $this->screens[] = ROOM_TYPE_MODULE_SCREEN_NAME;
+            $this->screens[] = TOUR_MODULE_SCREEN_NAME;
+        }
+
         $this->galleryMetaRepository = $galleryMetaRepository;
     }
 
