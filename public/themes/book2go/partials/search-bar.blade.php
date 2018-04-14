@@ -1,6 +1,5 @@
 <!-- Nav Booking -->
 <section id="section-booking">
-    
     <div class="booking-content col-xs-12 col-sm-12 col-md-10">
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
             <li class="nav-item">
@@ -17,11 +16,11 @@
                         <input id="location" type="text" class="input-small form-control" name="local" placeholder="Nhập địa điểm ..."/>
                     </div> -->
                     <div class="col-xs-12 col-md-12 tab-content-right">
-                        <form id="search-hotel" action="#" class="row">
+                        <form id="search-hotel" action="{{ route('book2go.search-result') }}" method="get" class="row">
                             <div class="col-xs-12 col-sm-6 col-md-4 arrival-date">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" style="text-align: center;background-color: #FFFFFF;" name="local" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
+                                        <input type="text" style="text-align: center;background-color: #FFFFFF;" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-search"></i></i></span>
                                         </div>
@@ -31,10 +30,12 @@
                             <div class="col-xs-12 col-sm-6 col-md-5 arrival-date">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" name="daterange-hotel" style="text-align: center;cursor:pointer;" class="input-small form-control" value="" />
+                                        <input type="text" id="daterange-hotel" style="text-align: center;cursor:pointer;" class="input-small form-control" value="" />
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
                                         </div>
+                                        <input type="hidden" name="h-cin" value="">
+                                        <input type="hidden" name="h-cout" value="">
                                     </div>
                                 </div>
                             </div>

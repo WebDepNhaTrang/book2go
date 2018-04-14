@@ -24,10 +24,10 @@ if(!empty($page)) $post = $page; @endphp
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="pic-wrapper text-center">
-                            <a href="./ks-detail.html">
+                            <a href="/starcity-nha-trang-hotel.html">
                                 <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
                             </a>
-                            <div class="block-readmore"><a href="./ks-detail.html"></a></div>
+                            <div class="block-readmore"><a href="/starcity-nha-trang-hotel.html"></a></div>
                         </div>
                         <div class="des-information">
                             <div class="col-7">
@@ -47,7 +47,7 @@ if(!empty($page)) $post = $page; @endphp
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="pic-wrapper text-center">
-                            <a href="#">
+                            <a href="/starcity-nha-trang-hotel.html">
                                 <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
                             </a>
                             <div class="block-readmore"><a href="#"></a></div>
@@ -55,7 +55,7 @@ if(!empty($page)) $post = $page; @endphp
                         <div class="des-information">
                             <div class="col-7">
                                 <h2 class="des-title-header">
-                                    <a href="#">Demo Căn Hộ</a></h2>
+                                    <a href="/starcity-nha-trang-hotel.html">Demo Căn Hộ</a></h2>
                                     <p class="flag-icon flag-icon-fr">Cam Ranh, Khánh Hòa</p>
                             </div>
                             <div class="col-5" align="right">

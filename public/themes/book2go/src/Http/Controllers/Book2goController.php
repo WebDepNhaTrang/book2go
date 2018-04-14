@@ -15,4 +15,13 @@ class Book2goController extends Controller
     {
         return Theme::scope('test')->render();
     }
+
+    /**
+     * @return \Response
+     */
+    public function searchResult()
+    {
+        return Theme::scope('search-result')->render();
+    }
+    
 }

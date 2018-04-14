@@ -3,7 +3,11 @@ $(document).ready(function() {
     // ===== Daterangepicker Checkin Checkout in Homepage ==== 
     var today = moment();
     var tomorrow = moment(today).add(1, 'days');
-    $('input[name="daterange-hotel"]').daterangepicker({ 
+
+    $('input[name="h-cin"]').val(today.format('YYYY-MM-DD'));
+    $('input[name="h-cout"]').val(tomorrow.format('YYYY-MM-DD'));
+
+    $('#daterange-hotel').daterangepicker({ 
         locale: {
             format: 'DD/MM/YYYY'
         },
@@ -14,9 +18,11 @@ $(document).ready(function() {
         "autoApply": true
     });
 
-    $('input[name="daterange-hotel"]').on('apply.daterangepicker', function(ev, picker) {
-        console.log(picker.startDate.format('YYYY-MM-DD'));
-        console.log(picker.endDate.format('YYYY-MM-DD'));
+    $('#daterange-hotel').on('apply.daterangepicker', function(ev, picker) {
+        // console.log(picker.startDate.format('YYYY-MM-DD'));
+        // console.log(picker.endDate.format('YYYY-MM-DD'));
+        $('input[name="h-cin"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="h-cout"]').val(picker.endDate.format('YYYY-MM-DD'));
     });
 
     
