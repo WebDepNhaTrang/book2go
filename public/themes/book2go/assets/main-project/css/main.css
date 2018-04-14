@@ -187,7 +187,7 @@ body {
 }
 /* User Login Form */
 
-#modal-login .user_login {
+#modal-login .social_login {
     display: none;
 }
 
@@ -2187,9 +2187,27 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #fff;
 }
 #search-result .ks-info{
+    margin-top: 40px;
+}
+#search-result .ks-info .item{
     border: 1px solid #ddd;
-    margin-top: 20px;
-    padding: 15px;
+    padding: 15px 0;
+}
+#search-result .ks-info .tiet-kiem-ngay span{
+    color: #ed5c59;
+    font-weight: 500;
+}
+#search-result .ks-info .price-through{
+    text-decoration: line-through;
+    margin: 5px 0;
+}
+#search-result .ks-info .price-show .price{
+    color: #ff6c00;
+    font-size: 22px;
+    font-weight: 700;
+}
+#search-result .ks-info .price-show .currency{
+    color: #ff6c00;
 }
 #search-result .ks-info .ks-name a{
     color: #333;
