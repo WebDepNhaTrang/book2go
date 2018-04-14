@@ -59,10 +59,10 @@
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 fourth-col">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Liên Hệ</h6>
-                <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                <p><i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
-                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                <p><i class="fa fa-home mr-3"></i> {{ setting('contact_address') }}</p>
+                <p><i class="fa fa-envelope mr-3"></i> {{ setting('email_support') }}</p>
+                <p><i class="fa fa-phone mr-3"></i> {{ setting('contact_hotline') }}</p>
+                <p><i class="fa fa-print mr-3"></i> {{ setting('contact_hotline') }}</p>
             </div>
             <!--/.Fourth column-->
 

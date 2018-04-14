@@ -99,7 +99,7 @@ $(document).ready(function() {
         $("#register_form").click(function() {
                 $(".social_login").hide();
                 $(".user_register").show();
-                $(".header_title").text('Register');
+                $(".header_title").text('Đăng ký');
                 return false;
         });
         // Going back to Social Forms
@@ -107,7 +107,7 @@ $(document).ready(function() {
                 $(".user_login").hide();
                 $(".user_register").hide();
                 $(".social_login").show();
-                $(".header_title").text('Login');
+                $(".header_title").text('Đăng nhập');
                 return false;
         });
     });
