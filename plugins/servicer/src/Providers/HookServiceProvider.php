@@ -35,6 +35,7 @@ class HookServiceProvider extends ServiceProvider
     {
         if ($slug instanceof Eloquent) {
             $data = [];
+
             switch ($slug->reference) {
 
                 case TOUR_MODULE_SCREEN_NAME:
@@ -101,11 +102,12 @@ class HookServiceProvider extends ServiceProvider
                      }
                      break;
                 case HOTEL_MODULE_SCREEN_NAME:
-                     $post = app(ServicerInterface::class)->findById($slug->reference_id);
+                     $post = app(ServiceTypeInterface::class)->findById($slug->reference_id);
                      $post = apply_filters(BASE_FILTER_BEFORE_GET_SINGLE, $post, app(ServiceTypeInterface::class)->getModel(), HOTEL_MODULE_SCREEN_NAME);
+      
                      if (!empty($post)) {
                          Helper::handleViewCount($post, 'viewed_post');
-
+                        
                          SeoHelper::setTitle($post->name)->setDescription($post->description);
 
                          admin_bar()->registerLink(trans('plugins.blog::posts.edit_this_post'), route('posts.edit', $post->id));

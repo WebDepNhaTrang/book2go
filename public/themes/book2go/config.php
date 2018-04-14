@@ -51,16 +51,14 @@ return [
             
             $theme->asset()->container('footer')->usePath()->add('bootstrap-daterangepicker-js', 'bootstrap-daterangepicker/daterangepicker.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('moment-js', 'bootstrap-daterangepicker/moment.min.js');
-
             // $theme->asset()->container('footer')->usePath()->add('bootstrap-datepicker-js', 'bootstrap-datepicker/js/bootstrap-datepicker.min.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('slick-js', 'slick/js/slick.js', ['jquery']);
+            $theme->asset()->container('footer')->usePath()->add('photo-gallery-js', 'photo-gallery-picEyes/jquery.picEyes.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('lean-modal-js', 'lean-modal/js/lean-modal.min.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('main-project-js', 'main-project/js/main.js', ['jquery']);
 
             $theme->asset()->usePath()->add('bootstrap-css', 'bootstrap/css/bootstrap.min.css');
-
             $theme->asset()->usePath()->add('bootstrap-daterangepicker-css', 'bootstrap-daterangepicker/daterangepicker.css');
-
             // $theme->asset()->usePath()->add('bootstrap-datepicker-css', 'bootstrap-datepicker/css/bootstrap-datepicker.min.css');
             $theme->asset()->usePath()->add('font-awesome-css', 'font-awesome/css/fontawesome-all.min.css');
             $theme->asset()->usePath()->add('main-project-css', 'main-project/css/main.css');

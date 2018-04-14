@@ -929,6 +929,8 @@ footer .footer-social a:hover .fa-linkedin-in{
     top: inherit;
     height: 70vh;
     min-height: 450px;
+    padding-left: 0px;
+    list-style: none;
 }
 #ks-detail .sub-banner .first-image{
     position: absolute;
@@ -1031,7 +1033,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     border-radius: 0 0 4px 4px;
 }
 #ks-detail .ks-datphong form .search-block{
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 #ks-detail .ks-datphong form .search-block button{
     background-color: #ff6c00;
@@ -2189,18 +2191,25 @@ footer .footer-social a:hover .fa-linkedin-in{
     margin-top: 20px;
     padding: 15px;
 }
+#search-result .ks-info .ks-name a{
+    color: #333;
+}
+#search-result .ks-info .ks-name a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
 /* End / Search Result Page*/
 
 
 /* Photo Gallery Poppup */
 
-.photo-gallery {
+.col-room-type .photo-gallery {
     max-width:300px;
     list-style-type: none;
     padding: 0;
 }
-.photo-gallery > li {float:left;}
-.photo-gallery > li img { width:220px;cursor:pointer;}
+.col-room-type .photo-gallery > li {float:left;}
+.col-room-type .photo-gallery > li img { width:220px;cursor:pointer;}
 .picshade {
     min-height: 1000px;
     position: fixed;

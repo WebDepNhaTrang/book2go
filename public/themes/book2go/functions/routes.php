@@ -10,6 +10,10 @@ Route::group(['namespace' => 'Theme\Book2go\Http\Controllers', 'middleware' => '
             'uses' => 'Book2goController@test',
         ]);
 
+        Route::get('/search-result', [
+            'uses' => 'Book2goController@searchResult',
+            'as'   => 'book2go.search-result'
+        ]);
     });
 
 });
