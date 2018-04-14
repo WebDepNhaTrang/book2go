@@ -113,7 +113,7 @@
 
     <section class="popupBody">
         <!-- Social Login -->
-        <div class="social_login">
+        <!-- <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
                     <span class="icon"><i class="fab fa-facebook-f"></i></span>
@@ -121,10 +121,10 @@
 
                 </a>
 
-                <!-- <a href="#" class="social_box google">
+                <a href="#" class="social_box google">
                     <span class="icon"><i class="fab fa-google-plus-g"></i></span>
                     <span class="icon_title">Đăng nhập bằng Google</span>
-                </a> -->
+                </a>
             </div>
 
             <div class="centeredText">
@@ -135,7 +135,7 @@
                 <div class="one_half"><a href="#" id="login_form" class="btn">Đăng nhập</a></div>
                 <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Username & Password Login form -->
         <div class="user_login">
@@ -154,8 +154,10 @@
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                    <!-- <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div> -->
+                    <div class="one_half"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
+                    
                 </div>
             </form>
 

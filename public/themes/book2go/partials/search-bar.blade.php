@@ -20,7 +20,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-4 arrival-date">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" style="text-align: center;background-color: #FFFFFF;" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
+                                        <input type="text" style="background-color: #FFFFFF;" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-search"></i></i></span>
                                         </div>
@@ -53,7 +53,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-4 arrival-date">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" style="text-align: center;background-color: #FFFFFF;" name="local" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
+                                        <input type="text" style="background-color: #FFFFFF;" name="local" value="" class="input-small form-control" placeholder="Nhập địa điểm ...">
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-search"></i></i></span>
                                         </div>
