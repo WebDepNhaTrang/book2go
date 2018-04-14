@@ -9,7 +9,7 @@ if (!function_exists('get_all_hotels')) {
      */
     function get_all_hotels($select = ['*'])
     {
-        $hotels = app(ServiceTypeInterface::class)->all();
+        $hotels = app(ServiceTypeInterface::class)->getHotels($select);
         return $hotels;
     }
 }

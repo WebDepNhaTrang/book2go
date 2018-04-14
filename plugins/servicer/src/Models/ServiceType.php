@@ -95,4 +95,13 @@ class ServiceType extends Eloquent
     {
         return $this->belongsTo(User::class)->withDefault();
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @author Anh Ngo
+     */
+    public function roomType()
+    {
+        return $this->hasMany(Servicer::class, 'service_type_id');
+    }
 }

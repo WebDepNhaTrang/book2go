@@ -19,9 +19,9 @@ class TourRequest extends Request
             'name' => 'required|max:200',
             'description' => 'max:500',
             'image' => 'max:255',
-            'price' => 'numeric',
-            'order' => 'numeric',
-            'number_of_service' => 'numeric'
+            'price' => 'numeric|nullable',
+            'order' => 'numeric|nullable',
+            'number_of_service' => 'numeric|nullable'
         ];
     }
 }
