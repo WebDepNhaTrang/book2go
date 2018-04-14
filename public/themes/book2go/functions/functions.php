@@ -3,7 +3,7 @@
 register_page_template([
     'default' => 'Default',
     'about-template' => 'About Template',
-    'hotel-template' => 'Hotel Template',
+    'hotel-list-template' => 'Hotel List Template',
     'tour-template' => 'Tour Template',
     'faq-template' => 'FAQ Template',
     'contact-template' => 'Contact Template',
