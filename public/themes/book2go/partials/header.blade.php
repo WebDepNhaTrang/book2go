@@ -4,8 +4,8 @@
         <div class="container">
             <div class="row col-md-12">
                 <div class="col-md-6 col-left">
-                    <a class="mr-3" href="mailto:contact@book2govn.com"><i class="far fa-envelope"></i> contact@book2govn.com</a>
-                    <a href="tel:0909090909"><i class="fas fa-mobile-alt"></i> 0909 090 909</a>
+                    <a class="mr-3" href="mailto:contact@book2govn.com"><i class="far fa-envelope"></i> info@book2govn.com</a>
+                    <a href="tel:0909090909"><i class="fas fa-mobile-alt"></i> (+84) 974 974 567</a>
                 </div>
                 <div class="col-md-6 col-right">
                     <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>

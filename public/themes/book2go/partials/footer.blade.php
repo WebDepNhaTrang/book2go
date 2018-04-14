@@ -121,10 +121,10 @@
 
                 </a>
 
-                <a href="#" class="social_box google">
+                <!-- <a href="#" class="social_box google">
                     <span class="icon"><i class="fab fa-google-plus-g"></i></span>
                     <span class="icon_title">Đăng nhập bằng Google</span>
-                </a>
+                </a> -->
             </div>
 
             <div class="centeredText">
@@ -171,6 +171,18 @@
 
                 <label>Địa chỉ Email</label>
                 <input type="email" />
+                <br />
+
+                <label>Số điện thoại</label>
+                <input type="text" />
+                <br />
+
+                <label>Địa chỉ</label>
+                <input type="text" />
+                <br />
+
+                <label>Công ty</label>
+                <input type="text" />
                 <br />
 
                 <label>Mật khẩu</label>
