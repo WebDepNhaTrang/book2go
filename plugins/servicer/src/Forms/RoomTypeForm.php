@@ -25,6 +25,7 @@ class RoomTypeForm extends FormAbstract
             ->setModuleName(ROOM_TYPE_MODULE_SCREEN_NAME)
             ->setValidatorClass(RoomTypeRequest::class)
             ->withCustomFields()
+            ->hasTabs()
             ->add('name', 'text', [
                 'label' => trans('core.base::forms.name'),
                 'label_attr' => ['class' => 'control-label required'],

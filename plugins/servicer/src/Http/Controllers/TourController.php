@@ -3,7 +3,7 @@
 namespace Botble\Servicer\Http\Controllers;
 
 use Botble\Servicer\Http\Requests\TourRequest;
-use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
+use Botble\Servicer\Repositories\Interfaces\TourInterface;
 use Botble\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Exception\Exception;
@@ -19,16 +19,16 @@ use Auth;
 class TourController extends BaseController
 {
     /**
-     * @var ApartmentInterface
+     * @var TourInterface
      */
     protected $servicerRepository;
 
     /**
      * ServiceController constructor.
-     * @param ApartmentInterface $servicerRepository
+     * @param TourInterface $servicerRepository
      * @author Anh Ngo
      */
-    public function __construct(ApartmentInterface $servicerRepository)
+    public function __construct(TourInterface $servicerRepository)
     {
         $this->servicerRepository = $servicerRepository;
     }
@@ -97,7 +97,7 @@ class TourController extends BaseController
             abort(404);
         }
 
-        page_title()->setTitle(trans('servicer::service.edit') . ' #' . $id);
+        page_title()->setTitle(trans('servicer::servicer.edit') . ' #' . $id);
 
         return $formBuilder->create(TourForm::class)->setModel($tour)->renderForm();
     }
@@ -121,9 +121,9 @@ class TourController extends BaseController
         event(new UpdatedContentEvent(TOUR_MODULE_SCREEN_NAME, $request, $tour));
 
         if ($request->input('submit') === 'save') {
-            return redirect()->route('service.list')->with('success_msg', trans('core.base::notices.update_success_message'));
+            return redirect()->route('tour.list')->with('success_msg', trans('core.base::notices.update_success_message'));
         } else {
-            return redirect()->route('service.edit', $id)->with('success_msg', trans('core.base::notices.update_success_message'));
+            return redirect()->route('tour.edit', $id)->with('success_msg', trans('core.base::notices.update_success_message'));
         }
     }
 

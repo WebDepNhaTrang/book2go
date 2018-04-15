@@ -18,6 +18,7 @@ class ApartmentForm extends FormAbstract
             ->setModuleName(APARTMENT_MODULE_SCREEN_NAME)
             ->setValidatorClass(ApartmentRequest::class)
             ->withCustomFields()
+            ->hasTabs()
             ->add('name', 'text', [
                 'label' => trans('core.base::forms.name'),
                 'label_attr' => ['class' => 'control-label required'],

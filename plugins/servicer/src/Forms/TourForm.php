@@ -18,6 +18,7 @@ class TourForm extends FormAbstract
             ->setModuleName(TOUR_MODULE_SCREEN_NAME)
             ->setValidatorClass(TourRequest::class)
             ->withCustomFields()
+            ->hasTabs()
             ->add('name', 'text', [
                 'label' => trans('core.base::forms.name'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -64,7 +65,7 @@ class TourForm extends FormAbstract
                 ]
             ])
             ->add('price_children', 'number', [
-                'label' => "Price",
+                'label' => "Price of Children",
                 'label_attr' => ['class' => 'control-label'],
                 'attr' => [
                     'placeholder' => "12000000",
