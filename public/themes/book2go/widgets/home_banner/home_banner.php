@@ -34,7 +34,8 @@ class HomeBannerWidget extends AbstractWidget
     {
         parent::__construct([
             'name' => 'HomeBanner',
-            'description' => __('This is a sample widget'),
+            'description' => __('This is Home Banner widget'),
+            'banner_image' => ''
         ]);
     }
 }
