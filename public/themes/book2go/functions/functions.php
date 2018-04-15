@@ -4,7 +4,7 @@ register_page_template([
     'default' => 'Default',
     'about-template' => 'About Template',
     'hotel-list-template' => 'Hotel List Template',
-    'tour-template' => 'Tour Template',
+    'tour-list-template' => 'Tour List Template',
     'faq-template' => 'FAQ Template',
     'contact-template' => 'Contact Template',
     'getit-template' => 'Get It Template',
