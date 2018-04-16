@@ -32,6 +32,11 @@ use Botble\Servicer\Repositories\Caches\ApartmentCacheDecorator;
 use Botble\Servicer\Repositories\Eloquent\ApartmentRepository;
 use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
 
+use Botble\Servicer\Models\Promotion;
+use Botble\Servicer\Repositories\Caches\PromotionCacheDecorator;
+use Botble\Servicer\Repositories\Eloquent\PromotionRepository;
+use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
+
 class ServicerServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
@@ -67,6 +72,9 @@ class ServicerServiceProvider extends ServiceProvider
             $this->app->singleton(ApartmentInterface::class, function () {
                 return new ApartmentCacheDecorator(new ApartmentRepository(new Apartment()), new Cache($this->app['cache'], ApartmentRepository::class));
             });
+            $this->app->singleton(PromotionInterface::class, function () {
+                return new PromotionCacheDecorator(new PromotionRepository(new Promotion()), new Cache($this->app['cache'], PromotionRepository::class));
+            });
         } else {
             $this->app->singleton(ServicerInterface::class, function () {
                 return new ServicerRepository(new Servicer());
@@ -82,6 +90,9 @@ class ServicerServiceProvider extends ServiceProvider
             });
             $this->app->singleton(ApartmentInterface::class, function () {
                 return new ApartmentRepository(new Apartment());
+            });
+            $this->app->singleton(PromotionInterface::class, function () {
+                return new PromotionRepository(new Promotion());
             });
         }
 
@@ -154,6 +165,15 @@ class ServicerServiceProvider extends ServiceProvider
                     'icon' => null,
                     'url' => route('apartment.list'),
                     'permissions' => ['apartment.list'],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-servicer-promotion',
+                    'priority' => 4,
+                    'parent_id' => 'cms-plugins-servicer',
+                    'name' => trans('servicer::promotion.name'),
+                    'icon' => null,
+                    'url' => route('promotion.list'),
+                    'permissions' => ['promotion.list'],
                 ]);
         });
 

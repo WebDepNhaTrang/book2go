@@ -35,8 +35,8 @@ class CreateServicerTable extends Migration
             $table->text('content')->nullable();
             $table->integer('user_id')->references('id')->on('users');
             $table->string('image', 255)->nullable();
-            $table->string('price', 20,2)->nullable();
-            $table->string('price_children', 20,2)->nullable();
+            $table->decimal('price', 20,2)->nullable();
+            $table->decimal('price_children', 20,2)->nullable();
             $table->integer('adults')->nullable();
             $table->integer('children')->nullable();
             $table->string('format_type', 30)->nullable();
@@ -57,6 +57,6 @@ class CreateServicerTable extends Migration
     public function down()
     {
         Schema::dropIfExists('service_types');
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('servicers');
     }
 }

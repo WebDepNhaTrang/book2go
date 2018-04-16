@@ -1,6 +1,9 @@
 <?php
 
 use Botble\Servicer\Repositories\Interfaces\ServiceTypeInterface;
+use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
+use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
+use Botble\Servicer\Repositories\Interfaces\TourInterface;
 
 if (!function_exists('get_all_hotels')) {
     /**
@@ -10,6 +13,30 @@ if (!function_exists('get_all_hotels')) {
     function get_all_hotels($select = ['*'])
     {
         $hotels = app(ServiceTypeInterface::class)->getHotels($select);
+        return $hotels;
+    }
+}
+
+if (!function_exists('get_all_tours')) {
+    /**
+     * @param array $args
+     * @return array|mixed
+     */
+    function get_all_tours($select = ['*'])
+    {
+        $hotels = app(TourInterface::class)->getTours($select);
+        return $hotels;
+    }
+}
+
+if (!function_exists('get_all_apartments')) {
+    /**
+     * @param array $args
+     * @return array|mixed
+     */
+    function get_all_apartments($select = ['*'])
+    {
+        $hotels = app(ApartmentInterface::class)->getApartments($select);
         return $hotels;
     }
 }

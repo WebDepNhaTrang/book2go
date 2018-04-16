@@ -85,7 +85,8 @@ class Servicer extends Eloquent
         'children',
         'format_type',
         'service_type_id',
-        'number_of_servicer'
+        'number_of_servicer',
+        'address'
     ];
 
     /**

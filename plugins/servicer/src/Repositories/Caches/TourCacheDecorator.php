@@ -29,4 +29,14 @@ class TourCacheDecorator extends CacheAbstractDecorator implements TourInterface
         $this->repository = $repository;
         $this->cache = $cache;
     }
+
+    /**
+     * @param array $select
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function getTours(array $select)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

@@ -227,6 +227,49 @@ Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' =>
                 'permission' => 'tour.edit',
             ]);
         }); 
+
+        Route::group(['prefix' => 'promotion'], function () {
+
+            Route::get('/', [
+                'as' => 'promotion.list',
+                'uses' => 'PromotionController@getList',
+            ]);
+
+            Route::get('/create', [
+                'as' => 'promotion.create',
+                'uses' => 'PromotionController@getCreate',
+            ]);
+
+            Route::post('/create', [
+                'as' => 'promotion.create',
+                'uses' => 'PromotionController@postCreate',
+            ]);
+
+            Route::get('/edit/{id}', [
+                'as' => 'promotion.edit',
+                'uses' => 'PromotionController@getEdit',
+            ]);
+
+            Route::post('/edit/{id}', [
+                'as' => 'promotion.edit',
+                'uses' => 'PromotionController@postEdit',
+            ]);
+
+            Route::get('/delete/{id}', [
+                'as' => 'promotion.delete',
+                'uses' => 'PromotionController@getDelete',
+            ]);
+
+            Route::post('/delete-many', [
+                'as' => 'promotion.delete.many',
+                'uses' => 'PromotionController@postDeleteMany',
+            ]);
+
+            Route::post('/change-status', [
+                'as' => 'promotion.change.status',
+                'uses' => 'PromotionController@postChangeStatus',
+            ]);
+        }); 
     });
     
 
