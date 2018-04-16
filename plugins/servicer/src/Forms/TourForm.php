@@ -44,7 +44,14 @@ class TourForm extends FormAbstract
                     'placeholder' => trans('core.base::forms.content'),
                 ],
             ])
-
+            ->add('address', 'text', [
+                'label' => trans('servicer::forms.address'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.address'),
+                    'data-counter' => 300,
+                ],
+            ])
             ->add('status', 'select', [
                 'label' => trans('core.base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

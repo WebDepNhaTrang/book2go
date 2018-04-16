@@ -31,7 +31,7 @@ class ServiceTypeCacheDecorator extends CacheAbstractDecorator implements Servic
     }
 
     /**
-     * @param array $condition
+     * @param array $select
      * @return mixed
      * @author Anh Ngo
      */

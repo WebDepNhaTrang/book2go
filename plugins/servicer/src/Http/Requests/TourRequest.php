@@ -21,7 +21,8 @@ class TourRequest extends Request
             'image' => 'max:255',
             'price' => 'numeric|nullable',
             'order' => 'numeric|nullable',
-            'number_of_service' => 'numeric|nullable'
+            'number_of_service' => 'numeric|nullable',
+            'address' => 'max:300'
         ];
     }
 }

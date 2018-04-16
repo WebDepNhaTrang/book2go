@@ -18,3 +18,7 @@ if (!defined('SERVICE_TYPE_MODULE_SCREEN_NAME')) {
 if (!defined('TOUR_MODULE_SCREEN_NAME')) {
     define('TOUR_MODULE_SCREEN_NAME', 'tour');
 }
+
+if (!defined('PROMOTION_MODULE_SCREEN_NAME')) {
+    define('PROMOTION_MODULE_SCREEN_NAME', 'promotion');
+}

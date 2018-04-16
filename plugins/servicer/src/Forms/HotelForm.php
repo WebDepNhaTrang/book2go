@@ -44,7 +44,22 @@ class HotelForm extends FormAbstract
                     'placeholder' => trans('core.base::forms.content'),
                 ],
             ])
-
+            ->add('address', 'text', [
+                'label' => trans('servicer::forms.address'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.address'),
+                    'data-counter' => 300,
+                ],
+            ])
+            ->add('phone', 'number', [
+                'label' => trans('servicer::forms.phone'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.phone'),
+                    'data-counter' => 20
+                ]
+            ])
             ->add('status', 'select', [
                 'label' => trans('core.base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -54,6 +69,23 @@ class HotelForm extends FormAbstract
                 'choices' => [
                     1 => trans('core.base::system.activated'),
                     0 => trans('core.base::system.deactivated'),
+                ],
+            ])
+            ->add('star', 'number', [
+                'label' => trans('servicer::forms.star'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.star'),
+                    'data-counter' => 20,
+                    'min' => 0
+                ]
+            ])
+            ->add('lat_long', 'text', [
+                'label' => trans('servicer::forms.lat_long'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.lat_long'),
+                    'data-counter' => 100,
                 ],
             ])
             ->add('image', 'mediaImage', [

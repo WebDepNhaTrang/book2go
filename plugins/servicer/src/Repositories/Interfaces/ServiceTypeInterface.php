@@ -7,7 +7,7 @@ use Botble\Support\Repositories\Interfaces\RepositoryInterface;
 interface ServiceTypeInterface extends RepositoryInterface
 {
 	/**
-     * @param array $condition
+     * @param array $select
      * @return mixed
      * @author Anh Ngo
      */

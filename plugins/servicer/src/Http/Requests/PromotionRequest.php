@@ -4,7 +4,7 @@ namespace Botble\Servicer\Http\Requests;
 
 use Botble\Support\Http\Requests\Request;
 
-class HotelRequest extends Request
+class PromotionRequest extends Request
 {
 
     /**
@@ -19,10 +19,9 @@ class HotelRequest extends Request
             'name' => 'required|max:200',
             'description' => 'max:500',
             'image' => 'max:255',
-            'address' => 'max:300',
-            'phone' => 'max:100',
-            'lat_long' => 'max:100',
-            'star' => 'max:10'
+            'code' => 'max:100',
+            'cost' => 'max:10',
+            'quantity' => 'max:20'
         ];
     }
 }

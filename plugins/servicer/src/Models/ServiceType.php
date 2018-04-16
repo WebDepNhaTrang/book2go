@@ -79,7 +79,11 @@ class ServiceType extends Eloquent
         'status',
         'user_id',
         'order',
-        'featured'
+        'featured',
+        'star',
+        'address',
+        'lat_long',
+        'phone'
     ];
 
     /**
