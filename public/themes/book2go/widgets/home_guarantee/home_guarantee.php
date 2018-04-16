@@ -2,7 +2,7 @@
 
 use Botble\Widget\AbstractWidget;
 
-class HomeBannerWidget extends AbstractWidget
+class HomeGuaranteeWidget extends AbstractWidget
 {
     /**
      * The configuration array.
@@ -24,7 +24,7 @@ class HomeBannerWidget extends AbstractWidget
     /**
      * @var string
      */
-    protected $widgetDirectory = 'home_banner';
+    protected $widgetDirectory = 'home_guarantee';
 
     /**
      * Widget constructor.
@@ -33,9 +33,12 @@ class HomeBannerWidget extends AbstractWidget
     public function __construct()
     {
         parent::__construct([
-            'name' => 'Home Banner',
-            'description' => __('This is Home Banner for Homepage'),
-            'banner_image' => ''
+            'name' => 'Home Guarantee',
+            'description' => __('This is Home Guarantee for Homepage'),
+            'number' => '1',
+            'title' => 'Cam kết của chúng tôi',
+            'sub_title' => 'Your fun and enjoyment is guaranteed when you book travel tours and hotels with us. 
+            <br>Well-organized routine, experienced guide, and professional service'
         ]);
     }
 }

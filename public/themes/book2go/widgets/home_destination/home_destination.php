@@ -2,7 +2,7 @@
 
 use Botble\Widget\AbstractWidget;
 
-class HomeBannerWidget extends AbstractWidget
+class HomeDestinationWidget extends AbstractWidget
 {
     /**
      * The configuration array.
@@ -24,7 +24,7 @@ class HomeBannerWidget extends AbstractWidget
     /**
      * @var string
      */
-    protected $widgetDirectory = 'home_banner';
+    protected $widgetDirectory = 'home_destination';
 
     /**
      * Widget constructor.
@@ -33,9 +33,12 @@ class HomeBannerWidget extends AbstractWidget
     public function __construct()
     {
         parent::__construct([
-            'name' => 'Home Banner',
-            'description' => __('This is Home Banner for Homepage'),
-            'banner_image' => ''
+            'name' => 'Home Destination',
+            'description' => __('This is Home Destination for Homepage'),
+            'number' => '02',
+            'title' => 'Địa Điểm Nổi Bật',
+            'sub_title' => 'Right place, Right time. Discover now the best destinations to travel this month! 
+            <br>Recommended by millions of real travelers.'
         ]);
     }
 }
