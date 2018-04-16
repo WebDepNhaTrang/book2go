@@ -39,4 +39,24 @@ class ServiceTypeCacheDecorator extends CacheAbstractDecorator implements Servic
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+
+    /**
+     * @param array $ids
+     * @param array $select
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function getHotelByIds(array $ids = [], $select = ['*'])
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getHotelById($id)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

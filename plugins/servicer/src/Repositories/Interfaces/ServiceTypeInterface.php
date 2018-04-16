@@ -12,4 +12,19 @@ interface ServiceTypeInterface extends RepositoryInterface
      * @author Anh Ngo
      */
     public function getHotels(array $select);
+
+
+    /**
+     * @param array $ids
+     * @param array $select
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function getHotelByIds(array $ids = [], $select = ['*']);
+
+    /**
+	 * @param $id
+	 * @return mixed
+	 */
+	public function getHotelById($id);
 }

@@ -86,6 +86,20 @@ class RoomTypeForm extends FormAbstract
                     'id' => 'number_of_servicer'
                 ]
             ])
+            ->add('adults', 'number', [
+                'label' => "Adults",
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => "10"
+                ]
+            ])
+            ->add('children', 'number', [
+                'label' => "Children",
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'placeholder' => "2"
+                ]
+            ])
             ->add('image', 'mediaImage', [
                 'label' => trans('core.base::forms.image'),
                 'label_attr' => ['class' => 'control-label'],

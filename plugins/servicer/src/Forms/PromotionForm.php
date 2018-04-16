@@ -106,7 +106,7 @@ class PromotionForm extends FormAbstract
                 'name_field' => 'tours'
             ])
             ->add('apartments[]', 'chooseMulti', [
-                'label' => trans('servicer::hotel.name'),
+                'label' => trans('servicer::apartment.name'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices' => $apartments,
                 'value' => old('apartments', $selected_hotels),
