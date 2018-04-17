@@ -1,0 +1,9 @@
+{
+    "name": "Servicer",
+    "namespace": "Botble\\Servicer\\",
+    "provider": "Botble\\Servicer\\Providers\\ServicerServiceProvider",
+    "author": "Anh Ngo",
+    "url": "https://fb.com/nivianh",
+    "version": "1.0",
+    "description": "Servicer"
+}

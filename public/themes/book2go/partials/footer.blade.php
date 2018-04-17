@@ -59,10 +59,10 @@
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 fourth-col">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Liên Hệ</h6>
-                <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                <p><i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
-                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                <p><i class="fa fa-home mr-3"></i> {{ setting('contact_address') }}</p>
+                <p><i class="fa fa-envelope mr-3"></i> {{ setting('email_support') }}</p>
+                <p><i class="fa fa-phone mr-3"></i> {{ setting('contact_hotline') }}</p>
+                <p><i class="fa fa-print mr-3"></i> {{ setting('contact_hotline') }}</p>
             </div>
             <!--/.Fourth column-->
 
@@ -113,7 +113,7 @@
 
     <section class="popupBody">
         <!-- Social Login -->
-        <div class="social_login">
+        <!-- <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
                     <span class="icon"><i class="fab fa-facebook-f"></i></span>
@@ -135,7 +135,7 @@
                 <div class="one_half"><a href="#" id="login_form" class="btn">Đăng nhập</a></div>
                 <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Username & Password Login form -->
         <div class="user_login">
@@ -154,8 +154,10 @@
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                    <!-- <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div> -->
+                    <div class="one_half"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
+                    
                 </div>
             </form>
 
@@ -171,6 +173,18 @@
 
                 <label>Địa chỉ Email</label>
                 <input type="email" />
+                <br />
+
+                <label>Số điện thoại</label>
+                <input type="text" />
+                <br />
+
+                <label>Địa chỉ</label>
+                <input type="text" />
+                <br />
+
+                <label>Công ty</label>
+                <input type="text" />
                 <br />
 
                 <label>Mật khẩu</label>

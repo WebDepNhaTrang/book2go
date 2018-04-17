@@ -4,8 +4,8 @@
         <div class="container">
             <div class="row col-md-12">
                 <div class="col-md-6 col-left">
-                    <a class="mr-3" href="mailto:contact@book2govn.com"><i class="far fa-envelope"></i> contact@book2govn.com</a>
-                    <a href="tel:0909090909"><i class="fas fa-mobile-alt"></i> 0909 090 909</a>
+                    <a class="mr-3" href="mailto:{{ setting('email_support') }}"><i class="far fa-envelope"></i> {{ setting('email_support') }}</a>
+                    <a href="tel:{{ setting('contact_hotline') }}"><i class="fas fa-mobile-alt"></i> {{ setting('contact_hotline') }}</a>
                 </div>
                 <div class="col-md-6 col-right">
                     <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>

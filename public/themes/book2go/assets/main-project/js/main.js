@@ -1,45 +1,42 @@
 $(document).ready(function() {
 
-    // ===== Bootstrap Datepicker Checkin Checkout in Homepage ==== 
-    $("#checkIn").datepicker({
-        format: "dd-mm-yyyy",
-        todayBtn: true,
-        autoclose: true,
-        startDate: new Date()
-    })
-    .on("changeDate", function(e) {
-        var checkInDate = e.date, $checkOut = $("#checkOut");    
-        checkInDate.setDate(checkInDate.getDate() + 1);
-        $checkOut.datepicker("setStartDate", checkInDate);
-        $checkOut.datepicker("setDate", checkInDate).focus();
+    // ===== Daterangepicker Checkin Checkout in Homepage ==== 
+    var today = moment();
+    var tomorrow = moment(today).add(1, 'days');
+
+    $('input[name="h-cin"]').val(today.format('YYYY-MM-DD'));
+    $('input[name="h-cout"]').val(tomorrow.format('YYYY-MM-DD'));
+
+    $('#daterange-hotel').daterangepicker({ 
+        locale: {
+            format: 'DD/MM/YYYY'
+        },
+        "startDate": today, 
+        "endDate": tomorrow,
+        "minDate": today,
+        "opens": "center",
+        "autoApply": true
     });
 
-    $("#checkOut").datepicker({
-        format: "dd-mm-yyyy",
-        todayBtn: true,
-        autoclose: true,
-        startDate: new Date()
+    $('#daterange-hotel').on('apply.daterangepicker', function(ev, picker) {
+        // console.log(picker.startDate.format('YYYY-MM-DD'));
+        // console.log(picker.endDate.format('YYYY-MM-DD'));
+        $('input[name="h-cin"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="h-cout"]').val(picker.endDate.format('YYYY-MM-DD'));
     });
 
-    // ===== Bootstrap Datepicker Checkintour Checkouttour in Homepage ==== 
-    $("#checkInTour").datepicker({
-        format: "dd-mm-yyyy",
-        todayBtn: true,
-        autoclose: true,
-        startDate: new Date()
-    })
-    .on("changeDate", function(e) {
-        var checkInDate = e.date, $checkOut = $("#checkOutTour");    
-        checkInDate.setDate(checkInDate.getDate() + 1);
-        $checkOut.datepicker("setStartDate", checkInDate);
-        $checkOut.datepicker("setDate", checkInDate).focus();
-    });
+    
 
-    $("#checkOutTour").datepicker({
-        format: "dd-mm-yyyy",
-        todayBtn: true,
-        autoclose: true,
-        startDate: new Date()
+    // ===== Daterangepicker Checkintour Checkouttour in Homepage ==== 
+    $('input[name="daterange-tour"]').daterangepicker({ 
+        locale: {
+            format: 'DD/MM/YYYY'
+        },
+        "startDate": today, 
+        "endDate": tomorrow,
+        "minDate": today,
+        "opens": "center",
+        "autoApply": true
     });
 
     // ===== Scroll to Top ==== 
@@ -99,24 +96,23 @@ $(document).ready(function() {
 
     $(function() {
         // Calling Login Form
-        $("#login_form").click(function() {
-                $(".social_login").hide();
-                $(".user_login").show();
-                return false;
-        });
+        // $("#login_form").click(function() {
+        //         $(".social_login").hide();
+        //         $(".user_login").show();
+        //         return false;
+        // });
         // Calling Register Form
         $("#register_form").click(function() {
-                $(".social_login").hide();
+                $(".user_login").hide();
                 $(".user_register").show();
-                $(".header_title").text('Register');
+                $(".header_title").text('Đăng ký');
                 return false;
         });
         // Going back to Social Forms
         $(".back_btn").click(function() {
-                $(".user_login").hide();
                 $(".user_register").hide();
-                $(".social_login").show();
-                $(".header_title").text('Login');
+                $(".user_login").show();
+                $(".header_title").text('Đăng nhập');
                 return false;
         });
     });
