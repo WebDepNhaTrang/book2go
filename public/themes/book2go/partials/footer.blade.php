@@ -1,14 +1,9 @@
 <!-- Section DoiTac -->
 <section id="section-doitac">
     <section class="customer-logos slider container">
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand1.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand2.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand3.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand4.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand1.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand2.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand3.jpg') }}"></div>
-        <div class="slide"><img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/brand4.jpg') }}"></div>
+    @foreach(get_posts_by_category(4,12,0) as $v)
+        <div class="slide"><a href="{{ $v->description }}"><img class="img-fluid" src="{{ get_object_image($v->image, 'medium') }}"></a></div>
+    @endforeach
     </section>
 </section>
 <!-- End / Section DoiTac -->
@@ -24,8 +19,7 @@
 
             <!--First column-->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 first-col">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Book2govn</h6>
-                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {!! theme_option('footer_block1') !!}
                 <img class="img-fluid" src="{{ theme_option('logo') }}" alt="{{ setting('site_title') }}">
             </div>
             <!--/.First column-->
@@ -34,11 +28,7 @@
 
             <!--Second column-->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 second-col">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Sản Phẩm</h6>
-                <p><a href="#!">MDBootstrap</a></p>
-                <p><a href="#!">MDWordPress</a></p>
-                <p><a href="#!">BrandFlow</a></p>
-                <p><a href="#!">Bootstrap Angular</a></p>
+                {!! theme_option('footer_block2') !!}
             </div>
             <!--/.Second column-->
 
@@ -46,11 +36,7 @@
 
             <!--Third column-->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 third-col">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Liên Kết</h6>
-                <p><a href="#!">Your Account</a></p>
-                <p><a href="#!">Become an Affiliate</a></p>
-                <p><a href="#!">Shipping Rates</a></p>
-                <p><a href="#!">Help</a></p>
+                {!! theme_option('footer_block3') !!}
             </div>
             <!--/.Third column-->
 
@@ -58,11 +44,7 @@
 
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 fourth-col">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Liên Hệ</h6>
-                <p><i class="fa fa-home mr-3"></i> {{ setting('contact_address') }}</p>
-                <p><i class="fa fa-envelope mr-3"></i> {{ setting('email_support') }}</p>
-                <p><i class="fa fa-phone mr-3"></i> {{ setting('contact_hotline') }}</p>
-                <p><i class="fa fa-print mr-3"></i> {{ setting('contact_hotline') }}</p>
+                {!! theme_option('footer_block4') !!}
             </div>
             <!--/.Fourth column-->
 
@@ -86,10 +68,10 @@
                 <!--Social buttons-->
                 <div class="text-center text-md-right footer-social">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a class="" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a class="" href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a class="" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li class="list-inline-item"><a class="" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a class="" href="{{ theme_option('social_facebook') }}"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a class="" href="{{ theme_option('social_twitter') }}"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class="" href="{{ theme_option('social_google') }}"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li class="list-inline-item"><a class="" href="{{ theme_option('social_linkedin') }}"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
                 <!--/.Social buttons-->
