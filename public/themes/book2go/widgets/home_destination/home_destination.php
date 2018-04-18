@@ -35,6 +35,7 @@ class HomeDestinationWidget extends AbstractWidget
         parent::__construct([
             'name' => 'Home Destination',
             'description' => __('This is Home Destination for Homepage'),
+            'destination_image' => '',
             'number' => '02',
             'title' => 'Địa Điểm Nổi Bật',
             'sub_title' => 'Right place, Right time. Discover now the best destinations to travel this month! 
