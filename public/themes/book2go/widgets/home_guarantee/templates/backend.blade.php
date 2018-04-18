@@ -14,7 +14,7 @@
     <label for="widget-name">{{ __('Content Section') }}</label>
     <div class="help-ts"><i class="fa fa-info-circle"></i>
         <span>
-            To show content this section, please go to <code>Menu -> Static Blocks</code> and fix three <code>GUARANTEE BLOCK</code>!
+            To show content this section, please go to <code><a href="{{ url('/admin/block') }}" target="_blank">Menu -> Static Blocks</a></code> and fix the "description" , "content" of the <code>GUARANTEE BLOCK</code>!
         </span>
     </div>
 </div>

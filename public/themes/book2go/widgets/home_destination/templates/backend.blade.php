@@ -12,14 +12,6 @@
 </div>
 <div class="form-group">
     <label for="widget-name">{{ __('Content Section') }}</label>
-    <?php 
-        $hotels = get_all_hotels(['id', 'name']);
-        // print_r($hotels);
-    ?>
-    <select class="form-control" multiple='multiple' name="" id="">
-        @foreach($hotels as $hotel)
-            <option value="{{ $hotel['id'] }}">{{ $hotel['name'] }}</option>
-        @endforeach
-    </select>
+    {!! Form::select('hotels[]', app(Botble\Servicer\Repositories\Interfaces\ServiceTypeInterface::class)->all()->pluck('name', 'id')->all(), $config['hotels'], ['multiple' => true, 'class' => 'form-control']) !!}
 </div>
 

@@ -5,6 +5,7 @@ namespace Botble\CustomField\Forms;
 use Botble\Base\Forms\FormAbstract;
 use Botble\CustomField\Http\Requests\CreateFieldGroupRequest;
 use Botble\CustomField\Repositories\Interfaces\FieldGroupInterface;
+use CustomField;
 
 class CustomFieldForm extends FormAbstract
 {
@@ -72,7 +73,7 @@ class CustomFieldForm extends FormAbstract
                     'content' => view('plugins.custom-field::rules', [
                         'object' => $this->getModel(),
                         'customFieldItems' => json_encode($customFieldItems),
-                        'rules_template' => $this->getModel() ? $this->getModel()->rules_template : null,
+                        'rules_template' => CustomField::renderRules(),
                     ])->render(),
                 ],
                 'field-items-list' => [

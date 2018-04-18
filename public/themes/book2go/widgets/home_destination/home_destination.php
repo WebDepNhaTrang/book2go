@@ -38,7 +38,8 @@ class HomeDestinationWidget extends AbstractWidget
             'number' => '02',
             'title' => 'Địa Điểm Nổi Bật',
             'sub_title' => 'Right place, Right time. Discover now the best destinations to travel this month! 
-            <br>Recommended by millions of real travelers.'
+            <br>Recommended by millions of real travelers.',
+            'hotels' => array()
         ]);
     }
 }

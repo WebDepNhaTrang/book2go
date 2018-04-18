@@ -2,78 +2,7 @@
 
 
 
-<!-- Section Testimonials -->
-<section id="section-testimonials">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="promo-caption">
-                <h1 class="caption-number">
-                    <span>03</span>
-                </h1>
-                <h2 class="caption-title">
-                    <span>Khách Hàng Nói Về Chúng Tôi</span>
-                </h2>
-            </div>
-            <div class="row testimonials-list">
-                <div class="col-md-6 testimonials-item">
-                    <div class="testimonials-info text-center">
-                        <p>
-                            On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.
-                        </p>
-                        <h5>Mario L. Gordon</h5>
-                    </div>
-                    <div class="testimonials-img text-center">
-                        <picture>
-                            <img src="{{ Theme::asset()->url('main-project/img/avatar3.png') }}" alt="">
-                        </picture>
-                        
-                    </div>
-                </div>
-                <div class="col-md-6 testimonials-item">
-                    <div class="testimonials-info text-center">
-                        <p>
-                            On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.
-                        </p>
-                        <h5>Mario L. Gordon</h5>
-                    </div>
-                    <div class="testimonials-img text-center">
-                        <picture>
-                            <img src="{{ Theme::asset()->url('main-project/img/avatar3.png') }}" alt="">
-                        </picture>
-                    </div>
-                </div>
-                <div class="col-md-6 testimonials-item">
-                    <div class="testimonials-info text-center">
-                        <p>
-                            On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.
-                        </p>
-                        <h5>Mario L. Gordon</h5>
-                    </div>
-                    <div class="testimonials-img text-center">
-                        <picture>
-                            <img src="{{ Theme::asset()->url('main-project/img/avatar3.png') }}" alt="">
-                        </picture>
-                        
-                    </div>
-                </div>
-                <div class="col-md-6 testimonials-item">
-                    <div class="testimonials-info text-center">
-                        <p>
-                            On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.
-                        </p>
-                        <h5>Mario L. Gordon</h5>
-                    </div>
-                    <div class="testimonials-img text-center">
-                        <picture>
-                            <img src="{{ Theme::asset()->url('main-project/img/avatar3.png') }}" alt="">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End / Section Testimonials -->
+
 
 <!-- Section News -->
 <section id="section-news">

@@ -14,7 +14,7 @@ if(!empty($page)) $post = $page; @endphp
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Trang chủ</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
                 </ol>
             </nav>
@@ -33,17 +33,11 @@ if(!empty($page)) $post = $page; @endphp
                         <span>01</span>
                     </h1>
                     <h2 class="caption-title">
-                        <span>Who we are?</span>
+                        <span>{{ __('Chúng tôi là ai?') }}</span>
                     </h2>
                 </div>
                 <div>
-                    <p>We are proud of our team, a team of members from not only travelling industry but also other backgrounds. The diversity brings us a well-rounded view and understanding and consequently creates better services to customers and partners. 
-                    </p>
-                    <p>
-                    You most likely to see and meet the following faces. Please be noted, however, there are more of us taking care of different little things in a sole attempt to make your trip best enjoyable and memorable.
-                    </p>
-                    <p>
-                    We have been trying hard for the sustainable and responsible development of tourism. Green office, responsible products, CSR activities, community developmnent work and others are among our main responsible activities. </p>
+                    {!! get_field($page->id, PAGE_MODULE_SCREEN_NAME, 'how_we_are_content_about_template') !!}
                 </div>
             </div>
         </div>
@@ -51,14 +45,7 @@ if(!empty($page)) $post = $page; @endphp
 
     <div class="container">
         <div class="row intro-description">
-            <p>Miều tả chi tiết quy trình hoạt động của công ty.</p>
-            <p>We are proud of our team, a team of members from not only travelling industry but also other backgrounds. The diversity brings us a well-rounded view and understanding and consequently creates better services to customers and partners. 
-                </p>
-                <p>
-                You most likely to see and meet the following faces. Please be noted, however, there are more of us taking care of different little things in a sole attempt to make your trip best enjoyable and memorable.
-                </p>
-                <p>
-                We have been trying hard for the sustainable and responsible development of tourism. Green office, responsible products, CSR activities, community developmnent work and others are among our main responsible activities. </p>
+        {!! $page->content !!}
         </div>
     </div>
 
