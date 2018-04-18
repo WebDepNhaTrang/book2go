@@ -76,11 +76,7 @@ class CustomFieldController extends BaseController
         Assets::addJavascriptDirectly('vendor/core/plugins/custom-field/js/edit-field-group.js');
         Assets::addJavascript(['jquery-ui']);
 
-        $object = $this->fieldGroupRepository->getModel();
-        $object->rules_template = CustomField::renderRules();
-
-        return $formBuilder->create(CustomFieldForm::class)->setModel($object)->renderForm();
-
+        return $formBuilder->create(CustomFieldForm::class)->renderForm();
     }
 
     /**

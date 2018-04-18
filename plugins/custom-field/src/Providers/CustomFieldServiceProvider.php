@@ -95,17 +95,17 @@ class CustomFieldServiceProvider extends ServiceProvider
         $this->app->register(HookServiceProvider::class);
         $this->app->register(EventServiceProvider::class);
 
-        // Event::listen(SessionStarted::class, function () {
-        //     dashboard_menu()->registerItem([
-        //         'id' => 'cms-plugins-custom-field',
-        //         'priority' => 5,
-        //         'parent_id' => null,
-        //         'name' => trans('plugins.custom-field::base.admin_menu.title'),
-        //         'icon' => 'icon icon-list',
-        //         'url' => route('custom-fields.list'),
-        //         'permissions' => ['custom-fields.list'],
-        //     ]);
-        // });
+        Event::listen(SessionStarted::class, function () {
+            dashboard_menu()->registerItem([
+                'id' => 'cms-plugins-custom-field',
+                'priority' => 5,
+                'parent_id' => null,
+                'name' => trans('plugins.custom-field::base.admin_menu.title'),
+                'icon' => 'icon icon-list',
+                'url' => route('custom-fields.list'),
+                'permissions' => ['custom-fields.list'],
+            ]);
+        });
 
         $this->registerUsersFields();
         $this->registerPagesFields();
