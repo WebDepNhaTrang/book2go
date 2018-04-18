@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <img src="{{asset('vendor/core/images/boton-vertical-logo2.png')}}" class="img-responsive" style="margin: 10px auto;">    
+    <img src="{{setting('admin_logo')}}" class="img-responsive" style="margin: 10px auto;">    
     <h3 class="form-title font-green">{{ trans('core.acl::auth.login_title') }}</h3>
     <div class="content-wrapper">
         {!! Form::open(['route' => 'access.login', 'class' => 'login-form']) !!}

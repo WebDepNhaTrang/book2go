@@ -3,7 +3,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="promo-img">
-                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/pr.png') }}" alt="slide">
+                <img class="img-fluid" src="{{ __($config['destination_image']) }}" alt="slide">
             </div>
             <div class="promo-caption">
                 <h1 class="caption-number">

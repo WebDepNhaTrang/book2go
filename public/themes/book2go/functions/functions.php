@@ -10,6 +10,14 @@ register_page_template([
     'getit-template' => 'Get It Template',
 ]);
 
+register_post_template([
+    'news-detail-template' => 'News Detail Template'
+]);
+
+register_category_template([
+    'news-list-template' => 'News List Template'
+]);
+
 register_sidebar([
     'id' => 'home_sidebar',
     'name' => 'Home sidebar',
