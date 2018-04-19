@@ -11,5 +11,11 @@ interface ApartmentInterface extends RepositoryInterface
      * @return mixed
      * @author Anh Ngo
      */
-    public function getApartments(array $select);
+    public function getApartments(array $select = ['*']);
+
+    /**
+	 * @param array $select
+	 * @return Collection
+	 */
+	public function getApartmentsFront(array $select = ['*']);
 }

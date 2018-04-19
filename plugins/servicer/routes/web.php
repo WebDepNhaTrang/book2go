@@ -2,6 +2,14 @@
 
 Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' => 'web'], function () {
 
+    Route::group(['prefix' => 'available'], function () {
+
+        Route::get('/', [
+            'as' => 'available.list',
+            'uses' => 'PublicController@getAvailable',
+        ]);
+    });
+
     Route::group(['prefix' => config('core.base.general.admin_dir'), 'middleware' => 'auth'], function () {
         Route::group(['prefix' => 'servicer'], function () {
 
@@ -268,6 +276,49 @@ Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' =>
             Route::post('/change-status', [
                 'as' => 'promotion.change.status',
                 'uses' => 'PromotionController@postChangeStatus',
+            ]);
+        }); 
+
+        Route::group(['prefix' => 'booking'], function () {
+
+            Route::get('/', [
+                'as' => 'booking.list',
+                'uses' => 'BookingController@getList',
+            ]);
+
+            Route::get('/create', [
+                'as' => 'booking.create',
+                'uses' => 'BookingController@getCreate',
+            ]);
+
+            Route::post('/create', [
+                'as' => 'booking.create',
+                'uses' => 'BookingController@postCreate',
+            ]);
+
+            Route::get('/edit/{id}', [
+                'as' => 'booking.edit',
+                'uses' => 'BookingController@getEdit',
+            ]);
+
+            Route::post('/edit/{id}', [
+                'as' => 'booking.edit',
+                'uses' => 'BookingController@postEdit',
+            ]);
+
+            Route::get('/delete/{id}', [
+                'as' => 'booking.delete',
+                'uses' => 'BookingController@getDelete',
+            ]);
+
+            Route::post('/delete-many', [
+                'as' => 'booking.delete.many',
+                'uses' => 'BookingController@postDeleteMany',
+            ]);
+
+            Route::post('/change-status', [
+                'as' => 'booking.change.status',
+                'uses' => 'BookingController@postChangeStatus',
             ]);
         }); 
     });

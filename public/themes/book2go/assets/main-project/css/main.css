@@ -2417,3 +2417,8 @@ footer .footer-social a:hover .fa-linkedin-in{
     opacity: 1;
   }
   /* End / Photo Gallery Poppup */
+
+.star .fa-star{
+    color: #ff6c00;
+    font-size: 11px;
+}
