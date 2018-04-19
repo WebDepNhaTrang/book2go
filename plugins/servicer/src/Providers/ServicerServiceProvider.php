@@ -37,6 +37,11 @@ use Botble\Servicer\Repositories\Caches\PromotionCacheDecorator;
 use Botble\Servicer\Repositories\Eloquent\PromotionRepository;
 use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
 
+use Botble\Servicer\Models\Booking;
+use Botble\Servicer\Repositories\Caches\BookingCacheDecorator;
+use Botble\Servicer\Repositories\Eloquent\BookingRepository;
+use Botble\Servicer\Repositories\Interfaces\BookingInterface;
+
 class ServicerServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
@@ -55,47 +60,29 @@ class ServicerServiceProvider extends ServiceProvider
             ->setNamespace('plugins/servicer')
             ->loadAndPublishConfigurations(['servicer']);
 
-        if (setting('enable_cache', false)) {
-            $this->app->singleton(ServicerInterface::class, function () {
-                return new ServicerCacheDecorator(new ServicerRepository(new Servicer()), new Cache($this->app['cache'], ServicerRepository::class));
-            });
+        $this->app->singleton(ServicerInterface::class, function () {
+            return new ServicerRepository(new Servicer());
+        });
+        $this->app->singleton(ServiceTypeInterface::class, function () {
+            return new ServiceTypeRepository(new ServiceType());
+        });
+        $this->app->singleton(TourInterface::class, function () {
+            return new TourRepository(new Tour());
+        });
+        $this->app->singleton(RoomTypeInterface::class, function () {
+            return new RoomTypeRepository(new RoomType());
+        });
+        $this->app->singleton(ApartmentInterface::class, function () {
+            return new ApartmentRepository(new Apartment());
+        });
+        $this->app->singleton(PromotionInterface::class, function () {
+            return new PromotionRepository(new Promotion());
+        });
 
-            $this->app->singleton(ServiceTypeInterface::class, function () {
-                return new ServiceTypeCacheDecorator(new ServiceTypeRepository(new ServiceType()), new Cache($this->app['cache'], ServiceTypeRepository::class));
-            });
-            $this->app->singleton(TourInterface::class, function () {
-                return new TourCacheDecorator(new TourRepository(new Tour()), new Cache($this->app['cache'], TourRepository::class));
-            });
-            $this->app->singleton(RoomTypeInterface::class, function () {
-                return new RoomTypeCacheDecorator(new RoomTypeRepository(new RoomType()), new Cache($this->app['cache'], RoomTypeRepository::class));
-            });
-            $this->app->singleton(ApartmentInterface::class, function () {
-                return new ApartmentCacheDecorator(new ApartmentRepository(new Apartment()), new Cache($this->app['cache'], ApartmentRepository::class));
-            });
-            $this->app->singleton(PromotionInterface::class, function () {
-                return new PromotionCacheDecorator(new PromotionRepository(new Promotion()), new Cache($this->app['cache'], PromotionRepository::class));
-            });
-        } else {
-            $this->app->singleton(ServicerInterface::class, function () {
-                return new ServicerRepository(new Servicer());
-            });
-            $this->app->singleton(ServiceTypeInterface::class, function () {
-                return new ServiceTypeRepository(new ServiceType());
-            });
-            $this->app->singleton(TourInterface::class, function () {
-                return new TourRepository(new Tour());
-            });
-            $this->app->singleton(RoomTypeInterface::class, function () {
-                return new RoomTypeRepository(new RoomType());
-            });
-            $this->app->singleton(ApartmentInterface::class, function () {
-                return new ApartmentRepository(new Apartment());
-            });
-            $this->app->singleton(PromotionInterface::class, function () {
-                return new PromotionRepository(new Promotion());
-            });
-        }
-
+        $this->app->singleton(BookingInterface::class, function () {
+            return new BookingRepository(new Booking());
+        });
+        
         Helper::autoload(__DIR__ . '/../../helpers');
     }
 
@@ -173,7 +160,16 @@ class ServicerServiceProvider extends ServiceProvider
                     'name' => trans('servicer::promotion.name'),
                     'icon' => null,
                     'url' => route('promotion.list'),
-                    'permissions' => ['promotion.list'],
+                    'permissions' => [],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-servicer-booking',
+                    'priority' => 5,
+                    'parent_id' => 'cms-plugins-servicer',
+                    'name' => trans('servicer::booking.name'),
+                    'icon' => null,
+                    'url' => route('booking.list'),
+                    'permissions' => [],
                 ]);
         });
 

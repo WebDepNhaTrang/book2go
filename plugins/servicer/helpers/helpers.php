@@ -65,3 +65,15 @@ if (!function_exists('get_hotel_by_id')) {
         return $hotels;
     }
 }
+
+function render_number_star($star){
+    if($star){
+        $html = '<span class="star">';
+        for($i = 1; $i <= $star; $i++){
+            $html = $html . '<span class="fa fa-star"></span>';
+        }
+        $html = $html . '</span>';
+        return $html;
+    }
+    return null;
+}

@@ -11,9 +11,11 @@ class TourRepository extends RepositoriesAbstract implements TourInterface
 	 * @param array $select
 	 * @return Collection
 	 */
-	public function getTours(array $select)
+	public function getTours(array $select = ['*'])
 	{
-	    $data = $this->model->where('format_type', '=', TOUR_MODULE_SCREEN_NAME)->select($select);
+	    $data = $this->model->where(['status' => 1, 'format_type'=> TOUR_MODULE_SCREEN_NAME])
+	    		->select($select)
+	    		->orderBy('servicers.order', 'desc');
 
 	    $data = apply_filters(BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM, $data, $this->model, TOUR_MODULE_SCREEN_NAME)->get();
 

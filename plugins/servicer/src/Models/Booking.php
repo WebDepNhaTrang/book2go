@@ -13,18 +13,17 @@ use Venturecraft\Revisionable\RevisionableTrait;
  *
  * @mixin \Eloquent
  */
-class ServiceType extends Eloquent
+class Booking extends Eloquent
 {
     use RevisionableTrait;
     use SoftDeletes;
-    use SlugTrait;
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'service_types';
+    protected $table = 'bookings';
 
     /**
      * @var mixed
@@ -73,23 +72,33 @@ class ServiceType extends Eloquent
      */
     protected $fillable = [
         'name',
-        'description',
-        'content',
-        'image',
+        'member_id',
         'status',
-        'user_id',
-        'order',
-        'featured',
-        'star',
+        'checkin',
+        'checkout',
+        'payment',
+        'subtotal',
+        'discount',
+        'tax',
+        'total',
+        'servicer_id',
+        'servicer_name',
+        'amount_adults',
+        'amount_children',
+        'total_of_servicer',
+        'fullname',
+        'email',
+        'phone',
         'address',
-        'lat_long',
-        'phone'
+        'requirements',
+        'notes',
+        'user_id'
     ];
 
     /**
      * @var string
      */
-    protected $screen = HOTEL_MODULE_SCREEN_NAME;
+    protected $screen = BOOKING_MODULE_SCREEN_NAME;
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -98,23 +107,5 @@ class ServiceType extends Eloquent
     public function user()
     {
         return $this->belongsTo(User::class)->withDefault();
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Anh Ngo
-     */
-    public function roomType()
-    {
-        return $this->hasMany(Servicer::class, 'service_type_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Anh Ngo
-     */
-    public function roomTypeActive()
-    {
-        return $this->hasMany(Servicer::class, 'service_type_id')->where('servicers.status', '=', 1);
     }
 }

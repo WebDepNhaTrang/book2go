@@ -11,5 +11,5 @@ interface TourInterface extends RepositoryInterface
      * @return mixed
      * @author Anh Ngo
      */
-    public function getTours(array $select);
+    public function getTours(array $select = ['*']);
 }

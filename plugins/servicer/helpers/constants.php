@@ -22,3 +22,7 @@ if (!defined('TOUR_MODULE_SCREEN_NAME')) {
 if (!defined('PROMOTION_MODULE_SCREEN_NAME')) {
     define('PROMOTION_MODULE_SCREEN_NAME', 'promotion');
 }
+
+if (!defined('BOOKING_MODULE_SCREEN_NAME')) {
+    define('BOOKING_MODULE_SCREEN_NAME', 'booking');
+}

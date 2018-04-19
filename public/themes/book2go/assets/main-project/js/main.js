@@ -4,9 +4,6 @@ $(document).ready(function() {
     var today = moment();
     var tomorrow = moment(today).add(1, 'days');
 
-    $('input[name="h-cin"]').val(today.format('YYYY-MM-DD'));
-    $('input[name="h-cout"]').val(tomorrow.format('YYYY-MM-DD'));
-
     $('#daterange-hotel').daterangepicker({ 
         locale: {
             format: 'DD/MM/YYYY'
@@ -17,18 +14,16 @@ $(document).ready(function() {
         "opens": "center",
         "autoApply": true
     });
-
+    
     $('#daterange-hotel').on('apply.daterangepicker', function(ev, picker) {
         // console.log(picker.startDate.format('YYYY-MM-DD'));
         // console.log(picker.endDate.format('YYYY-MM-DD'));
-        $('input[name="h-cin"]').val(picker.startDate.format('YYYY-MM-DD'));
-        $('input[name="h-cout"]').val(picker.endDate.format('YYYY-MM-DD'));
+        $('input[name="checkin"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="checkout"]').val(picker.endDate.format('YYYY-MM-DD'));
     });
 
-    
-
     // ===== Daterangepicker Checkintour Checkouttour in Homepage ==== 
-    $('input[name="daterange-tour"]').daterangepicker({ 
+    $('input#daterange-tour').daterangepicker({ 
         locale: {
             format: 'DD/MM/YYYY'
         },
@@ -38,6 +33,26 @@ $(document).ready(function() {
         "opens": "center",
         "autoApply": true
     });
+
+    $('#daterange-tour').on('apply.daterangepicker', function(ev, picker) {
+        // console.log(picker.startDate.format('YYYY-MM-DD'));
+        // console.log(picker.endDate.format('YYYY-MM-DD'));
+        $('input[name="checkin"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="checkout"]').val(picker.endDate.format('YYYY-MM-DD'));
+    });
+
+    var startDate = $('#daterange-hotel').attr('data-start-date');
+    var endDate = $('#daterange-hotel').attr('data-end-date');
+    if(startDate && endDate){
+        $('#daterange-hotel').data('daterangepicker').setStartDate(startDate);
+        $('#daterange-hotel').data('daterangepicker').setEndDate(endDate);
+
+        $('#daterange-tour').data('daterangepicker').setStartDate(startDate);
+        $('#daterange-tour').data('daterangepicker').setEndDate(endDate);
+    }else{
+        $('input[name="checkin"]').val(today.format('YYYY-MM-DD'));
+        $('input[name="checkout"]').val(tomorrow.format('YYYY-MM-DD'));
+    }
 
     // ===== Scroll to Top ==== 
     $(window).scroll(function() {

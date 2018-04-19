@@ -12,9 +12,9 @@ class ServiceTypeRepository extends RepositoriesAbstract implements ServiceTypeI
 	 * @param array $orderBy
 	 * @return Collection
 	 */
-	public function getHotels(array $select)
+	public function getHotels(array $select = ['*'])
 	{
-	    $data = $this->model->select($select);
+	    $data = $this->model->where(['status' => 1])->select($select);
 
 	    $data = apply_filters(BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM, $data, $this->model, HOTEL_MODULE_SCREEN_NAME)->get();
 
