@@ -178,7 +178,7 @@ class ServicerServiceProvider extends ServiceProvider
         }
 
         $this->app->booted(function () {
-            config(['core.slug.general.supported' => array_merge(config('core.slug.general.supported'), [ROOM_TYPE_MODULE_SCREEN_NAME, HOTEL_MODULE_SCREEN_NAME, TOUR_MODULE_SCREEN_NAME, APARTMENT_MODULE_SCREEN_NAME])]);
+            config(['core.slug.general.supported' => array_merge(config('core.slug.general.supported'), [ HOTEL_MODULE_SCREEN_NAME, TOUR_MODULE_SCREEN_NAME, APARTMENT_MODULE_SCREEN_NAME])]);
             config(['core.seo-helper.general.supported' => array_merge(config('core.seo-helper.general.supported'), [ROOM_TYPE_MODULE_SCREEN_NAME, HOTEL_MODULE_SCREEN_NAME, TOUR_MODULE_SCREEN_NAME, APARTMENT_MODULE_SCREEN_NAME])]);
         });
     }

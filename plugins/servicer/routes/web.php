@@ -8,6 +8,10 @@ Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' =>
             'as' => 'available.list',
             'uses' => 'PublicController@getAvailable',
         ]);
+        Route::get('/booking', [
+            'as' => 'public.booking',
+            'uses' => 'PublicController@getAvailable',
+        ]);
     });
 
     Route::group(['prefix' => config('core.base.general.admin_dir'), 'middleware' => 'auth'], function () {

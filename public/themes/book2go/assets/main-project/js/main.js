@@ -47,8 +47,11 @@ $(document).ready(function() {
         $('#daterange-hotel').data('daterangepicker').setStartDate(startDate);
         $('#daterange-hotel').data('daterangepicker').setEndDate(endDate);
 
-        $('#daterange-tour').data('daterangepicker').setStartDate(startDate);
-        $('#daterange-tour').data('daterangepicker').setEndDate(endDate);
+        if($('#daterange-tour').length){
+            $('#daterange-tour').data('daterangepicker').setStartDate(startDate);
+            $('#daterange-tour').data('daterangepicker').setEndDate(endDate);
+        }
+        
     }else{
         $('input[name="checkin"]').val(today.format('YYYY-MM-DD'));
         $('input[name="checkout"]').val(tomorrow.format('YYYY-MM-DD'));
