@@ -22,39 +22,42 @@
     @endif
 @endif
 
-<div class="row">
-    <div class="col-md-6 col-sm-12 col-xs-12">
+<div class="row form-contact">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <h4>Gửi tin nhắn cho chúng tôi</h4>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="form-group">
-            <label for="contact_name" class="control-label required">{{ trans('plugins.contact::contact.form_name') }}</label>
+            <label for="contact_name" class="control-label required">{{ trans('plugins.contact::contact.form_name') }} (*)</label>
             <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="contact_name"
-                   placeholder="Name">
+                   placeholder="">
         </div>
     </div>
-    <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="form-group">
-            <label for="contact_email" class="control-label required">{{ trans('plugins.contact::contact.form_email') }}</label>
+            <label for="contact_email" class="control-label required">{{ trans('plugins.contact::contact.form_email') }} (*)</label>
             <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="contact_email"
-                   placeholder="Email...">
+                   placeholder="">
         </div>
     </div>
-    <div class="col-md-6 col-sm-12 col-xs-12">
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="form-group">
             <label for="contact_address" class="control-label">{{ trans('plugins.contact::contact.form_address') }}</label>
             <input type="text" class="form-control" name="address" value="{{ old('address') }}" id="contact_address"
                    placeholder="Address...">
         </div>
-    </div>
-    <div class="col-md-6 col-sm-12 col-xs-12">
+    </div> -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="form-group">
             <label for="contact_phone" class="control-label">{{ trans('plugins.contact::contact.form_phone') }}</label>
             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="contact_phone"
-                   placeholder="Phone...">
+                   placeholder="">
         </div>
     </div>
     <div class="col-md-12">
         <div class="form-group">
-            <label for="contact_content" class="control-label required">{{ trans('plugins.contact::contact.form_message') }}</label>
-            <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ trans('plugins.contact::contact.form_message') }}">{{ old('content') }}</textarea>
+            <label for="contact_content" class="control-label required">{{ trans('plugins.contact::contact.form_message') }} (*)</label>
+            <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="">{{ old('content') }}</textarea>
         </div>
     </div>
     @if (setting('enable_captcha'))
@@ -69,8 +72,12 @@
     <div class="col-md-12">
         <div class="form-group"><p>{!! trans('plugins.contact::contact.required_field') !!}</p></div>
     </div>
+    <div class="col-md-12">
+        <div class="form-group text-right">
+            <button type="submit" class="btn btn-primary">{{ trans('plugins.contact::contact.send_btn') }}</button>
+        </div>
+    </div>
+    
 </div>
-<div class="form-group text-right">
-    <button type="submit" class="btn btn-primary cyan text">{{ trans('plugins.contact::contact.send_btn') }}</button>
-</div>
+
 {!! Form::close() !!}

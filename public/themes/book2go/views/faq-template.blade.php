@@ -2,9 +2,9 @@
 if(!empty($page)) $post = $page; @endphp
 
 <section id="faq">
-<div class="container-fluid sub-banner">
+<div class="container-fluid sub-banner" style="background-image: url({{ get_object_image($page->image, '') }});">
     <div class="sub-banner-header">
-        <h3>FAQs</h3>
+        <h3>{{ $page->name }}</h3>
     </div>
 </div>
 <div class="container breadcrumb-list mt-5">
@@ -12,7 +12,7 @@ if(!empty($page)) $post = $page; @endphp
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Câu hỏi thường gặp</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $page->name }}</li>
             </ol>
         </nav>
     </div>
@@ -23,40 +23,17 @@ if(!empty($page)) $post = $page; @endphp
             <span>01</span>
         </h1>
         <h2 class="caption-title">
-            <span>Câu hỏi thường gặp</span>
+            <span>{{ __('Câu hỏi thường gặp') }}</span>
         </h2>
     </div>
     <div class="row">
+        @foreach(get_posts_by_category(5,6,0) as $v)
         <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
+            <h4>{{ $v->description }}</h4>
+            {!! $v->content !!}
             <hr>
         </div>
-        <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
-            <hr>
-        </div>
-        <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
-            <hr>
-        </div>
-        <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
-            <hr>
-        </div>
-        <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
-            
-        </div>
-        <div class="col-md-6">
-            <h4>How it works?</h4>
-            <p>Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</p>
-            
-        </div>
+        @endforeach
     </div>
 </div>
 
