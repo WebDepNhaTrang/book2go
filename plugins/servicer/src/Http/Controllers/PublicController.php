@@ -92,16 +92,21 @@ class PublicController extends BaseController
     		$hotels = $this->hotelRepository->getHotels();
     		foreach ($hotels as $key_hotel => $hotel) {
     			$room_types = $hotel->roomTypeActive;
-    			foreach ($room_types as $key_room => $room) {
-    				if(array_key_exists($room->id, $total_of_servicers)){
-    					if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
-    						break;
-    					}
-    					if($room_types->keys()->last() == $key_room){
-    						$room_types->forget($key_hotel);
-    					}
-    				}
-    			} 
+                if(!$room_types->count()){
+                    $hotels->forget($key_hotel);
+                }else{
+                    foreach ($room_types as $key_room => $room) {
+                        if(array_key_exists($room->id, $total_of_servicers)){
+                            if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
+                                break;
+                            }
+                            if($room_types->keys()->last() == $key_room){
+                                $hotels->forget($key_hotel);
+                            }
+                        }
+                    }
+                }
+    			 
     		}
 
     		$apartments = $this->apartmentRepository->getApartments();
