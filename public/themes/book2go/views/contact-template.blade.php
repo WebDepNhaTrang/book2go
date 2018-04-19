@@ -43,35 +43,9 @@ if(!empty($page)) $post = $page; @endphp
                 </picture>
             </div>
             <div class="col-md-7">
-                <div class="form-contact">
-                    <h4>Gửi tin nhắn cho chúng tôi</h4>
-                    <form>
-                        <div class="form-group">
-                            <label for="txtname">Họ và tên</label>
-                            <input type="text" class="form-control" id="txtname" placeholder="Nhập họ và tên">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn">
-                        </div>
-                                
-                        <div class="form-group">
-                            <label for="txtphone">Số điện thoại</label>
-                            <input type="text" class="form-control" id="txtphone" placeholder="Nhập số điện thoại">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="txtnoidung">Nội dung</label>
-                            <textarea class="form-control" id="txtnoidung" rows="5">Nhập nội dung</textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Gửi</button>
-                    </form>
-                </div>
-                <?php
+                @php
                     echo do_shortcode('[contact-form][/contact-form]');
-                ?>
+                @endphp
             </div>
         </div>
     </div>
