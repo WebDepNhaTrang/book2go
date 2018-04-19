@@ -2,9 +2,9 @@
 if(!empty($page)) $post = $page; @endphp
 
 <section id="faq">
-<div class="container-fluid sub-banner">
+<div class="container-fluid sub-banner" style="background-image: url({{ get_object_image($page->image, '') }});">
     <div class="sub-banner-header">
-        <h3>FAQs</h3>
+        <h3>{{ $page->name }}</h3>
     </div>
 </div>
 <div class="container breadcrumb-list mt-5">
@@ -12,7 +12,7 @@ if(!empty($page)) $post = $page; @endphp
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Câu hỏi thường gặp</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $page->name }}</li>
             </ol>
         </nav>
     </div>

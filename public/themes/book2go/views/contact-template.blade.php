@@ -2,9 +2,9 @@
 if(!empty($page)) $post = $page; @endphp
 
 <section id="contact">
-    <div class="container-fluid sub-banner">
+    <div class="container-fluid sub-banner" style="background-image: url({{ get_object_image($page->image, '') }});">
         <div class="sub-banner-header">
-            <h3>Liên hệ</h3>
+            <h3>{{ $page->name }}</h3>
         </div>
     </div>
     <!-- Nav Booking -->
@@ -16,7 +16,7 @@ if(!empty($page)) $post = $page; @endphp
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ $page->name }}</li>
                 </ol>
             </nav>
         </div>
@@ -32,9 +32,7 @@ if(!empty($page)) $post = $page; @endphp
             </h2>
         </div>
         <div class="row col-md-12">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit minima aut, tempore id laudantium consectetur delectus aspernatur quas obcaecati harum aliquam voluptatem, labore molestiae asperiores, non explicabo quia sunt!
-            </p>
+            {!! $page->content !!}
         </div>
     </div>
     <div class="container my-5">
@@ -71,7 +69,9 @@ if(!empty($page)) $post = $page; @endphp
                         <button type="submit" class="btn btn-primary">Gửi</button>
                     </form>
                 </div>
-                
+                <?php
+                    echo do_shortcode('[contact-form][/contact-form]');
+                ?>
             </div>
         </div>
     </div>
