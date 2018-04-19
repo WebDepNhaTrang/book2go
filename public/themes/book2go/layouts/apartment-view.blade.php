@@ -1,0 +1,1 @@
+apartment-view.blade.php

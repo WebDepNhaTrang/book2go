@@ -2422,3 +2422,56 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #ff6c00;
     font-size: 11px;
 }
+
+#ks-detail .sub-banner .image-0{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+}
+#ks-detail .sub-banner .image-0 img, 
+#ks-detail .sub-banner .image-1 img, 
+#ks-detail .sub-banner .image-2 img, 
+#ks-detail .sub-banner .image-3 img, 
+#ks-detail .sub-banner .image-4 img, 
+#ks-detail .sub-banner .image-5 img, 
+#ks-detail .sub-banner .map-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: object-fit\:cover;
+    object-fit: cover;
+}
+#ks-detail .sub-banner .image-1{
+    position: absolute;
+    right:0;
+    height: 55%;
+    width: calc(40% - 4px);
+}
+#ks-detail .sub-banner .image-2{
+    position: absolute;
+    left: 0;
+    height: calc(30% - 4px);
+    width: 24%;
+    top: calc(70% + 4px);
+}
+#ks-detail .sub-banner .image-3{
+    position: absolute;
+    height: calc(30% - 4px);
+    width: calc(36% - 4px);
+    top: calc(70% + 4px);
+    left: calc(24% + 4px);
+}
+#ks-detail .sub-banner .image-4{
+    position: absolute;
+    right: calc(16% - 4px);
+    height: calc(100% - 55% - 4px);
+    width: 24%;
+    top: calc(55% + 4px);
+}
+#ks-detail .sub-banner .image-5{
+    position: absolute;
+    right:0;
+    height: calc(13.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 31.5% + 4px);
+}

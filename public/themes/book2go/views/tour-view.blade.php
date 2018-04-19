@@ -74,33 +74,27 @@
                     </span>
                 </p>
                 <form id="search-hotel" action="tour-booking.html" class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 arrival-date">
+                    <div class="col-xs-12 col-sm-4 col-md-6 arrival-date">
                         <div class="form-group mb-0">
                             <label for="arrivalDate" class="control-label">Ngày đi</label>
-                            <div class="input-group">
-                                <input id="checkIn" type="text" style="cursor:pointer;" name="arrivalDate" value="" placeholder="Check-in" class="input-small form-control">
-                                <div class="input-group-append">
-                                    <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" id="daterange-hotel" style="text-align: center;cursor:pointer;" class="input-small form-control" @if($checkin && $checkout) data-start-date="{{date('d/m/Y', strtotime($checkin))}}" data-end-date="{{date('d/m/Y', strtotime($checkout))}}" @endif/>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="hidden" name="checkin" value="">
+                                    <input type="hidden" name="checkout" value="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 departure-date">
-                        <div class="form-group mb-0">
-                            <label for="departureDate" class="control-label">Ngày về</label>
-                            <div class="input-group">
-                                <input id="checkOut" type="text" style="cursor:pointer; background-color: #FFFFFF;" name="departureDate" value="" placeholder="Check-out" class="input-small form-control">
-                                <div class="input-group-append">
-                                    <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-xs-12 col-sm-2 col-md-2 departure-date">
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Người lớn</label>
                             <div class="input-group">
-                                <select name="" id="" class="form-control">
+                                <select name="" id="adults" class="form-control">
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -114,7 +108,7 @@
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Trẻ em</label>
                             <div class="input-group">
-                                <select name="" id="" class="form-control">
+                                <select name="" class="form-control">
                                     <option value="">0</option>
                                     <option value="">1</option>
                                     <option value="">2</option>

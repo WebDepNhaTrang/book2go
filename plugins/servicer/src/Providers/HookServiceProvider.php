@@ -55,10 +55,13 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TOUR_MODULE_SCREEN_NAME, $post);
 
+                        $checkin = null;
+                        $checkout = null;
+
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
                             'view' => config('plugins.servicer.servicer.tour-view'),
-                            'data' => compact('post'),
+                            'data' => compact('post', 'checkout', 'checkin'),
                         ];
                     }
                     break;
@@ -76,10 +79,13 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, APARTMENT_MODULE_SCREEN_NAME, $post);
 
+                        $checkin = null;
+                        $checkout = null;
+
                         $data = [
                             'template' => config('plugins.servicer.servicer.apartment-template'),
                             'view' => config('plugins.servicer.servicer.apartment-view'),
-                            'data' => compact('post'),
+                            'data' => compact('post', 'checkin', 'checkout'),
                         ];
                     }
                     break;
