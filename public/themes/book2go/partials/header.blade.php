@@ -8,7 +8,14 @@
                     <a href="tel:{{ setting('contact_hotline') }}"><i class="fas fa-mobile-alt"></i> {{ setting('contact_hotline') }}</a>
                 </div>
                 <div class="col-md-6 col-right">
-                    <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                    <!-- <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a> -->
+                    @if (Auth::guard('member')->check())
+                        <a href="#">Chào {{ Auth::guard('member')->user()->name }}!,</a>
+                        <a href="{{ route('public.member.logout') }}"><i class="fa fa-sign-out"></i>{{ __('Logout') }}</a>
+                    @else
+                        <!-- <a href="{{ route('public.member.login') }}"><i class="fa fa-sign-in"></i> {{ __('Login') }}</a> -->
+                        <a id="modal_trigger" href="#modal-login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                    @endif
                 </div>
                 
             </div>
