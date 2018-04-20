@@ -12,4 +12,10 @@ interface TourInterface extends RepositoryInterface
      * @author Anh Ngo
      */
     public function getTours(array $select = ['*']);
+
+    /**
+	 * @param array $select
+	 * @return Collection
+	 */
+	public function getToursFront(array $select = ['*'], $page = null, $numberOfOnPage = 3);
 }

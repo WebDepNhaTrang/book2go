@@ -31,7 +31,8 @@ class ApartmentRepository extends RepositoriesAbstract implements ApartmentInter
 	{
 	    $data = $this->model->where(['status' => 1, 'format_type' => APARTMENT_MODULE_SCREEN_NAME])
 					    ->select($select)
-					    ->orderBy('servicers.order', 'desc');
+					    ->orderBy('servicers.order', 'desc')
+					    ->orderBy('servicers.created_at', 'desc');
 
 	    $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, APARTMENT_MODULE_SCREEN_NAME)->get();
 

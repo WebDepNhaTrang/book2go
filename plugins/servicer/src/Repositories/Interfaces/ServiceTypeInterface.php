@@ -27,4 +27,10 @@ interface ServiceTypeInterface extends RepositoryInterface
 	 * @return mixed
 	 */
 	public function getHotelById($id);
+
+    /**
+     * @param array $select
+     * @return Collection
+     */
+    public function getHotelsFront(array $select = ['*']);
 }

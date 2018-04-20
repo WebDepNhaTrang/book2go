@@ -52,4 +52,21 @@ class ServiceTypeRepository extends RepositoriesAbstract implements ServiceTypeI
 	    $this->resetModel();
 	    return $data;
 	}
+
+	/**
+	 * @param array $select
+	 * @return Collection
+	 */
+	public function getHotelsFront(array $select = ['*'])
+	{
+	    $data = $this->model->where(['status' => 1])
+					    ->select($select)
+					    ->orderBy('service_types.order', 'desc')
+					    ->orderBy('service_types.created_at', 'desc');
+
+	    $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, HOTEL_MODULE_SCREEN_NAME)->get();
+
+	    $this->resetModel();
+	    return $data;
+	}
 }

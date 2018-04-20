@@ -4,7 +4,7 @@ if(!empty($page)) $post = $page; @endphp
 <section id="st-ks-ch-list">
     <div class="container-fluid sub-banner">
         <div class="sub-banner-header">
-            <h3>Khách Sạn - Căn Hộ</h3>
+            <h3>{{$post->name}}</h3>
         </div>
     </div>
     {!! Theme::partial('search-bar') !!}
@@ -18,149 +18,40 @@ if(!empty($page)) $post = $page; @endphp
             </nav>
         </div>
     </div>
+    @php
+        $data = get_listing_hotels_apartments();
+    @endphp
     <div class="container">
         <div class="row destinations-list">
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="/starcity-nha-trang-hotel.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="/starcity-nha-trang-hotel.html"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="#">Demo Khách Sạn</a></h2>
-                                    <p class="flag-icon flag-icon-fr">Nha Trang, Khánh Hòa</p>
+            @foreach ($data as $key => $value)
+                <div class="col-sm-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="pic-wrapper text-center">
+                                <a href="{{route('public.single', $value->slug)}}">
+                                    <img class="img-fluid" src="{{get_object_image($value->image, 'featured')}}" alt="">
+                                </a>
+                                <div class="block-readmore"><a href="{{route('public.single', $value->slug)}}"></a></div>
                             </div>
-                            <div class="col-5 text-right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="/starcity-nha-trang-hotel.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="#"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="/starcity-nha-trang-hotel.html">Demo Căn Hộ</a></h2>
-                                    <p class="flag-icon flag-icon-fr">Cam Ranh, Khánh Hòa</p>
-                            </div>
-                            <div class="col-5" align="right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
+                            <div class="des-information">
+                                <div class="col-7">
+                                    <h2 class="des-title-header">
+                                        <a href="{{route('public.single', $value->slug)}}">{{$value->name}}</a></h2>
+                                        <p class="flag-icon flag-icon-fr">{{$value->address}}</p>
+                                </div>
+                                <div class="col-5 text-right">
+                                    <p class="region-properties"><a href="#">Alsace</a></p>
+                                    <p class="count-properties">1 properties</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="./ks-detail.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="./ks-detail.html"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="#">Paris</a></h2>
-                                    <p class="flag-icon flag-icon-fr">France</p>
-                            </div>
-                            <div class="col-5" align="right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="./ks-detail.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="./ks-detail.html"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="#">Paris</a></h2>
-                                    <p class="flag-icon flag-icon-fr">France</p>
-                            </div>
-                            <div class="col-5" align="right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="./ks-detail.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="./ks-detail.html"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="./ks-detail.html">Paris</a></h2>
-                                    <p class="flag-icon flag-icon-fr">France</p>
-                            </div>
-                            <div class="col-5" align="right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="pic-wrapper text-center">
-                            <a href="./ks-detail.html">
-                                <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/3.jpg') }}" alt="">
-                            </a>
-                            <div class="block-readmore"><a href="./ks-detail.html"></a></div>
-                        </div>
-                        <div class="des-information">
-                            <div class="col-7">
-                                <h2 class="des-title-header">
-                                    <a href="./ks-detail.html">Paris</a></h2>
-                                    <p class="flag-icon flag-icon-fr">France</p>
-                            </div>
-                            <div class="col-5" align="right">
-                                <p class="region-properties"><a href="#">Alsace</a></p>
-                                <p class="count-properties">1 properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <div class="btn-block text-center">
-            <a class="btn btn-default btn-outline" href="">Xem Thêm</a>
+            {!! $data->setPath(route('public.single', $post->slug))->links() !!}            
         </div>
     </div>
         

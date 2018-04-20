@@ -23,5 +23,7 @@ return [
 	* Template for Room Type
 	*/
 	'room_type-template' => 'room_type-template',
-	'room_type-view' => 'room_type-view'
+	'room_type-view' => 'room_type-view',
+
+	'img-map' => '/images/img-map.png'
 ];

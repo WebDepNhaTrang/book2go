@@ -6,10 +6,13 @@
             @endphp
             @if($galleries)
                 @foreach($galleries as $key => $gallery)
-                    <li class="image-{{$key}}">
+                    <li class="image-{{$key}} @if($key > 5) d-none @endif">
                         <img class="" src="{{ url($gallery['img']) }}" alt="">
                     </li>
                 @endforeach
+                <div class="map-image">
+                    <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
+                </div>
             @endif
             
         </ul>
@@ -25,8 +28,9 @@
                     {!! render_number_star($post->star) !!}
                     <p class="address">{{$post->address}}</p>
                     <p class="tel">Tel: {{$post->phone}}</p>
-                    <iframe src="https://www.facebook.com/plugins/share_button.php?href={{route('public.single', $post->slug)}}&layout=button_count&size=small&mobile_iframe=true&appId=1635619343393030&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href={{route('public.single', $post->slug)}}&layout=standard&action=like&size=small&show_faces=false&share=false&height=35&appId=1635619343393030" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                    {!! render_facebook_social(route('public.single', $post->slug)) !!}
+                   
                 </div>
                 <div class="col-md-4">
                     <button type="button" class="btn btn-sm btn-danger" disabled>Giảm 30% Hôm nay</button>

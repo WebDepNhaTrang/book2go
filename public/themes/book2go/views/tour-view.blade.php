@@ -16,12 +16,12 @@
             <div class="fifth-image">
                 <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail5.jpg') }}" alt="">
             </div>
-            <div class="map-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/img-map.png') }}" alt="">
-            </div>
+            
             <div class="sixth-image">
                 <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail2.jpg') }}" alt="">
             </div>
+
+
         </div>
     </div>
     <div class="ks-info container">
@@ -36,8 +36,9 @@
                     {!! render_number_star($post->star) !!}
                     <p class="address">{{$post->address}}</p>
                     <p class="tel">Tel: {{$post->phone}}</p>
-                    <iframe src="https://www.facebook.com/plugins/share_button.php?href={{route('public.single', $post->slug)}}&layout=button_count&size=small&mobile_iframe=true&appId=1635619343393030&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href={{route('public.single', $post->slug)}}&layout=standard&action=like&size=small&show_faces=false&share=false&height=35&appId=1635619343393030" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                    {!! render_facebook_social(route('public.single', $post->slug)) !!}
+                    
                 </div>
                 <div class="col-md-4">
                     <button type="button" class="btn btn-sm btn-danger" disabled>Giảm 30% Hôm nay</button>
