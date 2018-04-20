@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Theme;
 use URL;
+use Validator;
+use Illuminate\Support\MessageBag;
 
 class LoginController extends Controller
 {
@@ -95,5 +97,51 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response|void
+     * @author Sang Nguyen
+     */
+    public function login_ajax(Request $request)
+    {
+        $rules = [
+    		'email' =>'required|email',
+    		'password' => 'required|min:6'
+    	];
+    	$messages = [
+    		'email.required' => 'Email là trường bắt buộc',
+    		'email.email' => 'Email không đúng định dạng',
+    		'password.required' => 'Mật khẩu là trường bắt buộc',
+    		'password.min' => 'Mật khẩu phải chứa ít nhất 6 ký tự',
+    	];
+    	$validator = Validator::make($request->all(), $rules, $messages);
+
+    	if ($validator->fails()) {
+            return response()->json([
+                    'error' => true,
+                    'message' => $validator->errors()
+                ], 200);
+    		// return redirect()->back()->withErrors($validator)->withInput();
+    	} else {
+    		$email = $request->input('email');
+    		$password = $request->input('password');
+
+    		if( $this->attemptLogin($request) ) {
+                return response()->json([
+                    'error' => false,
+                    'message' => 'success'
+                ], 200);
+    			// return redirect()->intended('/');
+    		} else {
+    			$errors = new MessageBag(['errorlogin' => 'Email hoặc mật khẩu không đúng']);
+                return response()->json([
+                    'error' => true,
+                    'message' => $errors
+                ], 200);
+    			// return redirect()->back()->withInput()->withErrors($errors);
+    		}
+    	}
     }
 }

@@ -53,6 +53,7 @@ Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
     ], function () {
         Route::get('/login', 'LoginController@showLoginForm')->name('login');
         Route::post('/login', 'LoginController@login')->name('login.post');
+        Route::post('/login/ajax', 'LoginController@login_ajax')->name('login.ajax');
 
         Route::get('/register', 'RegisterController@showRegistrationForm')->name('register');
         Route::post('/register', 'RegisterController@register')->name('register.post');

@@ -121,13 +121,17 @@
 
         <!-- Username & Password Login form -->
         <div class="user_login">
+            <span style="color:red; display:none;" class="error errorLogin"></span>
             <form>
+                <meta name="csrf-token" content="{{ csrf_token() }}">
                 <label>Địa chỉ Email</label>
-                <input type="email" />
+                <input id="email_login" type="email" />
+                <span style="color:red; display: none" class="error errorEmail"></span>
                 <br />
 
                 <label>Mật khẩu</label>
-                <input type="password" />
+                <input id="pass_login" type="password" />
+                <span style="color:red; display: none" class="error errorPassword"></span>
                 <br />
 
                 <div class="checkbox">
@@ -137,7 +141,7 @@
 
                 <div class="action_btns">
                     <!-- <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div> -->
-                    <div class="one_half"><a href="#" class="btn btn_red">Đăng nhập</a></div>
+                    <div class="one_half"><a href="#" class="btn btn_red" id="dang-nhap">Đăng nhập</a></div>
                     <div class="one_half last"><a href="#" id="register_form" class="btn">Tạo tài khoản</a></div>
                     
                 </div>

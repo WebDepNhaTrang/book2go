@@ -8,6 +8,7 @@
 
         <link rel="canonical" href="{{ url('/') }}">
         <meta http-equiv="content-language" content="en">
+        
 
         {!! Theme::header() !!}
     </head>
