@@ -15,31 +15,32 @@ class PromotionForm extends FormAbstract
      */
     public function buildForm()
     {
-        $hotels  = [];
+        $hotels[0]  = "None";
         if(get_all_hotels(['id', 'name'])){
-            $hotels = get_all_hotels(['id', 'name']);
+            $hotels = array_merge($hotels, get_all_hotels(['id', 'name'])->pluck('name', 'id')->toArray());
         }
-        $selected_hotels = [];
-        if ($this->getModel() && $this->getModel()->hotels != null) {
-            $selected_hotels = $this->getModel()->hotels->pluck('id')->all();
+        $selected_hotels = 0;
+        if ($this->getModel() && $this->getModel()->hotels->first() != null) {
+            $selected_hotels = $this->getModel()->hotels->first()->id;
         }
 
-        $tours  = [];
+        $tours[0]  = "None";
         if(get_all_tours(['id', 'name'])){
-            $tours = get_all_tours(['id', 'name']);
+            $tours = array_merge($tours, get_all_tours(['id', 'name'])->pluck('name', 'id')->toArray());
         }
-        $selected_tours = [];
-        if ($this->getModel() && $this->getModel()->tours != null) {
-            $selected_tours = $this->getModel()->tours->pluck('id')->all();
+        $selected_tours = 0;
+        if ($this->getModel() && $this->getModel()->tours->first() != null) {
+            $selected_tours = $this->getModel()->tours->first()->id;
         }
 
-        $apartments  = [];
+        $apartments[0]  = "None";
         if(get_all_apartments(['id', 'name'])){
-            $apartments = get_all_apartments(['id', 'name']);
+            $apartments = array_merge($apartments, get_all_apartments(['id', 'name'])->pluck('name', 'id')->toArray()) ;
         }
-        $selected_apartments = [];
-        if ($this->getModel() && $this->getModel()->apartments != null) {
-            $selected_apartments = $this->getModel()->apartments->pluck('id')->all();
+
+        $selected_apartments = 0;
+        if ($this->getModel() && $this->getModel()->apartments->first() != null) {
+            $selected_apartments = $this->getModel()->apartments->first()->id;
         }
 
         $this->addCustomField('chooseMulti', ChooseMultiField::class);
@@ -57,14 +58,14 @@ class PromotionForm extends FormAbstract
                     'data-counter' => 200,
                 ],
             ])
-            ->add('code', 'text', [
-                'label' => trans('servicer::forms.code'),
-                'label_attr' => ['class' => 'control-label required'],
-                'attr' => [
-                    'placeholder' => trans('servicer::forms.code'),
-                    'data-counter' => 100,
-                ],
-            ])
+            // ->add('code', 'text', [
+            //     'label' => trans('servicer::forms.code'),
+            //     'label_attr' => ['class' => 'control-label required'],
+            //     'attr' => [
+            //         'placeholder' => trans('servicer::forms.code'),
+            //         'data-counter' => 100,
+            //     ],
+            // ])
             ->add('cost', 'number', [
                 'label' => trans('servicer::forms.cost'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -91,25 +92,34 @@ class PromotionForm extends FormAbstract
                     'placeholder' => trans('servicer::forms.end_date'),
                 ],
             ])
-            ->add('hotels[]', 'chooseMulti', [
+            ->add('hotels[]', 'select', [
                 'label' => trans('servicer::hotel.name'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices' => $hotels,
                 'value' => old('hotels', $selected_hotels),
+                'attr' => [
+                    'class' => 'select-search-full',
+                ],
                 'name_field' => 'hotels'
             ])
-            ->add('tours[]', 'chooseMulti', [
+            ->add('tours[]', 'select', [
                 'label' => trans('servicer::tour.name'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices' => $tours,
                 'value' => old('tours', $selected_tours),
+                'attr' => [
+                    'class' => 'select-search-full',
+                ],
                 'name_field' => 'tours'
             ])
-            ->add('apartments[]', 'chooseMulti', [
+            ->add('apartments[]', 'select', [
                 'label' => trans('servicer::apartment.name'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices' => $apartments,
-                'value' => old('apartments', $selected_hotels),
+                'value' => old('apartments', $selected_apartments),
+                'attr' => [
+                    'class' => 'select-search-full',
+                ],
                 'name_field' => 'apartments'
             ])
 
@@ -124,13 +134,13 @@ class PromotionForm extends FormAbstract
                     0 => trans('core.base::system.deactivated'),
                 ],
             ])
-            ->add('quantity', 'number', [
-                'label' => trans('servicer::forms.quantity'),
-                'label_attr' => ['class' => 'control-label'],
-                'attr' => [
-                    'placeholder' => trans('servicer::forms.quantity_placeholder'),
-                ]
-            ])
+            // ->add('quantity', 'number', [
+            //     'label' => trans('servicer::forms.quantity'),
+            //     'label_attr' => ['class' => 'control-label'],
+            //     'attr' => [
+            //         'placeholder' => trans('servicer::forms.quantity_placeholder'),
+            //     ]
+            // ])
             ->add('description', 'textarea', [
                 'label' => trans('core.base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],

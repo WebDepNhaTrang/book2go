@@ -86,9 +86,15 @@
                             <th scope="col">Loại phòng</th>
                             <th scope="col">Chi tiết</th>
                             <th scope="col">Sức chứa</th>
-                            <th scope="col">Giá phòng/đêm</th>
-                            <th scope="col">SL</th>
-                            <th scope="col">Đặt nhiều nhất</th>
+
+                            @if($checkin && $checkout)
+                                <th scope="col">Giá phòng/đêm</th>
+                                <th scope="col">SL</th>
+                                <th scope="col">Đặt nhiều nhất</th>
+                            @else
+                                <th scope="col"></th>
+                            @endif
+
                         </tr>
                     </thead>
                     <tbody>
@@ -114,45 +120,44 @@
                                         <span>{{$room->children}} x </span><i class="fas fa-child"></i>
                                     </div>
                                 </td>
-                                <td class="col-gia-phong">
-                                    <div class="tiet-kiem-ngay">
-                                        <span>Tiết kiệm 10% ngay hôm nay!</span>
-                                    </div>
-                                    <div class="price-through">
-                                        <span class="price">1,000,000 </span>
-                                        <span class="currency">₫</span>
-                                    </div>
-                                    <div class="price-show">
-                                        <span class="price">{{$room->price}} </span>
-                                        <span class="currency">₫</span>
-                                    </div>
-                                </td>
-                                <td class="col-so-luong">
-                                    <select class="form-control">
-                                        @for($i = 1; $i <= $room->number_of_servicer; $i++)
-                                            <option value="{{$i}}">{{$i}}</option>
-                                        @endfor
-                                    </select>
-                                </td>
-                                <td class="col-dat-phong">
-                                    <div class="gia-thap-nhat">
-                                        <span class="">Giá thấp nhất</span>
-                                    </div>
-                                    @if($checkin && $checkout)
-                                        <a href="{{route('public.booking', ['id' => $room->id, 'checkin' => $checkin, 'checkout' => $checkout])}}" class="btn btn-sm btn-datphong">Đặt phòng ngay</a>
-                                    @else
-                                        <span class="btn btn-sm btn-datphong">
-                                            Vui lòng chọn ngày
-                                        </span>
-                                    @endif
-
-                                    <div class="dang-nhap-giam">
-                                        <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
-                                    </div>
-                                    <div class="con-trong">
-                                        <span>Còn trống {{$room->number_of_servicer}} phòng</span>
-                                    </div>
-                                </td>
+                                @if($checkin && $checkout)
+                                    <td class="col-gia-phong">
+                                        <div class="tiet-kiem-ngay">
+                                            <span>Tiết kiệm 10% ngay hôm nay!</span>
+                                        </div>
+                                        <div class="price-through">
+                                            <span class="price">1,000,000 </span>
+                                            <span class="currency">₫</span>
+                                        </div>
+                                        <div class="price-show">
+                                            <span class="price">{{$room->price}} </span>
+                                            <span class="currency">₫</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-so-luong">
+                                        <select class="form-control">
+                                            @for($i = 1; $i <= $room->number_of_servicer; $i++)
+                                                <option value="{{$i}}">{{$i}}</option>
+                                            @endfor
+                                        </select>
+                                    </td>
+                                    <td class="col-dat-phong">
+                                        <div class="gia-thap-nhat">
+                                            <span class="">Giá thấp nhất</span>
+                                        </div>
+                                            <a href="{{route('public.booking', ['id' => $room->id, 'checkin' => $checkin, 'checkout' => $checkout])}}" class="btn btn-sm btn-datphong">Đặt phòng ngay</a>
+                                        <div class="dang-nhap-giam">
+                                            <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
+                                        </div>
+                                        <div class="con-trong">
+                                            <span>Còn trống {{$room->number_of_servicer}} phòng</span>
+                                        </div>
+                                    </td>
+                                @else
+                                    <td class="col-alert-notification">
+                                        <span class="alert alert-danger">Vui lòng chọn ngày</span>
+                                    </td>
+                                @endif
                             </tr>
                         @endforeach
                         
