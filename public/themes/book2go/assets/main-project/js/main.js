@@ -135,7 +135,7 @@ $(document).ready(function() {
         });
     });
 
-    
+    // Đăng nhập ajax
     $('#dang-nhap').click(function(e) {
         e.preventDefault();
         $.ajaxSetup({
@@ -162,6 +162,51 @@ $(document).ready(function() {
                     }
                     if (data.message.errorlogin != undefined) {
                         $('.errorLogin').show().text(data.message.errorlogin[0]);
+                    }
+                } else {
+                    window.location.reload()
+                }
+            }
+        });
+    })
+
+    // Đăng ký ajax
+    $('#dang-ky').click(function(e) {
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            'url' : 'register/ajax',
+            'data': {
+                'name' : $('#name_register').val(),
+                'email' : $('#email_register').val(),
+                'password' : $('#pass_register').val(),
+                'phone' : $('#phone_register').val(),
+                'address' : $('#address_register').val(),
+                'company' : $('#company_register').val()
+            },
+            'type' : 'POST',
+            success: function (data) {
+                console.log(data);
+                if (data.error == true) {
+                    $('.error').hide();
+                    if (data.message.name != undefined) {
+                        $('.errorName').show().text(data.message.name[0]);
+                    }
+                    if (data.message.email != undefined) {
+                        $('.errorEmail').show().text(data.message.email[0]);
+                    }
+                    if (data.message.password != undefined) {
+                        $('.errorPassword').show().text(data.message.password[0]);
+                    }
+                    if (data.message.phone != undefined) {
+                        $('.errorPhone').show().text(data.message.phone[0]);
+                    }
+                    if (data.message.errorlogin != undefined) {
+                        $('.errorRegister').show().text(data.message.errorregister[0]);
                     }
                 } else {
                     window.location.reload()

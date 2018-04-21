@@ -27,6 +27,8 @@ class Member extends Authenticatable
         'avatar',
         'dob',
         'phone',
+        'address',
+        'company'
     ];
 
     /**
