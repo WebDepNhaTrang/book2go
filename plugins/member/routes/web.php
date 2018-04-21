@@ -57,6 +57,7 @@ Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
         Route::get('/register', 'RegisterController@showRegistrationForm')->name('register');
         Route::post('/register', 'RegisterController@register')->name('register.post');
+        Route::post('/register/ajax', 'RegisterController@register_ajax')->name('register.ajax');
 
         Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.request');
         Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.email');

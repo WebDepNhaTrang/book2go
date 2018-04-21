@@ -135,7 +135,7 @@
                 <br />
 
                 <div class="checkbox">
-                    <input id="remember" type="checkbox" />
+                    <input id="remember" type="checkbox" name="remember"/>
                     <label for="remember">Lưu mật khẩu</label>
                 </div>
 
@@ -153,33 +153,38 @@
         <!-- Register Form -->
         <div class="user_register">
             <form>
-                <label>Họ và tên</label>
-                <input type="text" />
+                <meta name="csrf-token" content="{{ csrf_token() }}">
+                <label>Họ và tên (*)</label>
+                <input type="text" name="name" id="name_register"/>
+                <span style="color:red; display: none" class="error errorName"></span>
                 <br />
 
-                <label>Địa chỉ Email</label>
-                <input type="email" />
+                <label>Địa chỉ Email (*)</label>
+                <input type="email" name="email" id="email_register"/>
+                <span style="color:red; display: none" class="error errorEmail"></span>
                 <br />
 
-                <label>Số điện thoại</label>
-                <input type="text" />
+                <label>Mật khẩu (*)</label>
+                <input type="password" name="password" id="pass_register"/>
+                <span style="color:red; display: none" class="error errorPassword"></span>
+                <br />
+
+                <label>Số điện thoại (*)</label>
+                <input type="text" name="phone" id="phone_register"/>
+                <span style="color:red; display: none" class="error errorPhone"></span>
                 <br />
 
                 <label>Địa chỉ</label>
-                <input type="text" />
+                <input type="text" name="address" id="address_register"/>
                 <br />
 
                 <label>Công ty</label>
-                <input type="text" />
-                <br />
-
-                <label>Mật khẩu</label>
-                <input type="password" />
+                <input type="text" name="company" id="company_register"/>
                 <br />
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Tạo tài khoản</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red" id="dang-ky">Tạo tài khoản</a></div>
                 </div>
             </form>
         </div>

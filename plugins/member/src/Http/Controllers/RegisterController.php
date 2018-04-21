@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Theme;
 use Validator;
+use Illuminate\Http\Request;
+use Illuminate\Support\MessageBag;
 
 class RegisterController extends Controller
 {
@@ -89,5 +91,59 @@ class RegisterController extends Controller
     protected function guard()
     {
         return Auth::guard('member');
+    }
+
+    public function register_ajax(Request $request)
+    {
+        $rules = [
+            'name' => 'required|max:255',
+    		'email' => 'required|email|max:255|unique:members',
+            'password' => 'required|min:6',
+            'phone' => 'required|max:255'
+    	];
+    	$messages = [
+            'name.required' => 'Họ tên là trường bắt buộc',
+    		'email.required' => 'Email là trường bắt buộc',
+            'email.email' => 'Email không đúng định dạng',
+            'email.unique' => 'Email đã tồn tại',
+    		'password.required' => 'Mật khẩu là trường bắt buộc',
+            'password.min' => 'Mật khẩu phải chứa ít nhất 6 ký tự',
+            'phone.required' => 'Số điện thoại là trường bắt buộc',
+    	];
+    	$validator = Validator::make($request->all(), $rules, $messages);
+
+    	if ($validator->fails()) {
+            return response()->json([
+                    'error' => true,
+                    'message' => $validator->errors()
+                ], 200);
+    		// return redirect()->back()->withErrors($validator)->withInput();
+    	} else {
+            $member = new Member;
+
+            
+            $member->name = $request->input('name');
+            $member->email = $request->input('email');
+            $member->password = bcrypt($request->input('password'));
+            $member->phone = $request->input('phone');
+            $member->address = $request->input('address');
+            $member->company = $request->input('company');
+            
+            $member->save();
+
+    		$this->guard()->login($member);
+                return response()->json([
+                    'error' => false,
+                    'message' => 'success'
+                ], 200);
+    			
+    		// } else {
+    		// 	$errors = new MessageBag(['errorregister' => 'Đăng ký không thành công']);
+            //     return response()->json([
+            //         'error' => true,
+            //         'message' => $errors
+            //     ], 200);
+    		// }
+    	}
     }
 }
