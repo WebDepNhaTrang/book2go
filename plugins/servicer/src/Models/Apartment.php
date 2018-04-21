@@ -15,6 +15,7 @@ use Venturecraft\Revisionable\RevisionableTrait;
  */
 class Apartment extends Servicer
 {
+	use SlugTrait;
     /**
      * @var string
      */

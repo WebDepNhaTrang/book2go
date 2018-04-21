@@ -17,7 +17,6 @@ class Servicer extends Eloquent
 {
     use RevisionableTrait;
     use SoftDeletes;
-    use SlugTrait;
 
     /**
      * The database table used by the model.
@@ -109,6 +108,6 @@ class Servicer extends Eloquent
      */
     public function hotel()
     {
-        return $this->belongsTo(ServiceType::class)->withDefault();
+        return $this->belongsTo(ServiceType::class, 'service_type_id')->withDefault();
     }
 }

@@ -3,6 +3,8 @@
 namespace Botble\Servicer\Http\Controllers;
 
 use Botble\Servicer\Http\Requests\BookingRequest;
+use Theme;
+use Botble\Servicer\Http\Requests\FrontRequest;
 use Botble\Servicer\Repositories\Interfaces\BookingInterface;
 use Botble\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
@@ -18,9 +20,9 @@ use Auth;
 use Botble\Servicer\Repositories\Interfaces\ServiceTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
 use Botble\Servicer\Repositories\Interfaces\TourInterface;
+use Botble\Servicer\Repositories\Interfaces\RoomTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Http\Requests\PublicRequest;
-use Theme;
 
 class PublicController extends BaseController
 {
@@ -50,6 +52,11 @@ class PublicController extends BaseController
     protected $servicerRepository;
 
     /**
+     * @var RoomTypeInterface
+     */
+    protected $roomTypeRepository;
+
+    /**
      * BookingController constructor.
      * @param BookingInterface $bookingRepository
      * @author Anh Ngo
@@ -58,13 +65,15 @@ class PublicController extends BaseController
     		ServiceTypeInterface $hotelRepository,
     		ApartmentInterface $apartmentRepository,
     		TourInterface $tourRepository,
-    		ServicerInterface $servicerRepository)
+    		ServicerInterface $servicerRepository,
+            RoomTypeInterface $roomTypeRepository)
     {
         $this->bookingRepository = $bookingRepository;
         $this->hotelRepository = $hotelRepository;
         $this->apartmentRepository = $apartmentRepository;
         $this->tourRepository = $tourRepository;
         $this->servicerRepository = $servicerRepository;
+        $this->roomTypeRepository = $roomTypeRepository;
     }
 
     /**
@@ -128,5 +137,87 @@ class PublicController extends BaseController
     	}
 
     	return Theme::scope('search-result', compact('data', 'request'))->render();
+    }
+
+    /**
+     * @param BookingFrontRequest $request
+     * @return view
+     * @author Anh Ngo
+     */
+    public function getBooking(FrontRequest $request)
+    {
+        $servicer = $this->servicerRepository->findById($request->input('id'));
+        
+        $servicer = $this->convertServicer($servicer->id, $servicer->format_type);
+
+        $requests =  $this->requestOnly($request);
+
+        $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
+
+        $total_price = number_format($servicer->price * $requests['number_of_servicer'] * $total_date, 2);
+
+        return Theme::layout('booking')->scope('booking', compact('servicer', 'requests', 'total_price'))->render();
+    }
+
+    private function convertServicer($id, $format_type)
+    {
+        $servicer = collect();
+        switch ($format_type) {
+            case APARTMENT_MODULE_SCREEN_NAME:
+                $servicer = $this->apartmentRepository->findById($id);
+                break;
+            case TOUR_MODULE_SCREEN_NAME:
+                $servicer = $this->tourRepository->findById($id);
+                break;
+            case ROOM_TYPE_MODULE_SCREEN_NAME:
+                $servicer = $this->roomTypeRepository->findById($id);
+                break;
+        }
+        return $servicer;
+    }
+
+    private function totalDate($checkin, $checkout)
+    {
+        $checkin = strtotime($checkin);
+        $checkout = strtotime($checkout);
+        $datediff = $checkout - $checkin;
+
+        $total_date = round($datediff / (60 * 60 * 24));
+        return $total_date;
+    }
+
+    private function requestOnly($request)
+    {
+        return $request->only('checkin', 'checkout', 'number_of_servicer', 'adults', 'children');
+    }
+
+    /**
+     * @param BookingFrontRequest $request
+     * @return view
+     * @author Anh Ngo
+     */
+    public function postBooking(FrontRequest $request, AjaxResponse $response)
+    {
+        $servicer = $this->servicerRepository->findById($request->input('id'));
+        
+        $servicer = $this->convertServicer($servicer->id, $servicer->format_type);
+
+        $requests =  $this->requestOnly($request);
+
+        $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
+
+        $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
+
+        $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
+            'servicer_id' => $request->input('id'),
+            'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,
+            'status' => 1,
+            'total' => $total_price,
+            'servicer_name' => $servicer->name,
+            'total_of_servicer' => $requests['number_of_servicer'],
+            'user_id' => 0,
+        ]));
+
+        return $response->setData($booking)->setMessage('Bạn đã đặt phòng thành công, chúng tôi sẽ gửi mail xác nhận');
     }
 }

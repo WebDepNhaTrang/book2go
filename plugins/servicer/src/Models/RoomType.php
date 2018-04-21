@@ -19,4 +19,13 @@ class RoomType extends Servicer
      * @var string
      */
     protected $screen = ROOM_TYPE_MODULE_SCREEN_NAME;
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @author Anh Ngo
+     */
+    public function getSlugAttribute()
+    {
+        return $this->hotel->slug;
+    }
 }

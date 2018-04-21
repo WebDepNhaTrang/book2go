@@ -77,9 +77,16 @@
             </div>
         </div>
     </div>
+
     <div class="ks-room-list container">
         <div class="row">
-            <form action="#" class="col-md-12 px-0">
+            @if (isset($errors) && count($errors))
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
                 <table class="table d-none d-md-table">
                     <thead>
                         <tr class="table-header">
@@ -89,8 +96,8 @@
 
                             @if($checkin && $checkout)
                                 <th scope="col">Giá phòng/đêm</th>
-                                <th scope="col">SL</th>
-                                <th scope="col">Đặt nhiều nhất</th>
+                                
+                                <th scope="col">Đặt phòng</th>
                             @else
                                 <th scope="col"></th>
                             @endif
@@ -133,25 +140,44 @@
                                             <span class="price">{{$room->price}} </span>
                                             <span class="currency">₫</span>
                                         </div>
-                                    </td>
-                                    <td class="col-so-luong">
-                                        <select class="form-control">
-                                            @for($i = 1; $i <= $room->number_of_servicer; $i++)
-                                                <option value="{{$i}}">{{$i}}</option>
-                                            @endfor
-                                        </select>
-                                    </td>
-                                    <td class="col-dat-phong">
-                                        <div class="gia-thap-nhat">
-                                            <span class="">Giá thấp nhất</span>
-                                        </div>
-                                            <a href="{{route('public.booking', ['id' => $room->id, 'checkin' => $checkin, 'checkout' => $checkout])}}" class="btn btn-sm btn-datphong">Đặt phòng ngay</a>
                                         <div class="dang-nhap-giam">
                                             <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
                                         </div>
                                         <div class="con-trong">
                                             <span>Còn trống {{$room->number_of_servicer}} phòng</span>
                                         </div>
+                                    </td>
+                                    <td class="col-dat-phong">
+                                        <form action="{{route('public.booking')}}" method="get">
+                                            <input type="hidden" name="checkin" value="{{$checkin}}">
+                                            <input type="hidden" name="checkout" value="{{$checkout}}">
+                                            <input type="hidden" name="id" value="{{$room->id}}">
+                                            <span>Phòng</span>
+                                            <select class="form-control" name="number_of_servicer">
+                                                @for($i = 1; $i <= $room->number_of_servicer; $i++)
+                                                    <option value="{{$i}}">{{$i}}</option>
+                                                @endfor
+                                            </select>
+
+                                            <span>Người lớn</span>
+                                            <select class="form-control" name="adults">
+                                                @for($i = 1; $i <= $room->adults; $i++)
+                                                    <option value="{{$i}}">{{$i}}</option>
+                                                @endfor
+                                            </select>
+
+                                            <span>Trẻ em</span>
+                                            <select class="form-control" name="children">
+                                                @for($i = 0; $i <= $room->children; $i++)
+                                                    <option value="{{$i}}">{{$i}}</option>
+                                                @endfor
+                                            </select>
+                                        
+                                            <div class="gia-thap-nhat">
+                                                <span class="">Giá thấp nhất</span>
+                                            </div>
+                                            <button type="submit" class="btn btn-sm btn-datphong">Đặt phòng ngay</button>
+                                        </form>
                                     </td>
                                 @else
                                     <td class="col-alert-notification">
@@ -164,7 +190,7 @@
                     </tbody>
                 </table>
 
-            </form>
+
         </div>
         <div class="row">
             

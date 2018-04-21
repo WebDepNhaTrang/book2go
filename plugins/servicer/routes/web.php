@@ -10,7 +10,11 @@ Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' =>
         ]);
         Route::get('/booking', [
             'as' => 'public.booking',
-            'uses' => 'PublicController@getAvailable',
+            'uses' => 'PublicController@getBooking',
+        ]);
+        Route::post('/booking', [
+            'as' => 'public.booking.post',
+            'uses' => 'PublicController@postBooking',
         ]);
     });
 
