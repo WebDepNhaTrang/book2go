@@ -342,10 +342,12 @@ if (!function_exists('number_format_price')) {
      * @return array
      * @author Anh Ngo
      */
-    function number_format_price($price = null)
+    function number_format_price($price = null, $show = false)
     {  
-        if($price)
-            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';;
+        if($show)
+            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';
+        if($price) 
+            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';
         return null;
     }
 }

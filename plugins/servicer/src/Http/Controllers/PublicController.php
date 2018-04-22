@@ -24,6 +24,7 @@ use Botble\Servicer\Repositories\Interfaces\RoomTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Http\Requests\PublicRequest;
 use EmailHandler;
+use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
 
 class PublicController extends BaseController
 {
@@ -157,17 +158,19 @@ class PublicController extends BaseController
             case TOUR_MODULE_SCREEN_NAME:
                 $price_adults = $servicer->price * $requests['adults'];
                 $price_children = $servicer->price * $requests['children'];
-                $total_price = number_format($price_adults + $price_children, 2);
+                $total_price = $price_adults + $price_children;
                 $view = 'booking-tour';
                 break;
             
             default:
                 $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
-                $total_price = number_format($servicer->price * $requests['number_of_servicer'] * $total_date, 2);
+                $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
                 $view = 'booking';
                 break;
         }
-        return Theme::layout('booking')->scope($view, compact('servicer', 'requests', 'total_price'))->render();
+        $promotion = app(PromotionInterface::class)->getPromotionById($servicer->id, $servicer->format_type, $requests['checkin'], $requests['checkout']);
+
+        return Theme::layout('booking')->scope($view, compact('servicer', 'requests', 'total_price', 'promotion'))->render();
     }
 
     private function convertServicer($id, $format_type)
@@ -228,7 +231,7 @@ class PublicController extends BaseController
                 $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
                 break;
         }
-
+        
         $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
             'servicer_id' => $request->input('id'),
             'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,

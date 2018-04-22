@@ -86,16 +86,21 @@
                         <div class="col-5">
                             <span>{{$requests['number_of_servicer']}} x <a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
                             <div class="price-through">
-                                <span class="price"> {{$total_price}} </span>
-                                <span class="currency">₫</span>
+                                {!! number_format_price($total_price) !!}
                             </div>
                             <div class="price">
-                                <span class="price">0 </span>
-                                <span class="currency">₫</span>
+                                @if($promotion)
+                                    {!! number_format_price($total_price * $promotion->cost / 100) !!}
+                                @else 
+                                    {!! number_format_price(0, true) !!} 
+                                @endif
                             </div>
                             <div class="price-show">
-                                <span class="price"> {{$total_price}} </span>
-                                <span class="currency">₫</span>
+                                @if($promotion)
+                                    {!! number_format_price($total_price - ($total_price * $promotion->cost / 100)) !!}
+                                @else
+                                    {!! number_format_price($total_price) !!}
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -106,8 +111,11 @@
                         </div>
                         <div class="col-5">
                             <div class="price-total">
-                                <span class="price"> {{$total_price}} </span>
-                                <span class="currency">₫</span>
+                                @if($promotion)
+                                    {!! number_format_price($total_price - ($total_price * $promotion->cost / 100)) !!}
+                                @else
+                                    {!! number_format_price($total_price) !!}
+                                @endif
                             </div>
                         </div>
                     </div>
