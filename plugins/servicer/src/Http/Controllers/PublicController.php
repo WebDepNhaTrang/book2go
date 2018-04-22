@@ -23,6 +23,7 @@ use Botble\Servicer\Repositories\Interfaces\TourInterface;
 use Botble\Servicer\Repositories\Interfaces\RoomTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Http\Requests\PublicRequest;
+use EmailHandler;
 
 class PublicController extends BaseController
 {
@@ -152,11 +153,21 @@ class PublicController extends BaseController
 
         $requests =  $this->requestOnly($request);
 
-        $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
-
-        $total_price = number_format($servicer->price * $requests['number_of_servicer'] * $total_date, 2);
-
-        return Theme::layout('booking')->scope('booking', compact('servicer', 'requests', 'total_price'))->render();
+        switch ($servicer->format_type) {
+            case TOUR_MODULE_SCREEN_NAME:
+                $price_adults = $servicer->price * $requests['adults'];
+                $price_children = $servicer->price * $requests['children'];
+                $total_price = number_format($price_adults + $price_children, 2);
+                $view = 'booking-tour';
+                break;
+            
+            default:
+                $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
+                $total_price = number_format($servicer->price * $requests['number_of_servicer'] * $total_date, 2);
+                $view = 'booking';
+                break;
+        }
+        return Theme::layout('booking')->scope($view, compact('servicer', 'requests', 'total_price'))->render();
     }
 
     private function convertServicer($id, $format_type)
@@ -204,20 +215,78 @@ class PublicController extends BaseController
 
         $requests =  $this->requestOnly($request);
 
-        $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
-
-        $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
+        switch ($servicer->format_type) {
+            case TOUR_MODULE_SCREEN_NAME:
+                $price_adults = $servicer->price * $requests['adults'];
+                $price_children = $servicer->price * $requests['children'];
+                $total_price = $price_adults + $price_children;
+                $requests['number_of_servicer'] = 1;
+                break;
+            
+            default:
+                $total_date = $this->totalDate($requests['checkin'], $requests['checkout']);
+                $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
+                break;
+        }
 
         $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
             'servicer_id' => $request->input('id'),
             'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,
             'status' => 1,
+            'subtotal' => $total_price,
+            'discount' => 0,
             'total' => $total_price,
             'servicer_name' => $servicer->name,
             'total_of_servicer' => $requests['number_of_servicer'],
             'user_id' => 0,
+            'amount_adults' => $requests['adults'],
+            'amount_children' => $requests['children'],
         ]));
 
-        return $response->setData($booking)->setMessage('Bạn đã đặt phòng thành công, chúng tôi sẽ gửi mail xác nhận');
+        $data = $this->getDataBooking($booking, $request);
+
+        // Send email for client
+        EmailHandler::send(view('servicer::emails.booking', $data)->render(), trans('servicer::public.email_booking.title'), $data, 'servicer::emails.email');
+
+        // Send email for Admin, ex: sale@hotel.com
+        $data['to'] = setting('contact_email');
+        EmailHandler::send(view('servicer::emails.booking', $data)->render(), trans('servicer::public.email.title'), $data, 'servicer::emails.email');
+
+        return $response->setData($data)->setMessage('Bạn đã đặt phòng thành công, chúng tôi sẽ gửi mail xác nhận');
+    }
+
+    /**
+     * Get data for email
+     *
+     * @author Anh Ngo
+     */
+    public function getDataBooking($booking, $request)
+    {
+        $price = $booking->servicer->price;
+        $total_price = $booking->total;
+        $data = [
+            'name' => $booking->fullname,
+            'fullname' => $booking->fullname,
+            'email' => $booking->email,
+            'phone' => $booking->phone,
+            'address' => $booking->address,
+            'content' => $booking->content,
+            'buffet_breakfast' => $request->input('buffet_breakfast', 0),
+            'special_requirements' =>  $request->input('special_requirements', null),
+            'pickup_requirements' =>  $request->input('pickup_requirements', null),
+            'servicer_id' => $booking->servicer_id,
+            'checkin' => date("d/m/Y", strtotime($booking->checkin)),
+            'checkout' => date("d/m/Y", strtotime($booking->checkout)),
+            'room_name' => $booking->servicer_name,
+            'quantum' => $booking->total_of_servicer,
+            'booking_id' => $booking->id,
+            'date' => date("l, d/m/Y H:i:s", strtotime($booking->created_at)),
+            'to' => $booking->email,
+            'discount' => $booking->discount,
+            'price' => price_room($price),
+            'total_price' => price_room($total_price),
+            'hotel' => $booking->servicer->hotel?$booking->servicer->hotel->name:null
+        ];
+        return $data;
     }
 }

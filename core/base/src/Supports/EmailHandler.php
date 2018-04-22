@@ -26,10 +26,10 @@ class EmailHandler
      * @param $args
      * @author Sang Nguyen
      */
-    public function send($content, $title, $args)
+    public function send($content, $title, $args, $view = null)
     {
         try {
-            event(new SendMailEvent($content, $title . ' - ' . setting('site_title'), $args));
+            event(new SendMailEvent($content, $title . ' - ' . setting('site_title'), $args, $view));
         } catch (Exception $ex) {
             info($ex->getMessage());
             $this->sendErrorException($ex);

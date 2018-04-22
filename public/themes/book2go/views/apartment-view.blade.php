@@ -29,9 +29,14 @@
                     {!! render_facebook_social(route('public.single', $post->slug)) !!}
 
                 </div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-sm btn-danger" disabled>Giảm 30% Hôm nay</button>
-                </div>
+                @if($booking)
+                    @if($promotion)                    
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-sm btn-danger" disabled>Giảm {{ number_format_promotion($promotion->cost)}}</button>
+                        </div>
+                    @endif
+                @endif
+                
             </div>
         </div>
     </div>
@@ -71,6 +76,28 @@
                         <button class="btn btn-primary" type="submit">Kiểm tra <i class="fa fa-search"></i></button>
                     </div>
                 </form>
+                @if($booking)
+                    <form action="{{route('public.booking')}}" method="get">
+                        <input type="hidden" name="checkin" value="{{$checkin?:null}}">
+                        <input type="hidden" name="checkout" value="{{$checkout?:null}}">
+                        <input type="hidden" name="id" value="{{$post->id}}">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <span>Phòng</span>
+                                <select class="form-control" name="number_of_servicer">
+                                    @for($i = 1; $i <= $post->number_of_servicer; $i++)
+                                        <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
+                                </select>
+                            </div>
+                            
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <button class="btn btn-primary" type="submit">Đặt ngay</button>
+                            </div>
+                        </div>
+                        
+                </form>
+                @endif
             </div>
         </div>
     </div>

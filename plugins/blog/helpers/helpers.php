@@ -322,3 +322,30 @@ if (!function_exists('get_previous_post')) {
         return app(PostInterface::class)->getPreviousPost($order, $category_id, $id);
     }
 }
+
+if (!function_exists('number_format_promotion')) {
+    /**
+     * @return array
+     * @author Anh Ngo
+     */
+    function number_format_promotion($cost = null)
+    {  
+        if($cost)
+            return number_format($cost,0,'','') . '%';
+        return null;
+    }
+}
+
+
+if (!function_exists('number_format_price')) {
+    /**
+     * @return array
+     * @author Anh Ngo
+     */
+    function number_format_price($price = null)
+    {  
+        if($price)
+            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';;
+        return null;
+    }
+}

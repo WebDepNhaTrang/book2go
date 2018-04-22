@@ -37,8 +37,8 @@ if (!function_exists('get_all_apartments')) {
      */
     function get_all_apartments($select = ['*'])
     {
-        $hotels = app(ApartmentInterface::class)->getApartments($select);
-        return $hotels;
+        $apartments = app(ApartmentInterface::class)->getApartments($select);
+        return $apartments;
     }
 }
 

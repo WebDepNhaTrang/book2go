@@ -59,10 +59,10 @@
             </div>
             <div class="col-md-5">
                 <div class="ks-booking-info">
-                    <h5>Thông tin về phòng đã chọn</h5>
+                    <h5>Thông tin về tour đã chọn</h5>
                     <div class="row date-time">
                         <div class="col-5">
-                            <span>Nhận phòng</span><br>
+                            <span>Ngày đi</span><br>
                             <span class="dd">{{date('d', strtotime($requests['checkin']))}}</span>
                             <span>{{date('m Y', strtotime($requests['checkin']))}}</span>
                         </div>
@@ -70,31 +70,25 @@
                             <i class="icon-arrow fas fa-angle-right"></i>
                         </div>
                         <div class="col-5">
-                            <span>Trả phòng</span><br>
+                            <span>Ngày về</span><br>
                             <span class="dd">{{date('d', strtotime($requests['checkout']))}}</span>
                             <span>{{date('m Y', strtotime($requests['checkout']))}}</span>
                         </div>
-
                     </div>
                     <div class="row price-detail">
                         <div class="col-7">
-                            <span>Loại phòng:</span><br>
-                            <span>Giá gốc:</span><br>
-                            <span>Khuyến mãi:</span><br>
-                            <span>Giá tiền:</span>
+                            <span>Tên Tour:</span><br>
+                            <span>Người lớn ({{$requests['adults']}} khách):</span><br>
+                            <span>Trẻ em ({{$requests['children']}} khách):</span>
                         </div>
                         <div class="col-5">
-                            <span>{{$requests['number_of_servicer']}} x <a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
-                            <div class="price-through">
-                                <span class="price"> {{$total_price}} </span>
-                                <span class="currency">₫</span>
-                            </div>
-                            <div class="price">
-                                <span class="price">0 </span>
+                            <span><a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
+                            <div class="price-show">
+                                <span class="price">{{$total_price}}</span>
                                 <span class="currency">₫</span>
                             </div>
                             <div class="price-show">
-                                <span class="price"> {{$total_price}} </span>
+                                <span class="price">0 </span>
                                 <span class="currency">₫</span>
                             </div>
                         </div>
@@ -106,13 +100,12 @@
                         </div>
                         <div class="col-5">
                             <div class="price-total">
-                                <span class="price"> {{$total_price}} </span>
+                                <span class="price">{{$total_price}} </span>
                                 <span class="currency">₫</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>

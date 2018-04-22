@@ -43,6 +43,11 @@
         {!! Theme::footer() !!}
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
+        <script type="text/x-custom-template" id="message_after_booking">
+            <div class="alert alert-info">__message__</div>
+                <div class="alert alert-info">Chúng tôi sẽ chuyển về trang chủ sau <span id="timeLeft">10</span>
+            </div>
+        </script>
         <script type="text/javascript">
             $(document).ready(function(){
 
@@ -68,6 +73,9 @@
                         'email': {
                             required: true,
                             email: true
+                        },
+                        'address': {
+                            required: true
                         }
                     },
                     messages:
@@ -81,42 +89,15 @@
                 { 
                     $this = $('form#booking-available');
                     var dataForm = $this.serializeArray();
-                    dataForm.push(
-                            {
-                                name: "checkin",
-                                value: getParameterByName('checkin')
-                            }
-                    );
-                    dataForm.push(
-                            {
-                                name: "checkout",
-                                value: getParameterByName('checkout')
-                            }
-                    );
-                    dataForm.push(
-                            {
-                                name: "id",
-                                value: getParameterByName('id')
-                            }
-                    );
-                    dataForm.push(
-                            {
-                                name: "children",
-                                value: getParameterByName('children')
-                            }
-                    );
-                    dataForm.push(
-                            {
-                                name: "adults",
-                                value: getParameterByName('adults')
-                            }
-                    );
-                    dataForm.push(
-                            {
-                                name: "number_of_servicer",
-                                value: getParameterByName('number_of_servicer')
-                            }
-                    );
+                    var params = ['checkin', 'checkout', 'id', 'children', 'adults', 'number_of_servicer'];
+                    $.each(params, function(i, v){
+                        dataForm.push(
+                                {
+                                    name: v,
+                                    value: getParameterByName(v)
+                                }
+                        );
+                    });
 
                     $.ajax({
                         type : 'POST',
@@ -131,8 +112,8 @@
                         {   
                             // Display a success toast, with a title
                             toastr.success(response.message);
-                            $('.pageBooking').html('<div class="alert alert-info">'+ response.message + '</div>\
-                            <div class="alert alert-info">Chúng tôi sẽ chuyển về trang chủ sau <span id="timeLeft">10</span></div>');
+                            var template = $('#message_after_booking').html().replace(/__message__/gi, response.message || '');
+                            $('.pageBooking').html(template);
 
                             $this.find('button').attr('disabled', false);
                             // Your delay in milliseconds
