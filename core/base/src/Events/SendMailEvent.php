@@ -24,17 +24,23 @@ class SendMailEvent extends Event
     public $args;
 
     /**
+     * @var string
+     */
+    public $view;
+
+    /**
      * SendMailEvent constructor.
      * @param $content
      * @param $title
      * @param $args
      * @author Sang Nguyen
      */
-    public function __construct($content, $title, $args)
+    public function __construct($content, $title, $args, $view = null)
     {
         $this->content = $content;
         $this->title = $title;
         $this->args = $args;
+        $this->view = $view;
     }
 
     /**

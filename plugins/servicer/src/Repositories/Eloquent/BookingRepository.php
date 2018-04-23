@@ -27,9 +27,7 @@ class BookingRepository extends RepositoriesAbstract implements BookingInterface
                                                 $query->whereDate('checkin', '>=' ,$checkin)
                                                       ->whereDate('checkin', '<=' ,$checkout);
                                     });
-                            })
-                            
-                            ->groupBy('servicer_id');
+                            })->groupBy('servicer_id');
         $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, SERVICER_MODULE_SCREEN_NAME)->get();
 	    $this->resetModel();
 	    return $data;

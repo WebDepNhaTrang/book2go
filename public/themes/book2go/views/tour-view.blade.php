@@ -74,7 +74,7 @@
                         <span>/khách</span>
                     </span>
                 </p>
-                <form id="search-hotel" action="tour-booking.html" class="row">
+                <form id="search-hotel" action="{{route('public.booking')}}" class="row" method="GET">
                     <div class="col-xs-12 col-sm-4 col-md-6 arrival-date">
                         <div class="form-group mb-0">
                             <label for="arrivalDate" class="control-label">Ngày đi</label>
@@ -86,6 +86,7 @@
                                     </div>
                                     <input type="hidden" name="checkin" value="">
                                     <input type="hidden" name="checkout" value="">
+                                    <input type="hidden" name="id" value="{{$post->id}}">
                                 </div>
                             </div>
                         </div>
@@ -95,12 +96,10 @@
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Người lớn</label>
                             <div class="input-group">
-                                <select name="" id="adults" class="form-control">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                                <select class="form-control" name="adults" id="adults" >
+                                    @for($i = 1; $i <= 10; $i++)
+                                        <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
                                 </select>
                             </div>
                         </div>
@@ -109,13 +108,10 @@
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Trẻ em</label>
                             <div class="input-group">
-                                <select name="" class="form-control">
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                                <select class="form-control" name="children" id="children" >
+                                    @for($i = 0; $i <= 10; $i++)
+                                        <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
                                 </select>
                             </div>
                         </div>

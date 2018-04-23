@@ -16,26 +16,34 @@ class PromotionForm extends FormAbstract
     public function buildForm()
     {
         $hotels[0]  = "None";
-        if(get_all_hotels(['id', 'name'])){
-            $hotels = array_merge($hotels, get_all_hotels(['id', 'name'])->pluck('name', 'id')->toArray());
+        if($hotels = get_all_hotels(['id', 'name'])){
+            $hotels = $hotels->pluck('name', 'id')->toArray();
+            $hotels[0]  = "None";
+            $hotels = array_sort_recursive($hotels);
         }
+
         $selected_hotels = 0;
         if ($this->getModel() && $this->getModel()->hotels->first() != null) {
             $selected_hotels = $this->getModel()->hotels->first()->id;
         }
 
         $tours[0]  = "None";
-        if(get_all_tours(['id', 'name'])){
-            $tours = array_merge($tours, get_all_tours(['id', 'name'])->pluck('name', 'id')->toArray());
+        if($tours = get_all_tours(['id', 'name'])){
+            $tours = $tours->pluck('name', 'id')->toArray();
+            $tours[0]  = "None";
+            $tours = array_sort_recursive($tours);
         }
+
         $selected_tours = 0;
         if ($this->getModel() && $this->getModel()->tours->first() != null) {
             $selected_tours = $this->getModel()->tours->first()->id;
         }
 
         $apartments[0]  = "None";
-        if(get_all_apartments(['id', 'name'])){
-            $apartments = array_merge($apartments, get_all_apartments(['id', 'name'])->pluck('name', 'id')->toArray()) ;
+        if($apartments = get_all_apartments(['id', 'name'])){
+            $apartments = $apartments->pluck('name', 'id')->toArray();
+            $apartments[0]  = "None";
+            $apartments = array_sort_recursive($apartments);
         }
 
         $selected_apartments = 0;

@@ -26,6 +26,7 @@ class FrontRequest extends Request
         $max_servicer = 0;
         $adults = 0;
         $children = 0;
+        $format_type = null;
     	$servicer = app(ServicerInterface::class)->findById($id);
     	if($servicer){
     		$bookings = app(BookingInterface::class)->getTotalOfServicer($servicer->id, $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
@@ -36,6 +37,7 @@ class FrontRequest extends Request
     		}
             $children = $servicer->children;
             $adults = $servicer->adults;
+            $format_type = $servicer->format_type;
     	}
         
 
@@ -47,11 +49,25 @@ class FrontRequest extends Request
 			        }),
 			 ],
 			'checkin' => 'required|date_format:Y-m-d|after:yesterday|before:checkout',
-            'checkout' => 'required|date_format:Y-m-d|after:checkin',
-            'number_of_servicer' => 'required|numeric|between:1,'.$max_servicer,
-            'adults' => 'required|numeric|between:1,'.$adults,
-            'children' => 'required|numeric|max:'.$children
+            'checkout' => 'required|date_format:Y-m-d|after:checkin'
     	];
+        switch ($format_type) {
+            case TOUR_MODULE_SCREEN_NAME:
+                $rule = array_merge($rule, [
+                    'number_of_servicer' => '',
+                    'adults' => 'required|numeric',
+                    'children' => 'required|numeric'
+                ]);
+                break;
+            
+            default:
+                $rule = array_merge($rule, [
+                    'number_of_servicer' => 'required|numeric|between:1,'.$max_servicer,
+                    // 'adults' => 'required|numeric|between:1,'.$adults,
+                    // 'children' => 'required|numeric|max:'.$children
+                ]); 
+                break;
+        }
         switch ($this->method()) {
             case 'POST':
                 $rule = array_merge($rule, [
@@ -61,7 +77,6 @@ class FrontRequest extends Request
                     'address' => 'required'
                 ]); 
             break;
-           
         }
         return $rule;
     }

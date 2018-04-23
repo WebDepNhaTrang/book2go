@@ -20,4 +20,13 @@ class Apartment extends Servicer
      * @var string
      */
     protected $screen = APARTMENT_MODULE_SCREEN_NAME;
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+     * @author Anh Ngo
+     */
+    public function promotions()
+    {
+        return $this->belongsToMany(Promotion::class, 'promotion_servicer', 'reference_id', 'promotion_id')->where('reference', '=', APARTMENT_MODULE_SCREEN_NAME)->orderBy('cost', 'asc');
+    }
 }

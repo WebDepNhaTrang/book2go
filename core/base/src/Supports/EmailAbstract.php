@@ -26,6 +26,11 @@ class EmailAbstract extends Mailable
     public $data;
 
     /**
+     * @var string
+     */
+    public $view;
+
+    /**
      * Create a new message instance.
      *
      * @param $content
@@ -33,11 +38,12 @@ class EmailAbstract extends Mailable
      * @param array $data
      * @author Sang Nguyen
      */
-    public function __construct($content, $subject, $data = [])
+    public function __construct($content, $subject, $data = [], $view = null)
     {
         $this->content = $content;
         $this->subject = $subject;
         $this->data = $data;
+        $this->view = $view;
     }
 
     /**
@@ -48,9 +54,14 @@ class EmailAbstract extends Mailable
      */
     public function build()
     {
-        $email = $this->from(setting('admin_email'))
+        if($this->view){
+            $view = $this->view;
+        }else{
+            $view = config('core.base.general.email_template');
+        }
+        $email = $this->from(setting('email_from_address'),setting('email_from_name'))
             ->subject($this->subject)
-            ->view(config('core.base.general.email_template'))
+            ->view($view)
             ->with(['content' => $this->content]);
 
         $attachments = array_get($this->data, 'attachments');

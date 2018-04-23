@@ -108,4 +108,13 @@ class Booking extends Eloquent
     {
         return $this->belongsTo(User::class)->withDefault();
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @author Anh Ngo
+     */
+    public function servicer()
+    {
+        return $this->belongsTo(Servicer::class);
+    }
 }

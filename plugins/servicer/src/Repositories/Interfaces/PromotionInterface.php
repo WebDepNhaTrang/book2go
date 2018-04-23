@@ -6,4 +6,9 @@ use Botble\Support\Repositories\Interfaces\RepositoryInterface;
 
 interface PromotionInterface extends RepositoryInterface
 {
+	/**
+	 * @param array $select
+	 * @return Collection
+	 */
+	public function getPromotionById($id, $type, $checkin, $checkout);
 }
