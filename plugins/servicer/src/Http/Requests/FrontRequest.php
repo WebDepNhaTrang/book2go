@@ -22,13 +22,13 @@ class FrontRequest extends Request
         $checkin = request()->get('checkin');
         $checkout = request()->get('checkout');
         $number_of_servicer = request()->get('number_of_servicer');
-        $id = request()->get('id');
+        $id = request()->get('id', 0);
         $max_servicer = 0;
         $adults = 0;
         $children = 0;
         $format_type = null;
     	$servicer = app(ServicerInterface::class)->findById($id);
-    	if($servicer){
+    	if($servicer && $checkin && $checkout){
     		$bookings = app(BookingInterface::class)->getTotalOfServicer($servicer->id, $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
     		if(array_key_exists($servicer->id, $bookings)){
     		    $max_servicer = $servicer->number_of_servicer - $bookings[$servicer->id];
@@ -48,8 +48,8 @@ class FrontRequest extends Request
 			                $query->where('id', $id)->where('status', 1);
 			        }),
 			 ],
-			'checkin' => 'required|date_format:Y-m-d|after:yesterday|before:checkout',
-            'checkout' => 'required|date_format:Y-m-d|after:checkin'
+			'checkin' => 'required|date|date_format:Y-m-d|after:yesterday|before:checkout',
+            'checkout' => 'required|date|date_format:Y-m-d|after:checkin'
     	];
         switch ($format_type) {
             case TOUR_MODULE_SCREEN_NAME:

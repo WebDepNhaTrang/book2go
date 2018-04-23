@@ -49,5 +49,16 @@ return [
 	            ],
 	        ],
 	    ],
+	    [
+	        'label' => 'Name of Discount Membership',
+	        'type' => 'text',
+	        'attributes' => [
+	            'name' => 'member_discounts_name',
+	            'value' => 'Đăng nhập để giảm thêm <strong>200,000</strong> ₫',
+	            'options' => [
+	                'class' => 'form-control',
+	            ],
+	        ],
+	    ],
     ],
 ];

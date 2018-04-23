@@ -108,7 +108,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($room_types as $room)
+                    @foreach($room_types as $key => $room)
                         <tr>
                             <td class="col-room-type">
                                 <div>
@@ -132,23 +132,30 @@
                             </td>
                             @if($checkin && $checkout)
                                 <td class="col-gia-phong">
-                                    <div class="tiet-kiem-ngay">
-                                        <span>Tiết kiệm 10% ngay hôm nay!</span>
-                                    </div>
-                                    <div class="price-through">
-                                        <span class="price">{{$room->price}} </span>
-                                        <span class="currency">₫</span>
-                                    </div>
-                                    <div class="price-show">
-                                        <span class="price">{{$room->price}} </span>
-                                        <span class="currency">₫</span>
-                                    </div>
+                                    @if($promotion)
+                                        <div class="tiet-kiem-ngay">
+                                            <span>{{$promotion->promotion_name}}</span>
+                                        </div>
+                                        <div class="price-through">
+                                            {!! number_format_price($room->price * $promotion->cost / 100) !!}
+                                        </div>
+                                        <div class="price-show">
+                                            {!! number_format_price($room->price - ($room->price * $promotion->cost / 100)) !!}
+                                        </div>
+                                    @else
+                                        <div class="price-show">
+                                            {!! number_format_price($room->price) !!}
+                                        </div>
+                                    @endif
+                                    
                                 </td>
                                 
                                 <td class="col-dat-phong">
-                                    <div class="gia-thap-nhat">
-                                        <span class="">Giá thấp nhất</span>
-                                    </div>
+                                    @if($key == 0)
+                                        <div class="gia-thap-nhat">
+                                            <span class="">Giá thấp nhất</span>
+                                        </div>
+                                    @endif
                                     <form action="{{route('public.booking')}}" method="get">
                                         <input type="hidden" name="checkin" value="{{$checkin}}">
                                         <input type="hidden" name="checkout" value="{{$checkout}}">
@@ -163,9 +170,9 @@
                                         </div>
                                         <div class="col-8 float-right">
                                             <button type="submit" class="btn btn-sm btn-datphong">Đặt phòng ngay</button>
-                                            @if(!Auth::guard('member')->check())
+                                            @if(!Auth::guard('member')->check() && setting('allow_discount_membership'))
                                                 <div class="dang-nhap-giam">
-                                                    <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
+                                                    <p>{!! setting('member_discounts_name') !!}</p>
                                                 </div>
                                             @endif
                                             <div class="con-trong">

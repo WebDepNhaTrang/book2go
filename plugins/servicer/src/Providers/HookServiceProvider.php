@@ -46,6 +46,7 @@ class HookServiceProvider extends ServiceProvider
 
                 case TOUR_MODULE_SCREEN_NAME:
                     $post = app(TourInterface::class)->findById($slug->reference_id);
+                    
                     $post = apply_filters(BASE_FILTER_BEFORE_GET_SINGLE, $post, app(TourInterface::class)->getModel(), TOUR_MODULE_SCREEN_NAME);
                     if (!empty($post)) {
 
@@ -63,6 +64,7 @@ class HookServiceProvider extends ServiceProvider
                            $checkout = request()->get('checkout');
                            $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);
                         }
+
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
                             'view' => config('plugins.servicer.servicer.tour-view'),

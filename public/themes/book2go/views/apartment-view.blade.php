@@ -95,8 +95,7 @@
                                 <button class="btn btn-primary" type="submit">Đặt ngay</button>
                             </div>
                         </div>
-                        
-                </form>
+                    </form>
                 @endif
             </div>
         </div>

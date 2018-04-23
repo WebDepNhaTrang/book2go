@@ -1,12 +1,12 @@
 <section id="ks-booking">
                 
     <div class="container">
-    	@if(!Auth::guard('member')->check())
+    	@if(!Auth::guard('member')->check() && setting('allow_discount_membership'))
             <div class="login-tip">
                 <div class="row">
                     <div class="col-9">
                         <i class="insider-banner-tag"></i>
-                        <strong>Giảm đến 30% với Ưu đãi nội bộ Book2govn!</strong>
+                        <strong>{!! setting('member_discounts_name') !!}</strong>
                         <p>Giá sẽ giảm ngay khi đăng nhập!</p>
                     </div>
                     <div class="col-3">
