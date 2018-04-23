@@ -115,6 +115,6 @@ class ServiceType extends Eloquent
      */
     public function roomTypeActive()
     {
-        return $this->hasMany(Servicer::class, 'service_type_id')->where('servicers.status', '=', 1);
+        return $this->hasMany(Servicer::class, 'service_type_id')->where('servicers.status', '=', 1)->orderBy('price', 'asc');
     }
 }

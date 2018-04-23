@@ -43,19 +43,15 @@
                                 </div>
                             @endif
                             <div>
-                                @if(!empty($promotion))
-                                    <div class="price-through">
-                                        {!! number_format_price($row->price) !!}
-                                    </div>
+                                @if(isset($row->format_type))
                                     <div class="price-show">
-                                        {!! number_format_price($row->price - ($row->price*$promotion->cost/100)) !!}
+                                        {!! number_format_price($row->price) !!}
                                     </div>
                                 @else
                                     <div class="price-show">
-                                        {!! number_format_price($row->price) !!}
+                                        {!! number_format_price($row->roomTypeActive?$row->roomTypeActive->first()->price:null) !!}
                                     </div>
                                 @endif
-                                
                             </div>
                         </div>
                         <div class="clear-fix"></div>
