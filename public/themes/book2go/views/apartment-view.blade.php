@@ -29,14 +29,14 @@
                     {!! render_facebook_social(route('public.single', $post->slug)) !!}
 
                 </div>
-                @if($booking)
-                    @if($promotion)                    
-                        <div class="col-md-4">
-                            <button type="button" class="btn btn-sm btn-danger" disabled>Giảm {{ number_format_promotion($promotion->cost)}}</button>
-                        </div>
-                    @endif
+
+                @if($promotion)
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-sm btn-danger" disabled>{{$promotion->promotion_name}}</button>
+                        <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                    </div>
                 @endif
-                
+
             </div>
         </div>
     </div>

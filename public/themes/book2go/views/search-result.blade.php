@@ -33,24 +33,38 @@
 
                         </div>
                         <div class="col-md-4 float-right">
-                            <div class="tiet-kiem-ngay">
-                                <span>Tiết kiệm 10% ngay hôm nay!</span>
-                            </div>
+                            @php 
+                                $promotion= get_promotion_by_id($row->id, $row->format_type?:request()->get('type'), request()->get('checkin'), request()->get('checkout'));
+                            @endphp
+                            @if($promotion)
+                                <div class="tiet-kiem-ngay">
+                                    <span>{{$promotion->promotion_name}}</span><br/>
+                                    <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                                </div>
+                            @endif
                             <div>
-                                <div class="price-through">
-                                    <span class="price">1,000,000 </span>
-                                    <span class="currency">₫</span>
-                                </div>
-                                <div class="price-show">
-                                    <span class="price">{{$row->price}}</span>
-                                    <span class="currency">₫</span>
-                                </div>
+                                @if(!empty($promotion))
+                                    <div class="price-through">
+                                        {!! number_format_price($row->price) !!}
+                                    </div>
+                                    <div class="price-show">
+                                        {!! number_format_price($row->price - ($row->price*$promotion->cost/100)) !!}
+                                    </div>
+                                @else
+                                    <div class="price-show">
+                                        {!! number_format_price($row->price) !!}
+                                    </div>
+                                @endif
+                                
                             </div>
                         </div>
                         <div class="clear-fix"></div>
                     </div>
                 </div>
             @endforeach
+
+            {{$data->links()}}
+
         @endif
     </div>
     

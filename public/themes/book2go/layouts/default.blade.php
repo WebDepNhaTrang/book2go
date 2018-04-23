@@ -22,5 +22,15 @@
         {!! Theme::partial('footer') !!}
 
         {!! Theme::footer() !!}
+
+        @if (isset($errors) && count($errors))
+            <script type="text/javascript">
+                
+                toastr.error("Đã có lỗi xảy ra, vui lòng kiểm tra lại!!!");
+                @foreach ($errors->all() as $error)
+                    
+                @endforeach
+            </script>
+        @endif
     </body>
 </html>

@@ -30,8 +30,7 @@ class PromotionRepository extends RepositoriesAbstract implements PromotionInter
 						 })
 						->select(['*', 'promotions.name as promotion_name'])
 						->distinct()
-		                ->orderBy('promotions.cost', 'desc')
-		                ->first();
+		                ->orderBy('promotions.cost', 'desc');
 	 	    
 		}else{
      	    $data = $this->model
@@ -50,10 +49,10 @@ class PromotionRepository extends RepositoriesAbstract implements PromotionInter
     					 })
     					->select(['*', 'promotions.name as promotion_name'])
     					->distinct()
-    	                ->orderBy('promotions.cost', 'desc')
-    	                ->first();
+    	                ->orderBy('promotions.cost', 'desc');
 		}
  	    
+		$data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, PROMOTION_MODULE_SCREEN_NAME)->first();
 
 	    $this->resetModel();
 	    return $data;

@@ -10,9 +10,86 @@
         <meta http-equiv="content-language" content="en">
 
         {!! Theme::header() !!}
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        
+        <style type="text/css">
+            .loader {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              position: fixed;
+              border: 4px solid #ff6c00;
+              top: 50%;
+              animation: loader 2s infinite ease;
+              z-index: 9999;
+            }
+
+            .loader-inner {
+              vertical-align: top;
+              display: inline-block;
+              width: 100%;
+              background-color: #ff6c00;
+              animation: loader-inner 2s infinite ease-in;
+            }
+
+            @keyframes loader {
+              0% {
+                transform: rotate(0deg);
+              }
+              
+              25% {
+                transform: rotate(180deg);
+              }
+              
+              50% {
+                transform: rotate(180deg);
+              }
+              
+              75% {
+                transform: rotate(360deg);
+              }
+              
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+
+            @keyframes loader-inner {
+              0% {
+                height: 0%;
+              }
+              
+              25% {
+                height: 0%;
+              }
+              
+              50% {
+                height: 100%;
+              }
+              
+              75% {
+                height: 100%;
+              }
+              
+              100% {
+                height: 0%;
+              }
+            }
+            .pre-loader{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background-color: rgba(255, 108, 0, 0.5);
+                z-index: 9999;
+                display: none;
+            }
+        </style>
     </head>
     <body>
+        <div class="text-center pre-loader">
+             <!-- Loading square for squar.red network -->
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+         
         <div id="wrapper">
             {!! Theme::partial('header') !!}
 
@@ -42,11 +119,10 @@
 
         {!! Theme::footer() !!}
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
+        
         <script type="text/x-custom-template" id="message_after_booking">
-            <div class="alert alert-info">__message__</div>
-                <div class="alert alert-info">Chúng tôi sẽ chuyển về trang chủ sau <span id="timeLeft">10</span>
-            </div>
+            <div class="alert alert-info">__message__ <br/>Chúng tôi sẽ chuyển về trang chủ sau 
+                <span id="timeLeft">10</span></div>
         </script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -106,25 +182,34 @@
                         dataType: 'json',
                         beforeSend: function()
                         { 
-                            $this.find('button').attr('disabled', true);
+                            $('.pre-loader').fadeIn();
+                            $this.find('button').attr('disabled', true).html('Đang xác thực');
                         },
                         success :  function(response)
                         {   
-                            // Display a success toast, with a title
-                            toastr.success(response.message);
-                            var template = $('#message_after_booking').html().replace(/__message__/gi, response.message || '');
-                            $('.pageBooking').html(template);
+                            if(response.error == false){
+                                $('.pre-loader').fadeOut();
+                                // Display a success toast, with a title
+                                toastr.success(response.message);
+                                var template = $('#message_after_booking').html().replace(/__message__/gi, response.message || '');
+                                $('.pageBooking').html(template);
 
-                            $this.find('button').attr('disabled', false);
-                            // Your delay in milliseconds
-                            window.setInterval(function() {
-                                var timeLeft    = $("#timeLeft").html();                                
-                                if(eval(timeLeft) == 0){
-                                        window.location= ($('a.navbar-brand').attr('href'));                 
-                                }else{              
-                                    $("#timeLeft").html(eval(timeLeft)- eval(1));
-                                }
-                            }, 1000); 
+                                $this.find('button').attr('disabled', false);
+                                // Your delay in milliseconds
+                                window.setInterval(function() {
+                                    var timeLeft    = $("#timeLeft").html();                                
+                                    if(eval(timeLeft) == 0){
+                                            window.location= ($('a.navbar-brand').attr('href'));                 
+                                    }else{              
+                                        $("#timeLeft").html(eval(timeLeft)- eval(1));
+                                    }
+                                }, 1000); 
+                            }else{
+                                // Display a success toast, with a title
+                                toastr.error(response.message);
+                                $this.find('button').attr('disabled', true).html('Opp!!!');
+                            }
+                            
                         },
                         error: function() {
                             alert( "error" );

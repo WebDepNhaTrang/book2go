@@ -51,7 +51,7 @@
                             <label for="txtaddress">Địa chỉ</label>
                             <input type="text" class="form-control" id="txtaddress" name="address" value="{{old('address', $member?$member->address:null)}}" placeholder="Nhập địa chỉ">
                         </div>
-
+                        <input type="hidden" name="booking_id" value="{{$booking->id}}">
                         <button type="submit" class="btn btn-primary">Xác nhận đặt phòng</button>
                     {!! Form::close() !!}
                 </div>
@@ -63,33 +63,45 @@
                     <div class="row date-time">
                         <div class="col-5">
                             <span>Ngày đi</span><br>
-                            <span class="dd">{{date('d', strtotime($requests['checkin']))}}</span>
-                            <span>{{date('m Y', strtotime($requests['checkin']))}}</span>
+                            <span class="dd">{{date('d', strtotime($booking->checkin))}}</span>
+                            <span>{{date('m Y', strtotime($booking->checkin))}}</span>
                         </div>
                         <div class="col-2">
                             <i class="icon-arrow fas fa-angle-right"></i>
                         </div>
                         <div class="col-5">
                             <span>Ngày về</span><br>
-                            <span class="dd">{{date('d', strtotime($requests['checkout']))}}</span>
-                            <span>{{date('m Y', strtotime($requests['checkout']))}}</span>
+                            <span class="dd">{{date('d', strtotime($booking->checkout))}}</span>
+                            <span>{{date('m Y', strtotime($booking->checkout))}}</span>
                         </div>
                     </div>
                     <div class="row price-detail">
                         <div class="col-7">
                             <span>Tên Tour:</span><br>
-                            <span>Người lớn ({{$requests['adults']}} khách):</span><br>
-                            <span>Trẻ em ({{$requests['children']}} khách):</span>
+                            <span>Người lớn ({{$booking->amount_adults}} khách):</span><br>
+                            <span>Trẻ em ({{$requests['children']}} khách):</span><br>
+                            <span>Khuyến mãi 
+                                @if($booking->discount)
+                                    @php $notes = null; @endphp
+                                    @foreach(json_decode($booking->notes, true) as $value)
+                                        @php
+                                            $promotion_discount = number_format_price_nohtml($value['promotion_discount']);
+                                         $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
+                                    @endforeach
+                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:</span><br>
+                                @endif:
+                            </span>
                         </div>
                         <div class="col-5">
                             <span><a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
                             <div class="price-show">
-                                <span class="price">{{$total_price}}</span>
-                                <span class="currency">₫</span>
+                                {!! number_format_price($booking->amount_adults * $servicer->price, true) !!}
                             </div>
                             <div class="price-show">
-                                <span class="price">0 </span>
-                                <span class="currency">₫</span>
+                                {!! number_format_price($booking->amount_children * $servicer->price_children, true) !!}
+                            </div>
+                            <div class="price-show">
+                                {!! number_format_price($booking->discount, true) !!}
                             </div>
                         </div>
                     </div>
@@ -100,8 +112,7 @@
                         </div>
                         <div class="col-5">
                             <div class="price-total">
-                                <span class="price">{{$total_price}} </span>
-                                <span class="currency">₫</span>
+                                {!! number_format_price($booking->total) !!}
                             </div>
                         </div>
                     </div>

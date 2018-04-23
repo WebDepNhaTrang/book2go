@@ -351,3 +351,14 @@ if (!function_exists('number_format_price')) {
         return null;
     }
 }
+
+if (!function_exists('number_format_price_nohtml')) {
+    /**
+     * @return array
+     * @author Anh Ngo
+     */
+    function number_format_price_nohtml($price = null)
+    {  
+        return number_format($price, 2) . '₫';
+    }
+}

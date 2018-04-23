@@ -4,6 +4,7 @@ use Botble\Servicer\Repositories\Interfaces\ServiceTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
 use Botble\Servicer\Repositories\Interfaces\TourInterface;
+use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 if (!function_exists('get_all_hotels')) {
@@ -131,5 +132,17 @@ if (!function_exists('render_facebook_social')) {
         return null;
         
         
+    }
+}
+
+if (!function_exists('get_promotion_by_id')) {
+    /**
+     * @param array $args
+     * @return array|mixed
+     */
+    function get_promotion_by_id($id, $type, $checkin, $checkout)
+    {
+        $promotion = app(PromotionInterface::class)->getPromotionById($id, $type, $checkin, $checkout);
+        return $promotion;
     }
 }

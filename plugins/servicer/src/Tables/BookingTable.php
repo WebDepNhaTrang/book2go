@@ -52,7 +52,7 @@ class bookingTable extends TableAbstract
         /**
         * @var \Eloquent $model
         */
-        $query = $model->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status']);
+        $query = $model->where('status', '=', 1)->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status']);
         return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, BOOKING_MODULE_SCREEN_NAME));
     }
 

@@ -25,6 +25,7 @@ use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Http\Requests\PublicRequest;
 use EmailHandler;
 use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class PublicController extends BaseController
 {
@@ -59,6 +60,11 @@ class PublicController extends BaseController
     protected $roomTypeRepository;
 
     /**
+     * @var PromotionInterface
+     */
+    protected $promotionRepository;
+
+    /**
      * BookingController constructor.
      * @param BookingInterface $bookingRepository
      * @author Anh Ngo
@@ -68,7 +74,8 @@ class PublicController extends BaseController
     		ApartmentInterface $apartmentRepository,
     		TourInterface $tourRepository,
     		ServicerInterface $servicerRepository,
-            RoomTypeInterface $roomTypeRepository)
+            RoomTypeInterface $roomTypeRepository,
+            PromotionInterface $promotionRepository)
     {
         $this->bookingRepository = $bookingRepository;
         $this->hotelRepository = $hotelRepository;
@@ -76,6 +83,7 @@ class PublicController extends BaseController
         $this->tourRepository = $tourRepository;
         $this->servicerRepository = $servicerRepository;
         $this->roomTypeRepository = $roomTypeRepository;
+        $this->promotionRepository = $promotionRepository;
     }
 
     /**
@@ -138,6 +146,19 @@ class PublicController extends BaseController
             $data = $tours;
     	}
 
+        $currentPage = LengthAwarePaginator::resolveCurrentPage('page');
+        $numOfItemOnPage = 7;
+        if ($currentPage == 1) {
+            $start = 0;
+        }else {
+            $start = ($currentPage - 1) * $numOfItemOnPage;
+        }
+        $currentPageCollection = $data->slice($start, $numOfItemOnPage)->all();
+        $data = new LengthAwarePaginator($currentPageCollection, count($data), $numOfItemOnPage);
+        $data->setPath(route('available.list').'?type='.$type.'&checkin='.$checkin.'&checkout='.$checkout);
+
+        
+
     	return Theme::scope('search-result', compact('data', 'request'))->render();
     }
 
@@ -160,6 +181,7 @@ class PublicController extends BaseController
                 $price_children = $servicer->price * $requests['children'];
                 $total_price = $price_adults + $price_children;
                 $view = 'booking-tour';
+                $requests['number_of_servicer'] = 1;
                 break;
             
             default:
@@ -168,9 +190,26 @@ class PublicController extends BaseController
                 $view = 'booking';
                 break;
         }
-        $promotion = app(PromotionInterface::class)->getPromotionById($servicer->id, $servicer->format_type, $requests['checkin'], $requests['checkout']);
 
-        return Theme::layout('booking')->scope($view, compact('servicer', 'requests', 'total_price', 'promotion'))->render();
+        $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
+            'servicer_id' => $request->input('id'),
+            'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,
+            'status' => 0,
+            'subtotal' => $total_price,
+            'discount' => 0,
+            'total' => $total_price,
+            'servicer_name' => $servicer->name,
+            'total_of_servicer' => $requests['number_of_servicer'],
+            'user_id' => 0,
+            'amount_adults' => $request->input('adults', 0),
+            'amount_children' => $request->input('children', 0),
+            'user_agent' => isset($_SERVER['HTTP_USER_AGENT'])?$_SERVER['HTTP_USER_AGENT']:null,
+            'ip_address' => isset($_SERVER['REMOTE_ADDR'])?$_SERVER['REMOTE_ADDR']:null
+        ]));
+
+        $booking = apply_filters(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, $booking, $servicer, PROMOTION_MODULE_SCREEN_NAME);
+
+        return Theme::layout('booking')->scope($view, compact('servicer', 'requests', 'total_price', 'booking'))->render();
     }
 
     private function convertServicer($id, $format_type)
@@ -186,7 +225,11 @@ class PublicController extends BaseController
             case ROOM_TYPE_MODULE_SCREEN_NAME:
                 $servicer = $this->roomTypeRepository->findById($id);
                 break;
+            default:
+                $servicer = $this->servicerRepository->findById($id);
+                break;
         }
+
         return $servicer;
     }
 
@@ -212,6 +255,10 @@ class PublicController extends BaseController
      */
     public function postBooking(FrontRequest $request, AjaxResponse $response)
     {
+        $booking = $this->bookingRepository->getFirstBy(['id' => $request->input('booking_id'), 'status' => 0]);
+        if(!$booking){
+            return $response->setError(true)->setMessage('Đã xảy ra lỗi, vui lòng kiểm tra lại thông tin');
+        }
         $servicer = $this->servicerRepository->findById($request->input('id'));
         
         $servicer = $this->convertServicer($servicer->id, $servicer->format_type);
@@ -231,20 +278,14 @@ class PublicController extends BaseController
                 $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
                 break;
         }
-        
-        $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
-            'servicer_id' => $request->input('id'),
-            'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,
+        $booking->fill([
             'status' => 1,
-            'subtotal' => $total_price,
-            'discount' => 0,
-            'total' => $total_price,
-            'servicer_name' => $servicer->name,
-            'total_of_servicer' => $requests['number_of_servicer'],
-            'user_id' => 0,
-            'amount_adults' => $requests['adults'],
-            'amount_children' => $requests['children'],
-        ]));
+            'email' => $request->input('email'),
+            'address' => $request->input('address'),
+            'fullname' => $request->input('fullname'),
+            'phone' => $request->input('phone'),
+        ]);
+        $booking->save();
 
         $data = $this->getDataBooking($booking, $request);
 
@@ -285,9 +326,9 @@ class PublicController extends BaseController
             'booking_id' => $booking->id,
             'date' => date("l, d/m/Y H:i:s", strtotime($booking->created_at)),
             'to' => $booking->email,
-            'discount' => $booking->discount,
-            'price' => price_room($price),
-            'total_price' => price_room($total_price),
+            'discount' => number_format_price_nohtml($booking->discount),
+            'price' => number_format_price_nohtml($price),
+            'total_price' => number_format_price_nohtml($total_price),
             'hotel' => $booking->servicer->hotel?$booking->servicer->hotel->name:null
         ];
         return $data;

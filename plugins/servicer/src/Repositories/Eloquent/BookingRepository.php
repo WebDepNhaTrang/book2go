@@ -18,6 +18,7 @@ class BookingRepository extends RepositoriesAbstract implements BookingInterface
 		    $servicer_id = [$servicer_id];
 		}
 	    $data = $this->model->whereIn('servicer_id', $servicer_id)
+	    					->where('status', '=', 1)
 	    					->select('servicer_id', DB::raw('SUM(total_of_servicer) as total'))
                             ->where(function ($query) use ($checkin, $checkout) {
                                 $query->where(function ($query) use ($checkin) {

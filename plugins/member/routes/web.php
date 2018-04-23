@@ -41,6 +41,20 @@ Route::group([
             'uses' => 'MemberController@postDeleteMany',
             'permission' => 'member.delete',
         ]);
+
+        Route::group(['prefix' => 'settings'], function () {
+            Route::get('/', [
+                'as' => 'member.settings.promotion',
+                'uses' => 'MemberController@getPromotion',
+                'permission' => 'member.edit',
+            ]);
+
+            Route::post('/edit', [
+                'as' => 'member.settings.promotion.edit',
+                'uses' => 'MemberController@postEditPromotion',
+                'permission' => 'member.edit',
+            ]);
+        });
     });
 });
 

@@ -32,9 +32,12 @@
                     {!! render_facebook_social(route('public.single', $post->slug)) !!}
                    
                 </div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-sm btn-danger" disabled>Giảm 30% Hôm nay</button>
-                </div>
+                @if($promotion)
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-sm btn-danger" disabled>{{$promotion->promotion_name}}</button>
+                        <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -160,9 +163,11 @@
                                         </div>
                                         <div class="col-8 float-right">
                                             <button type="submit" class="btn btn-sm btn-datphong">Đặt phòng ngay</button>
-                                            <div class="dang-nhap-giam">
-                                                <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
-                                            </div>
+                                            @if(!Auth::guard('member')->check())
+                                                <div class="dang-nhap-giam">
+                                                    <p>Đăng nhập để giảm thêm <strong>200,000</strong> ₫</p>
+                                                </div>
+                                            @endif
                                             <div class="con-trong">
                                                 <span>Còn trống {{$room->number_of_servicer}} phòng</span>
                                             </div>

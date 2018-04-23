@@ -74,22 +74,38 @@ class MemberServiceProvider extends ServiceProvider
     {
         $this->setIsInConsole($this->app->runningInConsole())
             ->setNamespace('plugins/member')
-            ->loadAndPublishConfigurations(['permissions'])
+            ->loadAndPublishConfigurations(['permissions', 'member_config'])
             ->loadAndPublishTranslations()
             ->loadAndPublishViews()
             ->loadRoutes()
             ->loadMigrations();
 
-        // Event::listen(SessionStarted::class, function () {
-        //     dashboard_menu()->registerItem([
-        //         'id' => 'cms-core-member',
-        //         'priority' => 22,
-        //         'parent_id' => null,
-        //         'name' => trans('plugins.member::member.menu_name'),
-        //         'icon' => 'fa fa-users',
-        //         'url' => route('member.list'),
-        //         'permissions' => ['member.list'],
-        //     ]);
-        // });
+        Event::listen(SessionStarted::class, function () {
+            dashboard_menu()->registerItem([
+                'id' => 'cms-core-member',
+                'priority' => 22,
+                'parent_id' => null,
+                'name' => trans('plugins.member::member.menu_name'),
+                'icon' => 'fa fa-users',
+                'url' => route('member.list'),
+                'permissions' => ['member.list'],
+            ])->registerItem([
+                'id' => 'cms-core-member-listing',
+                'priority' => 1,
+                'parent_id' => 'cms-core-member',
+                'name' => trans('plugins.member::member.menu_name'),
+                'icon' => 'fa fa-users',
+                'url' => route('member.list'),
+                'permissions' => ['member.list'],
+            ])->registerItem([
+                'id' => 'cms-core-member-setting',
+                'priority' => 2,
+                'parent_id' => 'cms-core-member',
+                'name' => 'Settings',
+                'icon' => 'fa fa-cogs',
+                'url' => route('member.settings.promotion'),
+                'permissions' => ['member.edit'],
+            ]);
+        });
     }
 }

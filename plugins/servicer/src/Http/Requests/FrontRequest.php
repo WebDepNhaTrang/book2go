@@ -62,9 +62,7 @@ class FrontRequest extends Request
             
             default:
                 $rule = array_merge($rule, [
-                    'number_of_servicer' => 'required|numeric|between:1,'.$max_servicer,
-                    // 'adults' => 'required|numeric|between:1,'.$adults,
-                    // 'children' => 'required|numeric|max:'.$children
+                    'number_of_servicer' => 'required|numeric|between:1,'.$max_servicer
                 ]); 
                 break;
         }

@@ -97,5 +97,6 @@ return [
     'departure_date' => 'Departure date',
     'arrive_date' => 'Arrive date',
     'room_name' => 'Room name',
-    'quantum' => 'Number of room'
+    'quantum' => 'Number of room',
+    'discount_for_member' => 'Discount for Member'
 ];

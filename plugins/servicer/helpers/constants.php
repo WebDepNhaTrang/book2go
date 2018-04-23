@@ -26,3 +26,8 @@ if (!defined('PROMOTION_MODULE_SCREEN_NAME')) {
 if (!defined('BOOKING_MODULE_SCREEN_NAME')) {
     define('BOOKING_MODULE_SCREEN_NAME', 'booking');
 }
+
+// change data show in front page
+if (!defined('BASE_FILTER_BEFORE_GET_BOOKING_PAGE')) {
+    define('BASE_FILTER_BEFORE_GET_BOOKING_PAGE', 'before_get_booking_page');
+}

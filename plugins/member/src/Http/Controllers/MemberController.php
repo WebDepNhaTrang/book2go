@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Events\DeletedContentEvent;
 use Botble\Base\Events\UpdatedContentEvent;
+use Setting;
 
 class MemberController extends BaseController
 {
@@ -174,5 +175,55 @@ class MemberController extends BaseController
         }
 
         return $response->setMessage(trans('core.base::notices.delete_success_message'));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getPromotion()
+    {
+
+        $member_config = $this->getAvailableSettings();
+       
+        return view('plugins.member::settings.promotions', compact('member_config'));
+    }
+
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function postEditPromotion(Request $request)
+    {
+
+        $member_config = $this->getAvailableSettings();
+
+        foreach ($member_config as $tab) {
+            foreach ($tab['settings'] as $setting) {
+                $key = $setting['attributes']['name'];
+                Setting::set($key, $request->input($key, 0));
+            }
+        }
+
+        Setting::save();
+        
+        if ($request->input('submit') === 'save') {
+            return redirect()->route('member.settings.promotion')->with('success_msg', trans('core.base::notices.update_success_message'));
+        } else {
+            return redirect()->back()->with('success_msg', trans('core.base::notices.update_success_message'));
+        }
+    }
+
+    /**
+     * @return array
+     * @author Sang Nguyen
+     */
+    protected function getAvailableSettings() : array
+    {
+        $settings = [];
+
+        $settings[] = config('plugins.member.member_config', []);
+
+        return $settings;
     }
 }

@@ -28,6 +28,8 @@ class HookServiceProvider extends ServiceProvider
     public function boot()
     {
         add_filter(BASE_FILTER_PUBLIC_SINGLE_DATA, [$this, 'handleSingleView'], 4, 1);
+        add_filter(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, [$this, 'checkPromotionBeforeShow'], 10, 3);
+        add_filter(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, [$this, 'checkDiscountMemberBeforeShow'], 11, 3);
     }
 
     /**
@@ -55,6 +57,7 @@ class HookServiceProvider extends ServiceProvider
 
                         $checkin = null;
                         $checkout = null;
+                        $promotion = null;
                         if(request()->get('checkin') && request()->get('checkout')){
                            $checkin = request()->get('checkin');
                            $checkout = request()->get('checkout');
@@ -159,5 +162,104 @@ class HookServiceProvider extends ServiceProvider
         }
 
         return $slug;
+    }
+
+
+    /**
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function checkPromotionBeforeShow(Eloquent $booking, $servicer, $screen)
+    {
+        $promotion = app(PromotionInterface::class)->getPromotionById($servicer->id, $servicer->format_type, $booking->checkin, $booking->checkout);
+        $promotion_extension = [];
+        if($promotion){
+            switch ($servicer->format_type) {
+                case TOUR_MODULE_SCREEN_NAME:
+                    $befor_discount = $booking->subtotal * $promotion->cost;
+                    $befor_discount = $befor_discount / 100;
+                    break;
+
+                default:
+                    $start = $booking->checkin;
+                    if($start < $promotion->start_date){
+                        $start = date('Y-m-d', strtotime($promotion->start_date));
+                    }
+                    $end = $booking->checkout;
+                    if($end > $promotion->end_date){
+                        $end = date('Y-m-d', strtotime($promotion->end_date));
+                    }
+                    $promotion_extension = ['promotion_start_date' => $start, 'promotion_end_date' => $end];
+                    $total_date = $this->totalDate($start, $end);
+                    $befor_discount = $servicer->price * $booking->total_of_servicer * $total_date * $promotion->cost;
+                    $befor_discount = $befor_discount / 100;
+                    break;
+            }
+            $discount = round($booking->discount + $befor_discount);
+            $total = $booking->subtotal - $discount;
+            $notes = json_decode($booking->notes, true);
+            $promotion_note = [
+                'promotion_id' => $promotion->id, 
+                'promotion_name' => $promotion->promotion_name, 
+                'promotion_type' => PROMOTION_MODULE_SCREEN_NAME,
+                'promotion_cost' => $promotion->cost,
+                'promotion_discount' => $befor_discount,
+                'promotion_extension' => $promotion_extension];
+            $notes = array_merge($notes?:[], [$promotion_note]);
+            $notes = json_encode($notes, true);
+            $booking->fill(['discount' => $discount, 'total' => $total, 'notes' => $notes]);
+            $booking->save();
+            return $booking;
+        }
+        return $booking;
+    }
+
+    /**
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function checkDiscountMemberBeforeShow(Eloquent $booking, $servicer, $screen)
+    {
+        if(setting('allow_discount_membership', true) && Auth::guard('member')->check()){
+            if(setting('member_discounts_type') == 1 && setting('percent_discount_for_members')){
+                $cost = setting('percent_discount_for_members');
+                $befor_discount = ($booking->subtotal * $cost) / 100;
+                $discount = round($booking->discount + $befor_discount);
+            }elseif(setting('member_discounts_type') == 2 && setting('cash_discount_for_members')){
+                $cost = setting('cash_discount_for_members');
+                $befor_discount = $cost;
+                $discount = round($booking->discount + $befor_discount);
+            }else{
+                return $booking;
+            }
+
+            $total = $booking->subtotal - $discount;
+            $promotion_extension = [];
+            $notes = json_decode($booking->notes, true);
+            $promotion_note = [
+                'promotion_id' => 0, 
+                'promotion_name' => trans('servicer::public.discount_for_member'), 
+                'promotion_type' => MEMBER_MODULE_SCREEN_NAME,
+                'promotion_cost' => $cost, 
+                'promotion_discount' => $befor_discount,
+                'promotion_extension' => $promotion_extension];
+            $notes = array_merge($notes?:[], [$promotion_note]);
+            $notes = json_encode($notes, true);
+            $booking->fill(['discount' => $discount, 'total' => $total, 'notes' => $notes]);
+            $booking->save();
+            return $booking;
+        }
+
+        return $booking;
+    }
+
+    private function totalDate($checkin, $checkout)
+    {
+        $checkin = strtotime($checkin);
+        $checkout = strtotime($checkout);
+        $datediff = $checkout - $checkin;
+
+        $total_date = round($datediff / (60 * 60 * 24));
+        return $total_date;
     }
 }

@@ -56,13 +56,15 @@ return [
             $theme->asset()->container('footer')->usePath()->add('photo-gallery-js', 'photo-gallery-picEyes/jquery.picEyes.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('lean-modal-js', 'lean-modal/js/lean-modal.min.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('main-project-js', 'main-project/js/main.js', ['jquery']);
-
+            $theme->asset()->container('footer')->add('toastr.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', ['jquery']);
+            
             $theme->asset()->usePath()->add('bootstrap-css', 'bootstrap/css/bootstrap.min.css');
             $theme->asset()->usePath()->add('bootstrap-daterangepicker-css', 'bootstrap-daterangepicker/daterangepicker.css');
             // $theme->asset()->usePath()->add('bootstrap-datepicker-css', 'bootstrap-datepicker/css/bootstrap-datepicker.min.css');
             $theme->asset()->usePath()->add('font-awesome-css', 'font-awesome/css/fontawesome-all.min.css');
             $theme->asset()->usePath()->add('main-project-css', 'main-project/css/main.css');
             $theme->asset()->usePath()->add('responsive-project-css', 'main-project/css/responsive.css');
+            $theme->asset()->add('toastr.min.css', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css');
             
 
             $theme->composer(['page', 'post'], function($view) {
