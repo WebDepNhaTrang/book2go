@@ -56,6 +56,19 @@ if (!function_exists('get_hotel_by_ids')) {
     }
 }
 
+
+if (!function_exists('get_promotions_front')) {
+    /**
+     * @param array $args
+     * @return array|mixed
+     */
+    function get_promotions_front($select = ['*'], $numberOfPage = 10)
+    {
+        $promotions = app(PromotionInterface::class)->getPromotionsFront($select, $numberOfPage);
+        return $promotions;
+    }
+}
+
 if (!function_exists('get_hotel_by_id')) {
     /**
      * @param array $args

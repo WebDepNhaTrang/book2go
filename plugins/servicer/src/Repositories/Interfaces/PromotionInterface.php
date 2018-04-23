@@ -11,4 +11,10 @@ interface PromotionInterface extends RepositoryInterface
 	 * @return Collection
 	 */
 	public function getPromotionById($id, $type, $checkin, $checkout);
+
+	/**
+	 * @param array $select
+	 * @return Collection
+	 */
+	public function getPromotionsFront(array $select = ['*'], $numberOfPage = null);
 }
