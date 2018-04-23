@@ -15,13 +15,13 @@
             </div>
             <div class="row news-list">
                 @foreach(get_posts_by_category(3,4,0) as $v)
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="block-article">
                         <div class="block-image">
                             <img class="img-fluid" src="{{ get_object_image($v->image, '') }}" alt="{{ $v->name }}">
-                            <div class="like"><i class="fa fa-thumbs-up">&nbsp;</i>
+                            <!-- <div class="like"><i class="fa fa-thumbs-up">&nbsp;</i>
                                 <div>{{ rand(50,200) }}</div>
-                            </div>
+                            </div> -->
                         </div>
                         <h5 class="block-description">						
                             <a class="mod-articles-category-title " href="{{ route('public.single', $v->slug) }}">

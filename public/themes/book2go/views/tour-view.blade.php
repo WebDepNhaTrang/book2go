@@ -1,28 +1,22 @@
 <section id="tour-detail">
     <div class="ks-detail-banner">
-        <div class="sub-banner">
-            <div class="first-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail1.jpg') }}" alt="">
-            </div>
-            <div class="second-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail2.jpg') }}" alt="">
-            </div>
-            <div class="third-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail3.jpg') }}" alt="">
-            </div>
-            <div class="fourth-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail4.jpg') }}" alt="">
-            </div>
-            <div class="fifth-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail5.jpg') }}" alt="">
-            </div>
-            
-            <div class="sixth-image">
-                <img class="" src="{{ Theme::asset()->url('main-project/img/ks-detail2.jpg') }}" alt="">
-            </div>
+        <ul class="sub-banner photo-gallery">
+            @php
+                $galleries = gallery_meta_data($post->id, TOUR_MODULE_SCREEN_NAME);
+            @endphp
+            @if($galleries)
+                @foreach($galleries as $key => $gallery)
+                    <li class="image-{{$key}} @if($key > 5) d-none @endif">
+                        <img class="" src="{{ url($gallery['img']) }}" alt="">
+                    </li>
+                @endforeach
+                <div class="map-image">
+                    <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
+                </div>
+            @endif
 
 
-        </div>
+        </ul>
     </div>
     <div class="ks-info container">
         <div class="row">

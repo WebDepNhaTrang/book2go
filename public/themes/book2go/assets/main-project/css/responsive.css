@@ -76,6 +76,9 @@
     #section-booking .booking-content .tab-content .tab-content-right .form-group{
         margin-bottom: 0;
     }
+    #about-us .about-content .promo-caption{
+        margin-top: -25px;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */
@@ -243,5 +246,8 @@
     }
     /* End / Section Banner */
 
+    #about-us .about-content .promo-caption{
+        margin-top: -25px;
+    }
 
 }

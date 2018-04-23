@@ -685,7 +685,7 @@ body {
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid #ecf0f3;
-    text-align: center;
+    /* text-align: center; */
     min-height: 400px;
     transition: all 0.3s ease-in-out;
     margin-bottom: 30px;
@@ -724,7 +724,7 @@ body {
 }
 
 #section-news .jumbotron .news-list .block-description{
-    margin-top: 50px;
+    margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
     line-height: 25px;
@@ -742,6 +742,7 @@ body {
     margin-top: 20px;
     font-size: 14px;
     margin-bottom: 20px;
+    padding: 0 30px;
 }
 
 #section-news .btn-block .btn-outline{
@@ -804,7 +805,7 @@ body {
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid #ecf0f3;
-    text-align: center;
+    /* text-align: center; */
     min-height: 400px;
     transition: all 0.3s ease-in-out;
     margin-bottom: 30px;
@@ -843,7 +844,7 @@ body {
 }
 
 #news-list-page .news-list .block-description{
-    margin-top: 50px;
+    margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
     line-height: 25px;
@@ -861,6 +862,7 @@ body {
     margin-top: 20px;
     font-size: 14px;
     margin-bottom: 20px;
+    padding: 0 30px;
 }
 
 /* Section DoiTac */
@@ -1810,53 +1812,62 @@ footer .footer-social a:hover .fa-linkedin-in{
     min-height: 450px;
     margin-bottom: 20px;
 }
+
 #tour-detail .sub-banner{
     width: 100%;
     position: absolute;
     top: inherit;
     height: 70vh;
     min-height: 450px;
+    padding-left: 0px;
+    list-style: none;
 }
-#tour-detail .sub-banner .first-image{
+#tour-detail .sub-banner .image-0{
     position: absolute;
     height: 70%;
     width: 60%;
 }
-#tour-detail .sub-banner .first-image img, #tour-detail .sub-banner .second-image img, #tour-detail .sub-banner .third-image img, #tour-detail .sub-banner .fourth-image img, #tour-detail .sub-banner .fifth-image img, #tour-detail .sub-banner .sixth-image img, #tour-detail .sub-banner .map-image img{
+#tour-detail .sub-banner .image-0 img, 
+#tour-detail .sub-banner .image-1 img, 
+#tour-detail .sub-banner .image-2 img, 
+#tour-detail .sub-banner .image-3 img, 
+#tour-detail .sub-banner .image-4 img, 
+#tour-detail .sub-banner .image-5 img, 
+#tour-detail .sub-banner .map-image img{
     position: absolute;
     width: 100%;
     height: 100%;
     font-family: object-fit\:cover;
     object-fit: cover;
 }
-#tour-detail .sub-banner .second-image{
+#tour-detail .sub-banner .image-1{
     position: absolute;
     right:0;
     height: 55%;
     width: calc(40% - 4px);
 }
-#tour-detail .sub-banner .third-image{
+#tour-detail .sub-banner .image-2{
     position: absolute;
     left: 0;
     height: calc(30% - 4px);
     width: 24%;
     top: calc(70% + 4px);
 }
-#tour-detail .sub-banner .fourth-image{
+#tour-detail .sub-banner .image-3{
     position: absolute;
     height: calc(30% - 4px);
     width: calc(36% - 4px);
     top: calc(70% + 4px);
     left: calc(24% + 4px);
 }
-#tour-detail .sub-banner .fifth-image{
+#tour-detail .sub-banner .image-4{
     position: absolute;
     right: calc(16% - 4px);
     height: calc(100% - 55% - 4px);
     width: 24%;
     top: calc(55% + 4px);
 }
-#tour-detail .sub-banner .sixth-image{
+#tour-detail .sub-banner .image-5{
     position: absolute;
     right:0;
     height: calc(13.5% - 4px);

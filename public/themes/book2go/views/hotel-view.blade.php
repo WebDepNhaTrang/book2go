@@ -14,7 +14,6 @@
                     <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
                 </div>
             @endif
-            
         </ul>
     </div>
     <div class="ks-info container">
