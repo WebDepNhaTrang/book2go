@@ -95,21 +95,6 @@
 
             {!! Theme::content() !!}
 
-            <!-- Section DoiTac -->
-            <section id="section-doitac">
-                <section class="customer-logos slider container">
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand1.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand2.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand3.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand4.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand1.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand2.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand3.jpg"></div>
-                    <div class="slide"><img class="img-fluid" src="./assets/main-project/img/brand4.jpg"></div>
-                </section>
-            </section>
-                <!-- End / Section DoiTac -->
-
             {!! Theme::partial('footer') !!}
 
             <!-- Return to Top -->

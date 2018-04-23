@@ -77,7 +77,7 @@
 
                     </div>
                     <div class="row price-detail">
-                        <div class="col-7">
+                        <div class="col-5">
                             <span>Loại phòng:</span><br>
                             <span>Giá gốc:</span><br>
                             <span>Khuyến mãi 
@@ -88,11 +88,12 @@
                                             $promotion_discount = number_format_price_nohtml($value['promotion_discount']);
                                          $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
                                     @endforeach
-                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:</span><br>
+                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:
                                 @endif
+                            </span><br>
                             <span>Giá tiền:</span>
                         </div>
-                        <div class="col-5">
+                        <div class="col-7">
                             <span>{{$requests['number_of_servicer']}} x <a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
                             <div class="price-through">
                                 {!! number_format_price($booking->subtotal) !!}
