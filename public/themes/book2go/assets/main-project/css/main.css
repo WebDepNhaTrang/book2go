@@ -1168,7 +1168,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     /* max-height: 90px; */
 }
 #ks-detail .ks-room-list table .col-room-type{
-    width: 10%;
+    width: 20%;
 }
 #ks-detail .ks-room-list table .col-chi-tiet{
     color: #333;
@@ -1211,7 +1211,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     position: relative;
     border-left: 1px solid #ddd;
     text-align: right;
-    width: 15%;
+    width: 25%;
 }
 #ks-detail .ks-room-list table .dang-nhap-giam{
     margin: 0 auto;
@@ -2320,7 +2320,11 @@ footer .footer-social a:hover .fa-linkedin-in{
 
 
 /* Photo Gallery Poppup */
-
+.col-room-type-mb .photo-gallery {
+    max-width:300px;
+    list-style-type: none;
+    padding: 0;
+}
 .col-room-type .photo-gallery {
     max-width:300px;
     list-style-type: none;

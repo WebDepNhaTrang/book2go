@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th4 18, 2018 lúc 09:05 AM
+-- Thời gian đã tạo: Th4 21, 2018 lúc 07:26 AM
 -- Phiên bản máy phục vụ: 10.1.30-MariaDB
 -- Phiên bản PHP: 7.2.2
 
@@ -190,7 +190,63 @@ INSERT INTO `audit_history` (`user_id`, `module`, `request`, `action`, `user_age
 (1, 'post', '{\"_token\":\"PT4Mcbm2LmzbtotmlsChEYLWt2imdiT40g7AhlA2\",\"name\":\"News Demo 2\",\"slug\":\"news-demo-2\",\"slug_id\":\"22\",\"description\":\"News Demo 2\",\"content\":\"<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>\\u00a0<\\/div>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"news-detail-template\",\"categories\":[\"3\"],\"image\":\"\\/uploads\\/1\\/tin-tuc-du-lich\\/new1.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 6, 'News Demo 2', 'primary', '2018-04-18 04:03:20', '2018-04-18 04:03:20'),
 (1, 'post', '{\"_token\":\"PT4Mcbm2LmzbtotmlsChEYLWt2imdiT40g7AhlA2\",\"name\":\"News Demo 1\",\"slug\":\"news-demo-1\",\"slug_id\":\"21\",\"description\":\"News Demo 1\",\"content\":\"<div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.<\\/div>\\r\\n<div>\\u00a0<\\/div>\\r\\n<\\/div>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"news-detail-template\",\"categories\":[\"3\"],\"image\":\"\\/uploads\\/1\\/tin-tuc-du-lich\\/new1.jpg\",\"other_image\":\"\\/uploads\\/1\\/contact-us.jpg\",\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'News Demo 1', 'primary', '2018-04-18 04:09:55', '2018-04-18 04:09:55'),
 (1, 'category', '{\"_token\":\"PT4Mcbm2LmzbtotmlsChEYLWt2imdiT40g7AhlA2\",\"name\":\"Tin T\\u1ee9c Du L\\u1ecbch\",\"slug\":\"tin-tuc-du-lich\",\"slug_id\":\"20\",\"parent_id\":\"0\",\"description\":\"Latest news and tips for the best travel destinations, hotels and restaurants.\\r\\n<br>Discover exciting world events, luxury travel deals, safety tips and more\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"news-list-template\",\"order\":\"0\",\"image\":null,\"other_image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 3, 'Tin Tức Du Lịch', 'primary', '2018-04-18 04:16:45', '2018-04-18 04:16:45'),
-(1, 'category', '{\"_token\":\"PT4Mcbm2LmzbtotmlsChEYLWt2imdiT40g7AhlA2\",\"name\":\"Tin T\\u1ee9c Du L\\u1ecbch\",\"slug\":\"tin-tuc-du-lich\",\"slug_id\":\"20\",\"parent_id\":\"0\",\"description\":\"Latest news and tips for the best travel destinations, hotels and restaurants.\\r\\n<br>Discover exciting world events, luxury travel deals, safety tips and more\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"news-list-template\",\"order\":\"0\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\",\"other_image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 3, 'Tin Tức Du Lịch', 'primary', '2018-04-18 04:17:48', '2018-04-18 04:17:48');
+(1, 'category', '{\"_token\":\"PT4Mcbm2LmzbtotmlsChEYLWt2imdiT40g7AhlA2\",\"name\":\"Tin T\\u1ee9c Du L\\u1ecbch\",\"slug\":\"tin-tuc-du-lich\",\"slug_id\":\"20\",\"parent_id\":\"0\",\"description\":\"Latest news and tips for the best travel destinations, hotels and restaurants.\\r\\n<br>Discover exciting world events, luxury travel deals, safety tips and more\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"news-list-template\",\"order\":\"0\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\",\"other_image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 3, 'Tin Tức Du Lịch', 'primary', '2018-04-18 04:17:48', '2018-04-18 04:17:48'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-18 15:24:34', '2018-04-18 15:24:34'),
+(1, 'hotel', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Hotel demo 3\",\"slug\":\"hotel-demo-3\",\"slug_id\":\"13\",\"description\":\"Hotel demo 3\",\"content\":\"<p>Hotel demo 3<\\/p>\",\"address\":null,\"phone\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"4\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\",\"order\":\"0\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Hotel demo 3', 'primary', '2018-04-18 15:24:49', '2018-04-18 15:24:49'),
+(1, 'category', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c Li\\u00ean K\\u1ebft\",\"slug\":\"doi-tac-lien-ket\",\"slug_id\":\"0\",\"parent_id\":\"0\",\"description\":\"\\u0110\\u1ed1i T\\u00e1c Li\\u00ean K\\u1ebft\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"default-category-template\",\"order\":\"0\",\"image\":null,\"other_image\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Đối Tác Liên Kết', 'info', '2018-04-18 15:31:15', '2018-04-18 15:31:15'),
+(1, 'category', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Kh\\u00e1ch H\\u00e0ng \\u0110\\u00e1nh Gi\\u00e1\",\"slug\":\"khach-hang-danh-gia\",\"slug_id\":\"15\",\"parent_id\":\"0\",\"description\":\"Kh\\u00e1ch H\\u00e0ng N\\u00f3i V\\u1ec1 Ch\\u00fang T\\u00f4i\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"default-category-template\",\"order\":\"0\",\"image\":null,\"other_image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 2, 'Khách Hàng Đánh Giá', 'primary', '2018-04-18 15:37:16', '2018-04-18 15:37:16'),
+(1, 'category', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"C\\u00e2u h\\u1ecfi c\\u00f4ng ty\",\"slug\":\"cau-hoi-cong-ty\",\"slug_id\":\"14\",\"parent_id\":\"0\",\"description\":\"C\\u00e2u h\\u1ecfi c\\u00f4ng ty\",\"other_content\":\"C\\u00e2u h\\u1ecfi c\\u00f4ng ty\",\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"default-category-template\",\"order\":\"0\",\"image\":null,\"other_image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Câu hỏi công ty', 'primary', '2018-04-18 15:37:18', '2018-04-18 15:37:18'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 1\",\"slug\":\"doi-tac-1\",\"slug_id\":\"0\",\"description\":\"https:\\/\\/www.google.com.vn\\/\",\"content\":\"<p>https:\\/\\/www.google.com.vn\\/<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 7, 'Đối Tác 1', 'info', '2018-04-18 15:39:48', '2018-04-18 15:39:48'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 1\",\"slug\":\"doi-tac-1\",\"slug_id\":\"24\",\"description\":\"https:\\/\\/www.google.com.vn\\/\",\"content\":\"<p>https:\\/\\/www.google.com.vn\\/<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":\"\\/uploads\\/1\\/doi-tac-lien-ket\\/brand1.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 7, 'Đối Tác 1', 'primary', '2018-04-18 15:39:59', '2018-04-18 15:39:59'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 2\",\"slug\":\"doi-tac-2\",\"slug_id\":\"0\",\"description\":\"https:\\/\\/www.google.com.vn\\/\",\"content\":\"<p>https:\\/\\/www.google.com.vn\\/<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":\"\\/uploads\\/1\\/doi-tac-lien-ket\\/brand2.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 8, 'Đối Tác 2', 'info', '2018-04-18 15:40:44', '2018-04-18 15:40:44'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 3\",\"slug\":\"doi-tac-lien-ket-1\",\"slug_id\":\"0\",\"description\":\"https:\\/\\/www.google.com.vn\\/\",\"content\":\"<p>https:\\/\\/www.google.com.vn\\/<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":\"\\/uploads\\/1\\/doi-tac-lien-ket\\/brand3.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 9, 'Đối Tác 3', 'info', '2018-04-18 15:41:11', '2018-04-18 15:41:11'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 4\",\"slug\":\"doi-tac-4\",\"slug_id\":\"0\",\"description\":\"https:\\/\\/www.google.com.vn\\/\",\"content\":\"<p>https:\\/\\/www.google.com.vn\\/<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":\"\\/uploads\\/1\\/doi-tac-lien-ket\\/brand4.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 10, 'Đối Tác 4', 'info', '2018-04-18 15:41:36', '2018-04-18 15:41:36'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Kh\\u00e1ch H\\u00e0ng 1\",\"slug\":\"khach-hang-1\",\"slug_id\":\"16\",\"description\":\"On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\\\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"2\"],\"image\":\"\\/uploads\\/1\\/khach-hang-danh-gia\\/avatar3.png\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Khách Hàng 1', 'primary', '2018-04-18 15:41:59', '2018-04-18 15:41:59'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Kh\\u00e1ch H\\u00e0ng 2\",\"slug\":\"khach-hang-2\",\"slug_id\":\"17\",\"description\":\"On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\\\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"2\"],\"image\":\"\\/uploads\\/1\\/khach-hang-danh-gia\\/avatar3.png\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 2, 'Khách Hàng 2', 'primary', '2018-04-18 15:42:01', '2018-04-18 15:42:01'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Kh\\u00e1ch H\\u00e0ng 3\",\"slug\":\"khach-hang-3\",\"slug_id\":\"18\",\"description\":\"On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\\\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"2\"],\"image\":\"\\/uploads\\/1\\/khach-hang-danh-gia\\/avatar3.png\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 3, 'Khách Hàng 3', 'primary', '2018-04-18 15:42:03', '2018-04-18 15:42:03'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"Kh\\u00e1ch H\\u00e0ng 4\",\"slug\":\"khach-hang-4\",\"slug_id\":\"19\",\"description\":\"On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\\\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"2\"],\"image\":\"\\/uploads\\/1\\/khach-hang-danh-gia\\/avatar3.png\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Khách Hàng 4', 'primary', '2018-04-18 15:42:05', '2018-04-18 15:42:05'),
+(1, 'post', '{\"_token\":\"cryf3o5p186E49Ut1BtysE0uFW4Zat7apU9iYUGu\",\"name\":\"\\u0110\\u1ed1i T\\u00e1c 5\",\"slug\":\"doi-tac-5\",\"slug_id\":\"0\",\"description\":\"https:\\/\\/google.com.vn\",\"content\":\"<p>https:\\/\\/google.com.vn<\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"4\"],\"image\":\"\\/uploads\\/1\\/doi-tac-lien-ket\\/brand1.jpg\",\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 11, 'Đối Tác 5', 'info', '2018-04-18 15:45:02', '2018-04-18 15:45:02'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-19 08:13:32', '2018-04-19 08:13:32'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi c\\u00f4ng ty 1\",\"slug\":\"cau-hoi-cong-ty-1\",\"slug_id\":\"0\",\"description\":\"How it works?\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"1\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 12, 'Câu hỏi công ty 1', 'info', '2018-04-19 08:14:38', '2018-04-19 08:14:38'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi c\\u00f4ng ty 2\",\"slug\":\"cau-hoi-cong-ty-2\",\"slug_id\":\"0\",\"description\":\"How it work?\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"1\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 13, 'Câu hỏi công ty 2', 'info', '2018-04-19 08:15:11', '2018-04-19 08:15:11');
+INSERT INTO `audit_history` (`user_id`, `module`, `request`, `action`, `user_agent`, `ip_address`, `reference_user`, `reference_id`, `reference_name`, `type`, `created_at`, `updated_at`) VALUES
+(1, 'category', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi FAQs\",\"slug\":\"cau-hoi-faqs\",\"slug_id\":\"0\",\"parent_id\":\"0\",\"description\":\"C\\u00e2u h\\u1ecfi FAQs\",\"other_content\":null,\"content\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"default-category-template\",\"order\":\"0\",\"image\":null,\"other_image\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'Câu hỏi FAQs', 'info', '2018-04-19 08:38:01', '2018-04-19 08:38:01'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi FAQs 1\",\"slug\":\"cau-hoi-faqs-1\",\"slug_id\":\"0\",\"description\":\"How it works?\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"5\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 14, 'Câu hỏi FAQs 1', 'info', '2018-04-19 08:39:34', '2018-04-19 08:39:34'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi FAQs 2\",\"slug\":\"cau-hoi-faqs-2\",\"slug_id\":\"0\",\"description\":\"C\\u00e2u h\\u1ecfi FAQs 2\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"5\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 15, 'Câu hỏi FAQs 2', 'info', '2018-04-19 08:40:13', '2018-04-19 08:40:13'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi FAQs 3\",\"slug\":\"cau-hoi-faqs-3\",\"slug_id\":\"0\",\"description\":\"C\\u00e2u h\\u1ecfi FAQs 3\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"5\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 16, 'Câu hỏi FAQs 3', 'info', '2018-04-19 08:40:29', '2018-04-19 08:40:29'),
+(1, 'post', '{\"_token\":\"lmCXxcrXvYy8csC7faesyZz2CjYNbckFe5XHSwdj\",\"name\":\"C\\u00e2u h\\u1ecfi FAQs 4\",\"slug\":\"cau-hoi-faqs-4\",\"slug_id\":\"0\",\"description\":\"C\\u00e2u h\\u1ecfi FAQs 4\",\"content\":\"<p><span style=\\\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\\\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.<\\/span><\\/p>\",\"other_content\":null,\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"format_type\":null,\"template\":\"default-post-template\",\"categories\":[\"5\"],\"image\":null,\"other_image\":null,\"order\":\"0\",\"tag\":null}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 17, 'Câu hỏi FAQs 4', 'info', '2018-04-19 08:40:59', '2018-04-19 08:40:59'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-19 14:20:26', '2018-04-19 14:20:26'),
+(1, 'custom-field', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"title\":\"How We Are Block \\u001c\",\"rules\":\"[[{\\\"name\\\":\\\"page_template\\\",\\\"type\\\":\\\"==\\\",\\\"value\\\":\\\"about-template\\\"}]]\",\"group_items\":\"[{\\\"id\\\":1,\\\"title\\\":\\\"\\\\bWho we are content\\\",\\\"slug\\\":\\\"how_we_are_content_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"wysiwyg\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":\\\"basic\\\",\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[]},{\\\"id\\\":0,\\\"title\\\":\\\"Image Left\\\",\\\"slug\\\":\\\"how_we_are_image_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"image\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":null,\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[]}]\",\"deleted_items\":null,\"submit\":\"apply\",\"status\":\"1\",\"order\":\"4\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'How We Are Block ', 'primary', '2018-04-19 14:53:52', '2018-04-19 14:53:52'),
+(1, 'custom-field', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"title\":\"How We Are Block \\u001c\",\"rules\":\"[[{\\\"name\\\":\\\"page_template\\\",\\\"type\\\":\\\"==\\\",\\\"value\\\":\\\"about-template\\\"}]]\",\"group_items\":\"[{\\\"id\\\":2,\\\"title\\\":\\\"Image Left\\\",\\\"slug\\\":\\\"how_we_are_image_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"image\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":null,\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[]},{\\\"id\\\":1,\\\"title\\\":\\\"\\\\bWho we are content\\\",\\\"slug\\\":\\\"how_we_are_content_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"wysiwyg\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":\\\"basic\\\",\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[]}]\",\"deleted_items\":null,\"submit\":\"apply\",\"status\":\"1\",\"order\":\"4\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'How We Are Block ', 'primary', '2018-04-19 14:54:18', '2018-04-19 14:54:18'),
+(1, 'page', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"Gi\\u1edbi Thi\\u1ec7u\",\"slug\":\"gioi-thieu\",\"slug_id\":\"1\",\"description\":null,\"content\":\"<h4>Suy ngh\\u0129 c\\u1ee7a ch\\u00fang t\\u00f4i<\\/h4>\\r\\n<p>Cha m\\u1eb9 v\\u1ea5t c\\u1ea3 c\\u1ea3 \\u0111\\u1eddi, \\u0111\\u1ebfn tu\\u1ed5i v\\u1ec1 chi\\u1ec1u mu\\u1ed1n \\u0111\\u01b0\\u1ee3c d\\u00e0nh kho\\u1ea3n th\\u1eddi gian c\\u00f2n l\\u1ea1i \\u0111\\u1ec3 th\\u01b0 gi\\u1ea3n v\\u00e0 mu\\u1ed1n \\u0111\\u01b0\\u1ee3c v\\u00e2y qu\\u1ea7n b\\u00ean con c\\u00e1i v\\u00e0 ch\\u00e1u ch\\u1eaft\\u2026<\\/p>\\r\\n<p>M\\u1ed9t gia \\u0111\\u00ecnh \\u1edf \\u0111\\u00f3 cha b\\u1eadn r\\u1ed9n v\\u1edbi c\\u00f4ng vi\\u1ec7c x\\u00e3 h\\u1ed9i, m\\u1eb9 \\u0111\\u1ea7u t\\u1eaft m\\u1eb7t t\\u1ed1i v\\u1edbi c\\u00f4ng vi\\u1ec7c n\\u1ed9i tr\\u1ee3, nh\\u1eefng \\u0111\\u1ee9a tr\\u1ebb \\u0111i h\\u1ecdc t\\u1eeb s\\u00e1ng \\u0111\\u1ebfn t\\u1ed1i mu\\u1ed9n, \\u2026 h\\u1ecd c\\u1ea7n c\\u00f3 kho\\u1ea3n kh\\u00f4ng gian v\\u00e0 th\\u1eddi gian \\u0111\\u1ec3 \\u0111\\u01b0\\u1ee3c nh\\u00ecn l\\u1ea1i nhau, h\\u00e2m n\\u00f3ng v\\u00e0 y\\u00eau th\\u01b0\\u01a1ng nhau<\\/p>\\r\\n<p>Nh\\u1eefng b\\u1ea1n tr\\u1ebb lu\\u00f4n mu\\u1ed1n kh\\u1eb3ng \\u0111\\u1ecbnh m\\u00ecnh v\\u1edbi c\\u00f4ng ty v\\u00e0 x\\u00e3 h\\u1ed9i, h\\u1ecd lao v\\u00e0o c\\u00f4ng vi\\u1ec7c m\\u00e0 qu\\u00ean r\\u1eb1ng cu\\u1ed9c s\\u1ed1ng kh\\u00f4ng ch\\u1ec9 c\\u00f3 c\\u00f4ng vi\\u1ec7c v\\u00e0 khi gi\\u1eadt m\\u00ecnh nh\\u1eadn ra, h\\u1ecd \\u0111ang thi\\u1ebfu nh\\u1eefng gi\\u00e2y ph\\u00fat t\\u1eadn h\\u01b0\\u1edfng cu\\u1ed9c s\\u1ed1ng c\\u00f9ng b\\u1ea1n b\\u00e8 v\\u00e0 ng\\u01b0\\u1eddi th\\u00e2n\\u2026<\\/p>\\r\\n<p>V\\u00e0 c\\u00f2n nhi\\u1ec1u nhi\\u1ec1u ng\\u01b0\\u1eddi kh\\u00e1c\\u2026. H\\u1ecd c\\u1ea7n c\\u00f3 nh\\u1eefng \\u0111\\u1ecba \\u0111i\\u1ec3m, h\\u1ecd c\\u1ea7n c\\u00f3 nh\\u1eefng k\\u1ef3 ngh\\u1ec9 \\u0111\\u1ec3 \\u0111\\u01b0\\u1ee3c b\\u00ean nhau v\\u00e0 th\\u01b0 gi\\u1ea3n t\\u00e1i t\\u1ea1o n\\u0103ng l\\u01b0\\u1ee3ng\\u2026<\\/p>\",\"icon\":null,\"order\":\"0\",\"note\":null,\"custom_fields\":\"[{\\\"id\\\":1,\\\"title\\\":\\\"How We Are Block \\\\u001c\\\",\\\"items\\\":[{\\\"id\\\":2,\\\"title\\\":\\\"Image Left\\\",\\\"slug\\\":\\\"how_we_are_image_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"image\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":null,\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[],\\\"value\\\":\\\"\\/uploads\\/1\\/page-about-us.jpg\\\"},{\\\"id\\\":1,\\\"title\\\":\\\"\\\\bWho we are content\\\",\\\"slug\\\":\\\"how_we_are_content_about_template\\\",\\\"instructions\\\":null,\\\"type\\\":\\\"wysiwyg\\\",\\\"options\\\":{\\\"defaultValue\\\":null,\\\"defaultValueTextarea\\\":null,\\\"placeholderText\\\":null,\\\"wysiwygToolbar\\\":\\\"basic\\\",\\\"selectChoices\\\":null,\\\"buttonLabel\\\":null,\\\"rows\\\":null},\\\"items\\\":[],\\\"value\\\":\\\"<p>Ch&uacute;ng t&ocirc;i l&agrave; ng\\u01b0\\u1eddi \\u0111\\u1ed3ng h&agrave;nh, l&agrave; tr\\u1ee3 l&yacute; \\u0111\\u1eaft l\\u1ef1c c\\u1ee7a c&aacute;c b\\u1ea1n cho nh\\u1eefng k\\u1ef3 ngh\\u1ec9 d\\u01b0\\u1ee1ng, h&agrave;nh tr&igrave;nh tham quan du l\\u1ecbch.<br \\/>\\\\nCh&uacute;ng t&ocirc;i mang \\u0111\\u1ebfn cho c&aacute;c b\\u1ea1n nh\\u1eefng d\\u1ecbch v\\u1ee5 l\\u01b0u tr&uacute; v&agrave; tour du l\\u1ecbch t\\u1ea1i \\u0111\\u1ecba ph\\u01b0\\u01a1ng ch\\u1ea5t l\\u01b0\\u1ee3ng t\\u1ed1t, h&agrave;i l&ograve;ng cao v&agrave; th\\u01b0 gi\\u1ea3n nh\\u1ea5t.<br \\/>\\\\nCh&uacute;ng t&ocirc;i l&agrave; nh\\u1eefng th&agrave;nh vi&ecirc;n k\\u1ef3 c\\u1ef1u l&agrave;m vi\\u1ec7c trong ng&agrave;nh du l\\u1ecbch trong v&agrave; ngo&agrave;i n\\u01b0\\u1edbc v\\u1edbi nhi\\u1ec1u n\\u0103m kinh nghi\\u1ec7m.&nbsp;<br \\/>\\\\n-&nbsp;&nbsp; &nbsp;L&ecirc; Phi Long<br \\/>\\\\n-&nbsp;&nbsp; &nbsp;Nguy\\u1ec5n Th\\u1ecb B&iacute;ch Khu&ecirc;<\\/p>\\\\n\\\"}]}]\",\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"about-template\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Giới Thiệu', 'primary', '2018-04-19 14:56:53', '2018-04-19 14:56:53'),
+(1, 'page', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"C\\u00e2u H\\u1ecfi Th\\u01b0\\u1eddng G\\u1eb7p\",\"slug\":\"faq\",\"slug_id\":\"4\",\"description\":null,\"content\":\"<p>FAQ<\\/p>\",\"icon\":null,\"order\":\"0\",\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"faq-template\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Câu Hỏi Thường Gặp', 'primary', '2018-04-19 15:10:25', '2018-04-19 15:10:25'),
+(1, 'page', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"FAQs\",\"slug\":\"faq\",\"slug_id\":\"4\",\"description\":null,\"content\":\"<p>FAQ<\\/p>\",\"icon\":null,\"order\":\"0\",\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"faq-template\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'FAQs', 'primary', '2018-04-19 15:11:10', '2018-04-19 15:11:10'),
+(1, 'page', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"Li\\u00ean H\\u1ec7\",\"slug\":\"lien-he\",\"slug_id\":\"5\",\"description\":null,\"content\":\"<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit minima aut, tempore id laudantium consectetur delectus aspernatur quas obcaecati harum aliquam voluptatem, labore molestiae asperiores, non explicabo quia sunt!<\\/div>\",\"icon\":null,\"order\":\"0\",\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"contact-template\",\"image\":null}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'Liên Hệ', 'primary', '2018-04-19 15:13:41', '2018-04-19 15:13:41'),
+(1, 'page', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"Li\\u00ean H\\u1ec7\",\"slug\":\"lien-he\",\"slug_id\":\"5\",\"description\":null,\"content\":\"<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit minima aut, tempore id laudantium consectetur delectus aspernatur quas obcaecati harum aliquam voluptatem, labore molestiae asperiores, non explicabo quia sunt!<\\/div>\",\"icon\":null,\"order\":\"0\",\"note\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"template\":\"contact-template\",\"image\":\"\\/uploads\\/1\\/contact-us.jpg\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'Liên Hệ', 'primary', '2018-04-19 15:14:38', '2018-04-19 15:14:38'),
+(1, 'room_type', '{\"_token\":\"VgmoUiFoqlr39O1P450BQopTdUUzxAFYXBFsnkvn\",\"name\":\"Room Test 1\",\"slug\":\"room-test-1\",\"slug_id\":\"0\",\"service_type_id\":\"2\",\"description\":\"Room Test 1\",\"content\":\"<p>Room Test 1<\\/p>\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"price\":\"1000000\",\"number_of_servicer\":\"10\",\"adults\":\"2\",\"children\":\"2\",\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Room Test 1', 'info', '2018-04-19 15:47:22', '2018-04-19 15:47:22'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-20 03:21:33', '2018-04-20 03:21:33'),
+(1, 'contact', '{\"ids\":[\"1\",\"2\"]}', 'deleted', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Thiện', 'danger', '2018-04-20 04:01:13', '2018-04-20 04:01:13'),
+(1, 'contact', '{\"ids\":[\"1\",\"2\"]}', 'deleted', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 2, 'Thiện', 'danger', '2018-04-20 04:01:13', '2018-04-20 04:01:13'),
+(1, 'apartment', '{\"_token\":\"8Lg8CeGPVKxNAXPA4NTAVNbhArNjEyDjfqhSKu72\",\"name\":\"C\\u0103n h\\u1ed9 demo 1\",\"slug\":\"can-ho-demo-1\",\"slug_id\":\"0\",\"description\":\"C\\u0103n h\\u1ed9 demo 1\",\"content\":\"<p>C\\u0103n h\\u1ed9 demo 1<\\/p>\",\"address\":null,\"gallery\":null,\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"price\":\"900000\",\"number_of_servicer\":\"1\",\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'Căn hộ demo 1', 'info', '2018-04-20 04:01:56', '2018-04-20 04:01:56'),
+(1, 'user', '{\"_token\":\"8Lg8CeGPVKxNAXPA4NTAVNbhArNjEyDjfqhSKu72\",\"first_name\":\"Test\",\"last_name\":\"User\",\"username\":\"testuser\",\"email\":\"test@gmail.com\",\"password\":\"123123\",\"password_confirmation\":\"123123\",\"role_id\":\"2\",\"submit\":\"apply\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 2, 'Test User', 'info', '2018-04-20 08:59:50', '2018-04-20 08:59:50'),
+(1, 'user', '[]', 'deleted', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 2, 'Test User', 'danger', '2018-04-20 09:03:19', '2018-04-20 09:03:19'),
+(1, 'member', '{\"_token\":\"8Lg8CeGPVKxNAXPA4NTAVNbhArNjEyDjfqhSKu72\",\"name\":\"Test User\",\"email\":\"test@gmail.com\",\"password\":\"123123\",\"password_confirmation\":\"123123\",\"submit\":\"apply\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Test User', 'info', '2018-04-20 09:06:22', '2018-04-20 09:06:22'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Test User', 'info', '2018-04-20 09:15:23', '2018-04-20 09:15:23'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Test User', 'info', '2018-04-20 09:40:46', '2018-04-20 09:40:46'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Test User', 'info', '2018-04-20 15:25:48', '2018-04-20 15:25:48'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Test User', 'info', '2018-04-20 15:26:57', '2018-04-20 15:26:57'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-20 16:48:20', '2018-04-20 16:48:20'),
+(1, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 1, 'Dev Team', 'info', '2018-04-21 03:48:58', '2018-04-21 03:48:58'),
+(4, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 4, 'Thien Pham', 'info', '2018-04-21 05:13:58', '2018-04-21 05:13:58'),
+(5, 'to the system', NULL, 'logged in', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 0, 5, 'Thien Pham', 'info', '2018-04-21 05:16:38', '2018-04-21 05:16:38'),
+(1, 'hotel', '[]', 'deleted', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 1, 'Starcity Nha Trang Hotel', 'danger', '2018-04-21 05:18:05', '2018-04-21 05:18:05'),
+(1, 'hotel', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Hotel demo 4\",\"slug\":\"hotel-demo-4\",\"slug_id\":\"0\",\"description\":\"Hotel demo 4\",\"content\":\"<p>Hotel demo 4<\\/p>\",\"address\":\"Cam Ranh, Khanh Hoa\",\"phone\":\"090909090\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"5\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 5, 'Hotel demo 4', 'info', '2018-04-21 05:19:15', '2018-04-21 05:19:15'),
+(1, 'hotel', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Hotel demo 2\",\"slug\":\"hotel-demo-2\",\"slug_id\":\"12\",\"description\":\"Hotel demo 2\",\"content\":\"<p>Hotel demo 2<\\/p>\",\"address\":\"Ninh Hoa, Khanh Hoa\",\"phone\":\"0905160320\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"3\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\",\"order\":\"0\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 3, 'Hotel demo 2', 'primary', '2018-04-21 05:20:29', '2018-04-21 05:20:29'),
+(1, 'hotel', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Hotel demo 3\",\"slug\":\"hotel-demo-3\",\"slug_id\":\"13\",\"description\":\"Hotel demo 3\",\"content\":\"<p>Hotel demo 3<\\/p>\",\"address\":\"Cam Lam, Khanh Hoa\",\"phone\":\"0905160320\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"apply\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"4\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\",\"order\":\"0\"}', 'updated', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 4, 'Hotel demo 3', 'primary', '2018-04-21 05:20:54', '2018-04-21 05:20:54'),
+(1, 'hotel', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Hotel demo 5\",\"slug\":\"hotel-demo-5\",\"slug_id\":\"0\",\"description\":\"Hotel demo 5\",\"content\":\"<p>Hotel demo 5<\\/p>\",\"address\":\"Tran Phu, Nha Trang\",\"phone\":\"0905160320\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"5\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 6, 'Hotel demo 5', 'info', '2018-04-21 05:21:37', '2018-04-21 05:21:37'),
+(1, 'hotel', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Hotel demo 6\",\"slug\":\"hotel-demo-6\",\"slug_id\":\"0\",\"description\":\"Hotel demo 6\",\"content\":\"<p>Hotel demo 6<\\/p>\",\"address\":\"Loc Tho, Nha Trang\",\"phone\":\"0905160320\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"star\":\"4\",\"lat_long\":null,\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 7, 'Hotel demo 6', 'info', '2018-04-21 05:22:17', '2018-04-21 05:22:17'),
+(1, 'apartment', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"C\\u0103n H\\u1ed9 Demo 2\",\"slug\":\"can-ho-demo-2\",\"slug_id\":\"0\",\"description\":\"C\\u0103n H\\u1ed9 Demo 2\",\"content\":\"<p>C\\u0103n H\\u1ed9 Demo 2<\\/p>\",\"address\":null,\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"price\":\"1000000\",\"number_of_servicer\":\"3\",\"image\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 6, 'Căn Hộ Demo 2', 'info', '2018-04-21 05:24:10', '2018-04-21 05:24:10'),
+(1, 'tour', '{\"_token\":\"nTsFwtbQWoxXWP1OOECIR4x2BRMEG0J0DRkTZxhX\",\"name\":\"Tour \\u0110i\\u1ec7p S\\u01a1n\",\"slug\":\"tour-diep-son\",\"slug_id\":\"0\",\"description\":\"Tour \\u0110i\\u1ec7p S\\u01a1n\",\"content\":\"<p>Tour \\u0110i\\u1ec7p S\\u01a1n<\\/p>\",\"address\":\"Ninh Hoa, Khanh Hoa\",\"gallery\":\"[{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\\\",\\\"description\\\":null},{\\\"img\\\":\\\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\\\",\\\"description\\\":null}]\",\"seo_meta\":{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null},\"submit\":\"save\",\"language\":\"vi\",\"ref_from\":null,\"status\":\"1\",\"price\":\"600000\",\"price_children\":\"300000\",\"image\":\"\\/uploads\\/1\\/tour\\/dao-binh-ba\\/tour-dao-binh-ba.jpg\",\"order\":\"0\"}', 'created', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '127.0.0.1', 1, 7, 'Tour Điệp Sơn', 'info', '2018-04-21 05:25:41', '2018-04-21 05:25:41');
 
 -- --------------------------------------------------------
 
@@ -218,6 +274,40 @@ INSERT INTO `blocks` (`id`, `name`, `alias`, `description`, `content`, `status`,
 (1, 'GUARANTEE BLOCK 1', 'guarantee-block-1', 'FLIGHT GUARANTEE', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">Satisfaction guaranteed trip plan with Flexible travel date and the Most comfortable routine.</span></p>', 1, 1, '2018-04-16 05:15:46', '2018-04-16 05:15:46'),
 (2, 'GUARANTEE BLOCK 2', 'guarantee-block-2', 'GUARANTEE BLOCK 2', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">Satisfaction guaranteed trip plan with Flexible travel date and the Most comfortable routine.</span></p>', 1, 1, '2018-04-16 07:10:13', '2018-04-16 07:11:10'),
 (3, 'GUARANTEE BLOCK 3', 'guarantee-block-3', 'GUARANTEE BLOCK 3', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">Satisfaction guaranteed trip plan with Flexible travel date and the Most comfortable routine.</span></p>', 1, 1, '2018-04-16 07:10:29', '2018-04-16 07:11:46');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `bookings`
+--
+
+CREATE TABLE `bookings` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `member_id` int(10) UNSIGNED NOT NULL,
+  `status` tinyint(3) UNSIGNED DEFAULT '1',
+  `checkin` date DEFAULT NULL,
+  `checkout` date DEFAULT NULL,
+  `payment` varchar(120) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subtotal` decimal(20,2) DEFAULT NULL,
+  `discount` decimal(20,2) DEFAULT NULL,
+  `tax` decimal(20,2) DEFAULT NULL,
+  `total` decimal(20,2) DEFAULT NULL,
+  `servicer_id` int(10) UNSIGNED NOT NULL,
+  `servicer_name` varchar(400) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `amount_adults` int(11) DEFAULT NULL,
+  `amount_children` int(11) DEFAULT NULL,
+  `total_of_servicer` int(11) DEFAULT NULL,
+  `fullname` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(400) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements` text COLLATE utf8mb4_unicode_ci,
+  `notes` text COLLATE utf8mb4_unicode_ci,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -252,9 +342,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `parent_id`, `description`, `status`, `user_id`, `icon`, `featured`, `order`, `is_default`, `deleted_at`, `created_at`, `updated_at`, `category_type`, `template`, `content`, `image`, `other_image`, `other_content`) VALUES
-(1, 'Câu hỏi công ty', 0, 'Câu hỏi công ty', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-17 02:35:57', '2018-04-17 02:35:57', NULL, NULL, NULL, NULL, NULL, 'Câu hỏi công ty'),
-(2, 'Khách Hàng Đánh Giá', 0, 'Khách Hàng Nói Về Chúng Tôi', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-17 10:38:07', '2018-04-17 10:38:07', NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'Tin Tức Du Lịch', 0, 'Latest news and tips for the best travel destinations, hotels and restaurants.\r\n<br>Discover exciting world events, luxury travel deals, safety tips and more', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-18 03:30:14', '2018-04-18 04:17:48', NULL, 'news-list-template', NULL, '/uploads/1/contact-us.jpg', NULL, NULL);
+(1, 'Câu hỏi công ty', 0, 'Câu hỏi công ty', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-17 02:35:57', '2018-04-18 15:37:18', NULL, 'default-category-template', NULL, NULL, NULL, 'Câu hỏi công ty'),
+(2, 'Khách Hàng Đánh Giá', 0, 'Khách Hàng Nói Về Chúng Tôi', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-17 10:38:07', '2018-04-18 15:37:16', NULL, 'default-category-template', NULL, NULL, NULL, NULL),
+(3, 'Tin Tức Du Lịch', 0, 'Latest news and tips for the best travel destinations, hotels and restaurants.\r\n<br>Discover exciting world events, luxury travel deals, safety tips and more', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-18 03:30:14', '2018-04-18 04:17:48', NULL, 'news-list-template', NULL, '/uploads/1/contact-us.jpg', NULL, NULL),
+(4, 'Đối Tác Liên Kết', 0, 'Đối Tác Liên Kết', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-18 15:31:15', '2018-04-18 15:31:15', NULL, 'default-category-template', NULL, NULL, NULL, NULL),
+(5, 'Câu hỏi FAQs', 0, 'Câu hỏi FAQs', 1, 1, NULL, 0, 0, 0, NULL, '2018-04-19 08:38:01', '2018-04-19 08:38:01', NULL, 'default-category-template', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -274,6 +366,14 @@ CREATE TABLE `contacts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `address`, `content`, `is_read`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Thiện', 'chithien175@gmail.com', '0905160320', NULL, 'Test contact', 0, '2018-04-20 04:01:13', '2018-04-19 16:10:15', '2018-04-20 04:01:13'),
+(2, 'Thiện', 'chithien175@gmail.com', '0905160320', NULL, 'fsdfsdfsdfsdf', 0, '2018-04-20 04:01:13', '2018-04-19 16:15:14', '2018-04-20 04:01:13');
 
 -- --------------------------------------------------------
 
@@ -298,7 +398,8 @@ CREATE TABLE `custom_fields` (
 INSERT INTO `custom_fields` (`id`, `use_for`, `use_for_id`, `field_item_id`, `type`, `slug`, `value`) VALUES
 (1, 'page', 1, 1, 'wysiwyg', 'about_block', '<p>Ch&uacute;ng t&ocirc;i l&agrave; người đồng h&agrave;nh, l&agrave; trợ l&yacute; đắt lực của c&aacute;c bạn cho những kỳ nghỉ dưỡng, h&agrave;nh tr&igrave;nh tham quan du lịch.<br />\nCh&uacute;ng t&ocirc;i mang đến cho c&aacute;c bạn những dịch vụ lưu tr&uacute; v&agrave; tour du lịch tại địa phương chất lượng tốt, h&agrave;i l&ograve;ng cao v&agrave; thư giản nhất.<br />\nCh&uacute;ng t&ocirc;i l&agrave; những th&agrave;nh vi&ecirc;n kỳ cựu l&agrave;m việc trong ng&agrave;nh du lịch trong v&agrave; ngo&agrave;i nước với nhiều năm kinh nghiệm.&nbsp;<br />\n-&nbsp;&nbsp; &nbsp;L&ecirc; Phi Long<br />\n-&nbsp;&nbsp; &nbsp;Nguyễn Thị B&iacute;ch Khu&ecirc;</p>\n'),
 (2, 'page', 1, 1, 'wysiwyg', 'how_we_are_about_template', '<p>Ch&uacute;ng t&ocirc;i l&agrave; người đồng h&agrave;nh, l&agrave; trợ l&yacute; đắt lực của c&aacute;c bạn cho những kỳ nghỉ dưỡng, h&agrave;nh tr&igrave;nh tham quan du lịch.<br />\nCh&uacute;ng t&ocirc;i mang đến cho c&aacute;c bạn những dịch vụ lưu tr&uacute; v&agrave; tour du lịch tại địa phương chất lượng tốt, h&agrave;i l&ograve;ng cao v&agrave; thư giản nhất.<br />\nCh&uacute;ng t&ocirc;i l&agrave; những th&agrave;nh vi&ecirc;n kỳ cựu l&agrave;m việc trong ng&agrave;nh du lịch trong v&agrave; ngo&agrave;i nước với nhiều năm kinh nghiệm.&nbsp;<br />\n-&nbsp;&nbsp; &nbsp;L&ecirc; Phi Long<br />\n-&nbsp;&nbsp; &nbsp;Nguyễn Thị B&iacute;ch Khu&ecirc;</p>\n'),
-(3, 'page', 1, 1, 'wysiwyg', 'how_we_are_content_about_template', '<p>Ch&uacute;ng t&ocirc;i l&agrave; người đồng h&agrave;nh, l&agrave; trợ l&yacute; đắt lực của c&aacute;c bạn cho những kỳ nghỉ dưỡng, h&agrave;nh tr&igrave;nh tham quan du lịch.<br />\nCh&uacute;ng t&ocirc;i mang đến cho c&aacute;c bạn những dịch vụ lưu tr&uacute; v&agrave; tour du lịch tại địa phương chất lượng tốt, h&agrave;i l&ograve;ng cao v&agrave; thư giản nhất.<br />\nCh&uacute;ng t&ocirc;i l&agrave; những th&agrave;nh vi&ecirc;n kỳ cựu l&agrave;m việc trong ng&agrave;nh du lịch trong v&agrave; ngo&agrave;i nước với nhiều năm kinh nghiệm.&nbsp;<br />\n-&nbsp;&nbsp; &nbsp;L&ecirc; Phi Long<br />\n-&nbsp;&nbsp; &nbsp;Nguyễn Thị B&iacute;ch Khu&ecirc;</p>\n');
+(3, 'page', 1, 1, 'wysiwyg', 'how_we_are_content_about_template', '<p>Ch&uacute;ng t&ocirc;i l&agrave; người đồng h&agrave;nh, l&agrave; trợ l&yacute; đắt lực của c&aacute;c bạn cho những kỳ nghỉ dưỡng, h&agrave;nh tr&igrave;nh tham quan du lịch.<br />\nCh&uacute;ng t&ocirc;i mang đến cho c&aacute;c bạn những dịch vụ lưu tr&uacute; v&agrave; tour du lịch tại địa phương chất lượng tốt, h&agrave;i l&ograve;ng cao v&agrave; thư giản nhất.<br />\nCh&uacute;ng t&ocirc;i l&agrave; những th&agrave;nh vi&ecirc;n kỳ cựu l&agrave;m việc trong ng&agrave;nh du lịch trong v&agrave; ngo&agrave;i nước với nhiều năm kinh nghiệm.&nbsp;<br />\n-&nbsp;&nbsp; &nbsp;L&ecirc; Phi Long<br />\n-&nbsp;&nbsp; &nbsp;Nguyễn Thị B&iacute;ch Khu&ecirc;</p>\n'),
+(4, 'page', 1, 2, 'image', 'how_we_are_image_about_template', '/uploads/1/page-about-us.jpg');
 
 -- --------------------------------------------------------
 
@@ -425,7 +526,8 @@ CREATE TABLE `field_items` (
 --
 
 INSERT INTO `field_items` (`id`, `field_group_id`, `parent_id`, `order`, `title`, `slug`, `type`, `instructions`, `options`) VALUES
-(1, 1, NULL, 1, 'Who we are content', 'how_we_are_content_about_template', 'wysiwyg', NULL, '{\"defaultValue\":null,\"defaultValueTextarea\":null,\"placeholderText\":null,\"wysiwygToolbar\":\"basic\",\"selectChoices\":null,\"buttonLabel\":null,\"rows\":null}');
+(1, 1, NULL, 2, 'Who we are content', 'how_we_are_content_about_template', 'wysiwyg', NULL, '{\"defaultValue\":null,\"defaultValueTextarea\":null,\"placeholderText\":null,\"wysiwygToolbar\":\"basic\",\"selectChoices\":null,\"buttonLabel\":null,\"rows\":null}'),
+(2, 1, NULL, 1, 'Image Left', 'how_we_are_image_about_template', 'image', NULL, '{\"defaultValue\":null,\"defaultValueTextarea\":null,\"placeholderText\":null,\"wysiwygToolbar\":null,\"selectChoices\":null,\"buttonLabel\":null,\"rows\":null}');
 
 -- --------------------------------------------------------
 
@@ -475,26 +577,45 @@ CREATE TABLE `gallery_meta` (
 
 INSERT INTO `gallery_meta` (`id`, `content_id`, `images`, `reference`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, 'gallery', '2018-04-12 09:49:47', '2018-04-12 09:49:47'),
-(8, 4, NULL, 'page', '2018-04-12 16:34:10', '2018-04-12 16:34:10'),
-(9, 5, NULL, 'page', '2018-04-12 16:39:10', '2018-04-12 16:39:10'),
 (10, 6, NULL, 'page', '2018-04-12 16:43:33', '2018-04-12 16:43:33'),
-(11, 1, '[{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"\\/uploads\\/1\\/khach-san\\/starcity\\/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-14 07:32:23', '2018-04-14 07:32:33'),
 (12, 2, NULL, 'page', '2018-04-14 07:37:52', '2018-04-14 07:37:52'),
 (13, 3, NULL, 'page', '2018-04-15 15:18:35', '2018-04-15 15:18:35'),
 (22, 1, NULL, 'tour', '2018-04-15 15:52:05', '2018-04-15 15:52:05'),
 (27, 2, NULL, 'hotel', '2018-04-16 13:55:27', '2018-04-16 13:55:27'),
-(29, 1, NULL, 'category', '2018-04-17 02:35:57', '2018-04-17 02:35:57'),
-(49, 1, NULL, 'page', '2018-04-17 08:50:46', '2018-04-17 08:50:46'),
-(50, 2, NULL, 'category', '2018-04-17 10:38:07', '2018-04-17 10:38:07'),
-(52, 2, NULL, 'post', '2018-04-17 11:03:18', '2018-04-17 11:03:18'),
-(53, 1, NULL, 'post', '2018-04-17 11:03:32', '2018-04-17 11:03:32'),
-(54, 3, NULL, 'post', '2018-04-17 11:10:34', '2018-04-17 11:10:34'),
-(55, 4, NULL, 'post', '2018-04-17 11:10:53', '2018-04-17 11:10:53'),
-(56, 3, NULL, 'hotel', '2018-04-17 11:27:27', '2018-04-17 11:27:27'),
-(57, 4, NULL, 'hotel', '2018-04-17 11:27:33', '2018-04-17 11:27:33'),
+(56, 3, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-17 11:27:27', '2018-04-21 05:20:29'),
 (63, 6, NULL, 'post', '2018-04-18 04:03:20', '2018-04-18 04:03:20'),
 (64, 5, NULL, 'post', '2018-04-18 04:09:55', '2018-04-18 04:09:55'),
-(66, 3, NULL, 'category', '2018-04-18 04:17:48', '2018-04-18 04:17:48');
+(66, 3, NULL, 'category', '2018-04-18 04:17:48', '2018-04-18 04:17:48'),
+(67, 4, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-18 15:24:49', '2018-04-21 05:20:54'),
+(68, 4, NULL, 'category', '2018-04-18 15:31:15', '2018-04-18 15:31:15'),
+(69, 2, NULL, 'category', '2018-04-18 15:37:16', '2018-04-18 15:37:16'),
+(70, 1, NULL, 'category', '2018-04-18 15:37:18', '2018-04-18 15:37:18'),
+(72, 7, NULL, 'post', '2018-04-18 15:39:59', '2018-04-18 15:39:59'),
+(73, 8, NULL, 'post', '2018-04-18 15:40:44', '2018-04-18 15:40:44'),
+(74, 9, NULL, 'post', '2018-04-18 15:41:11', '2018-04-18 15:41:11'),
+(75, 10, NULL, 'post', '2018-04-18 15:41:36', '2018-04-18 15:41:36'),
+(76, 1, NULL, 'post', '2018-04-18 15:41:59', '2018-04-18 15:41:59'),
+(77, 2, NULL, 'post', '2018-04-18 15:42:01', '2018-04-18 15:42:01'),
+(78, 3, NULL, 'post', '2018-04-18 15:42:03', '2018-04-18 15:42:03'),
+(79, 4, NULL, 'post', '2018-04-18 15:42:05', '2018-04-18 15:42:05'),
+(80, 11, NULL, 'post', '2018-04-18 15:45:02', '2018-04-18 15:45:02'),
+(81, 12, NULL, 'post', '2018-04-19 08:14:38', '2018-04-19 08:14:38'),
+(82, 13, NULL, 'post', '2018-04-19 08:15:11', '2018-04-19 08:15:11'),
+(83, 5, NULL, 'category', '2018-04-19 08:38:01', '2018-04-19 08:38:01'),
+(84, 14, NULL, 'post', '2018-04-19 08:39:34', '2018-04-19 08:39:34'),
+(85, 15, NULL, 'post', '2018-04-19 08:40:13', '2018-04-19 08:40:13'),
+(86, 16, NULL, 'post', '2018-04-19 08:40:29', '2018-04-19 08:40:29'),
+(87, 17, NULL, 'post', '2018-04-19 08:40:59', '2018-04-19 08:40:59'),
+(88, 1, NULL, 'page', '2018-04-19 14:56:53', '2018-04-19 14:56:53'),
+(90, 4, NULL, 'page', '2018-04-19 15:11:10', '2018-04-19 15:11:10'),
+(92, 5, NULL, 'page', '2018-04-19 15:14:38', '2018-04-19 15:14:38'),
+(93, 4, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'room_type', '2018-04-19 15:47:22', '2018-04-19 15:47:22'),
+(94, 5, NULL, 'apartment', '2018-04-20 04:01:56', '2018-04-20 04:01:56'),
+(95, 5, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-21 05:19:15', '2018-04-21 05:19:15'),
+(96, 6, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-21 05:21:37', '2018-04-21 05:21:37'),
+(97, 7, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'hotel', '2018-04-21 05:22:17', '2018-04-21 05:22:17'),
+(98, 6, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'apartment', '2018-04-21 05:24:10', '2018-04-21 05:24:10'),
+(99, 7, '[{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315140039604211.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg\",\"description\":null},{\"img\":\"/uploads/1/khach-san/starcity/1158838-16020215590039570222-1.jpg\",\"description\":null}]', 'tour', '2018-04-21 05:25:41', '2018-04-21 05:25:41');
 
 -- --------------------------------------------------------
 
@@ -587,7 +708,6 @@ INSERT INTO `language_meta` (`lang_meta_id`, `lang_meta_content_id`, `lang_meta_
 (138, 3, 'vi', 'page', '7c5bae42d165267160637af7534b58a4'),
 (139, 4, 'vi', 'page', '55676cfd20e14638f5d5c2211e7a8067'),
 (140, 6, 'vi', 'page', 'bf2ffc3e31704ed2e4307e73061ecb30'),
-(141, 1, 'vi', 'hotel', '5b0232f1346edb4812da9e44d6389474'),
 (142, 1, 'vi', 'tour', 'f8183edcca5de54c89662ad1195f6977'),
 (143, 1, 'vi', 'block', 'a06d169434bbde1cb85d3e6321cfb416'),
 (144, 2, 'vi', 'block', '989b3da41cef6d773d81695bd824ed04'),
@@ -600,7 +720,22 @@ INSERT INTO `language_meta` (`lang_meta_id`, `lang_meta_content_id`, `lang_meta_
 (151, 4, 'vi', 'post', '5ecd254ca37126ae7b200ecef59fa947'),
 (152, 3, 'vi', 'category', 'c7e1cab5be10112d966c6dcbb8eb5352'),
 (153, 5, 'vi', 'post', '70d18e551c07f62834d402006f17beb0'),
-(154, 6, 'vi', 'post', '7fdc40682b74e63e7aff945560c27166');
+(154, 6, 'vi', 'post', '7fdc40682b74e63e7aff945560c27166'),
+(155, 4, 'vi', 'category', 'bcaecb682c85d7918fb947ac0b5c999e'),
+(156, 8, 'vi', 'post', '5a8a5281000d580c0503360497e23c6e'),
+(157, 9, 'vi', 'post', 'b0d3b6d22cbdcf7105e9034645289133'),
+(158, 11, 'vi', 'post', 'c8e536e951acb49da53b8728e81ab73c'),
+(159, 12, 'vi', 'post', 'fa9afcf2782cfb784f705d2867906091'),
+(160, 14, 'vi', 'post', '57f0a84248753c4d11bba02d7b09f418'),
+(161, 15, 'vi', 'post', '219d9a3965e749aeab75613e4215a7dd'),
+(162, 17, 'vi', 'post', '123a1285f5218eabb82f320e33e0eab7'),
+(163, 4, 'vi', 'room_type', '9d186f8590771ccfcacd7b2ae007d6a1'),
+(164, 5, 'vi', 'apartment', '324c9e1e92d95e31fee4d2edd741c367'),
+(165, 5, 'vi', 'hotel', '9d7aef1e9d9369d3aa1b40947c453312'),
+(166, 6, 'vi', 'hotel', 'dc6163417d4a054665dd9fa2dbe9c0b2'),
+(167, 7, 'vi', 'hotel', '32a5e045a3f55d11102fea451fbcf6a9'),
+(168, 6, 'vi', 'apartment', '3fd35de99a02c4d8faa1ccf9a4ff29e2'),
+(169, 7, 'vi', 'tour', '65ee540b5f09efc85f42e5cd298b9698');
 
 -- --------------------------------------------------------
 
@@ -640,7 +775,12 @@ INSERT INTO `media_files` (`id`, `user_id`, `name`, `folder_id`, `mime_type`, `s
 (11, 1, 'avatar3', 5, 'image/png', 28975, 'uploads/1/khach-hang-danh-gia/avatar3.png', '[]', '2018-04-17 11:00:42', '2018-04-17 11:00:42', NULL),
 (12, 1, 'new1', 6, 'image/jpeg', 33755, 'uploads/1/tin-tuc-du-lich/new1.jpg', '[]', '2018-04-18 03:40:17', '2018-04-18 03:40:17', NULL),
 (13, 1, 'pr', 0, 'image/png', 385430, 'uploads/1/pr.png', '[]', '2018-04-18 03:57:06', '2018-04-18 03:57:06', NULL),
-(14, 1, 'contact-us', 0, 'image/jpeg', 222228, 'uploads/1/contact-us.jpg', '[]', '2018-04-18 04:09:41', '2018-04-18 04:09:41', NULL);
+(14, 1, 'contact-us', 0, 'image/jpeg', 222228, 'uploads/1/contact-us.jpg', '[]', '2018-04-18 04:09:41', '2018-04-18 04:09:41', NULL),
+(15, 1, 'brand1', 7, 'image/jpeg', 6604, 'uploads/1/doi-tac-lien-ket/brand1.jpg', '[]', '2018-04-18 15:39:29', '2018-04-18 15:39:29', NULL),
+(16, 1, 'brand2', 7, 'image/jpeg', 8036, 'uploads/1/doi-tac-lien-ket/brand2.jpg', '[]', '2018-04-18 15:39:30', '2018-04-18 15:39:30', NULL),
+(17, 1, 'brand3', 7, 'image/jpeg', 7498, 'uploads/1/doi-tac-lien-ket/brand3.jpg', '[]', '2018-04-18 15:39:30', '2018-04-18 15:39:30', NULL),
+(18, 1, 'brand4', 7, 'image/jpeg', 8493, 'uploads/1/doi-tac-lien-ket/brand4.jpg', '[]', '2018-04-18 15:39:31', '2018-04-18 15:39:31', NULL),
+(19, 1, 'page-about-us', 0, 'image/jpeg', 84224, 'uploads/1/page-about-us.jpg', '[]', '2018-04-19 14:56:40', '2018-04-19 14:56:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -669,7 +809,8 @@ INSERT INTO `media_folders` (`id`, `user_id`, `name`, `slug`, `parent_id`, `crea
 (3, 1, 'Tour', 'tour', 0, '2018-04-15 15:21:07', '2018-04-15 15:21:07', NULL),
 (4, 1, 'Đảo Bình Ba', 'dao-binh-ba', 3, '2018-04-15 15:21:20', '2018-04-15 15:21:20', NULL),
 (5, 1, 'Khách Hàng Đánh Giá', 'khach-hang-danh-gia', 0, '2018-04-17 11:00:35', '2018-04-17 11:00:35', NULL),
-(6, 1, 'Tin Tức Du Lịch', 'tin-tuc-du-lich', 0, '2018-04-18 03:39:47', '2018-04-18 03:39:47', NULL);
+(6, 1, 'Tin Tức Du Lịch', 'tin-tuc-du-lich', 0, '2018-04-18 03:39:47', '2018-04-18 03:39:47', NULL),
+(7, 1, 'Đối Tác Liên Kết', 'doi-tac-lien-ket', 0, '2018-04-18 15:39:15', '2018-04-18 15:39:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -703,8 +844,18 @@ CREATE TABLE `members` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `dob` date DEFAULT NULL,
-  `phone` varchar(25) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `phone` varchar(25) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `members`
+--
+
+INSERT INTO `members` (`id`, `name`, `email`, `password`, `avatar`, `remember_token`, `created_at`, `updated_at`, `dob`, `phone`, `address`, `company`) VALUES
+(1, 'Test User', 'test@gmail.com', '$2y$10$3znVuIKTgwbtyndCpWVxkO13gzmCK38sgpPh35H2toMh15./Kqgm.', NULL, 'WfjlWWsojYZv9jBjJrdmDzTK3f65UU092d1lFfX9ewVfgpOLSFxoIZsvzEkW', '2018-04-20 09:06:22', '2018-04-20 09:06:22', NULL, NULL, NULL, NULL),
+(5, 'Thien Pham', 'chithien175@gmail.com', '$2y$10$R95CSA8mgDPbxft1Mzwn4eUTQdOlqXKc.j.y1PtFGEnOiLpBcJQka', NULL, NULL, '2018-04-21 05:16:38', '2018-04-21 05:16:38', NULL, '123123123', 'sfsdfsdfs', 'dfsdfsdf');
 
 -- --------------------------------------------------------
 
@@ -805,7 +956,6 @@ INSERT INTO `meta_boxes` (`id`, `content_id`, `meta_key`, `meta_value`, `referen
 (4, 4, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'page', '2018-04-12 16:34:10', '2018-04-12 16:34:10'),
 (5, 5, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'page', '2018-04-12 16:39:10', '2018-04-12 16:39:10'),
 (6, 6, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'page', '2018-04-12 16:43:33', '2018-04-12 16:43:33'),
-(7, 1, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-14 07:32:23', '2018-04-14 07:32:23'),
 (8, 1, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'tour', '2018-04-15 15:22:13', '2018-04-15 15:22:13'),
 (9, 2, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-16 08:49:49', '2018-04-16 08:49:49'),
 (10, 3, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-16 08:54:53', '2018-04-16 08:54:53'),
@@ -818,7 +968,27 @@ INSERT INTO `meta_boxes` (`id`, `content_id`, `meta_key`, `meta_value`, `referen
 (17, 4, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-17 11:10:53', '2018-04-17 11:10:53'),
 (18, 3, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'category', '2018-04-18 03:30:14', '2018-04-18 03:30:14'),
 (19, 5, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 03:40:43', '2018-04-18 03:40:43'),
-(20, 6, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 03:41:33', '2018-04-18 03:41:33');
+(20, 6, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 03:41:33', '2018-04-18 03:41:33'),
+(21, 4, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'category', '2018-04-18 15:31:15', '2018-04-18 15:31:15'),
+(22, 7, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 15:39:48', '2018-04-18 15:39:48'),
+(23, 8, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 15:40:44', '2018-04-18 15:40:44'),
+(24, 9, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 15:41:11', '2018-04-18 15:41:11'),
+(25, 10, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 15:41:36', '2018-04-18 15:41:36'),
+(26, 11, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-18 15:45:02', '2018-04-18 15:45:02'),
+(27, 12, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:14:38', '2018-04-19 08:14:38'),
+(28, 13, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:15:11', '2018-04-19 08:15:11'),
+(29, 5, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'category', '2018-04-19 08:38:01', '2018-04-19 08:38:01'),
+(30, 14, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:39:34', '2018-04-19 08:39:34'),
+(31, 15, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:40:13', '2018-04-19 08:40:13'),
+(32, 16, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:40:29', '2018-04-19 08:40:29'),
+(33, 17, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'post', '2018-04-19 08:40:59', '2018-04-19 08:40:59'),
+(34, 4, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'room_type', '2018-04-19 15:47:22', '2018-04-19 15:47:22'),
+(35, 5, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'apartment', '2018-04-20 04:01:56', '2018-04-20 04:01:56'),
+(36, 5, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-21 05:19:15', '2018-04-21 05:19:15'),
+(37, 6, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-21 05:21:37', '2018-04-21 05:21:37'),
+(38, 7, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'hotel', '2018-04-21 05:22:17', '2018-04-21 05:22:17'),
+(39, 6, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'apartment', '2018-04-21 05:24:10', '2018-04-21 05:24:10'),
+(40, 7, 'seo_meta', '[{\"seo_title\":null,\"seo_keyword\":null,\"seo_description\":null}]', 'tour', '2018-04-21 05:25:41', '2018-04-21 05:25:41');
 
 -- --------------------------------------------------------
 
@@ -879,7 +1049,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (43, '2018_04_05_153938_create_events_table', 18),
 (44, '2018_04_09_100307_add_other_content_to_category_table', 19),
 (45, '2018_04_13_190612_create_servicer_table', 20),
-(46, '2018_04_15_225006_add_column_servicer_and_create_promotion_table', 21);
+(46, '2018_04_15_225006_add_column_servicer_and_create_promotion_table', 21),
+(47, '2018_04_17_095212_create_booking_table', 22),
+(48, '2018_04_21_112142_add_address_company_columns', 23);
 
 -- --------------------------------------------------------
 
@@ -1027,11 +1199,11 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `name`, `content`, `status`, `user_id`, `image`, `template`, `parent_id`, `icon`, `featured`, `order`, `description`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Giới Thiệu', '<h4>Suy nghĩ của chúng tôi</h4>\r\n<p>Cha mẹ vất cả cả đời, đến tuổi về chiều muốn được dành khoản thời gian còn lại để thư giản và muốn được vây quần bên con cái và cháu chắt…</p>\r\n<p>Một gia đình ở đó cha bận rộn với công việc xã hội, mẹ đầu tắt mặt tối với công việc nội trợ, những đứa trẻ đi học từ sáng đến tối muộn, … họ cần có khoản không gian và thời gian để được nhìn lại nhau, hâm nóng và yêu thương nhau</p>\r\n<p>Những bạn trẻ luôn muốn khẳng định mình với công ty và xã hội, họ lao vào công việc mà quên rằng cuộc sống không chỉ có công việc và khi giật mình nhận ra, họ đang thiếu những giây phút tận hưởng cuộc sống cùng bạn bè và người thân…</p>\r\n<p>Và còn nhiều nhiều người khác…. Họ cần có những địa điểm, họ cần có những kỳ nghỉ để được bên nhau và thư giản tái tạo năng lượng…</p>', 1, 1, NULL, 'about-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 10:09:00', '2018-04-17 08:50:46'),
+(1, 'Giới Thiệu', '<h4>Suy nghĩ của chúng tôi</h4>\r\n<p>Cha mẹ vất cả cả đời, đến tuổi về chiều muốn được dành khoản thời gian còn lại để thư giản và muốn được vây quần bên con cái và cháu chắt…</p>\r\n<p>Một gia đình ở đó cha bận rộn với công việc xã hội, mẹ đầu tắt mặt tối với công việc nội trợ, những đứa trẻ đi học từ sáng đến tối muộn, … họ cần có khoản không gian và thời gian để được nhìn lại nhau, hâm nóng và yêu thương nhau</p>\r\n<p>Những bạn trẻ luôn muốn khẳng định mình với công ty và xã hội, họ lao vào công việc mà quên rằng cuộc sống không chỉ có công việc và khi giật mình nhận ra, họ đang thiếu những giây phút tận hưởng cuộc sống cùng bạn bè và người thân…</p>\r\n<p>Và còn nhiều nhiều người khác…. Họ cần có những địa điểm, họ cần có những kỳ nghỉ để được bên nhau và thư giản tái tạo năng lượng…</p>', 1, 1, '/uploads/1/contact-us.jpg', 'about-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 10:09:00', '2018-04-19 14:56:53'),
 (2, 'Địa Điểm', '<p>Địa Điểm</p>', 1, 1, NULL, 'hotel-list-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:22:16', '2018-04-14 07:37:52'),
 (3, 'Tour', '<p>Tour</p>', 1, 1, NULL, 'tour-list-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:29:23', '2018-04-15 15:18:35'),
-(4, 'FAQ', '<p>FAQ</p>', 1, 1, NULL, 'faq-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:34:10', '2018-04-12 16:34:10'),
-(5, 'Liên Hệ', '<p>Liên Hệ</p>', 1, 1, NULL, 'contact-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:39:10', '2018-04-12 16:39:10'),
+(4, 'FAQs', '<p>FAQ</p>', 1, 1, '/uploads/1/contact-us.jpg', 'faq-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:34:10', '2018-04-19 15:11:10'),
+(5, 'Liên Hệ', '<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit minima aut, tempore id laudantium consectetur delectus aspernatur quas obcaecati harum aliquam voluptatem, labore molestiae asperiores, non explicabo quia sunt!</div>', 1, 1, '/uploads/1/contact-us.jpg', 'contact-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:39:10', '2018-04-19 15:14:38'),
 (6, 'Khuyến Mãi', '<p>Khuyến Mãi</p>', 1, 1, NULL, 'getit-template', 0, NULL, 0, 0, NULL, NULL, '2018-04-12 16:43:33', '2018-04-12 16:43:33');
 
 -- --------------------------------------------------------
@@ -1086,12 +1258,23 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `name`, `description`, `content`, `status`, `user_id`, `featured`, `image`, `views`, `format_type`, `deleted_at`, `created_at`, `updated_at`, `post_type`, `template`, `other_image`, `order`, `other_content`, `book_now`) VALUES
-(1, 'Khách Hàng 1', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:02:45', '2018-04-17 11:03:32', NULL, NULL, NULL, 0, NULL, 0),
-(2, 'Khách Hàng 2', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:03:18', '2018-04-17 11:03:18', NULL, NULL, NULL, 0, NULL, 0),
-(3, 'Khách Hàng 3', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:10:34', '2018-04-17 11:10:34', NULL, NULL, NULL, 0, NULL, 0),
-(4, 'Khách Hàng 4', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:10:53', '2018-04-17 11:10:53', NULL, NULL, NULL, 0, NULL, 0),
+(1, 'Khách Hàng 1', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:02:45', '2018-04-18 15:41:59', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(2, 'Khách Hàng 2', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:03:18', '2018-04-18 15:42:01', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(3, 'Khách Hàng 3', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:10:34', '2018-04-18 15:42:03', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(4, 'Khách Hàng 4', 'On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px; text-align: center;\">On behalf of a group of four Czechs, I would like to thank you very much for very well organized journey to both parts of Vietnam. Wishing you personally and your company in general every success.</span></p>', 1, 1, 0, '/uploads/1/khach-hang-danh-gia/avatar3.png', 0, NULL, NULL, '2018-04-17 11:10:53', '2018-04-18 15:42:05', NULL, 'default-post-template', NULL, 0, NULL, 0),
 (5, 'News Demo 1', 'News Demo 1', '<div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div> </div>\r\n</div>', 1, 1, 0, '/uploads/1/tin-tuc-du-lich/new1.jpg', 1, NULL, NULL, '2018-04-18 03:40:43', '2018-04-18 04:09:55', NULL, 'news-detail-template', '/uploads/1/contact-us.jpg', 0, NULL, 0),
-(6, 'News Demo 2', 'News Demo 2', '<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div> </div>', 1, 1, 0, '/uploads/1/tin-tuc-du-lich/new1.jpg', 0, NULL, NULL, '2018-04-18 03:41:33', '2018-04-18 04:03:20', NULL, 'news-detail-template', NULL, 0, NULL, 0);
+(6, 'News Demo 2', 'News Demo 2', '<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo in eos libero error excepturi magni officiis esse dolores sunt ex itaque veniam quod nisi perferendis numquam, nulla, expedita beatae.</div>\r\n<div> </div>', 1, 1, 0, '/uploads/1/tin-tuc-du-lich/new1.jpg', 0, NULL, NULL, '2018-04-18 03:41:33', '2018-04-18 04:03:20', NULL, 'news-detail-template', NULL, 0, NULL, 0),
+(7, 'Đối Tác 1', 'https://www.google.com.vn/', '<p>https://www.google.com.vn/</p>', 1, 1, 0, '/uploads/1/doi-tac-lien-ket/brand1.jpg', 0, NULL, NULL, '2018-04-18 15:39:48', '2018-04-18 15:39:59', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(8, 'Đối Tác 2', 'https://www.google.com.vn/', '<p>https://www.google.com.vn/</p>', 1, 1, 0, '/uploads/1/doi-tac-lien-ket/brand2.jpg', 0, NULL, NULL, '2018-04-18 15:40:44', '2018-04-18 15:40:44', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(9, 'Đối Tác 3', 'https://www.google.com.vn/', '<p>https://www.google.com.vn/</p>', 1, 1, 0, '/uploads/1/doi-tac-lien-ket/brand3.jpg', 0, NULL, NULL, '2018-04-18 15:41:11', '2018-04-18 15:41:11', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(10, 'Đối Tác 4', 'https://www.google.com.vn/', '<p>https://www.google.com.vn/</p>', 1, 1, 0, '/uploads/1/doi-tac-lien-ket/brand4.jpg', 0, NULL, NULL, '2018-04-18 15:41:36', '2018-04-18 15:41:36', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(11, 'Đối Tác 5', 'https://google.com.vn', '<p>https://google.com.vn</p>', 1, 1, 0, '/uploads/1/doi-tac-lien-ket/brand1.jpg', 0, NULL, NULL, '2018-04-18 15:45:01', '2018-04-18 15:45:01', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(12, 'Câu hỏi công ty 1', 'How it works?', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:14:38', '2018-04-19 08:14:38', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(13, 'Câu hỏi công ty 2', 'How it work?', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:15:11', '2018-04-19 08:15:11', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(14, 'Câu hỏi FAQs 1', 'How it works?', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:39:34', '2018-04-19 08:39:34', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(15, 'Câu hỏi FAQs 2', 'Câu hỏi FAQs 2', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:40:13', '2018-04-19 08:40:13', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(16, 'Câu hỏi FAQs 3', 'Câu hỏi FAQs 3', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:40:29', '2018-04-19 08:40:29', NULL, 'default-post-template', NULL, 0, NULL, 0),
+(17, 'Câu hỏi FAQs 4', 'Câu hỏi FAQs 4', '<p><span style=\"color: #465a66; font-family: mallory, \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 16px;\">Lorem ipsum dolor sit amet, aliquam netus amet, tempor sit, mauris nam lorem. Non sodales venenatis, laoreet amet. Nullam eu, non enim, auctor euismod. Arcu sed justo, consequat sem, vel habitant. Felis vestibulum, vehicula condimentum. Nunc eget a.</span></p>', 1, 1, 0, NULL, 0, NULL, NULL, '2018-04-19 08:40:59', '2018-04-19 08:40:59', NULL, 'default-post-template', NULL, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -1113,12 +1296,23 @@ CREATE TABLE `post_category` (
 --
 
 INSERT INTO `post_category` (`id`, `category_id`, `post_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(2, 2, 2, NULL, '2018-04-17 11:03:18', '2018-04-17 11:03:18'),
-(3, 2, 1, NULL, '2018-04-17 11:03:32', '2018-04-17 11:03:32'),
-(4, 2, 3, NULL, '2018-04-17 11:10:34', '2018-04-17 11:10:34'),
-(5, 2, 4, NULL, '2018-04-17 11:10:53', '2018-04-17 11:10:53'),
 (9, 3, 6, NULL, '2018-04-18 04:03:20', '2018-04-18 04:03:20'),
-(10, 3, 5, NULL, '2018-04-18 04:09:55', '2018-04-18 04:09:55');
+(10, 3, 5, NULL, '2018-04-18 04:09:55', '2018-04-18 04:09:55'),
+(12, 4, 7, NULL, '2018-04-18 15:39:59', '2018-04-18 15:39:59'),
+(13, 4, 8, NULL, '2018-04-18 15:40:44', '2018-04-18 15:40:44'),
+(14, 4, 9, NULL, '2018-04-18 15:41:11', '2018-04-18 15:41:11'),
+(15, 4, 10, NULL, '2018-04-18 15:41:36', '2018-04-18 15:41:36'),
+(16, 2, 1, NULL, '2018-04-18 15:41:59', '2018-04-18 15:41:59'),
+(17, 2, 2, NULL, '2018-04-18 15:42:01', '2018-04-18 15:42:01'),
+(18, 2, 3, NULL, '2018-04-18 15:42:03', '2018-04-18 15:42:03'),
+(19, 2, 4, NULL, '2018-04-18 15:42:05', '2018-04-18 15:42:05'),
+(20, 4, 11, NULL, '2018-04-18 15:45:02', '2018-04-18 15:45:02'),
+(21, 1, 12, NULL, '2018-04-19 08:14:38', '2018-04-19 08:14:38'),
+(22, 1, 13, NULL, '2018-04-19 08:15:11', '2018-04-19 08:15:11'),
+(23, 5, 14, NULL, '2018-04-19 08:39:34', '2018-04-19 08:39:34'),
+(24, 5, 15, NULL, '2018-04-19 08:40:13', '2018-04-19 08:40:13'),
+(25, 5, 16, NULL, '2018-04-19 08:40:29', '2018-04-19 08:40:29'),
+(26, 5, 17, NULL, '2018-04-19 08:40:59', '2018-04-19 08:40:59');
 
 -- --------------------------------------------------------
 
@@ -1203,7 +1397,7 @@ INSERT INTO `request_logs` (`id`, `status_code`, `url`, `count`, `user_id`, `ref
 (3, 404, 'http://localhost:8000/assets/main-project/img/brand3.jpg', 12, NULL, NULL, '2018-04-12 09:01:44', '2018-04-12 09:33:08'),
 (4, 404, 'http://localhost:8000/assets/main-project/img/brand4.jpg', 13, NULL, NULL, '2018-04-12 09:01:44', '2018-04-12 09:33:09'),
 (5, 404, 'http://localhost:8000/images/favicon.png', 190, NULL, NULL, '2018-04-12 09:01:54', '2018-04-15 16:17:44'),
-(6, 404, 'http://localhost:8000/vendor/core/images/ui/nav_arrow_right.pn', 346, NULL, NULL, '2018-04-12 09:02:31', '2018-04-18 04:17:49'),
+(6, 404, 'http://localhost:8000/vendor/core/images/ui/nav_arrow_right.pn', 484, NULL, NULL, '2018-04-12 09:02:31', '2018-04-21 05:25:42'),
 (7, 404, 'http://localhost:8000/uploads/1/banner/boton-vertical-logo2.png', 1, NULL, NULL, '2018-04-12 09:05:41', '2018-04-12 09:05:41'),
 (8, 404, 'http://localhost:8000/assets/main-project/img/slide1.png', 3, NULL, NULL, '2018-04-12 09:15:16', '2018-04-12 09:18:39'),
 (9, 404, 'http://localhost:8000/assets/main-project/img/icon3.png', 6, NULL, NULL, '2018-04-12 09:15:16', '2018-04-12 09:30:11'),
@@ -1213,9 +1407,9 @@ INSERT INTO `request_logs` (`id`, `status_code`, `url`, `count`, `user_id`, `ref
 (13, 404, 'http://localhost:8000/assets/main-project/img/3.jpg', 9, NULL, NULL, '2018-04-12 09:15:17', '2018-04-12 16:30:05'),
 (14, 404, 'http://localhost:8000/assets/main-project/img/avatar3.png', 6, NULL, NULL, '2018-04-12 09:15:18', '2018-04-12 09:30:12'),
 (15, 404, 'http://localhost:8000/assets/main-project/img/new1.jpg', 7, NULL, NULL, '2018-04-12 09:15:18', '2018-04-12 16:58:42'),
-(16, 404, 'http://localhost:8000/themes/book2go/assets/popper/js/popper.min.js.map', 374, NULL, NULL, '2018-04-12 09:15:35', '2018-04-18 07:05:11'),
-(17, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/js/bootstrap.min.js.map', 373, NULL, NULL, '2018-04-12 09:15:35', '2018-04-18 07:05:12'),
-(18, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/css/bootstrap.min.css.map', 389, NULL, NULL, '2018-04-12 09:15:36', '2018-04-18 07:05:11'),
+(16, 404, 'http://localhost:8000/themes/book2go/assets/popper/js/popper.min.js.map', 479, NULL, NULL, '2018-04-12 09:15:35', '2018-04-21 05:16:39'),
+(17, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/js/bootstrap.min.js.map', 478, NULL, NULL, '2018-04-12 09:15:35', '2018-04-21 05:16:39'),
+(18, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/css/bootstrap.min.css.map', 500, NULL, NULL, '2018-04-12 09:15:36', '2018-04-21 05:26:11'),
 (19, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/css/assets/main-project/img/brand1.jpg', 2, NULL, NULL, '2018-04-12 09:17:56', '2018-04-12 09:17:57'),
 (20, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/css/assets/main-project/img/brand2.jpg', 1, NULL, NULL, '2018-04-12 09:17:56', '2018-04-12 09:17:56'),
 (21, 404, 'http://localhost:8000/themes/book2go/assets/bootstrap/css/assets/main-project/img/brand3.jpg', 1, NULL, NULL, '2018-04-12 09:17:57', '2018-04-12 09:17:57'),
@@ -1248,13 +1442,21 @@ INSERT INTO `request_logs` (`id`, `status_code`, `url`, `count`, `user_id`, `ref
 (48, 404, 'http://localhost:8000/assets/main-project/img/ks-loaiphong2.jpg', 3, NULL, NULL, '2018-04-14 08:28:41', '2018-04-14 08:31:38'),
 (49, 404, 'http://localhost:8000/themes/book2go/assets/main-project/img/img-map.png%22%20alt=', 1, NULL, NULL, '2018-04-14 08:29:39', '2018-04-14 08:29:39'),
 (50, 404, 'http://localhost:8000/admin/tour/jquery.contextMenu.min.js.map', 1, NULL, NULL, '2018-04-15 15:21:56', '2018-04-15 15:21:56'),
-(51, 404, 'http://localhost:8000/vendor/core/media/packages/jquery-context-menu/jquery.contextMenu.min.css.map', 2, NULL, NULL, '2018-04-15 15:21:56', '2018-04-15 16:33:23'),
+(51, 404, 'http://localhost:8000/vendor/core/media/packages/jquery-context-menu/jquery.contextMenu.min.css.map', 3, NULL, NULL, '2018-04-15 15:21:56', '2018-04-19 14:55:07'),
 (52, 404, 'http://localhost:8000/%7B%7B%20Theme::asset()-%3Eurl(\'main-project/img/star.png\')', 2, NULL, NULL, '2018-04-15 16:02:21', '2018-04-15 16:02:44'),
 (53, 404, 'http://localhost:8000/admin/jquery.contextMenu.min.js.map', 1, NULL, NULL, '2018-04-15 16:33:23', '2018-04-15 16:33:23'),
 (54, 404, 'http://localhost:8000/admin/plugin', 1, NULL, NULL, '2018-04-15 16:42:46', '2018-04-15 16:42:46'),
 (55, 404, 'http://localhost:8000/admin/custom-field', 1, NULL, NULL, '2018-04-15 16:43:25', '2018-04-15 16:43:25'),
 (56, 404, 'http://localhost:8000/img/contact-us.jpg', 2, NULL, NULL, '2018-04-18 04:06:44', '2018-04-18 04:06:48'),
-(57, 404, 'http://localhost:8000/vendor/core/images/default-image.png', 2, NULL, NULL, '2018-04-18 04:10:09', '2018-04-18 04:17:24');
+(57, 404, 'http://localhost:8000/vendor/core/images/default-image.png', 5, NULL, NULL, '2018-04-18 04:10:09', '2018-04-19 15:14:14'),
+(58, 404, 'http://localhost:8000/vendor/core/packages/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css.map', 9, NULL, NULL, '2018-04-18 16:39:14', '2018-04-18 16:47:56'),
+(59, 404, 'http://localhost:8000/admin/pages/edit/__image__', 2, '[1]', NULL, '2018-04-19 14:53:56', '2018-04-19 14:54:26'),
+(60, 404, 'http://localhost:8000/admin/pages/edit/jquery.contextMenu.min.js.map', 2, '[1]', NULL, '2018-04-19 14:55:06', '2018-04-19 14:55:07'),
+(61, 404, 'http://localhost:8000/tour-detail.html', 1, '[1]', NULL, '2018-04-19 17:41:58', '2018-04-19 17:41:58'),
+(62, 404, 'http://localhost:8000/member/login', 5, NULL, NULL, '2018-04-20 05:38:44', '2018-04-20 08:36:09'),
+(63, 404, 'http://localhost:8000/member/login/ajax', 4, NULL, NULL, '2018-04-20 08:34:34', '2018-04-20 08:35:38'),
+(64, 404, 'http://localhost:8000/admin/member', 1, NULL, NULL, '2018-04-20 09:05:22', '2018-04-20 09:05:22'),
+(65, 404, 'http://localhost:8000/logout', 2, NULL, NULL, '2018-04-20 09:25:14', '2018-04-20 09:26:08');
 
 -- --------------------------------------------------------
 
@@ -1294,7 +1496,22 @@ INSERT INTO `revisions` (`id`, `revisionable_type`, `revisionable_id`, `user_id`
 (13, 'Botble\\Servicer\\Models\\ServiceType', 1, 1, 'star', NULL, '4', '2018-04-17 11:27:11', '2018-04-17 11:27:11'),
 (14, 'Botble\\Servicer\\Models\\ServiceType', 3, 1, 'star', NULL, '3', '2018-04-17 11:27:27', '2018-04-17 11:27:27'),
 (15, 'Botble\\Servicer\\Models\\ServiceType', 4, 1, 'star', NULL, '4', '2018-04-17 11:27:33', '2018-04-17 11:27:33'),
-(16, 'Botble\\Blog\\Models\\Post', 5, 1, 'other_image', NULL, '/uploads/1/contact-us.jpg', '2018-04-18 04:09:55', '2018-04-18 04:09:55');
+(16, 'Botble\\Blog\\Models\\Post', 5, 1, 'other_image', NULL, '/uploads/1/contact-us.jpg', '2018-04-18 04:09:55', '2018-04-18 04:09:55'),
+(17, 'Botble\\Blog\\Models\\Post', 7, 1, 'image', NULL, '/uploads/1/doi-tac-lien-ket/brand1.jpg', '2018-04-18 15:39:59', '2018-04-18 15:39:59'),
+(18, 'Botble\\Blog\\Models\\Post', 1, 1, 'template', NULL, 'default-post-template', '2018-04-18 15:41:59', '2018-04-18 15:41:59'),
+(19, 'Botble\\Blog\\Models\\Post', 2, 1, 'template', NULL, 'default-post-template', '2018-04-18 15:42:01', '2018-04-18 15:42:01'),
+(20, 'Botble\\Blog\\Models\\Post', 3, 1, 'template', NULL, 'default-post-template', '2018-04-18 15:42:03', '2018-04-18 15:42:03'),
+(21, 'Botble\\Blog\\Models\\Post', 4, 1, 'template', NULL, 'default-post-template', '2018-04-18 15:42:05', '2018-04-18 15:42:05'),
+(22, 'Botble\\Page\\Models\\Page', 1, 1, 'image', NULL, '/uploads/1/contact-us.jpg', '2018-04-19 14:56:53', '2018-04-19 14:56:53'),
+(23, 'Botble\\Page\\Models\\Page', 4, 1, 'name', 'FAQ', 'Câu Hỏi Thường Gặp', '2018-04-19 15:10:25', '2018-04-19 15:10:25'),
+(24, 'Botble\\Page\\Models\\Page', 4, 1, 'image', NULL, '/uploads/1/contact-us.jpg', '2018-04-19 15:10:25', '2018-04-19 15:10:25'),
+(25, 'Botble\\Page\\Models\\Page', 4, 1, 'name', 'Câu Hỏi Thường Gặp', 'FAQs', '2018-04-19 15:11:10', '2018-04-19 15:11:10'),
+(26, 'Botble\\Page\\Models\\Page', 5, 1, 'image', NULL, '/uploads/1/contact-us.jpg', '2018-04-19 15:14:38', '2018-04-19 15:14:38'),
+(27, 'Botble\\Servicer\\Models\\ServiceType', 1, 1, 'deleted_at', NULL, '2018-04-21 12:18:05', '2018-04-21 05:18:05', '2018-04-21 05:18:05'),
+(28, 'Botble\\Servicer\\Models\\ServiceType', 3, 1, 'address', NULL, 'Ninh Hoa, Khanh Hoa', '2018-04-21 05:20:29', '2018-04-21 05:20:29'),
+(29, 'Botble\\Servicer\\Models\\ServiceType', 3, 1, 'phone', NULL, '0905160320', '2018-04-21 05:20:29', '2018-04-21 05:20:29'),
+(30, 'Botble\\Servicer\\Models\\ServiceType', 4, 1, 'address', NULL, 'Cam Lam, Khanh Hoa', '2018-04-21 05:20:54', '2018-04-21 05:20:54'),
+(31, 'Botble\\Servicer\\Models\\ServiceType', 4, 1, 'phone', NULL, '0905160320', '2018-04-21 05:20:54', '2018-04-21 05:20:54');
 
 -- --------------------------------------------------------
 
@@ -1380,7 +1597,11 @@ CREATE TABLE `servicers` (
 INSERT INTO `servicers` (`id`, `name`, `status`, `description`, `content`, `user_id`, `image`, `price`, `price_children`, `adults`, `children`, `format_type`, `service_type_id`, `order`, `number_of_servicer`, `deleted_at`, `created_at`, `updated_at`, `address`) VALUES
 (1, 'Tour Bình Ba', 1, 'Tour Bình Ba', '<p>Tour Bình Ba</p>', 1, '/uploads/1/tour/dao-binh-ba/tour-dao-binh-ba.jpg', NULL, NULL, NULL, NULL, 'tour', 0, 0, NULL, NULL, '2018-04-15 15:22:13', '2018-04-15 15:24:49', NULL),
 (2, 'dfgdfgdfg', 1, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 'tour', 0, 0, NULL, '2018-04-15 15:54:36', '2018-04-15 15:33:54', '2018-04-15 15:54:36', NULL),
-(3, 'drgdgdfgdfg', 1, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 'tour', 0, 0, NULL, '2018-04-15 16:02:38', '2018-04-15 15:54:42', '2018-04-15 16:02:38', NULL);
+(3, 'drgdgdfgdfg', 1, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 'tour', 0, 0, NULL, '2018-04-15 16:02:38', '2018-04-15 15:54:42', '2018-04-15 16:02:38', NULL),
+(4, 'Room Test 1', 1, 'Room Test 1', '<p>Room Test 1</p>', 1, '/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg', '1000000.00', NULL, 2, 2, 'room_type', 2, 0, 10, NULL, '2018-04-19 15:47:22', '2018-04-19 15:47:22', NULL),
+(5, 'Căn hộ demo 1', 1, 'Căn hộ demo 1', '<p>Căn hộ demo 1</p>', 1, '/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg', '900000.00', NULL, NULL, NULL, 'apartment', 0, 0, 1, NULL, '2018-04-20 04:01:56', '2018-04-20 04:01:56', NULL),
+(6, 'Căn Hộ Demo 2', 1, 'Căn Hộ Demo 2', '<p>Căn Hộ Demo 2</p>', 1, '/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg', '1000000.00', NULL, NULL, NULL, 'apartment', 0, 0, 3, NULL, '2018-04-21 05:24:10', '2018-04-21 05:24:10', NULL),
+(7, 'Tour Điệp Sơn', 1, 'Tour Điệp Sơn', '<p>Tour Điệp Sơn</p>', 1, '/uploads/1/tour/dao-binh-ba/tour-dao-binh-ba.jpg', '600000.00', '300000.00', NULL, NULL, 'tour', 0, 0, NULL, NULL, '2018-04-21 05:25:41', '2018-04-21 05:25:41', 'Ninh Hoa, Khanh Hoa');
 
 -- --------------------------------------------------------
 
@@ -1412,10 +1633,13 @@ CREATE TABLE `service_types` (
 --
 
 INSERT INTO `service_types` (`id`, `name`, `description`, `content`, `status`, `user_id`, `featured`, `order`, `image`, `deleted_at`, `created_at`, `updated_at`, `star`, `lat_long`, `address`, `phone`) VALUES
-(1, 'Starcity Nha Trang Hotel', 'Starcity Nha Trang Hotel', '<p>Starcity Nha Trang Hotel</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg', NULL, '2018-04-14 07:32:23', '2018-04-17 11:27:11', 4, NULL, NULL, NULL),
+(1, 'Starcity Nha Trang Hotel', 'Starcity Nha Trang Hotel', '<p>Starcity Nha Trang Hotel</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020218440039576985.jpg', '2018-04-21 05:18:05', '2018-04-14 07:32:23', '2018-04-21 05:18:05', 4, NULL, NULL, NULL),
 (2, 'Hotel demo 1', 'Hotel demo 1', '<p>Hotel demo 1</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg', NULL, '2018-04-16 08:49:48', '2018-04-16 13:55:27', 5, NULL, 'Nha Trang, Khanh Hoa', NULL),
-(3, 'Hotel demo 2', 'Hotel demo 2', '<p>Hotel demo 2</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg', NULL, '2018-04-16 08:54:53', '2018-04-17 11:27:27', 3, NULL, NULL, NULL),
-(4, 'Hotel demo 3', 'Hotel demo 3', '<p>Hotel demo 3</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg', NULL, '2018-04-16 08:55:26', '2018-04-17 11:27:33', 4, NULL, NULL, NULL);
+(3, 'Hotel demo 2', 'Hotel demo 2', '<p>Hotel demo 2</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg', NULL, '2018-04-16 08:54:53', '2018-04-21 05:20:29', 3, NULL, 'Ninh Hoa, Khanh Hoa', '0905160320'),
+(4, 'Hotel demo 3', 'Hotel demo 3', '<p>Hotel demo 3</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020217110039573814.jpg', NULL, '2018-04-16 08:55:26', '2018-04-21 05:20:54', 4, NULL, 'Cam Lam, Khanh Hoa', '0905160320'),
+(5, 'Hotel demo 4', 'Hotel demo 4', '<p>Hotel demo 4</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020215590039570222.jpg', NULL, '2018-04-21 05:19:15', '2018-04-21 05:19:15', 5, NULL, 'Cam Ranh, Khanh Hoa', '090909090'),
+(6, 'Hotel demo 5', 'Hotel demo 5', '<p>Hotel demo 5</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020315020039603730.jpg', NULL, '2018-04-21 05:21:37', '2018-04-21 05:21:37', 5, NULL, 'Tran Phu, Nha Trang', '0905160320'),
+(7, 'Hotel demo 6', 'Hotel demo 6', '<p>Hotel demo 6</p>', 1, 1, 0, 0, '/uploads/1/khach-san/starcity/1158838-16020315020039603736.jpg', NULL, '2018-04-21 05:22:17', '2018-04-21 05:22:17', 4, NULL, 'Loc Tho, Nha Trang', '0905160320');
 
 -- --------------------------------------------------------
 
@@ -1458,7 +1682,7 @@ INSERT INTO `settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (30, 'language_hide_languages', '[]', NULL, NULL),
 (39, 'rich_editor', 'tinymce', NULL, NULL),
 (41, 'admin_title', 'Book2go CMS', NULL, NULL),
-(44, 'activated_plugins', '[\"translation\",\"analytics\",\"audit-log\",\"backup\",\"block\",\"blog\",\"captcha\",\"contact\",\"gallery\",\"member\",\"log-viewer\",\"language\",\"note\",\"request-log\",\"boton-addon\",\"events\",\"servicer\",\"custom-field\"]', NULL, NULL),
+(44, 'activated_plugins', '[\"translation\",\"analytics\",\"audit-log\",\"backup\",\"block\",\"blog\",\"captcha\",\"contact\",\"gallery\",\"log-viewer\",\"language\",\"note\",\"request-log\",\"boton-addon\",\"events\",\"servicer\",\"custom-field\",\"member\"]', NULL, NULL),
 (48, 'admin_logo', '/uploads/1/logo.png', NULL, NULL),
 (54, 'seo_title', 'Book2go', NULL, NULL),
 (55, 'seo_description', 'Book2go', NULL, NULL),
@@ -1474,7 +1698,24 @@ INSERT INTO `settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (74, 'theme-botonblue-social-facebook', 'https://www.facebook.com/', NULL, NULL),
 (75, 'theme-book2go-copyright', '© 2018 Book2go. All right reserved.', NULL, NULL),
 (76, 'theme-book2go-logo', '/uploads/1/logo.png', NULL, NULL),
-(98, 'contact_hotline', '(+84) 974 974 567', NULL, NULL);
+(98, 'contact_hotline', '(+84) 974 974 567', NULL, NULL),
+(99, 'theme-book2go-footer_block1', '<h6 class=\"text-uppercase mb-4 font-weight-bold\">Book2govn</h6>\r\n<p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>', NULL, NULL),
+(100, 'theme-book2go-footer_block2', '<h6 class=\"text-uppercase mb-4 font-weight-bold\">Sản Phẩm</h6>\r\n<p><a href=\"#!\">MDBootstrap</a></p>\r\n<p><a href=\"#!\">MDWordPress</a></p>\r\n<p><a href=\"#!\">BrandFlow</a></p>\r\n<p><a href=\"#!\">Bootstrap Angular</a></p>', NULL, NULL),
+(101, 'theme-book2go-footer_block3', '<h6 class=\"text-uppercase mb-4 font-weight-bold\">Liên Kết</h6>\r\n<p><a href=\"#!\">Your Account</a></p>\r\n<p><a href=\"#!\">Become an Affiliate</a></p>\r\n<p><a href=\"#!\">Shipping Rates</a></p>\r\n<p><a href=\"#!\">Help</a></p>', NULL, NULL),
+(102, 'theme-book2go-footer_block4', '<h6 class=\"text-uppercase mb-4 font-weight-bold\">Liên Hệ</h6>\r\n<p><i class=\"fa fa-home mr-3\"></i> Nha Trang City, Khanh Hoa Province, Vietnam</p>\r\n<p><i class=\"fa fa-envelope mr-3\"></i> info@book2govn.com</p>\r\n<p><i class=\"fa fa-phone mr-3\"></i> (+84) 974 974 567</p>', NULL, NULL),
+(103, 'theme-book2go-social_facebook', '#', NULL, NULL),
+(104, 'theme-book2go-social_twitter', '#', NULL, NULL),
+(105, 'theme-book2go-social_google', '#', NULL, NULL),
+(106, 'theme-book2go-social_linkedin', '#', NULL, NULL),
+(107, 'email_driver', 'smtp', NULL, NULL),
+(108, 'email_port', '587', NULL, NULL),
+(109, 'email_host', 'smtp.gmail.com', NULL, NULL),
+(110, 'email_username', 'webdepnhatrang@gmail.com', NULL, NULL),
+(111, 'email_password', 'mahbzdrgstiynyth', NULL, NULL),
+(112, 'email_encryption', 'TLS', NULL, NULL),
+(113, 'email_from_address', 'webdepnhatrang@gmail.com', NULL, NULL),
+(115, 'email_from_name', 'Book2govn', NULL, NULL),
+(116, 'contact_email_subject', 'Book2govn', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1503,7 +1744,7 @@ INSERT INTO `slugs` (`id`, `key`, `reference_id`, `reference`, `deleted_at`, `cr
 (4, 'faq', 4, 'page', NULL, '2018-04-12 16:34:10', '2018-04-12 16:34:10'),
 (5, 'lien-he', 5, 'page', NULL, '2018-04-12 16:39:10', '2018-04-12 16:39:10'),
 (6, 'khuyen-mai', 6, 'page', NULL, '2018-04-12 16:43:33', '2018-04-12 16:43:33'),
-(7, 'starcity-nha-trang-hotel', 1, 'hotel', NULL, '2018-04-14 07:32:23', '2018-04-14 07:32:23'),
+(7, 'starcity-nha-trang-hotel', 1, 'hotel', '2018-04-21 05:18:05', '2018-04-14 07:32:23', '2018-04-21 05:18:05'),
 (8, 'tour-binh-ba', 1, 'tour', NULL, '2018-04-15 15:22:13', '2018-04-15 15:43:18'),
 (9, '1523806434', 2, 'tour', '2018-04-15 15:54:36', '2018-04-15 15:33:54', '2018-04-15 15:54:36'),
 (10, '1523807682', 3, 'tour', '2018-04-15 16:02:38', '2018-04-15 15:54:42', '2018-04-15 16:02:38'),
@@ -1518,7 +1759,27 @@ INSERT INTO `slugs` (`id`, `key`, `reference_id`, `reference`, `deleted_at`, `cr
 (19, 'khach-hang-4', 4, 'post', NULL, '2018-04-17 11:10:53', '2018-04-17 11:10:53'),
 (20, 'tin-tuc-du-lich', 3, 'category', NULL, '2018-04-18 03:30:14', '2018-04-18 03:30:14'),
 (21, 'news-demo-1', 5, 'post', NULL, '2018-04-18 03:40:43', '2018-04-18 03:40:43'),
-(22, 'news-demo-2', 6, 'post', NULL, '2018-04-18 03:41:33', '2018-04-18 03:41:33');
+(22, 'news-demo-2', 6, 'post', NULL, '2018-04-18 03:41:33', '2018-04-18 03:41:33'),
+(23, 'doi-tac-lien-ket', 4, 'category', NULL, '2018-04-18 15:31:15', '2018-04-18 15:31:15'),
+(24, 'doi-tac-1', 7, 'post', NULL, '2018-04-18 15:39:48', '2018-04-18 15:39:48'),
+(25, 'doi-tac-2', 8, 'post', NULL, '2018-04-18 15:40:44', '2018-04-18 15:40:44'),
+(26, 'doi-tac-lien-ket-1', 9, 'post', NULL, '2018-04-18 15:41:11', '2018-04-18 15:41:11'),
+(27, 'doi-tac-4', 10, 'post', NULL, '2018-04-18 15:41:36', '2018-04-18 15:41:36'),
+(28, 'doi-tac-5', 11, 'post', NULL, '2018-04-18 15:45:02', '2018-04-18 15:45:02'),
+(29, 'cau-hoi-cong-ty-1', 12, 'post', NULL, '2018-04-19 08:14:38', '2018-04-19 08:14:38'),
+(30, 'cau-hoi-cong-ty-2', 13, 'post', NULL, '2018-04-19 08:15:11', '2018-04-19 08:15:11'),
+(31, 'cau-hoi-faqs', 5, 'category', NULL, '2018-04-19 08:38:01', '2018-04-19 08:38:01'),
+(32, 'cau-hoi-faqs-1', 14, 'post', NULL, '2018-04-19 08:39:34', '2018-04-19 08:39:34'),
+(33, 'cau-hoi-faqs-2', 15, 'post', NULL, '2018-04-19 08:40:13', '2018-04-19 08:40:13'),
+(34, 'cau-hoi-faqs-3', 16, 'post', NULL, '2018-04-19 08:40:29', '2018-04-19 08:40:29'),
+(35, 'cau-hoi-faqs-4', 17, 'post', NULL, '2018-04-19 08:40:59', '2018-04-19 08:40:59'),
+(36, 'room-test-1', 4, 'room_type', NULL, '2018-04-19 15:47:22', '2018-04-19 15:47:22'),
+(37, 'can-ho-demo-1', 5, 'apartment', NULL, '2018-04-20 04:01:56', '2018-04-20 04:01:56'),
+(38, 'hotel-demo-4', 5, 'hotel', NULL, '2018-04-21 05:19:15', '2018-04-21 05:19:15'),
+(39, 'hotel-demo-5', 6, 'hotel', NULL, '2018-04-21 05:21:37', '2018-04-21 05:21:37'),
+(40, 'hotel-demo-6', 7, 'hotel', NULL, '2018-04-21 05:22:17', '2018-04-21 05:22:17'),
+(41, 'can-ho-demo-2', 6, 'apartment', NULL, '2018-04-21 05:24:10', '2018-04-21 05:24:10'),
+(42, 'tour-diep-son', 7, 'tour', NULL, '2018-04-21 05:25:41', '2018-04-21 05:25:41');
 
 -- --------------------------------------------------------
 
@@ -3984,7 +4245,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `permissions`, `last_login`, `first_name`, `last_name`, `username`, `dob`, `address`, `secondary_address`, `job_position`, `phone`, `secondary_phone`, `secondary_email`, `gender`, `website`, `skype`, `facebook`, `twitter`, `google_plus`, `youtube`, `github`, `interest`, `about`, `profile_image`, `super_user`, `manage_supers`, `completed_profile`) VALUES
-(1, 'nivianh@gmail.com', '$2y$10$/eZYKbDrnjpKpz8TgOagre9qx7tylzGV2vEdgmfiWbcN410y3RJh.', 'i1acpGDbapctEEguIVyrl9PBAJ7kbTrIt9F6EahYbvmmOR0T1tA8ExkRhWTI', '2017-11-15 06:57:09', '2018-04-18 03:29:22', '{\"analytics.general\":true,\"analytics.page\":true,\"analytics.browser\":true,\"analytics.referrer\":true,\"backups.list\":true,\"backups.create\":true,\"backups.restore\":true,\"backups.delete\":true,\"block.list\":true,\"block.create\":true,\"block.edit\":true,\"block.delete\":true,\"categories.list\":true,\"categories.create\":true,\"categories.edit\":true,\"categories.delete\":true,\"contacts.list\":true,\"contacts.create\":true,\"contacts.edit\":true,\"contacts.delete\":true,\"custom-fields.list\":true,\"custom-fields.create\":true,\"custom-fields.edit\":true,\"custom-fields.delete\":true,\"dashboard.index\":true,\"galleries.list\":true,\"galleries.create\":true,\"galleries.edit\":true,\"galleries.delete\":true,\"languages.list\":true,\"languages.create\":true,\"languages.edit\":true,\"languages.delete\":true,\"logs.list\":true,\"logs.delete\":true,\"media.index\":true,\"files.list\":true,\"files.create\":true,\"files.edit\":true,\"files.trash\":true,\"files.delete\":true,\"folders.list\":true,\"folders.create\":true,\"folders.edit\":true,\"folders.trash\":true,\"folders.delete\":true,\"member.list\":true,\"member.create\":true,\"member.edit\":true,\"member.delete\":true,\"menus.list\":true,\"menus.create\":true,\"menus.edit\":true,\"menus.delete\":true,\"pages.list\":true,\"pages.create\":true,\"pages.edit\":true,\"pages.delete\":true,\"plugins.list\":true,\"posts.list\":true,\"posts.create\":true,\"posts.edit\":true,\"posts.delete\":true,\"roles.list\":true,\"roles.create\":true,\"roles.edit\":true,\"roles.delete\":true,\"settings.options\":true,\"tags.list\":true,\"tags.create\":true,\"tags.edit\":true,\"tags.delete\":true,\"translations.list\":true,\"translations.create\":true,\"translations.edit\":true,\"translations.delete\":true,\"users.list\":true,\"users.create\":true,\"users.edit\":true,\"users.delete\":true,\"widgets.list\":true,\"superuser\":true,\"manage_supers\":true}', '2018-04-18 03:29:22', 'Dev', 'Team', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/vendor/core/images/default-avatar.jpg', 1, 1, 0);
+(1, 'chithien175@gmail.com', '$2y$10$/eZYKbDrnjpKpz8TgOagre9qx7tylzGV2vEdgmfiWbcN410y3RJh.', 'i1acpGDbapctEEguIVyrl9PBAJ7kbTrIt9F6EahYbvmmOR0T1tA8ExkRhWTI', '2017-11-15 06:57:09', '2018-04-21 03:48:58', '{\"analytics.general\":true,\"analytics.page\":true,\"analytics.browser\":true,\"analytics.referrer\":true,\"backups.list\":true,\"backups.create\":true,\"backups.restore\":true,\"backups.delete\":true,\"block.list\":true,\"block.create\":true,\"block.edit\":true,\"block.delete\":true,\"categories.list\":true,\"categories.create\":true,\"categories.edit\":true,\"categories.delete\":true,\"contacts.list\":true,\"contacts.create\":true,\"contacts.edit\":true,\"contacts.delete\":true,\"custom-fields.list\":true,\"custom-fields.create\":true,\"custom-fields.edit\":true,\"custom-fields.delete\":true,\"dashboard.index\":true,\"galleries.list\":true,\"galleries.create\":true,\"galleries.edit\":true,\"galleries.delete\":true,\"languages.list\":true,\"languages.create\":true,\"languages.edit\":true,\"languages.delete\":true,\"logs.list\":true,\"logs.delete\":true,\"media.index\":true,\"files.list\":true,\"files.create\":true,\"files.edit\":true,\"files.trash\":true,\"files.delete\":true,\"folders.list\":true,\"folders.create\":true,\"folders.edit\":true,\"folders.trash\":true,\"folders.delete\":true,\"member.list\":true,\"member.create\":true,\"member.edit\":true,\"member.delete\":true,\"menus.list\":true,\"menus.create\":true,\"menus.edit\":true,\"menus.delete\":true,\"pages.list\":true,\"pages.create\":true,\"pages.edit\":true,\"pages.delete\":true,\"plugins.list\":true,\"posts.list\":true,\"posts.create\":true,\"posts.edit\":true,\"posts.delete\":true,\"roles.list\":true,\"roles.create\":true,\"roles.edit\":true,\"roles.delete\":true,\"settings.options\":true,\"tags.list\":true,\"tags.create\":true,\"tags.edit\":true,\"tags.delete\":true,\"translations.list\":true,\"translations.create\":true,\"translations.edit\":true,\"translations.delete\":true,\"users.list\":true,\"users.create\":true,\"users.edit\":true,\"users.delete\":true,\"widgets.list\":true,\"superuser\":true,\"manage_supers\":true}', '2018-04-21 03:48:58', 'Dev', 'Team', 'admin', '1991-05-17 15:59:03', NULL, NULL, NULL, NULL, NULL, 'chithien175@gmail.com', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/vendor/core/images/default-avatar.jpg', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -4055,11 +4316,11 @@ INSERT INTO `widgets` (`id`, `widget_id`, `sidebar_id`, `theme`, `position`, `da
 (202, 'CategoriesWidget', 'botonblue_hompage_section', 'botonblue', 4, '{\"id\":\"CategoriesWidget\",\"name\":\"Categories\",\"number_display\":\"3\"}', '2018-04-12 07:48:55', '2018-04-12 07:48:55'),
 (203, 'EventsWidget', 'botonblue_hompage_section', 'botonblue', 5, '{\"id\":\"EventsWidget\",\"name\":\"UPCOMING EVENTS\",\"number_display\":\"6\",\"image_url\":\"\\/uploads\\/1\\/dining\\/diamond-sky-bar\\/botom-diamond-sky-bar.jpg\"}', '2018-04-12 07:48:55', '2018-04-12 07:48:55'),
 (204, 'AboutUsWidget', 'botonblue_hompage_section', 'botonblue', 6, '{\"id\":\"AboutUsWidget\",\"name\":\"About Us\",\"page_id\":\"4\"}', '2018-04-12 07:48:55', '2018-04-12 07:48:55'),
-(307, 'HomeBannerWidget', 'home_sidebar', 'book2go', 0, '{\"id\":\"HomeBannerWidget\",\"banner_image\":\"\\/uploads\\/1\\/slide1.png\"}', '2018-04-18 03:57:12', '2018-04-18 03:57:12'),
-(308, 'HomeGuaranteeWidget', 'home_sidebar', 'book2go', 1, '{\"id\":\"HomeGuaranteeWidget\",\"number\":\"01\",\"title\":\"Cam k\\u1ebft c\\u1ee7a ch\\u00fang t\\u00f4i\",\"sub_title\":\"Your fun and enjoyment is guaranteed when you book travel tours and hotels with us.<br>Well-organized routine, experienced guide, and professional service\"}', '2018-04-18 03:57:12', '2018-04-18 03:57:12'),
-(309, 'HomeDestinationWidget', 'home_sidebar', 'book2go', 2, '{\"id\":\"HomeDestinationWidget\",\"destination_image\":\"\\/uploads\\/1\\/pr.png\",\"number\":\"02\",\"title\":\"\\u0110\\u1ecba \\u0110i\\u1ec3m N\\u1ed5i B\\u1eadt\",\"sub_title\":\"Right place, Right time. Discover now the best destinations to travel this month!             <br>Recommended by millions of real travelers.\",\"hotels\":[\"1\",\"2\",\"3\",\"4\"]}', '2018-04-18 03:57:12', '2018-04-18 03:57:12'),
-(310, 'HomeTestimonialWidget', 'home_sidebar', 'book2go', 3, '{\"id\":\"HomeTestimonialWidget\",\"number\":\"03\"}', '2018-04-18 03:57:12', '2018-04-18 03:57:12'),
-(311, 'HomeNewsWidget', 'home_sidebar', 'book2go', 4, '{\"id\":\"HomeNewsWidget\",\"number\":\"04\"}', '2018-04-18 03:57:12', '2018-04-18 03:57:12');
+(332, 'HomeBannerWidget', 'home_sidebar', 'book2go', 0, '{\"id\":\"HomeBannerWidget\",\"banner_image\":\"\\/uploads\\/1\\/slide1.png\"}', '2018-04-21 05:22:34', '2018-04-21 05:22:34'),
+(333, 'HomeGuaranteeWidget', 'home_sidebar', 'book2go', 1, '{\"id\":\"HomeGuaranteeWidget\",\"number\":\"01\",\"title\":\"Cam k\\u1ebft c\\u1ee7a ch\\u00fang t\\u00f4i\",\"sub_title\":\"Your fun and enjoyment is guaranteed when you book travel tours and hotels with us.<br>Well-organized routine, experienced guide, and professional service\"}', '2018-04-21 05:22:34', '2018-04-21 05:22:34'),
+(334, 'HomeDestinationWidget', 'home_sidebar', 'book2go', 2, '{\"id\":\"HomeDestinationWidget\",\"destination_image\":\"\\/uploads\\/1\\/pr.png\",\"number\":\"02\",\"title\":\"\\u0110\\u1ecba \\u0110i\\u1ec3m N\\u1ed5i B\\u1eadt\",\"sub_title\":\"Right place, Right time. Discover now the best destinations to travel this month!             <br>Recommended by millions of real travelers.\",\"hotels\":[\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"]}', '2018-04-21 05:22:34', '2018-04-21 05:22:34'),
+(335, 'HomeTestimonialWidget', 'home_sidebar', 'book2go', 3, '{\"id\":\"HomeTestimonialWidget\",\"number\":\"03\"}', '2018-04-21 05:22:34', '2018-04-21 05:22:34'),
+(336, 'HomeNewsWidget', 'home_sidebar', 'book2go', 4, '{\"id\":\"HomeNewsWidget\",\"number\":\"04\"}', '2018-04-21 05:22:34', '2018-04-21 05:22:34');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -4084,6 +4345,15 @@ ALTER TABLE `audit_history`
 --
 ALTER TABLE `blocks`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `bookings`
+--
+ALTER TABLE `bookings`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `bookings_member_id_index` (`member_id`),
+  ADD KEY `bookings_servicer_id_index` (`servicer_id`),
+  ADD KEY `bookings_user_id_index` (`user_id`);
 
 --
 -- Chỉ mục cho bảng `categories`
@@ -4437,22 +4707,28 @@ ALTER TABLE `blocks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT cho bảng `bookings`
+--
+ALTER TABLE `bookings`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `custom_fields`
 --
 ALTER TABLE `custom_fields`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `dashboard_widgets`
@@ -4482,7 +4758,7 @@ ALTER TABLE `field_groups`
 -- AUTO_INCREMENT cho bảng `field_items`
 --
 ALTER TABLE `field_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `galleries`
@@ -4494,7 +4770,7 @@ ALTER TABLE `galleries`
 -- AUTO_INCREMENT cho bảng `gallery_meta`
 --
 ALTER TABLE `gallery_meta`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT cho bảng `languages`
@@ -4506,19 +4782,19 @@ ALTER TABLE `languages`
 -- AUTO_INCREMENT cho bảng `language_meta`
 --
 ALTER TABLE `language_meta`
-  MODIFY `lang_meta_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+  MODIFY `lang_meta_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 
 --
 -- AUTO_INCREMENT cho bảng `media_files`
 --
 ALTER TABLE `media_files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `media_folders`
 --
 ALTER TABLE `media_folders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `media_settings`
@@ -4530,7 +4806,7 @@ ALTER TABLE `media_settings`
 -- AUTO_INCREMENT cho bảng `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`
@@ -4548,13 +4824,13 @@ ALTER TABLE `menu_nodes`
 -- AUTO_INCREMENT cho bảng `meta_boxes`
 --
 ALTER TABLE `meta_boxes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT cho bảng `notes`
@@ -4584,13 +4860,13 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT cho bảng `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `post_category`
 --
 ALTER TABLE `post_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `post_tag`
@@ -4614,13 +4890,13 @@ ALTER TABLE `promotion_servicer`
 -- AUTO_INCREMENT cho bảng `request_logs`
 --
 ALTER TABLE `request_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT cho bảng `revisions`
 --
 ALTER TABLE `revisions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT cho bảng `roles`
@@ -4638,25 +4914,25 @@ ALTER TABLE `role_users`
 -- AUTO_INCREMENT cho bảng `servicers`
 --
 ALTER TABLE `servicers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `service_types`
 --
 ALTER TABLE `service_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
 -- AUTO_INCREMENT cho bảng `slugs`
 --
 ALTER TABLE `slugs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT cho bảng `tags`
@@ -4686,7 +4962,7 @@ ALTER TABLE `user_meta`
 -- AUTO_INCREMENT cho bảng `widgets`
 --
 ALTER TABLE `widgets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=337;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
