@@ -38,7 +38,10 @@ class HomeGuaranteeWidget extends AbstractWidget
             'number' => '1',
             'title' => 'Cam kết của chúng tôi',
             'sub_title' => 'Your fun and enjoyment is guaranteed when you book travel tours and hotels with us. 
-            <br>Well-organized routine, experienced guide, and professional service'
+            <br>Well-organized routine, experienced guide, and professional service',
+            'image_block1' => '',
+            'image_block2' => '',
+            'image_block3' => ''
         ]);
     }
 }

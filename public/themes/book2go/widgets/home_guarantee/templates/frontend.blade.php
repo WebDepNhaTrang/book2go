@@ -16,7 +16,7 @@
             <div class="row guarantee-list">
                 <div class="col-md-4 guarantee-item">
                     <div class="guarantee-info text-center">
-                        <img src="{{ Theme::asset()->url('main-project/img/icon1.png') }}" alt="">
+                        <img src="{{ __($config['image_block1']) }}" alt="">
                         <div class="guarantee-title">
                             <?php 
                                 // print_r(get_block_by_id(1));
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-4 guarantee-item">
                     <div class="guarantee-info text-center">
-                        <img src="{{ Theme::asset()->url('main-project/img/icon2.png') }}" alt="">
+                        <img src="{{ __($config['image_block2']) }}" alt="">
                         <div class="guarantee-title">
                             <h2>{{ get_block_by_id(2)->description }}</h2>
                         </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md-4 guarantee-item">
                     <div class="guarantee-info text-center">
-                        <img src="{{ Theme::asset()->url('main-project/img/icon3.png') }}" alt="">
+                        <img src="{{ __($config['image_block3']) }}" alt="">
                         <div class="guarantee-title">
                             <h2>{{ get_block_by_id(3)->description }}</h2>
                         </div>
