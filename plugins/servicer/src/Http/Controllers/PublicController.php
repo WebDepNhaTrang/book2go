@@ -205,7 +205,15 @@ class PublicController extends BaseController
             'amount_children' => $request->input('children', 0),
             'user_agent' => isset($_SERVER['HTTP_USER_AGENT'])?$_SERVER['HTTP_USER_AGENT']:null,
             'ip_address' => isset($_SERVER['REMOTE_ADDR'])?$_SERVER['REMOTE_ADDR']:null
-        ]));
+        ]), [
+            'checkin' => $request->input('checkin'), 
+            'checkout' => $request->input('checkout'),
+            'servicer_id' => $request->input('id'),
+            'ip_address' => isset($_SERVER['REMOTE_ADDR'])?$_SERVER['REMOTE_ADDR']:null,
+            'member_id' => Auth::guard('member')->check()?Auth::guard('member')->user()->getKey():0,
+            'total_of_servicer' => $requests['number_of_servicer'],
+            'status' => 0
+        ]);
 
         $booking = apply_filters(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, $booking, $servicer, PROMOTION_MODULE_SCREEN_NAME);
 

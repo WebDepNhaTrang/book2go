@@ -67,6 +67,7 @@ class BookingController extends BaseController
      */
     public function postCreate(BookingRequest $request)
     {
+        abort(404);
         $booking = $this->bookingRepository->createOrUpdate(array_merge($request->input(),[
             'user_id' => Auth::user()->getKey(),
         ]));
@@ -97,7 +98,7 @@ class BookingController extends BaseController
 
         page_title()->setTitle(trans('servicer::booking.edit') . ' #' . $id);
 
-        return $formBuilder->create(BookingForm::class)->setModel($booking)->renderForm();
+        return view('servicer::booking.view', compact('booking'));
     }
 
     /**
