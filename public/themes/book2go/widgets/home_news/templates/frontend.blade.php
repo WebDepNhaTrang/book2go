@@ -7,7 +7,7 @@
                     <span>{{ __($config['number']) }}</span>
                 </h1>
                 <h2 class="caption-title">
-                    <span>{{ get_category_by_id(3)->name }}</span>
+                    <span>{{ get_category_by_id(3)->name }}</span>
                 </h2>
                 <p class="caption-description">
                     <span>{!! get_category_by_id(3)->description !!}</span>

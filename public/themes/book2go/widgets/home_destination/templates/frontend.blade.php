@@ -10,7 +10,7 @@
                     <span>{{ __($config['number']) }}</span>
                 </h1>
                 <h2 class="caption-title">
-                    <span>{{ __($config['title']) }}</span>
+                    <span>{{ __($config['title']) }}</span>
                 </h2>
                 <p class="caption-description">
                     <span>{!! __($config['sub_title']) !!}</span>

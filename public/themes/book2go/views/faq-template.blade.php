@@ -23,7 +23,7 @@ if(!empty($page)) $post = $page; @endphp
             <span>01</span>
         </h1>
         <h2 class="caption-title">
-            <span>{{ __('Câu hỏi thường gặp') }}</span>
+            <span>{{ __('Câu hỏi thường gặp') }}</span>
         </h2>
     </div>
     <div class="row">

@@ -28,7 +28,7 @@ if(!empty($page)) $post = $page; @endphp
                 <span>01</span>
             </h1>
             <h2 class="caption-title">
-                <span>Liên hệ với chúng tôi</span>
+                <span>Liên hệ với chúng tôi</span>
             </h2>
         </div>
         <div class="row col-md-12">
