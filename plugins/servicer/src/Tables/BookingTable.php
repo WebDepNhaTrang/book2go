@@ -59,7 +59,7 @@ class bookingTable extends TableAbstract
         /**
         * @var \Eloquent $model
         */
-        $query = $model->with('servicer')->where('status', '=', 1)->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status', 'bookings.checkin', 'bookings.checkout', 'bookings.servicer_id']);
+        $query = $model->with('servicer')->where('status', '=', 1)->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status', 'bookings.checkin', 'bookings.checkout', 'bookings.servicer_id'])->orderBy('updated_at', 'desc');
         return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, BOOKING_MODULE_SCREEN_NAME));
     }
 
