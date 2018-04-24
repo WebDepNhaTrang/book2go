@@ -76,6 +76,9 @@
     #section-booking .booking-content .tab-content .tab-content-right .form-group{
         margin-bottom: 0;
     }
+    #about-us .about-content .promo-caption{
+        margin-top: -25px;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */
@@ -151,6 +154,9 @@
         font-size: 22px;
         font-weight: 400;
         text-align: left;
+        color: #ff6c00;
+    }
+    #section-banner .jumbotron .promo-caption .caption-title a{
         color: #ff6c00;
     }
 
@@ -241,7 +247,13 @@
         text-align: left;
         color: #ff6c00;
     }
+    #section-banner .jumbotron .promo-caption .caption-title a{
+        color: #ff6c00;
+    }
     /* End / Section Banner */
 
+    #about-us .about-content .promo-caption{
+        margin-top: -25px;
+    }
 
 }

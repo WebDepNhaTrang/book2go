@@ -14,7 +14,6 @@
                     <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
                 </div>
             @endif
-            
         </ul>
     </div>
     <div class="ks-info container">
@@ -35,7 +34,7 @@
                 @if($promotion)
                     <div class="col-md-4">
                         <button type="button" class="btn btn-sm btn-danger" disabled>{{$promotion->promotion_name}}</button>
-                        <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                        <label class="badge badge-info">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }} đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
                     </div>
                 @endif
             </div>

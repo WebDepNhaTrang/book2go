@@ -97,9 +97,6 @@
 
             {!! Theme::partial('footer') !!}
 
-            <!-- Return to Top -->
-            <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up"></i></a>
-            <!-- End / Return to Top -->
         </div>
 
         {!! Theme::footer() !!}
