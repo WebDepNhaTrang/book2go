@@ -18,17 +18,24 @@ class bookingTable extends TableAbstract
     {
         $data = $this->table
             ->eloquent($this->query())
-            ->editColumn('name', function ($item) {
+            ->editColumn('fullname', function ($item) {
                 return anchor_link(route('booking.edit', $item->id), $item->fullname);
             })
             ->editColumn('checkbox', function ($item) {
                 return table_checkbox($item->id);
             })
-            ->editColumn('created_at', function ($item) {
-                return date_from_database($item->created_at, config('core.base.general.date_format.date'));
+            ->editColumn('servicer_name', function ($item) {
+                return $item->servicer->name;
             })
+            ->editColumn('checkin', function ($item) {
+                return date_from_database($item->checkin, config('core.base.general.date_format.date'));
+            })
+            ->editColumn('checkout', function ($item) {
+                return date_from_database($item->checkout, config('core.base.general.date_format.date'));
+            })
+
             ->editColumn('status', function ($item) {
-                return table_status($item->status);
+                return table_status_booking($item->status);
             });
 
         return apply_filters(BASE_FILTER_GET_LIST_DATA, $data, BOOKING_MODULE_SCREEN_NAME)
@@ -52,7 +59,7 @@ class bookingTable extends TableAbstract
         /**
         * @var \Eloquent $model
         */
-        $query = $model->where('status', '=', 1)->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status']);
+        $query = $model->with('servicer')->where('status', '=', 1)->select(['bookings.id', 'bookings.fullname', 'bookings.created_at', 'bookings.status', 'bookings.checkin', 'bookings.checkout', 'bookings.servicer_id']);
         return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, BOOKING_MODULE_SCREEN_NAME));
     }
 
@@ -70,14 +77,25 @@ class bookingTable extends TableAbstract
                 'width' => '20px',
                 'class' => 'searchable searchable_id',
             ],
-            'name' => [
+            'fullname' => [
                 'name' => 'bookings.fullname',
-                'title' => trans('core.base::tables.name'),
+                'title' => 'Fullname',
                 'class' => 'text-left searchable',
             ],
-            'created_at' => [
-                'name' => 'bookings.created_at',
-                'title' => trans('core.base::tables.created_at'),
+            'servicer_name' => [
+                'name' => 'bookings.servicer_id',
+                'title' => 'Service Name',
+                'class' => 'text-left',
+            ],
+            'checkin' => [
+                'name' => 'bookings.checkin',
+                'title' => 'Checkin',
+                'width' => '100px',
+                'class' => 'searchable',
+            ],
+            'checkout' => [
+                'name' => 'bookings.checkout',
+                'title' => 'Checkout',
                 'width' => '100px',
                 'class' => 'searchable',
             ],
@@ -117,14 +135,14 @@ class bookingTable extends TableAbstract
                 'link' => route('booking.delete.many'),
                 'text' => view('core.base::elements.tables.actions.delete')->render(),
             ],
-            'activate' => [
-                'link' => route('booking.change.status', ['status' => 1]),
-                'text' => view('core.base::elements.tables.actions.activate')->render(),
-            ],
-            'deactivate' => [
-                'link' => route('booking.change.status', ['status' => 0]),
-                'text' => view('core.base::elements.tables.actions.deactivate')->render(),
-            ]
+            // 'activate' => [
+            //     'link' => route('booking.change.status', ['status' => 1]),
+            //     'text' => view('core.base::elements.tables.actions.activate')->render(),
+            // ],
+            // 'deactivate' => [
+            //     'link' => route('booking.change.status', ['status' => 0]),
+            //     'text' => view('core.base::elements.tables.actions.deactivate')->render(),
+            // ]
         ];
     }
 

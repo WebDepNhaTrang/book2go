@@ -159,3 +159,37 @@ if (!function_exists('get_promotion_by_id')) {
         return $promotion;
     }
 }
+
+if (!function_exists('table_status_booking')) {
+    /**
+     * @param $selected
+     * @param array $statuses
+     * @return string
+     * @internal param $status
+     * @internal param null $activated_text
+     * @internal param null $deactivated_text
+     * @author Sang Nguyen
+     * @throws Throwable
+     */
+    function table_status_booking($selected, $statuses = [])
+    {
+        if (empty($statuses) || !is_array($statuses)) {
+            $statuses = [
+                0 => [
+                    'class' => 'label-danger',
+                    'text' => trans('core.base::tables.deactivated'),
+                ],
+                1 => [
+                    'class' => 'label-success',
+                    'text' => 'Have booked',
+                ],
+                2 => [
+                    'class' => 'label-success',
+                    'text' => 'Cancelled',
+                ],
+
+            ];
+        }
+        return view('core.base::elements.tables.status', compact('selected', 'statuses'))->render();
+    }
+}
