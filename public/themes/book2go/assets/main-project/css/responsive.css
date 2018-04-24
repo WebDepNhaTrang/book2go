@@ -156,6 +156,9 @@
         text-align: left;
         color: #ff6c00;
     }
+    #section-banner .jumbotron .promo-caption .caption-title a{
+        color: #ff6c00;
+    }
 
     /* Section Booking */
     #section-booking .booking-content{
@@ -242,6 +245,9 @@
         font-size: 32px;
         font-weight: 400;
         text-align: left;
+        color: #ff6c00;
+    }
+    #section-banner .jumbotron .promo-caption .caption-title a{
         color: #ff6c00;
     }
     /* End / Section Banner */
