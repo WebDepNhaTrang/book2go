@@ -144,7 +144,7 @@ $(document).ready(function() {
             }
         });
         $.ajax({
-            'url' : 'login/ajax',
+            'url' : $('form#form-login').attr('action'),
             'data': {
                 'email' : $('#email_login').val(),
                 'password' : $('#pass_login').val()
@@ -179,7 +179,7 @@ $(document).ready(function() {
             }
         });
         $.ajax({
-            'url' : 'register/ajax',
+            'url' : $('form#form-register').attr('action'),
             'data': {
                 'name' : $('#name_register').val(),
                 'email' : $('#email_register').val(),

@@ -122,7 +122,7 @@
         <!-- Username & Password Login form -->
         <div class="user_login">
             <span style="color:red; display:none;" class="error errorLogin"></span>
-            <form>
+            <form action="{{ route('public.member.login.ajax') }}" id="form-login">
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 <label>Địa chỉ Email</label>
                 <input id="email_login" type="email" />
@@ -152,7 +152,7 @@
 
         <!-- Register Form -->
         <div class="user_register">
-            <form>
+            <form action="{{ route('public.member.register.ajax') }}" id="form-register">
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 <label>Họ và tên (*)</label>
                 <span style="color:red; display: none" class="error errorName"></span>
