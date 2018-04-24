@@ -29,12 +29,19 @@
                             <div class="col-xs-12 col-sm-6 col-md-5 arrival-date">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" id="daterange-hotel" style="text-align: center;cursor:pointer;" class="input-small form-control" @if(request()->has('checkin') && request()->has('checkout')) data-start-date="{{date('d/m/Y', strtotime(request()->get('checkin')))}}" data-end-date="{{date('d/m/Y', strtotime(request()->get('checkout')))}}" @endif/>
+                                        <input type="text" id="daterange-hotel" style="text-align: center;cursor:pointer;" class="input-small form-control" 
+                                        @if(request()->has('checkin') && request()->has('checkout')) 
+                                            data-start-date="{{date('d/m/Y', strtotime(request()->get('checkin')))}}" 
+                                            data-end-date="{{date('d/m/Y', strtotime(request()->get('checkout')))}}" 
+                                        @elseif(session('checkin') && session('checkout'))
+                                            data-start-date="{{date('d/m/Y', strtotime(session('checkin')))}}" 
+                                            data-end-date="{{date('d/m/Y', strtotime(session('checkout')))}}" 
+                                        @endif/>
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="hidden" name="checkin" value="{{request()->get('checkin')}}">
-                                        <input type="hidden" name="checkout" value="{{request()->get('checkout')}}">
+                                        <input type="hidden" name="checkin" value="{{request()->get('checkin')?:session('checkin')}}">
+                                        <input type="hidden" name="checkout" value="{{request()->get('checkout')?:session('checkout')}}">
                                     </div>
                                 </div>
                             </div>
@@ -67,8 +74,8 @@
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="hidden" name="checkin" class="tour-checkin" value="{{request()->get('checkin')}}">
-                                        <input type="hidden" name="checkout" value="{{request()->get('checkout')}}">
+                                        <input type="hidden" name="checkin" class="tour-checkin" value="{{request()->get('checkin')?:session('checkin')}}">
+                                        <input type="hidden" name="checkout" value="{{request()->get('checkout')?:session('checkout')}}">
                                     </div>
                                 </div>
                             </div>

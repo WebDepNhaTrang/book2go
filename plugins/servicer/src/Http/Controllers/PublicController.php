@@ -99,6 +99,8 @@ class PublicController extends BaseController
     	$type = $request->input('type');
     	$checkin = date('Y-m-d', strtotime($request->input('checkin')));
     	$checkout = date('Y-m-d', strtotime($request->input('checkout')));
+        session()->put('checkin', $request->input('checkin'));
+        session()->put('checkout', $request->input('checkout'));
     	if($type == HOTEL_MODULE_SCREEN_NAME){
 
     		// Get all id 
@@ -156,8 +158,6 @@ class PublicController extends BaseController
         $currentPageCollection = $data->slice($start, $numOfItemOnPage)->all();
         $data = new LengthAwarePaginator($currentPageCollection, count($data), $numOfItemOnPage);
         $data->setPath(route('available.list').'?type='.$type.'&checkin='.$checkin.'&checkout='.$checkout);
-
-        
 
     	return Theme::scope('search-result', compact('data', 'request'))->render();
     }

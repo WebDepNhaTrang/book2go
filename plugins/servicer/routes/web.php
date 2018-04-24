@@ -2,20 +2,23 @@
 
 Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' => 'web'], function () {
 
+    
     Route::group(['prefix' => 'available'], function () {
-
-        Route::get('/', [
-            'as' => 'available.list',
-            'uses' => 'PublicController@getAvailable',
-        ]);
-        Route::get('/booking', [
-            'as' => 'public.booking',
-            'uses' => 'PublicController@getBooking',
-        ]);
-        Route::post('/booking', [
-            'as' => 'public.booking.post',
-            'uses' => 'PublicController@postBooking',
-        ]);
+        Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+            Route::get('/', [
+                'as' => 'available.list',
+                'uses' => 'PublicController@getAvailable',
+            ]);
+            Route::get('/booking', [
+                'as' => 'public.booking',
+                'uses' => 'PublicController@getBooking',
+            ]);
+            Route::post('/booking', [
+                'as' => 'public.booking.post',
+                'uses' => 'PublicController@postBooking',
+            ]);
+        });
+        
     });
 
     Route::group(['prefix' => config('core.base.general.admin_dir'), 'middleware' => 'auth'], function () {
