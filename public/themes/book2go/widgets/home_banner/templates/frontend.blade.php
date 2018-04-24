@@ -6,10 +6,10 @@
                 <img class="img-fluid" src="{{ __($config['banner_image']) }}" alt="book2go">
             </div>
             <marquee class="promo-caption" direction="up" scrolldelay="150" onmouseover="this.stop();" onmouseout="this.start();">
-                <h1 class="caption-title"><i class="fab fa-hotjar"></i> Vinpearl Land Khuyến Mãi Hè</h1>
-                <p class="caption-description">Từ 5/1 đặt phòng trực tuyến để được giảm giá 10% tại Vinpearl Land</p>
-                <h1 class="caption-title"><i class="fab fa-hotjar"></i> Sunrise Giảm Giá</h1>
-                <p class="caption-description">Giảm 10% khi đặt phòng trực tuyến tại Book2govn</p>
+                @foreach(get_promotions_front() as $v)
+                    <h1 class="caption-title"><i class="fab fa-hotjar"></i> <a href="{{route('public.single', $v->hotels[0]->slug)}}">{{ $v->name }}</a></h1>
+                    <p class="caption-description">{{ $v->description }}</p>
+                @endforeach
             </marquee>
         </div>
     </div>

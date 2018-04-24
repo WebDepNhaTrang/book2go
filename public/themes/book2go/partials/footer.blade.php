@@ -122,7 +122,7 @@
         <!-- Username & Password Login form -->
         <div class="user_login">
             <span style="color:red; display:none;" class="error errorLogin"></span>
-            <form>
+            <form action="{{ route('public.member.login.ajax') }}" id="form-login">
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 <label>Địa chỉ Email</label>
                 <input id="email_login" type="email" />
@@ -152,35 +152,33 @@
 
         <!-- Register Form -->
         <div class="user_register">
-            <form>
+            <form action="{{ route('public.member.register.ajax') }}" id="form-register">
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 <label>Họ và tên (*)</label>
-                <input type="text" name="name" id="name_register"/>
                 <span style="color:red; display: none" class="error errorName"></span>
-                <br />
+                <input type="text" name="name" id="name_register"/>
+                
 
                 <label>Địa chỉ Email (*)</label>
-                <input type="email" name="email" id="email_register"/>
                 <span style="color:red; display: none" class="error errorEmail"></span>
-                <br />
+                <input type="email" name="email" id="email_register"/>
+                
 
                 <label>Mật khẩu (*)</label>
-                <input type="password" name="password" id="pass_register"/>
                 <span style="color:red; display: none" class="error errorPassword"></span>
-                <br />
+                <input type="password" name="password" id="pass_register"/>
+                
 
                 <label>Số điện thoại (*)</label>
-                <input type="text" name="phone" id="phone_register"/>
                 <span style="color:red; display: none" class="error errorPhone"></span>
-                <br />
+                <input type="text" name="phone" id="phone_register"/>
+                
 
                 <label>Địa chỉ</label>
                 <input type="text" name="address" id="address_register"/>
-                <br />
 
                 <label>Công ty</label>
                 <input type="text" name="company" id="company_register"/>
-                <br />
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>

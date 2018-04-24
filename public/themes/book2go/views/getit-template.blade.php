@@ -38,149 +38,34 @@ if(!empty($page)) $post = $page; @endphp
                 <span>01</span>
             </h1>
             <h2 class="caption-title">
-                <span>Chương trình khuyến mãi</span>
+                <span>Chương trình khuyến mãi</span>
             </h2>
         </div>
     </div>
+    @php
+        $data = get_promotions_front();
 
+    @endphp
     <div class="container">
         <div class="row news-list">
+            @foreach($data as $v)
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="block-article">
                     <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
+                        <img class="img-fluid" src="{{get_object_image($v->image, 'featured')}}" alt="Image">
                         <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
+                            <div>- {{ $v->cost }}%</div>
                         </div>
                     </div>
                     <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="./ks-detail.html">
-                            Khách sạn A Khuyến Mãi
+                        <a class="mod-articles-category-title " href="{{route('public.single', $v->hotels[0]->slug)}}">
+                            {{ $v->name }}
                         </a>
                     </h5>
-                    <div class="date">21-May-2018</div>
+                    <div class="date">Từ {{date('d/m/Y', strtotime($v->start_date)) }} đến {{date('d/m/Y', strtotime($v->end_date)) }}</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Căn Hộ B Giảm Giá
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2018</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Tour Bình Ba Giảm 10%
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2018</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Airport Hotels The Right Way To Start
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2016</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Airport Hotels The Right Way To Start
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2016</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Airport Hotels The Right Way To Start
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2016</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Airport Hotels The Right Way To Start
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2016</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="block-article">
-                    <div class="block-image">
-                        <img class="img-fluid" src="{{ Theme::asset()->url('main-project/img/new1.jpg') }}" alt="Image">
-                        <div class="like">
-                            <!-- <i class="fa fa-thumbs-up">&nbsp;</i> -->
-                            <div>- 10%</div>
-                        </div>
-                    </div>
-                    <h5 class="block-description">						
-                        <a class="mod-articles-category-title " href="#">
-                            Airport Hotels The Right Way To Start
-                        </a>
-                    </h5>
-                    <div class="date">21-May-2016</div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="btn-block text-center">
             <a class="btn btn-default btn-outline" href="">Xem thêm</a>

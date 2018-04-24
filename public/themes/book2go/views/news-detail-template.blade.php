@@ -24,7 +24,7 @@
                         <span>01</span>
                     </h1>
                     <h2 class="caption-title">
-                        <span>{{ $post->name }}</span>
+                        <span>{{ $post->name }}</span>
                     </h2>
                 </div>
                 <div>
