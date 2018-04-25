@@ -17,6 +17,7 @@ use Auth;
 use SeoHelper;
 use Theme;
 use Botble\Servicer\Repositories\Interfaces\BookingInterface;
+use Session;
 
 class HookServiceProvider extends ServiceProvider
 {
@@ -42,6 +43,12 @@ class HookServiceProvider extends ServiceProvider
         if ($slug instanceof Eloquent) {
             $data = [];
 
+            $checkin = session('checkin');
+            $checkout = session('checkout');
+            if(request()->get('checkin') && request()->get('checkout')){
+                $checkin = request()->get('checkin');
+                $checkout = request()->get('checkout');
+            }
             switch ($slug->reference) {
 
                 case TOUR_MODULE_SCREEN_NAME:
@@ -56,12 +63,8 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TOUR_MODULE_SCREEN_NAME, $post);
 
-                        $checkin = null;
-                        $checkout = null;
                         $promotion = null;
-                        if(request()->get('checkin') && request()->get('checkout')){
-                           $checkin = request()->get('checkin');
-                           $checkout = request()->get('checkout');
+                        if($checkin && $checkout){
                            $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);
                         }
 
@@ -83,13 +86,10 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, APARTMENT_MODULE_SCREEN_NAME, $post);
 
-                        $checkin = null;
-                        $checkout = null;
+                        
                         $booking = false;
                         $promotion = false;
-                        if(request()->get('checkin') && request()->get('checkout')){
-                           $checkin = request()->get('checkin');
-                           $checkout = request()->get('checkout');
+                        if($checkin && $checkout){
                            $booking = true;
                            // Get all servicers with total of servicers booked
                            $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($post->id, $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
@@ -127,12 +127,9 @@ class HookServiceProvider extends ServiceProvider
                          do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, HOTEL_MODULE_SCREEN_NAME, $post);
 
                          $room_types = $post->roomTypeActive;
-                         $checkin = null;
-                         $checkout = null;
+                         
                          $promotion = false;
-                         if(request()->get('checkin') && request()->get('checkout')){
-                            $checkin = request()->get('checkin');
-                            $checkout = request()->get('checkout');
+                         if($checkin && $checkout){
                             // Get all servicers with total of servicers booked
                             $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
 

@@ -15,7 +15,6 @@ use Venturecraft\Revisionable\RevisionableTrait;
  */
 class Booking extends Eloquent
 {
-    use RevisionableTrait;
     use SoftDeletes;
 
     /**
