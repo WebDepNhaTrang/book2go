@@ -1,2 +1,2 @@
-# Book2GoVN.com
+# Project Book2go
 
