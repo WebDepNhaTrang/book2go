@@ -1,4 +1,4 @@
-<section id="ks-detail">
+<section id="ch-detail">
     <div class="ks-detail-banner">
         <ul class="sub-banner photo-gallery">
             @php
@@ -10,6 +10,9 @@
                         <img class="" src="{{ url($gallery['img']) }}" alt="">
                     </li>
                 @endforeach
+                <div class="map-image">
+                    <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
+                </div>
             @endif
             
         </ul>
@@ -56,6 +59,7 @@
                 <h5 class="mb-0">Kiểm tra phòng</h5>
             </div>
             <div class="col-md-12 px-3 py-3 ks-datphong-content">
+                
                 <p>Chọn ngày để kiểm tra phòng trống</p>
                 
                 <form id="check-room-type" action="{{route('public.single', ['slug' => $post->slug])}}" class="row">
@@ -82,16 +86,40 @@
                         <input type="hidden" name="checkout" value="{{$checkout?:null}}">
                         <input type="hidden" name="id" value="{{$post->id}}">
                         <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p>
+                                    <span>Giá Căn hộ:</span>
+                                    @if($promotion)
+                                        <div class="tiet-kiem-ngay">
+                                            <span>{{$promotion->promotion_name}}</span>
+                                        </div>
+                                        <div class="price-through">
+                                            {!! number_format_price($post->price) !!}
+                                            
+                                        </div>
+                                        <div class="price-show">
+                                            {!! number_format_price($post->price - ($post->price * $promotion->cost / 100)) !!}
+                                            <span>/căn</span>
+                                        </div>
+                                    @else
+                                        <div class="price-show">
+                                            {!! number_format_price($post->price) !!}
+                                            <span>/căn</span>
+                                        </div>
+                                    @endif
+                                </p>
+                            </div>
+                            
+                        
                             <div class="col-xs-12 col-sm-4 col-md-4">
-                                <span>Phòng</span>
+                                <span>Số lượng:</span>
                                 <select class="form-control" name="number_of_servicer">
                                     @for($i = 1; $i <= $post->number_of_servicer; $i++)
                                         <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                 </select>
                             </div>
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="col-xs-12 col-sm-4 col-md-4 search-block mt-3">
                                 <button class="btn btn-primary" type="submit">Đặt ngay</button>
                             </div>
                         </div>
