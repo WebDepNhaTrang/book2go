@@ -136,7 +136,7 @@
                                             <span>{{$promotion->promotion_name}}</span>
                                         </div>
                                         <div class="price-through">
-                                            {!! number_format_price($room->price * $promotion->cost / 100) !!}
+                                            {!! number_format_price($room->price) !!}
                                         </div>
                                         <div class="price-show">
                                             {!! number_format_price($room->price - ($room->price * $promotion->cost / 100)) !!}
@@ -238,7 +238,7 @@
                                             <span class="currency">₫</span>
                                         </div>
                                         <div class="price-show">
-                                            <span class="price">{{$room->price}} </span>
+                                            <span class="price">{!! number_format_price($room->price - ($room->price * $promotion->cost / 100)) !!} </span>
                                             <span class="currency">₫</span>
                                         </div>
                                     </span>

@@ -68,7 +68,7 @@
                             <span>{{$promotion->promotion_name}}</span>
                         </div>
                         <div class="price-through">
-                            {!! number_format_price($post->price * $promotion->cost / 100) !!}
+                            {!! number_format_price($post->price) !!}
                             
                         </div>
                         <div class="price-show">

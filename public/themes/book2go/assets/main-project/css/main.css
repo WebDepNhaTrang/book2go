@@ -2487,3 +2487,312 @@ footer .footer-social a:hover .fa-linkedin-in{
     width: calc(16% - 8px);
     top: calc(55% + 31.5% + 4px);
 }
+
+/* Khách Sạn Detail Page */
+#ch-detail .ks-detail-banner{
+    height: 70vh;
+    min-height: 450px;
+    margin-bottom: 20px;
+}
+#ch-detail .sub-banner{
+    width: 100%;
+    position: absolute;
+    top: inherit;
+    height: 70vh;
+    min-height: 450px;
+    padding-left: 0px;
+    list-style: none;
+}
+#ch-detail .sub-banner .first-image{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+}
+#ch-detail .sub-banner .first-image img, 
+#ch-detail .sub-banner .second-image img, 
+#ch-detail .sub-banner .third-image img, 
+#ch-detail .sub-banner .fourth-image img, 
+#ch-detail .sub-banner .fifth-image img, 
+#ch-detail .sub-banner .sixth-image img, 
+#ch-detail .sub-banner .map-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: object-fit\:cover;
+    object-fit: cover;
+}
+#ch-detail .sub-banner .second-image{
+    position: absolute;
+    right:0;
+    height: 55%;
+    width: calc(40% - 4px);
+}
+#ch-detail .sub-banner .third-image{
+    position: absolute;
+    left: 0;
+    height: calc(30% - 4px);
+    width: 24%;
+    top: calc(70% + 4px);
+}
+#ch-detail .sub-banner .fourth-image{
+    position: absolute;
+    height: calc(30% - 4px);
+    width: calc(36% - 4px);
+    top: calc(70% + 4px);
+    left: calc(24% + 4px);
+}
+#ch-detail .sub-banner .fifth-image{
+    position: absolute;
+    right: calc(16% - 4px);
+    height: calc(100% - 55% - 4px);
+    width: 24%;
+    top: calc(55% + 4px);
+}
+#ch-detail .sub-banner .sixth-image{
+    position: absolute;
+    right:0;
+    height: calc(13.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 31.5% + 4px);
+}
+#ch-detail .sub-banner .map-image{
+    position: absolute;
+    right: 0;
+    height: calc(31.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 4px);
+}
+#ch-detail .ks-info{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+#ch-detail .ks-info .ks-info-1{
+    padding: 15px;
+}
+#ch-detail .ks-info .ks-info-2{
+    padding: 15px;
+}
+#ch-detail .ks-info .ks-info-2 .ks-name{
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+#ch-detail .ks-info .ks-info-2 .address{
+    margin-bottom: 5px;
+}
+#ch-detail .ks-info .ks-info-2 .tel{
+    margin-bottom: 5px;
+}
+#ch-detail .ks-des{
+    margin-bottom: 40px;
+}
+#ch-detail .ks-des .ks-des-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#ch-detail .ks-des .ks-des-content{
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#ch-detail .ks-datphong{
+    margin-bottom: 40px;
+}
+#ch-detail .ks-datphong .ks-datphong-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#ch-detail .ks-datphong .ks-datphong-content{
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#ch-detail .ks-datphong form .search-block{
+    /* margin-top: 30px; */
+}
+#ch-detail .ks-datphong form .search-block button{
+    background-color: #ff6c00;
+    border-color: #ff6c00;
+}
+#ch-detail .ks-room-list{
+    margin-bottom: 40px;
+}
+#ch-detail .ks-room-list .room-list-title{
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+#ch-detail .ks-room-list .room-list-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#ch-detail .ks-room-list table{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+}
+#ch-detail .ks-room-list table .table-header th{
+    font-weight: 500;
+    color: #333;
+    background-color: #f7f7f7;
+    border-bottom: none;
+}
+#ch-detail .ks-room-list table img{
+    max-width: 170px;
+    /* max-height: 90px; */
+}
+#ch-detail .ks-room-list table .col-room-type{
+    width: 20%;
+}
+#ch-detail .ks-room-list table .col-chi-tiet{
+    color: #333;
+}
+#ch-detail .ks-room-list table .col-chi-tiet p{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+#ch-detail .ks-room-list table .room-type{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff6c00;
+}
+#ch-detail .ks-room-list table .col-suc-chua{
+    border-left: 1px solid #ddd;
+    text-align: center;
+    color: gray;
+    width: 10%;
+}
+#ch-detail .ks-room-list table .col-suc-chua span{
+    font-size: 14px;
+}
+#ch-detail .ks-room-list table .col-gia-phong{
+    border-left: 1px solid #ddd;
+    text-align: right;
+    width: 20%;
+}
+#ch-detail .ks-room-list table .col-so-luong{
+    border-left: 1px solid #ddd;
+    text-align: center;
+    width: 11%;
+}
+#ch-detail .ks-room-list table .tiet-kiem-ngay{
+    font-size: 13px;
+    font-weight: bold;
+    color: #ed5c59;
+}
+#ch-detail .ks-room-list table .col-dat-phong{
+    position: relative;
+    border-left: 1px solid #ddd;
+    text-align: right;
+    width: 25%;
+}
+#ch-detail .ks-room-list table .dang-nhap-giam{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ff6c00;
+    padding: 5px;
+    margin-top: 10px;
+}
+#ch-detail .ks-room-list table .dang-nhap-giam p{
+    margin: 0;
+    font-size: 12px;
+}
+#ch-detail .ks-room-list table .dang-nhap-giam p strong{
+    color: #007adc;
+    font-size: 14px;
+    font-weight: bold;
+}
+#ch-detail .ks-room-list table .gia-thap-nhat{
+    color: #fff;
+    background-color: #00AF3B;
+    text-align: center;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 5px;
+    font-size: 13px;
+    width: 100%;
+    font-weight: bold;
+}
+#ch-detail .ks-room-list table .btn-datphong{
+    background-color: #ff6c00;
+    color: #fff;
+    margin-top: 25px;
+    width: 100%;    
+}
+#ch-detail .ks-room-list table .con-trong{
+    color: #ff3131;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#ch-detail .price-through{
+    text-decoration: line-through;
+    margin: 5px 0;
+}
+#ch-detail .price-show .price{
+    color: #ff6c00;
+    font-size: 22px;
+    font-weight: 700;
+}
+#ch-detail .price-show .currency{
+    color: #ff6c00;
+}
+
+#ch-detail .sub-banner .image-0{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+}
+#ch-detail .sub-banner .image-0 img, 
+#ch-detail .sub-banner .image-1 img, 
+#ch-detail .sub-banner .image-2 img, 
+#ch-detail .sub-banner .image-3 img, 
+#ch-detail .sub-banner .image-4 img, 
+#ch-detail .sub-banner .image-5 img, 
+#ch-detail .sub-banner .map-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: object-fit\:cover;
+    object-fit: cover;
+}
+#ch-detail .sub-banner .image-1{
+    position: absolute;
+    right:0;
+    height: 55%;
+    width: calc(40% - 4px);
+}
+#ch-detail .sub-banner .image-2{
+    position: absolute;
+    left: 0;
+    height: calc(30% - 4px);
+    width: 24%;
+    top: calc(70% + 4px);
+}
+#ch-detail .sub-banner .image-3{
+    position: absolute;
+    height: calc(30% - 4px);
+    width: calc(36% - 4px);
+    top: calc(70% + 4px);
+    left: calc(24% + 4px);
+}
+#ch-detail .sub-banner .image-4{
+    position: absolute;
+    right: calc(16% - 4px);
+    height: calc(100% - 55% - 4px);
+    width: 24%;
+    top: calc(55% + 4px);
+}
+#ch-detail .sub-banner .image-5{
+    position: absolute;
+    right:0;
+    height: calc(13.5% - 4px);
+    width: calc(16% - 8px);
+    top: calc(55% + 31.5% + 4px);
+}
+/* End / Căn hộ Detail Page */
