@@ -92,8 +92,8 @@
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-white"><i class="fa fa-calendar-alt"></i></span>
                                     </div>
-                                    <input type="hidden" name="checkin" value="">
-                                    <input type="hidden" name="checkout" value="">
+                                    <input type="hidden" name="checkin" value="{{$checkin}}">
+                                    <input type="hidden" name="checkout" value="{{$checkout}}">
                                     <input type="hidden" name="id" value="{{$post->id}}">
                                 </div>
                             </div>

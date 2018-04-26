@@ -48,6 +48,8 @@ class HookServiceProvider extends ServiceProvider
             if(request()->get('checkin') && request()->get('checkout')){
                 $checkin = request()->get('checkin');
                 $checkout = request()->get('checkout');
+                session()->put('checkin', $checkin);
+                session()->put('checkout', $checkout);
             }
             switch ($slug->reference) {
 

@@ -28,7 +28,7 @@
                 
                 toastr.error("Đã có lỗi xảy ra, vui lòng kiểm tra lại!!!");
                 @foreach ($errors->all() as $error)
-                    
+                    console.log("{{$error}}");
                 @endforeach
             </script>
         @endif
