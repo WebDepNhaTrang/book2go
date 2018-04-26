@@ -178,7 +178,7 @@ class PublicController extends BaseController
         switch ($servicer->format_type) {
             case TOUR_MODULE_SCREEN_NAME:
                 $price_adults = $servicer->price * $requests['adults'];
-                $price_children = $servicer->price * $requests['children'];
+                $price_children = $servicer->price_children * $requests['children'];
                 $total_price = $price_adults + $price_children;
                 $view = 'booking-tour';
                 $requests['number_of_servicer'] = 1;
