@@ -51,23 +51,43 @@ if(!empty($page)) $post = $page; @endphp
                         //echo "</pre>";
                         //die();
                     @endphp
-                    @if($v->hotels || $v->apartments)
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="block-article">
-                            <div class="block-image">
-                                <img class="img-fluid" src="{{get_object_image($v->image, 'featured')}}" alt="Image">
-                                <div class="like">
-                                    <div>- {{ $v->cost }}%</div>
+                    @if($v->hotels->toArray())
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="block-article">
+                                <div class="block-image">
+                                    <img class="img-fluid" src="{{get_object_image($v->image, 'featured')}}" alt="Image">
+                                    <div class="like">
+                                        <div>- {{ $v->cost }}%</div>
+                                    </div>
                                 </div>
+                                <h5 class="block-description">						
+                                    <a class="mod-articles-category-title " href="{{route('public.single', $v->hotels[0]->slug)}}">
+                                        {{ $v->name }}
+                                    </a>
+                                </h5>
+                                <div class="date">Từ {{date('d/m/Y', strtotime($v->start_date)) }} đến {{date('d/m/Y', strtotime($v->end_date)) }}</div>
                             </div>
-                            <h5 class="block-description">						
-                                <a class="mod-articles-category-title " href="{{route('public.single', $v->hotels[0]->slug)}}">
-                                    {{ $v->name }}
-                                </a>
-                            </h5>
-                            <div class="date">Từ {{date('d/m/Y', strtotime($v->start_date)) }} đến {{date('d/m/Y', strtotime($v->end_date)) }}</div>
                         </div>
-                    </div>
+                    @elseif($v->apartments->toArray())
+                        @php
+                            $slug = get_slug_key_item('apartment', $v->apartments[0]->id);
+                        @endphp
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="block-article">
+                                <div class="block-image">
+                                    <img class="img-fluid" src="{{get_object_image($v->image, 'featured')}}" alt="Image">
+                                    <div class="like">
+                                        <div>- {{ $v->cost }}%</div>
+                                    </div>
+                                </div>
+                                <h5 class="block-description">						
+                                    <a class="mod-articles-category-title " href="{{route('public.single', $slug)}}">
+                                        {{ $v->name }}
+                                    </a>
+                                </h5>
+                                <div class="date">Từ {{date('d/m/Y', strtotime($v->start_date)) }} đến {{date('d/m/Y', strtotime($v->end_date)) }}</div>
+                            </div>
+                        </div>
                     @endif
                     @endforeach
                 </div>
@@ -84,7 +104,10 @@ if(!empty($page)) $post = $page; @endphp
                         //echo "</pre>";
                         //die();
                     @endphp
-                    @if($v->tours)
+                    @if($v->tours->toArray())
+                        @php
+                            $slug = get_slug_key_item('tour', $v->tours[0]->id);
+                        @endphp
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="block-article">
                             <div class="block-image">
@@ -94,7 +117,7 @@ if(!empty($page)) $post = $page; @endphp
                                 </div>
                             </div>
                             <h5 class="block-description">						
-                                <a class="mod-articles-category-title " href="{{route('public.single', $v->hotels[0]->slug)}}">
+                                <a class="mod-articles-category-title " href="{{route('public.single', $slug)}}">
                                     {{ $v->name }}
                                 </a>
                             </h5>
