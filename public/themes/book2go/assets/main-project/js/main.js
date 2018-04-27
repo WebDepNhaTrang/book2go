@@ -119,6 +119,7 @@ $(document).ready(function() {
         //         $(".user_login").show();
         //         return false;
         // });
+
         // Calling Register Form
         $("#register_form").click(function() {
                 $(".user_login").hide();
@@ -126,7 +127,7 @@ $(document).ready(function() {
                 $(".header_title").text('Đăng ký');
                 return false;
         });
-        // Going back to Social Forms
+        // Going back to Login Forms
         $(".back_btn").click(function() {
                 $(".user_register").hide();
                 $(".user_login").show();
