@@ -2796,3 +2796,8 @@ footer .footer-social a:hover .fa-linkedin-in{
     top: calc(55% + 31.5% + 4px);
 }
 /* End / Căn hộ Detail Page */
+
+.developed{
+    font-size: 14px;
+    color: #333;
+}
