@@ -59,7 +59,7 @@
                 <!--Copyright-->
                 <p class="text-center text-md-left grey-text">{!! __(theme_option('copyright')) !!}</p>
                 <!--/.Copyright-->
-
+                <a class="developed" title="Web Design Nha Trang, Khanh Hoa, professional software team in Nha Trang" href="https://www.facebook.com/webdepnhatrang" target="_blank">Developed by WebDepNhaTrang</a>
             </div>
             <!--Grid column-->
 
@@ -188,4 +188,3 @@
         </div>
     </section>
 </div>
-<!-- End / Poppup login -->
