@@ -79,6 +79,14 @@ class ApartmentForm extends FormAbstract
                     'id' => 'number_of_servicer'
                 ]
             ])
+            ->add('lat_long', 'text', [
+                'label' => trans('servicer::forms.lat_long'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr' => [
+                    'placeholder' => trans('servicer::forms.lat_long'),
+                    'data-counter' => 100,
+                ],
+            ])
             ->add('image', 'mediaImage', [
                 'label' => trans('core.base::forms.image'),
                 'label_attr' => ['class' => 'control-label'],
