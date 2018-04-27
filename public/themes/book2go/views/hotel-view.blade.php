@@ -31,7 +31,7 @@
                     <div id="map-canvas"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
         </div>
@@ -298,7 +298,7 @@
     function initialize() {
 
         var mapOptions = {
-            zoom: 7,
+            zoom: 10,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             center: center
         };

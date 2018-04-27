@@ -2581,6 +2581,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: calc(31.5% - 4px);
     width: calc(16% - 8px);
     top: calc(55% + 4px);
+    cursor: pointer;
 }
 #ch-detail .ks-info{
     border: 1px solid #ddd;
@@ -2767,6 +2768,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     position: absolute;
     height: 70%;
     width: 60%;
+    cursor: pointer;
 }
 #ch-detail .sub-banner .image-0 img, 
 #ch-detail .sub-banner .image-1 img, 
@@ -2786,6 +2788,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     right:0;
     height: 55%;
     width: calc(40% - 4px);
+    cursor: pointer;
 }
 #ch-detail .sub-banner .image-2{
     position: absolute;
@@ -2793,6 +2796,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: calc(30% - 4px);
     width: 24%;
     top: calc(70% + 4px);
+    cursor: pointer;
 }
 #ch-detail .sub-banner .image-3{
     position: absolute;
@@ -2800,6 +2804,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     width: calc(36% - 4px);
     top: calc(70% + 4px);
     left: calc(24% + 4px);
+    cursor: pointer;
 }
 #ch-detail .sub-banner .image-4{
     position: absolute;
@@ -2807,6 +2812,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: calc(100% - 55% - 4px);
     width: 24%;
     top: calc(55% + 4px);
+    cursor: pointer;
 }
 #ch-detail .sub-banner .image-5{
     position: absolute;
@@ -2814,6 +2820,7 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: calc(13.5% - 4px);
     width: calc(16% - 8px);
     top: calc(55% + 31.5% + 4px);
+    cursor: pointer;
 }
 /* End / Căn hộ Detail Page */
 
