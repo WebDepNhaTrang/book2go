@@ -147,7 +147,7 @@
                 </div>
             </form>
 
-            <a href="#" class="forgot_password">Quên mật khẩu?</a>
+            <a href="{{ route('public.member.password.reset') }}" id="forgot_password">Quên mật khẩu?</a>
         </div>
 
         <!-- Register Form -->
