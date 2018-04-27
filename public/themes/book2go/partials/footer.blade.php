@@ -186,5 +186,21 @@
                 </div>
             </form>
         </div>
+
+        <!-- Forgot password Form -->
+        <div class="user_forgot_pass">
+            <form action="{{ route('public.member.register.ajax') }}" id="form-register">
+                <meta name="csrf-token" content="{{ csrf_token() }}">
+
+                <label>Địa chỉ Email (*)</label>
+                <span style="color:red; display: none" class="error errorEmail"></span>
+                <input type="email" name="email" id="email_register"/>
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Trở lại</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red" id="dang-ky">Tạo tài khoản</a></div>
+                </div>
+            </form>
+        </div>
     </section>
 </div>

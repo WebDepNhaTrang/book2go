@@ -254,14 +254,22 @@
                                 </div>
                                 <div>
                                     <span>Giá phòng:
+                                        @if($promotion)
                                         <div class="price-through">
                                             <span class="price">{{$room->price}} </span>
                                             <span class="currency">₫</span>
                                         </div>
+                                        
                                         <div class="price-show">
                                             <span class="price">{!! number_format_price($room->price - ($room->price * $promotion->cost / 100)) !!} </span>
                                             <span class="currency">₫</span>
                                         </div>
+                                        @else
+                                        <div class="price-show">
+                                            <span class="price">{{$room->price}} </span>
+                                            <span class="currency">₫</span>
+                                        </div>
+                                        @endif
                                     </span>
                                 </div>
                                 <div>

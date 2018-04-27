@@ -102,7 +102,7 @@
                     @endif
                 </p>
                 <form id="search-hotel" action="{{route('public.booking')}}" class="row" method="GET">
-                    <div class="col-xs-12 col-sm-4 col-md-6 arrival-date">
+                    <div class="col-xs-12 col-sm-12 col-md-6 arrival-date">
                         <div class="form-group mb-0">
                             <label for="arrivalDate" class="control-label">Ngày đi</label>
                             <div class="form-group">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-xs-12 col-sm-2 col-md-2 departure-date">
+                    <div class="col-xs-12 col-sm-4 col-md-2 departure-date">
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Người lớn</label>
                             <div class="input-group">
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-2 col-md-2 departure-date">
+                    <div class="col-xs-12 col-sm-4 col-md-2 departure-date">
                         <div class="form-group mb-0">
                             <label for="departureDate" class="control-label">Trẻ em</label>
                             <div class="input-group">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 search-block">
+                    <div class="col-xs-12 col-sm-4 col-md-2 search-block">
                         <button class="btn btn-primary" type="submit">Đặt tour</button>
                     </div>
                 </form>
