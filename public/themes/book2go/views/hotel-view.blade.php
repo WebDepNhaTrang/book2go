@@ -10,12 +10,33 @@
                         <img class="" src="{{ url($gallery['img']) }}" alt="">
                     </li>
                 @endforeach
-                <div class="map-image">
+                <div class="map-image" data-toggle="modal" data-target="#modal-map">
                     <img class="" src="{{ config('plugins.servicer.servicer.img-map') }}" alt="">
                 </div>
             @endif
         </ul>
     </div>
+
+    <!-- Modal Google Map -->
+    <div class="modal fade" id="modal-map" tabindex="-1" role="dialog" aria-labelledby="modal-map" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{$post->name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="map-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="ks-info container">
         <div class="row">
             <div class="col-md-3 ks-info-1">
@@ -268,3 +289,26 @@
         </div>
     </div>
 </section>
+
+<script>
+    //popup google map
+    //59.76522, 18.35002
+    var center = new google.maps.LatLng({{ $post->lat_long }});
+
+    function initialize() {
+
+        var mapOptions = {
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: center
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            map: map,
+            position: center
+        });
+    }
+    initialize();
+</script>

@@ -20,6 +20,8 @@
 
         {!! Theme::partial('footer') !!}
 
+        
         {!! Theme::footer() !!}
+        
     </body>
 </html>

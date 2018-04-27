@@ -57,6 +57,7 @@ return [
             $theme->asset()->container('footer')->usePath()->add('lean-modal-js', 'lean-modal/js/lean-modal.min.js', ['jquery']);
             $theme->asset()->container('footer')->usePath()->add('main-project-js', 'main-project/js/main.js', ['jquery']);
             $theme->asset()->container('footer')->add('toastr.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', ['jquery']);
+            $theme->asset()->container('header')->add('google-map.js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAisknDhl9ltrTm8madKT6syVacjVMw4So', ['jquery']);
             
             $theme->asset()->usePath()->add('bootstrap-css', 'bootstrap/css/bootstrap.min.css');
             $theme->asset()->usePath()->add('bootstrap-daterangepicker-css', 'bootstrap-daterangepicker/daterangepicker.css');
