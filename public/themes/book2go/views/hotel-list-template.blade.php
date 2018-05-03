@@ -34,14 +34,13 @@ if(!empty($page)) $post = $page; @endphp
                                 <div class="block-readmore"><a href="{{route('public.single', $value->slug)}}"></a></div>
                             </div>
                             <div class="des-information">
-                                <div class="col-7">
+                                <div class="col-7 pr-0">
                                     <h2 class="des-title-header">
                                         <a href="{{route('public.single', $value->slug)}}">{{$value->name}}</a></h2>
                                         <p class="flag-icon flag-icon-fr">{{$value->address}}</p>
                                 </div>
                                 <div class="col-5 text-right">
-                                    <p class="region-properties"><a href="#">Alsace</a></p>
-                                    <p class="count-properties">1 properties</p>
+                                    <p class="region-properties"><a href="{{route('public.single', $value->slug)}}">ĐẶT NGAY</a></p>
                                 </div>
                             </div>
                         </div>

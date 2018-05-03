@@ -363,7 +363,7 @@ body {
     display: inline-block;
     cursor: pointer;
     position: absolute;
-    bottom: 140px;
+    bottom: 180px;
     right: 50px;
 }
 .destinations-list .panel .pic-wrapper .block-readmore a:hover{
@@ -372,12 +372,12 @@ body {
 .des-information{
     padding: 26px 0;
     display: -webkit-box;
-    min-height: 116px;
 }
 .des-information .des-title-header{
     margin: 0;
     font-size: 18px;
     font-weight: 600;
+    min-height: 42px;
 }
 .des-information .des-title-header a{
     color: #465a66;
@@ -405,6 +405,7 @@ body {
 }
 .des-information .count-properties{
     margin: 0px;
+    min-height: 44px;
 }
 #section-destinations .btn-block .btn-outline{
     color: #ff6c00;
