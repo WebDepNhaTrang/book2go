@@ -135,6 +135,7 @@
                                     <span class="room-type">{{$room->name}}</span>
                                     <ul class="clearfix photo-gallery">
                                         <li><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
+                                     
                                         <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
                                     </ul>
                                 </div>
@@ -235,7 +236,7 @@
                                 </div>
                             </div>
                             <div>
-                                <span class="badge">Còn trống 5 phòng</span>
+                                <span class="badge">Còn trống {{$room->number_of_servicer}} phòng</span>
                             </div>
                         </td>
                         @if($checkin && $checkout)
@@ -306,7 +307,7 @@
     function initialize() {
 
         var mapOptions = {
-            zoom: 10,
+            zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             center: center
         };
