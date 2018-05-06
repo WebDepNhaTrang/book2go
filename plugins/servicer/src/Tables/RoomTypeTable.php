@@ -21,6 +21,9 @@ class RoomTypeTable extends TableAbstract
             ->editColumn('name', function ($item) {
                 return anchor_link(route('room_type.edit', $item->id), $item->name);
             })
+            ->editColumn('hotel', function ($item) {
+                return anchor_link(route('hotel.edit', $item->hotel->id), $item->hotel->name);
+            })
             ->editColumn('checkbox', function ($item) {
                 return table_checkbox($item->id);
             })
@@ -52,7 +55,7 @@ class RoomTypeTable extends TableAbstract
         /**
         * @var \Eloquent $model
         */
-        $query = $model->select(['servicers.id', 'servicers.name', 'servicers.created_at', 'servicers.status'])
+        $query = $model->with('hotel')->select(['servicers.id', 'servicers.name', 'servicers.service_type_id', 'servicers.created_at', 'servicers.status'])
         	->where('servicers.format_type', '=', ROOM_TYPE_MODULE_SCREEN_NAME);
         return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, ROOM_TYPE_MODULE_SCREEN_NAME));
     }
@@ -75,6 +78,11 @@ class RoomTypeTable extends TableAbstract
                 'name' => 'servicers.name',
                 'title' => trans('core.base::tables.name'),
                 'class' => 'text-left searchable',
+            ],
+            'hotel' => [
+                'name' => 'servicers.name',
+                'title' => "Hotel",
+                'class' => 'text-left',
             ],
             'created_at' => [
                 'name' => 'servicers.created_at',
