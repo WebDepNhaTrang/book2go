@@ -40,8 +40,8 @@ if(!empty($page)) $post = $page; @endphp
                                         <p class="flag-icon flag-icon-fr">{{$value->address}}</p>
                                 </div>
                                 <div class="col-5 text-right">
-                                    <p class="region-properties"><a href="#">Alsace</a></p>
-                                    <p class="count-properties">1 properties</p>
+                                    <p class="region-properties"><a href="#">{!! number_format_price($value->price) !!}</a></p>
+                                    <!-- <p class="count-properties">1 properties</p> -->
                                 </div>
                             </div>
                         </div>

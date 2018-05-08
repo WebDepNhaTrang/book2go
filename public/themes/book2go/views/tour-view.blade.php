@@ -47,6 +47,25 @@
 
                     <h1 class="ks-name">{{$post->name}}</h1>
                     {!! render_number_star($post->star) !!}
+                    <p>
+                        <!-- <span>Giá Tour:</span> -->
+                        @if($promotion)
+                            
+                            <div class="price-through">
+                                {!! number_format_price($post->price) !!}
+                                <span>/khách</span>
+                            </div>
+                            <div class="price-show">
+                                {!! number_format_price($post->price - ($post->price * $promotion->cost / 100)) !!}
+                                <span>/khách</span>
+                            </div>
+                        @else
+                            <div class="price-show">
+                                {!! number_format_price($post->price) !!}
+                                <span>/khách</span>
+                            </div>
+                        @endif
+                    </p>
                     <p class="address">{{$post->address}}</p>
                     <p class="tel">Tel: {{$post->phone}}</p>
 
@@ -77,30 +96,10 @@
     <div class="tour-dattour container">
         <div class="row">
             <div class="col-md-12 px-3 py-3 tour-dattour-title">
-                <h5 class="mb-0">Chọn Số Lượng & Đặt Tour</h5>
+                <h5 class="mb-0">Đặt Tour</h5>
             </div>
             <div class="col-md-12 px-3 py-3 tour-dattour-content">
-                <p>
-                    <span>Giá Tour:</span>
-                    @if($promotion)
-                        <div class="tiet-kiem-ngay">
-                            <span>{{$promotion->promotion_name}}</span>
-                        </div>
-                        <div class="price-through">
-                            {!! number_format_price($post->price) !!}
-                            
-                        </div>
-                        <div class="price-show">
-                            {!! number_format_price($post->price - ($post->price * $promotion->cost / 100)) !!}
-                            <span>/khách</span>
-                        </div>
-                    @else
-                        <div class="price-show">
-                            {!! number_format_price($post->price) !!}
-                            <span>/khách</span>
-                        </div>
-                    @endif
-                </p>
+                
                 <form id="search-hotel" action="{{route('public.booking')}}" class="row" method="GET">
                     <div class="col-xs-12 col-sm-12 col-md-6 arrival-date">
                         <div class="form-group mb-0">

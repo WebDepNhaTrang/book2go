@@ -52,7 +52,7 @@
                             <input type="text" class="form-control" id="txtaddress" name="address" value="{{old('address', $member?$member->address:null)}}" placeholder="Nhập địa chỉ">
                         </div>
                         <input type="hidden" name="booking_id" value="{{$booking->id}}">
-                        <button type="submit" class="btn btn-primary">Xác nhận đặt phòng</button>
+                        <button type="submit" class="btn btn-primary">Xác nhận đặt tour</button>
                     {!! Form::close() !!}
                 </div>
                 
