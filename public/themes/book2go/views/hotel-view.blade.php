@@ -133,10 +133,17 @@
                             <td class="col-room-type">
                                 <div>
                                     <span class="room-type">{{$room->name}}</span>
+                                    @php
+                                        $galleries_room = gallery_meta_data($room->id, ROOM_TYPE_MODULE_SCREEN_NAME);
+                                    @endphp
                                     <ul class="clearfix photo-gallery">
                                         <li><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
-                                     
-                                        <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
+                                        @if($galleries)
+                                            @foreach($galleries_room as $key2 => $value2)
+                                                <li class="d-none"><img src="{{ url($value2['img']) }}"/></li>
+                                            @endforeach
+                                        @endif
+                                        <!-- <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li> -->
                                     </ul>
                                 </div>
                             </td>
@@ -229,9 +236,17 @@
                             <div>
                                 <div>
                                     <span class="room-type">{{$room->name}}</span>
+                                    @php
+                                        $galleries_room = gallery_meta_data($room->id, ROOM_TYPE_MODULE_SCREEN_NAME);
+                                    @endphp
                                     <ul class="clearfix photo-gallery">
                                         <li><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
-                                        <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
+                                        @if($galleries)
+                                            @foreach($galleries_room as $key2 => $value2)
+                                                <li class="d-none"><img src="{{ url($value2['img']) }}"/></li>
+                                            @endforeach
+                                        @endif
+                                        <!-- <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li> -->
                                     </ul>
                                 </div>
                             </div>
