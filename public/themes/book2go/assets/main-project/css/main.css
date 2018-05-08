@@ -1998,15 +1998,15 @@ footer .footer-social a:hover .fa-linkedin-in{
     background-color: #ff6c00;
     color: #fff;
 }
-#tour-detail .tour-dattour .price-through{
+#tour-detail .ks-info .price-through{
     text-decoration: line-through;
 }
-#tour-detail .tour-dattour .price-show .price{
+#tour-detail .ks-info .price-show .price{
     color: #ff6c00;
     font-size: 22px;
     font-weight: 700;
 }
-#tour-detail .tour-dattour .price-show .currency{
+#tour-detail .ks-info .price-show .currency{
     color: #ff6c00;
 }
 /* End / Tour Detail Page */

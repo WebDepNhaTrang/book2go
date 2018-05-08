@@ -46,10 +46,7 @@
                                                                         </table>
                                                                     </td>
                                                                     <!--start  space width -->
-                                                                    <td colspan="2" align="center" valign="top"
-                                                                        style="font-size:13px;line-height:22px;color:#000000;font-weight:normal;text-align:center;font-family:Tahoma,Helvetica,Arial,sans-serif;border-collapse:collapse; text-transform: uppercase;">
-                                                                           {{setting('site_title')}}
-                                                                    </td>
+                                                                    
 
                                                                 </tr>
                                                                 <tr>
@@ -455,7 +452,7 @@
                                                         <td style="border-collapse: collapse;">
                                                             &nbsp;&nbsp;</td>
                                                         <td align="right" style="font-size: 13px;line-height: 22px;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse;">
-                                                                {{ trans('servicer::public.email_booking.service_charge') }}
+                                                                
                                                             </td>
                                                         <!--start  space width -->
                                                         <td valign="top" align="center" class="remove-479"
@@ -513,13 +510,47 @@
                                                             </table>
                                                         </td>
                                                         <!--start  space width -->
-                                                            <td valign="top" align="center" class="remove-479"
-                                                        style="font-size: 13px;line-height: 22px;text-align: center;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
-                                                            {{ trans('servicer::public.email_booking.payment_method') }}
+                                                            <td valign="top" align="left" class="remove-479"
+                                                        style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
+                                                        <b>Cancellation Policy</b> <br>
+                                                        Any cancellation received within 7 days prior to arrival date will incur the full period charge. Failure to arrive at your hotel or property will be treated as a No-Show and no refund will be given (Property policy).</b><br>
+                                                        <b>Check in</b> 14:00 – <b>check out</b> 12:00<br>
+                                                        <b>Late check out</b> as per hotel policy<br>
+                                                        <b>Early check in</b> as per hotel policy
                                                         </td>
-                                                            <td valign="top" align="center" class="remove-479"
-                                                        style="font-size: 13px;line-height: 22px;text-align: center;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit;     padding: 0 12px;">
-                                                            {{ trans('servicer::public.email_booking.cash_card_other') }}
+                                                            <td valign="top" align="left" class="remove-479"
+                                                        style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit;     padding: 0 12px;">
+                                                            
+                                                         </td>
+                                                           
+                                                    </tr>
+                                                    <tr>
+                                                        <!--start  space width -->
+                                                        <td valign="top" align="left" class="remove-479"
+                                                            style="border-collapse: collapse;">
+                                                            <table width="20" align="right" border="0"
+                                                                   cellpadding="0" cellspacing="0"
+                                                                   style="height: 5px;border-spacing: 0;">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td valign="top"
+                                                                        style="border-collapse: collapse;">
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <!--start  space width -->
+                                                            <td valign="top" align="left" class="remove-479"
+                                                        style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
+                                                            <b>Phương thức thanh toán: Chuyển khoản</b><br>
+                                                            Số tài khoản: 0061000783737 <br>
+                                                            Chủ tài khoản: Lê Phi Long <br>
+                                                            Ngân hàng Vietcombank chi nhánh Nha Trang
+                                                        </td>
+                                                            <td valign="top" align="left" class="remove-479"
+                                                        style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit;     padding: 0 12px;">
+                                                            
                                                          </td>
                                                            
                                                     </tr>
@@ -555,7 +586,7 @@
                                                         <td style="border-collapse: collapse;">
                                                             &nbsp;&nbsp;</td>
                                                         <td align="right" style="font-size: 13px;line-height: 22px;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse;">
-                                                              {{ trans('servicer::public.email_booking.reservation_guaranteed') }}
+                                                              
                                                             </td>
                                                         <!--start  space width -->
                                                         <td valign="top" align="center" class="remove-479"

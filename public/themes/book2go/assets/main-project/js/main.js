@@ -102,8 +102,11 @@ $(document).ready(function() {
         $(this).parent().parent().find("li").picEyes();
     });
 
-    
-
+    $('.view-all-pic').click(function(e) {
+        $(this).closest(".list-pics").children(".photo-gallery li img").trigger('click');
+        // $(this).closest(".list-pics").children(".photo-gallery li img").picEyes();
+        // alert('123');
+    });
 
     // Popup for login form
     $("#modal_trigger").leanModal({

@@ -18,7 +18,7 @@ if(!empty($page)) $post = $page; @endphp
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="promo-caption text-center my-4">
             <h1 class="caption-number">
                 <span>01</span>
@@ -27,11 +27,11 @@ if(!empty($page)) $post = $page; @endphp
                 <span>Chương trình khuyến mãi</span>
             </h2>
         </div>
-    </div>
+    </div> -->
     @php
         $data = get_promotions_front();
     @endphp
-    <div class="container">
+    <div class="container mt-5">
         
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">

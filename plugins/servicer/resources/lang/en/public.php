@@ -87,7 +87,7 @@ return [
         'pickup' => 'Pickup requirements:',
         'copy_right' => '© Copyright :year, All rights reserved',
         'booking_confirmation' => 'BOOKING CONFIRMATION',
-        'reservation' => 'Reservation',
+        'reservation' => 'Reservation Apartment',
         'date' => 'Date:',
         'title' => 'BOOKING CONFIRMATION',
         'form_hotel' => 'Hotel',
