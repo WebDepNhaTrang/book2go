@@ -362,3 +362,16 @@ if (!function_exists('number_format_price_nohtml')) {
         return number_format($price, 2) . '₫';
     }
 }
+
+if (!function_exists('number_format_vat')) {
+    /**
+     * @return array
+     * @author Anh Ngo
+     */
+    function number_format_vat($price = null)
+    {  
+        if($price) 
+            return '<span class="price">'.number_format($price * 10 / 100, 2).'</span><span class="currency">₫</span>';
+        return null;
+    }
+}

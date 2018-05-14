@@ -218,4 +218,37 @@ $(document).ready(function() {
             }
         });
     })
+
+
+    if($('.pageBooking').length > 0){
+
+        /**
+         * Number.prototype.format(n, x, s, c)
+         * 
+         * @param integer n: length of decimal
+         * @param integer x: length of whole part
+         * @param mixed   s: sections delimiter
+         * @param mixed   c: decimal delimiter
+         */
+        Number.prototype.format = function(n, x, s, c) {
+            var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+                num = this.toFixed(Math.max(0, ~~n));
+
+            return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+        };
+
+        $('input[name=include_vat].include_vat').change(function() {
+            if(this.checked) {
+                $('form#booking-available input[name=include_vat]').val('1');
+                $('.price-vat span.price').html(parseInt($(this).val()).format(2, 3, ',', '.'));
+                var total_price = parseInt($('.price-show').data('price')) + parseInt($(this).val());
+                $('.price-show span.price').html(total_price.format(2, 3, ',', '.'));
+            }else{
+                $('form#booking-available input[name=include_vat]').val('');
+                $('.price-vat span.price').html(0);
+                var total_price = parseInt($('.price-show').data('price'));
+                $('.price-show span.price').html(total_price.format(2, 3, ',', '.'));
+            }
+        });
+    }
 });

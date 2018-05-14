@@ -253,7 +253,7 @@ class PublicController extends BaseController
 
     private function requestOnly($request)
     {
-        return $request->only('checkin', 'checkout', 'number_of_servicer', 'adults', 'children');
+        return $request->only('checkin', 'checkout', 'number_of_servicer', 'adults', 'children', 'include_vat');
     }
 
     /**
@@ -286,12 +286,21 @@ class PublicController extends BaseController
                 $total_price = $servicer->price * $requests['number_of_servicer'] * $total_date;
                 break;
         }
+        if(!empty($requests['include_vat']) && $requests['include_vat'] == 1){
+            $tax = $booking->tax;
+            $total = $booking->total + $tax;
+        }else{
+            $tax = 0;
+            $total = $booking->total;
+        }
         $booking->fill([
             'status' => 1,
             'email' => $request->input('email'),
             'address' => $request->input('address'),
             'fullname' => $request->input('fullname'),
             'phone' => $request->input('phone'),
+            'tax' => $tax,
+            'total' => $total
         ]);
         $booking->save();
 

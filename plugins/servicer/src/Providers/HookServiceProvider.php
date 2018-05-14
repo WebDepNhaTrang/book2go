@@ -31,6 +31,7 @@ class HookServiceProvider extends ServiceProvider
         add_filter(BASE_FILTER_PUBLIC_SINGLE_DATA, [$this, 'handleSingleView'], 4, 1);
         add_filter(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, [$this, 'checkPromotionBeforeShow'], 10, 3);
         add_filter(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, [$this, 'checkDiscountMemberBeforeShow'], 11, 3);
+        add_filter(BASE_FILTER_BEFORE_GET_BOOKING_PAGE, [$this, 'checkServiceVatBeforeShow'], 12, 3);
     }
 
     /**
@@ -65,10 +66,7 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TOUR_MODULE_SCREEN_NAME, $post);
 
-                        $promotion = null;
-                        if($checkin && $checkout){
-                           $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);
-                        }
+                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);                        
 
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
@@ -213,6 +211,25 @@ class HookServiceProvider extends ServiceProvider
             return $booking;
         }
         return $booking;
+    }
+
+    /**
+     * @return mixed
+     * @author Anh Ngo
+     */
+    public function checkServiceVatBeforeShow(Eloquent $booking, $servicer, $screen)
+    {
+        
+        $service_charge = $booking->subtotal * 10 / 100;
+        $tax = ($booking->subtotal + $service_charge) * 10 / 100;
+
+        // Mặc định ko bao gồm VAT;
+        $total = $booking->subtotal + $service_charge;
+
+        $booking->fill(['tax' => $tax, 'service_charge' => $service_charge, 'total' => $total]);
+        $booking->save();
+        return $booking;
+
     }
 
     /**

@@ -93,7 +93,8 @@ class Booking extends Eloquent
         'notes',
         'user_id',
         'user_agent',
-        'ip_address'
+        'ip_address',
+        'service_charge'
     ];
 
     /**

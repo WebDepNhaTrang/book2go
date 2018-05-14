@@ -100,6 +100,15 @@ class PromotionForm extends FormAbstract
                     'placeholder' => trans('servicer::forms.end_date'),
                 ],
             ])
+            ->add('description', 'editor', [
+                'label' => trans('core.base::forms.description'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr' => [
+                    'rows' => 4,
+                    'placeholder' => trans('core.base::forms.description_placeholder'),
+                    'data-counter' => 500,
+                ],
+            ])
             ->add('hotels[]', 'select', [
                 'label' => trans('servicer::hotel.name'),
                 'label_attr' => ['class' => 'control-label'],
@@ -149,15 +158,7 @@ class PromotionForm extends FormAbstract
             //         'placeholder' => trans('servicer::forms.quantity_placeholder'),
             //     ]
             // ])
-            ->add('description', 'textarea', [
-                'label' => trans('core.base::forms.description'),
-                'label_attr' => ['class' => 'control-label'],
-                'attr' => [
-                    'rows' => 4,
-                    'placeholder' => trans('core.base::forms.description_placeholder'),
-                    'data-counter' => 500,
-                ],
-            ])
+            
             ->add('image', 'mediaImage', [
                 'label' => trans('core.base::forms.image'),
                 'label_attr' => ['class' => 'control-label'],
