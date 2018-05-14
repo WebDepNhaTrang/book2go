@@ -543,10 +543,10 @@
                                                         <!--start  space width -->
                                                             <td valign="top" align="left" class="remove-479"
                                                         style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
-                                                            <b>Phương thức thanh toán: Chuyển khoản</b><br>
-                                                            Số tài khoản: 0061000783737 <br>
-                                                            Chủ tài khoản: Lê Phi Long <br>
-                                                            Ngân hàng Vietcombank chi nhánh Nha Trang
+                                                            <b>Payment Methods: Transfer</b><br>
+                                                            Account number: 0061000783737 <br>
+                                                            Account holder: Lê Phi Long <br>
+                                                            Vietcombank branch in Nha Trang
                                                         </td>
                                                             <td valign="top" align="left" class="remove-479"
                                                         style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit;     padding: 0 12px;">

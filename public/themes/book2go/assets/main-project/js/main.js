@@ -103,9 +103,7 @@ $(document).ready(function() {
     });
 
     $('.view-all-pic').click(function(e) {
-        $(this).closest(".list-pics").children(".photo-gallery li img").trigger('click');
-        // $(this).closest(".list-pics").children(".photo-gallery li img").picEyes();
-        // alert('123');
+        $(this).parent().find(".photo-gallery li:first img").trigger('click');
     });
 
     // Popup for login form
