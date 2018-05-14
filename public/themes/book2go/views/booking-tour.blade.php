@@ -28,6 +28,11 @@
                 @endforeach
             </div>
         @endif
+        <div class="row">
+            <div class="promo-img">
+                <img class="img-fluid" src="{{ theme_option('bookingpage_img') }}" alt="slide">
+            </div>
+        </div>
         <div class="row pageBooking">
             <div class="col-md-7">
                 <div class="ks-booking-form">

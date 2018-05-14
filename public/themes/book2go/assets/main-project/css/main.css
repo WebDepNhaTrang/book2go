@@ -1199,6 +1199,21 @@ footer .footer-social a:hover .fa-linkedin-in{
     font-weight: 700;
     color: #ff6c00;
 }
+#ks-detail .col-room-type .view-all-pic{
+    font-size: 13px;
+    font-weight: 500;
+}
+#ks-detail .col-room-type .view-all-pic:hover{
+    cursor: pointer;
+}
+#ks-detail .col-room-type-mb .view-all-pic{
+    font-size: 13px;
+    font-weight: 500;
+}
+#ks-detail .col-room-type-mb .view-all-pic:hover{
+    cursor: pointer;
+}
+
 #ks-detail .ks-room-list table .col-suc-chua{
     border-left: 1px solid #ddd;
     text-align: center;

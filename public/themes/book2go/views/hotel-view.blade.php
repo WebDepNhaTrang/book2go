@@ -249,6 +249,7 @@
                                         @endif
                                         <!-- <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li> -->
                                     </ul>
+                                    <p class="view-all-pic">Xem tất cả ảnh</p>
                                 </div>
                             </div>
                             <div>

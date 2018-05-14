@@ -200,4 +200,23 @@ theme_option()->setSection([
     ],
 ]);
 
+theme_option()->setSection([
+    'title' => __('Booking Page'),
+    'desc' => __('Booking Page'),
+    'id' => 'opt-text-subsection-bookingpage',
+    'subsection' => true,
+    'icon' => 'fa fa-home',
+    'fields' => [
+        [
+            'id' => 'bookingpage_img',
+            'type' => 'mediaImage',
+            'label' => __('Image'),
+            'attributes' => [
+                'name' => 'bookingpage_img',
+                'value' => null,
+            ],
+        ],
+    ],
+]);
+
 theme_option()->setArgs(['debug' => true]);
