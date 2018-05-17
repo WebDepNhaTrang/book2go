@@ -35,14 +35,14 @@ class PromotionRepository extends RepositoriesAbstract implements PromotionInter
 	 	    
 		}elseif($type == TOUR_MODULE_SCREEN_NAME){
 	 	    $data = $this->model
-	 	    			->join('promotion_servicer', 'promotion_servicer.promotion_id', '=', 'promotions.id')
-	 	    			->join('service_types', 'promotion_servicer.reference_id', '=', 'service_types.id')
-	 	    			->where('promotion_servicer.reference_id', $id)
-						->where('promotion_servicer.reference', $type)
-						->where('promotions.status', '=', 1)
-						->select(['*', 'promotions.name as promotion_name'])
-						->distinct()
-		                ->orderBy('promotions.cost', 'desc');
+     	    			->join('promotion_servicer', 'promotion_servicer.promotion_id', '=', 'promotions.id')
+     	    			->join('servicers', 'promotion_servicer.reference_id', '=', 'servicers.id')
+     	    			->where('promotion_servicer.reference_id', $id)
+    					->where('promotion_servicer.reference', $type)
+    					->where('promotions.status', '=', 1)
+    					->select(['*', 'promotions.name as promotion_name'])
+    					->distinct()
+    	                ->orderBy('promotions.cost', 'desc');
 		}else{
      	    $data = $this->model
      	    			->join('promotion_servicer', 'promotion_servicer.promotion_id', '=', 'promotions.id')
