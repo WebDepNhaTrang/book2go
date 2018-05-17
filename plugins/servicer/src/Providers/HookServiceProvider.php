@@ -66,7 +66,7 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TOUR_MODULE_SCREEN_NAME, $post);
 
-                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);                        
+                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, null, null);                        
 
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
