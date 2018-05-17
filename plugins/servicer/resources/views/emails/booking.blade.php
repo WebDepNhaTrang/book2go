@@ -512,11 +512,11 @@
                                                         <!--start  space width -->
                                                             <td valign="top" align="left" class="remove-479"
                                                         style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
-                                                        <b>Cancellation Policy</b> <br>
+                                                        <b>- Cancellation Policy</b> <br>
                                                         Any cancellation received within 7 days prior to arrival date will incur the full period charge. Failure to arrive at your hotel or property will be treated as a No-Show and no refund will be given (Property policy).</b><br>
-                                                        <b>Check in</b> 14:00 – <b>check out</b> 12:00<br>
-                                                        <b>Late check out</b> as per hotel policy<br>
-                                                        <b>Early check in</b> as per hotel policy
+                                                        <b>- Check in</b> 14:00 – <b>check out</b> 12:00<br>
+                                                        <b>- Late check out</b> as per hotel policy<br>
+                                                        <b>- Early check in</b> as per hotel policy
                                                         </td>
                                                             <td valign="top" align="left" class="remove-479"
                                                         style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit;     padding: 0 12px;">
@@ -543,7 +543,7 @@
                                                         <!--start  space width -->
                                                             <td valign="top" align="left" class="remove-479"
                                                         style="font-size: 13px;line-height: 22px;text-align: left;font-family: Tahoma, Helvetica, Arial, sans-serif;border-collapse: collapse; display: table-cell; vertical-align: inherit; ">
-                                                            <b>Payment Methods: Transfer</b><br>
+                                                            <b>- Payment Methods: Transfer</b><br>
                                                             Account number: 0061000783737 <br>
                                                             Account holder: Lê Phi Long <br>
                                                             Vietcombank branch in Nha Trang

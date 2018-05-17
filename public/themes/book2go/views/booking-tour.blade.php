@@ -126,8 +126,8 @@
                     </div>
                     <div class="row price-final">
                         <div class="col-7">
-                            <span class="giatien">Giá tiền: <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"></i></span><br>
-                            <span class="baogom">Giá đã bao gồm: Phí dịch vụ 5%, Thuế 10%</span>
+                            <span class="giatien">Giá tiền: <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"></i></span>
+                            
                         </div>
                         <div class="col-5">
                             <div class="price-total booking_total" data-price="{{$booking->total}}">

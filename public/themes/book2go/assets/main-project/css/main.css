@@ -500,6 +500,25 @@ body {
     width: 90px;
     height: 90px;
 }
+#section-testimonials .jumbotron .btn-block .btn-outline{
+    color: #ff6c00;
+    border-color: #ff6c00;
+    font-size: 16px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: none;
+    letter-spacing: 0px;
+    padding: 10px 25px;
+    transition: all 0.3s;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+#section-testimonials .jumbotron .btn-block .btn-outline:hover{
+    background-color: #ff6c00;
+    color: #fff;
+}
 /* End / Section Testimonials */
 
 
@@ -2855,6 +2874,76 @@ footer .footer-social a:hover .fa-linkedin-in{
     cursor: pointer;
 }
 /* End / Căn hộ Detail Page */
+
+/* End / Testimonials Page */
+#testimonials-page {
+    padding-bottom: 70px;
+}
+#testimonials-page .sub-banner{
+    background-image: url(../img/solidres.jpg);
+}
+#testimonials-page .sub-banner .sub-banner-header{
+    padding: 160px 0;
+}
+#testimonials-page .sub-banner .sub-banner-header h3{
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+#testimonials-page .breadcrumb-list .row{
+    border-bottom: 1px solid #ecf0f3;
+}
+#testimonials-page .breadcrumb{
+    background: none;
+    margin: 0;
+}
+#testimonials-page .breadcrumb li>a{
+    color: #465a66;
+    font-weight: 100;
+}
+#testimonials-page .breadcrumb li>a:hover{
+    color: #ff6c00;
+    text-decoration: none;
+}
+#testimonials-page .breadcrumb li.active{
+    font-weight: 400;
+}
+#testimonials-page .news-list{
+    margin-bottom: 20px;
+}
+#testimonials-page .testimonials-list .testimonials-item{
+    margin-bottom: 40px;
+}
+#testimonials-page .testimonials-list .testimonials-info{
+    padding: 20px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-radius: 5px;
+}
+#testimonials-page .testimonials-list .testimonials-info:after{
+    content:'';
+    position: absolute;
+    top: 53%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 10px rgb(221, 221, 221);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+#testimonials-page .testimonials-list .testimonials-img{
+    padding: 15px;
+    margin-top: 16px;
+}
+#testimonials-page .testimonials-list .testimonials-img picture img{
+    width: 90px;
+    height: 90px;
+}
+/* End / Testimonials Page */
 
 .developed{
     font-size: 14px;

@@ -8,6 +8,7 @@ register_page_template([
     'faq-template' => 'FAQ Template',
     'contact-template' => 'Contact Template',
     'getit-template' => 'Get It Template',
+    'testimonial-template' => 'Testimonial Template',
 ]);
 
 register_post_template([
