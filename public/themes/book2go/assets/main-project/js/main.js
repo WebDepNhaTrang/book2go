@@ -238,14 +238,16 @@ $(document).ready(function() {
         $('input[name=include_vat].include_vat').change(function() {
             if(this.checked) {
                 $('form#booking-available input[name=include_vat]').val('1');
-                $('.price-vat span.price').html(parseInt($(this).val()).format(2, 3, ',', '.'));
-                var total_price = parseInt($('.price-show').data('price')) + parseInt($(this).val());
-                $('.price-show span.price').html(total_price.format(2, 3, ',', '.'));
+                $('.booking_vat span.price').html(parseInt($(this).val()).format(2, 3, ',', '.'));
+                var total_price = parseInt($('.price-total.booking_total').data('price')) + parseInt($(this).val());
+                $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
+                $('.booking_total span.price').html(total_price.format(2, 3, ',', '.'));
             }else{
                 $('form#booking-available input[name=include_vat]').val('');
-                $('.price-vat span.price').html(0);
-                var total_price = parseInt($('.price-show').data('price'));
-                $('.price-show span.price').html(total_price.format(2, 3, ',', '.'));
+                $('.booking_vat span.price').html(0);
+                var total_price = parseInt($('.price-total.booking_total').data('price'));
+                $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
+                $('.booking_total span.price').html(total_price.format(2, 3, ',', '.'));
             }
         });
     }
