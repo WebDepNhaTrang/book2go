@@ -115,13 +115,13 @@
                             <div class="price">
                                 {!! number_format_price($booking->discount, true) !!}
                             </div>
-                            <div class="price">
+                            <div class="price booking_service_charge">
                                 {!! number_format_price($booking->service_charge) !!}
                             </div>
-                            <div class="price-vat">
+                            <div class="price-vat booking_vat" >
                                 {!! number_format_price(0, true) !!}
                             </div>
-                            <div class="price-show" data-price="{{$booking->total}}">
+                            <div class="price-show booking_total_hotel" >
                                 {!! number_format_price($booking->total) !!}
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                             {{-- <span class="baogom">Giá đã bao gồm: Phí dịch vụ 5%, Thuế 10%</span> --}}
                         </div>
                         <div class="col-5">
-                            <div class="price-total">
+                            <div class="price-total booking_total" data-price="{{$booking->total}}">
                                 {!! number_format_price($booking->total) !!}
                             </div>
                         </div>

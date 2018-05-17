@@ -56,6 +56,7 @@
                             <label for="txtaddress">Địa chỉ</label>
                             <input type="text" class="form-control" id="txtaddress" name="address" value="{{old('address', $member?$member->address:null)}}" placeholder="Nhập địa chỉ">
                         </div>
+                        <input type="hidden" name="include_vat" value="">
                         <input type="hidden" name="booking_id" value="{{$booking->id}}">
                         <button type="submit" class="btn btn-primary">Xác nhận đặt tour</button>
                     {!! Form::close() !!}
@@ -95,7 +96,13 @@
                                     @endforeach
                                     <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:</span><br>
                                 @endif
-                            </span>
+                            </span><br>
+                            <span>
+                                Phí dịch vụ : 10%
+                            </span><br>
+                            <span>
+                                <input type="checkbox" name="include_vat" class="include_vat" value="{{$booking->tax}}"> VAT 10%
+                            </span><br>
                         </div>
                         <div class="col-5">
                             <span><a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
@@ -105,8 +112,15 @@
                             <div class="price-show">
                                 {!! number_format_price($booking->amount_children * $servicer->price_children, true) !!}
                             </div>
-                            <div class="price-show">
+                            
+                            <div class="price-show price_discount">
                                 {!! number_format_price($booking->discount, true) !!}
+                            </div>
+                            <div class="price booking_service_charge">
+                                {!! number_format_price($booking->service_charge) !!}
+                            </div>
+                            <div class="price-vat booking_vat">
+                                {!! number_format_price(0, true) !!}
                             </div>
                         </div>
                     </div>
@@ -116,7 +130,7 @@
                             <span class="baogom">Giá đã bao gồm: Phí dịch vụ 5%, Thuế 10%</span>
                         </div>
                         <div class="col-5">
-                            <div class="price-total">
+                            <div class="price-total booking_total" data-price="{{$booking->total}}">
                                 {!! number_format_price($booking->total) !!}
                             </div>
                         </div>
