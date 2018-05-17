@@ -21,7 +21,7 @@
                         <h1 class="caption-title"><i class="fab fa-hotjar"></i> <a href="{{route('public.single', $slug)}}">{{ $v->name }}</a></h1>
                     @endif
                     
-                    <p class="caption-description">{{ $v->description }}</p>
+                    <p class="caption-description">{!! $v->description !!}</p>
                 @endforeach
             </marquee>
         </div>
