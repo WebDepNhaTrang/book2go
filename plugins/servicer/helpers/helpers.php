@@ -96,7 +96,7 @@ if (!function_exists('render_number_star')) {
 }
 
 if (!function_exists('get_listing_hotels_apartments')) {
-    function get_listing_hotels_apartments($numOfItemOnPage = 2){
+    function get_listing_hotels_apartments($numOfItemOnPage = 9){
 
         $hotels = app(ServiceTypeInterface::class)->getHotelsFront();
         $apartments = app(ApartmentInterface::class)->getApartmentsFront();
@@ -123,7 +123,7 @@ if (!function_exists('get_tours_front')) {
      * @param array $args
      * @return array|mixed
      */
-    function get_tours_front($select = ['*'], $page = true, $numberOfOnPage = 3)
+    function get_tours_front($select = ['*'], $page = true, $numberOfOnPage = 9)
     {
         $tours = app(TourInterface::class)->getToursFront($select, $page, $numberOfOnPage);
         return $tours;
