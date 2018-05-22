@@ -120,25 +120,25 @@ class HookServiceProvider extends ServiceProvider
       
                      if (!empty($post)) {
                         
-                         SeoHelper::setTitle($post->name)->setDescription($post->description);
+                        SeoHelper::setTitle($post->name)->setDescription($post->description);
 
-                         Theme::breadcrumb()->add(__('Home'), route('public.index'))->add($post->name, route('public.single', $slug->key));
+                        Theme::breadcrumb()->add(__('Home'), route('public.index'))->add($post->name, route('public.single', $slug->key));
 
-                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, HOTEL_MODULE_SCREEN_NAME, $post);
+                        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, HOTEL_MODULE_SCREEN_NAME, $post);
 
-                         $room_types = $post->roomTypeActive;
+                        $room_types = $post->roomTypeActive;
                          
-                         
-                         
-                        // Get all servicers with total of servicers booked
-                        $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
+                        if($checkin && $checkout){
+                            // Get all servicers with total of servicers booked
+                            $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
 
-                        foreach ($room_types as $key => $room) {
-                            if(array_key_exists($room->id, $total_of_servicers)){
-                                if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
-                                    $room->number_of_servicer -= $total_of_servicers[$room->id];
-                                }else{
-                                    $room_types->forget($key);
+                            foreach ($room_types as $key => $room) {
+                                if(array_key_exists($room->id, $total_of_servicers)){
+                                    if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
+                                        $room->number_of_servicer -= $total_of_servicers[$room->id];
+                                    }else{
+                                        $room_types->forget($key);
+                                    }
                                 }
                             }
                         }
