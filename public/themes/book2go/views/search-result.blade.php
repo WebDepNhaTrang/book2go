@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-4 float-right">
                             @php 
-                                $promotion= get_promotion_by_id($row->id, $row->format_type?:request()->get('type'), request()->get('checkin'), request()->get('checkout'));
+                                $promotion= get_promotion_by_id($row->id, $row->format_type?:request()->get('type'), null, null);
                             @endphp
                             @if($promotion)
                                 <div class="tiet-kiem-ngay">

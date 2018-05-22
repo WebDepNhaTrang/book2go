@@ -128,24 +128,22 @@ class HookServiceProvider extends ServiceProvider
 
                          $room_types = $post->roomTypeActive;
                          
-                         $promotion = false;
-                         if($checkin && $checkout){
-                            // Get all servicers with total of servicers booked
-                            $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
+                         
+                         
+                        // Get all servicers with total of servicers booked
+                        $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
 
-                            foreach ($room_types as $key => $room) {
-                                if(array_key_exists($room->id, $total_of_servicers)){
-                                    if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
-                                        $room->number_of_servicer -= $total_of_servicers[$room->id];
-                                    }else{
-                                        $room_types->forget($key);
-                                    }
+                        foreach ($room_types as $key => $room) {
+                            if(array_key_exists($room->id, $total_of_servicers)){
+                                if($room->number_of_servicer - $total_of_servicers[$room->id] > 0){
+                                    $room->number_of_servicer -= $total_of_servicers[$room->id];
+                                }else{
+                                    $room_types->forget($key);
                                 }
                             }
+                        }
 
-                            $promotion = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, $checkin, $checkout);
-                            
-                         }
+                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, null, null);
 
                          $data = [
                              'template' => config('plugins.servicer.servicer.hotel-template'),
