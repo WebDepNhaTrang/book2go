@@ -17,6 +17,12 @@
     #section-booking .booking-content .tab-content .tab-content-left{
         margin-bottom: 1rem;
     }
+    #st-ks-ch-list .destinations-list .col-12{
+        display: none;
+    }
+    #section-destinations .destinations-list .col-12{
+        display: none;
+    }
  }
 
  /* Small devices (landscape phones, 576px and up) */
@@ -40,6 +46,12 @@
     }
     #section-booking .booking-content .tab-content .tab-content-right .form-group{
         margin-bottom: 0;
+    }
+    #st-ks-ch-list .destinations-list .col-12{
+        display: none;
+    }
+    #section-destinations .destinations-list .col-12{
+        display: none;
     }
 }
 
@@ -79,6 +91,12 @@
     #about-us .about-content .promo-caption{
         margin-top: -25px;
     }
+    #st-ks-ch-list .destinations-list .col-7, #st-ks-ch-list .destinations-list .col-5{
+        display: none;
+    }
+    #section-destinations .destinations-list .col-7, #section-destinations .destinations-list .col-5{
+        display: none;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */
@@ -105,6 +123,7 @@
     }
     
     /* End / Section Booking */
+    
 }
 
  /* Extra large devices (large desktops, 1200px and up) */
@@ -256,4 +275,10 @@
         margin-top: -25px;
     }
 
+    #st-ks-ch-list .destinations-list .col-12{
+        display: none;
+    }
+    #section-destinations .destinations-list .col-12{
+        display: none;
+    }
 }

@@ -55,6 +55,22 @@
                                             <p class="region-properties"><a href="{{ route('public.single', $hotel->slug) }}">Đặt ngay</a></p>
                                             
                                         </div>
+                                        <div class="col-12">
+                                            <h2 class="des-title-header">
+                                                <a href="{{ route('public.single', $hotel->slug) }}">{{ $hotel->name }}</a></h2>
+                                                
+                                                <p class="flag-icon flag-icon-fr">
+                                                <span>
+                                                    @if($hotel->star > 0)
+                                                        @for($i=0; $i<$hotel->star; $i++)
+                                                        <img src="/themes/book2go/assets/main-project/img/star.png" border="0" alt="star">
+                                                        @endfor
+                                                    @endif
+                                                </span>
+                                                    
+                                                </p>
+                                                <p class="count-properties">{{ $hotel->address }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

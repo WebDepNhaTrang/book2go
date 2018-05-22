@@ -190,14 +190,14 @@
                                         <input type="hidden" name="checkout" value="{{$checkout}}">
                                         <input type="hidden" name="id" value="{{$room->id}}">
 
-                                        <div class="col-4 float-left">
+                                        <div class="col-12 float-left">
                                             <select class="form-control mt-4" name="number_of_servicer">
                                                 @for($i = 1; $i <= $room->number_of_servicer; $i++)
                                                     <option value="{{$i}}">{{$i}}</option>
                                                 @endfor
                                             </select>
                                         </div>
-                                        <div class="col-8 float-right">
+                                        <div class="col-12 float-right">
                                             <button type="submit" class="btn btn-sm btn-datphong">Đặt phòng ngay</button>
                                             @if(!Auth::guard('member')->check() && setting('allow_discount_membership'))
                                                 <div class="dang-nhap-giam">
