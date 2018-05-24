@@ -66,12 +66,17 @@ class HookServiceProvider extends ServiceProvider
 
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TOUR_MODULE_SCREEN_NAME, $post);
 
+                        $promotion_by_date = false;
+                        if($checkin && $checkout){
+                            $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);    
+                        }
+
                         $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, null, null);                        
 
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
                             'view' => config('plugins.servicer.servicer.tour-view'),
-                            'data' => compact('post', 'checkout', 'checkin', 'promotion'),
+                            'data' => compact('post', 'checkout', 'checkin', 'promotion', 'promotion_by_date'),
                         ];
                     }
                     break;
@@ -88,7 +93,7 @@ class HookServiceProvider extends ServiceProvider
 
                         
                         $booking = false;
-                        $promotion = false;
+                        $promotion_by_date = false;
                         if($checkin && $checkout){
                            $booking = true;
                            // Get all servicers with total of servicers booked
@@ -102,14 +107,16 @@ class HookServiceProvider extends ServiceProvider
                                }
                            }
 
-                           $promotion = app(PromotionInterface::class)->getPromotionById($post->id, APARTMENT_MODULE_SCREEN_NAME, $checkin, $checkout);
+                           $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, APARTMENT_MODULE_SCREEN_NAME, $checkin, $checkout);
 
                         }
+
+                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, APARTMENT_MODULE_SCREEN_NAME, null, null);
 
                         $data = [
                             'template' => config('plugins.servicer.servicer.apartment-template'),
                             'view' => config('plugins.servicer.servicer.apartment-view'),
-                            'data' => compact('post', 'checkin', 'checkout', 'booking', 'promotion'),
+                            'data' => compact('post', 'checkin', 'checkout', 'booking', 'promotion', 'promotion_by_date'),
                         ];
                     }
                     break;
@@ -127,7 +134,7 @@ class HookServiceProvider extends ServiceProvider
                         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, HOTEL_MODULE_SCREEN_NAME, $post);
 
                         $room_types = $post->roomTypeActive;
-                         
+                        $promotion_by_date = false;
                         if($checkin && $checkout){
                             // Get all servicers with total of servicers booked
                             $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
@@ -141,6 +148,7 @@ class HookServiceProvider extends ServiceProvider
                                     }
                                 }
                             }
+                            $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, $checkin, $checkout);
                         }
 
                         $promotion = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, null, null);
@@ -148,7 +156,7 @@ class HookServiceProvider extends ServiceProvider
                          $data = [
                              'template' => config('plugins.servicer.servicer.hotel-template'),
                              'view' => config('plugins.servicer.servicer.hotel-view'),
-                             'data' => compact('post', 'room_types', 'checkin', 'checkout', 'promotion'),
+                             'data' => compact('post', 'room_types', 'checkin', 'checkout', 'promotion', 'promotion_by_date'),
                          ];
                      }
                      break;

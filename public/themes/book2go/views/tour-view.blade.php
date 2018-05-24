@@ -49,14 +49,14 @@
                     {!! render_number_star($post->star) !!}
                     <p>
                         <!-- <span>Giá Tour:</span> -->
-                        @if($promotion)
+                        @if($promotion_by_date)
                             
                             <div class="price-through">
                                 {!! number_format_price($post->price) !!}
                                 <span>/khách</span>
                             </div>
                             <div class="price-show">
-                                {!! number_format_price($post->price - ($post->price * $promotion->cost / 100)) !!}
+                                {!! number_format_price($post->price - ($post->price * $promotion_by_date->cost / 100)) !!}
                                 <span>/khách</span>
                             </div>
                         @else
