@@ -161,15 +161,15 @@
                             </td>
                             @if($checkin && $checkout)
                                 <td class="col-gia-phong">
-                                    @if($promotion)
+                                    @if($promotion_by_date)
                                         <div class="tiet-kiem-ngay">
-                                            <span>{{$promotion->promotion_name}}</span>
+                                            <span>{{$promotion_by_date->promotion_name}}</span>
                                         </div>
                                         <div class="price-through">
                                             {!! number_format_price($room->price) !!}
                                         </div>
                                         <div class="price-show">
-                                            {!! number_format_price($room->price - ($room->price * $promotion->cost / 100)) !!}
+                                            {!! number_format_price($room->price - ($room->price * $promotion_by_date->cost / 100)) !!}
                                         </div>
                                     @else
                                         <div class="price-show">

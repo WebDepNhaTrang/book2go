@@ -23,11 +23,11 @@ class PromotionRepository extends RepositoriesAbstract implements PromotionInter
 							->where('promotions.status', '=', 1)
 							->where(function ($query) use ($checkin, $checkout) {
 							     $query->where(function ($query) use ($checkin) {
-							                     $query->whereDate('promotions.start_date', '<=' ,$checkin)
-							                           ->whereDate('promotions.end_date', '>=' ,$checkin);
+							                     $query->whereDate('promotions.start_date', '<' ,$checkin)
+							                           ->whereDate('promotions.end_date', '>' ,$checkin);
 							         })->orWhere(function ($query)  use ($checkin, $checkout) {
-							                     $query->whereDate('promotions.start_date', '>=' ,$checkin)
-							                           ->whereDate('promotions.start_date', '<=' ,$checkout);
+							                     $query->whereDate('promotions.start_date', '>' ,$checkin)
+							                           ->whereDate('promotions.start_date', '<' ,$checkout);
 							         });
 							 })
 							->select(['*', 'promotions.name as promotion_name'])
@@ -55,11 +55,11 @@ class PromotionRepository extends RepositoriesAbstract implements PromotionInter
 							->where('promotions.status', '=', 1)
 							->where(function ($query) use ($checkin, $checkout) {
 							     $query->where(function ($query) use ($checkin) {
-							                     $query->whereDate('promotions.start_date', '<=' ,$checkin)
-							                           ->whereDate('promotions.end_date', '>=' ,$checkin);
+							                     $query->whereDate('promotions.start_date', '<' ,$checkin)
+							                           ->whereDate('promotions.end_date', '>' ,$checkin);
 							         })->orWhere(function ($query)  use ($checkin, $checkout) {
-							                     $query->whereDate('promotions.start_date', '>=' ,$checkin)
-							                           ->whereDate('promotions.start_date', '<=' ,$checkout);
+							                     $query->whereDate('promotions.start_date', '>' ,$checkin)
+							                           ->whereDate('promotions.start_date', '<' ,$checkout);
 							         });
 							 })
 							->select(['*', 'promotions.name as promotion_name'])

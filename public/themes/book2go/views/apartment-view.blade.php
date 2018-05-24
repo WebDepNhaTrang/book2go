@@ -110,16 +110,16 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <p>
                                     <span>Giá Căn hộ:</span>
-                                    @if($promotion)
+                                    @if($promotion_by_date)
                                         <div class="tiet-kiem-ngay">
-                                            <span>{{$promotion->promotion_name}}</span>
+                                            <span>{{$promotion_by_date->promotion_name}}</span>
                                         </div>
                                         <div class="price-through">
                                             {!! number_format_price($post->price) !!}
                                             
                                         </div>
                                         <div class="price-show">
-                                            {!! number_format_price($post->price - ($post->price * $promotion->cost / 100)) !!}
+                                            {!! number_format_price($post->price - ($post->price * $promotion_by_date->cost / 100)) !!}
                                             <span>/căn</span>
                                         </div>
                                     @else
