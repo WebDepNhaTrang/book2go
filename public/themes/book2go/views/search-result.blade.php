@@ -33,26 +33,32 @@
 
                         </div>
                         <div class="col-md-4 float-right">
-                            @php 
-                                $promotion= get_promotion_by_id($row->id, $row->format_type?:request()->get('type'), null, null);
-                            @endphp
-                            @if($promotion)
-                                <div class="tiet-kiem-ngay">
-                                    <span>{{$promotion->promotion_name}}</span><br/>
-                                    <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
-                                </div>
-                            @endif
-                            <div>
-                                @if(isset($row->format_type))
-                                    <div class="price-show">
-                                        {!! number_format_price($row->price) !!}
-                                    </div>
-                                @else
-                                    <div class="price-show">
-                                        {!! number_format_price($row->roomTypeActive?$row->roomTypeActive->first()->price:null) !!}
+                            @if(!$locker = get_lock_service_by_id($row->id, $row->format_type?:request()->get('type'), request()->get('checkin'), request()->get('checkout')))
+                                @php 
+                                    $promotion= get_promotion_by_id($row->id, $row->format_type?:request()->get('type'), null, null);
+                                @endphp
+                                @if($promotion)
+                                    <div class="tiet-kiem-ngay">
+                                        <span>{{$promotion->promotion_name}}</span><br/>
+                                        <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
                                     </div>
                                 @endif
-                            </div>
+                                <div>
+                                    @if(isset($row->format_type))
+                                        <div class="price-show">
+                                            {!! number_format_price($row->price) !!}
+                                        </div>
+                                    @else
+                                        <div class="price-show">
+                                            {!! number_format_price($row->roomTypeActive?$row->roomTypeActive->first()->price:null) !!}
+                                        </div>
+                                    @endif
+                                </div>
+                            @else
+                                <td class="col-alert-notification">
+                                    <span class="alert alert-danger">Vui lòng liên hệ</span>
+                                </td>
+                            @endif
                         </div>
                         <div class="clear-fix"></div>
                     </div>

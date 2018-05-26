@@ -101,7 +101,11 @@
                         <button class="btn btn-primary" type="submit">Kiểm tra <i class="fa fa-search"></i></button>
                     </div>
                 </form>
-                @if($booking)
+                @if($locker)
+                    <td class="col-alert-notification">
+                        <span class="alert alert-danger">Vui lòng liên hệ</span>
+                    </td>
+                @elseif($booking)
                     <form action="{{route('public.booking')}}" method="get">
                         <input type="hidden" name="checkin" value="{{$checkin?:null}}">
                         <input type="hidden" name="checkout" value="{{$checkout?:null}}">

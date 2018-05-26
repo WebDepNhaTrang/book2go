@@ -118,7 +118,7 @@
                         <th scope="col">Chi tiết</th>
                         <th scope="col">Sức chứa</th>
 
-                        @if($checkin && $checkout)
+                        @if($checkin && $checkout && !$locker)
                             <th scope="col">Giá phòng/đêm</th>
                             <th scope="col">Đặt phòng</th>
                         @else
@@ -159,7 +159,11 @@
                                     <span>{{$room->children}} x </span><i class="fas fa-child"></i>
                                 </div>
                             </td>
-                            @if($checkin && $checkout)
+                            @if($locker)
+                                <td class="col-alert-notification">
+                                    <span class="alert alert-danger">Vui lòng liên hệ</span>
+                                </td>
+                            @elseif($checkin && $checkout)
                                 <td class="col-gia-phong">
                                     @if($promotion_by_date)
                                         <div class="tiet-kiem-ngay">

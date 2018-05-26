@@ -31,3 +31,7 @@ if (!defined('BOOKING_MODULE_SCREEN_NAME')) {
 if (!defined('BASE_FILTER_BEFORE_GET_BOOKING_PAGE')) {
     define('BASE_FILTER_BEFORE_GET_BOOKING_PAGE', 'before_get_booking_page');
 }
+
+if (!defined('LOCK_SERVICER_MODULE_SCREEN_NAME')) {
+    define('LOCK_SERVICER_MODULE_SCREEN_NAME', 'lock_servicer');
+}
