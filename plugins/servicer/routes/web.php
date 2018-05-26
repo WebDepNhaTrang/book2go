@@ -332,6 +332,51 @@ Route::group(['namespace' => 'Botble\Servicer\Http\Controllers', 'middleware' =>
                 'uses' => 'BookingController@postChangeStatus',
             ]);
         }); 
+
+
+        Route::group(['prefix' => 'lock-servicer'], function () {
+
+            Route::get('/', [
+                'as' => 'lock-servicer.list',
+                'uses' => 'LockServicerController@getList',
+            ]);
+
+            Route::get('/create', [
+                'as' => 'lock-servicer.create',
+                'uses' => 'LockServicerController@getCreate',
+            ]);
+
+            Route::post('/create', [
+                'as' => 'lock-servicer.create',
+                'uses' => 'LockServicerController@postCreate',
+            ]);
+
+            Route::get('/edit/{id}', [
+                'as' => 'lock-servicer.edit',
+                'uses' => 'LockServicerController@getEdit',
+            ]);
+
+            Route::post('/edit/{id}', [
+                'as' => 'lock-servicer.edit',
+                'uses' => 'LockServicerController@postEdit',
+            ]);
+
+            Route::get('/delete/{id}', [
+                'as' => 'lock-servicer.delete',
+                'uses' => 'LockServicerController@getDelete',
+            ]);
+
+            Route::post('/delete-many', [
+                'as' => 'lock-servicer.delete.many',
+                'uses' => 'LockServicerController@postDeleteMany',
+            ]);
+
+            Route::post('/change-status', [
+                'as' => 'lock-servicer.change.status',
+                'uses' => 'LockServicerController@postChangeStatus',
+            ]);
+        }); 
+
     });
     
 

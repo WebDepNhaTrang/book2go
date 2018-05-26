@@ -5,6 +5,7 @@ use Botble\Servicer\Repositories\Interfaces\ServicerInterface;
 use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
 use Botble\Servicer\Repositories\Interfaces\TourInterface;
 use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
+use Botble\Servicer\Repositories\Interfaces\LockServicerInterface;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 if (!function_exists('get_all_hotels')) {
@@ -191,5 +192,17 @@ if (!function_exists('table_status_booking')) {
             ];
         }
         return view('core.base::elements.tables.status', compact('selected', 'statuses'))->render();
+    }
+}
+
+if (!function_exists('get_lock_service_by_id')) {
+    /**
+     * @param array $args
+     * @return array|mixed
+     */
+    function get_lock_service_by_id($id, $type, $checkin, $checkout)
+    {
+        $locker = app(LockServicerInterface::class)->getLockerServiceById($id, $type, $checkin, $checkout);
+        return $locker;
     }
 }

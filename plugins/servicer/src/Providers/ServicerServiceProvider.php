@@ -42,6 +42,11 @@ use Botble\Servicer\Repositories\Caches\BookingCacheDecorator;
 use Botble\Servicer\Repositories\Eloquent\BookingRepository;
 use Botble\Servicer\Repositories\Interfaces\BookingInterface;
 
+use Botble\Servicer\Models\LockServicer;
+use Botble\Servicer\Repositories\Caches\LockServicerCacheDecorator;
+use Botble\Servicer\Repositories\Eloquent\LockServicerRepository;
+use Botble\Servicer\Repositories\Interfaces\LockServicerInterface;
+
 class ServicerServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
@@ -81,6 +86,10 @@ class ServicerServiceProvider extends ServiceProvider
 
         $this->app->singleton(BookingInterface::class, function () {
             return new BookingRepository(new Booking());
+        });
+
+        $this->app->singleton(LockServicerInterface::class, function () {
+            return new LockServicerRepository(new LockServicer());
         });
         
         Helper::autoload(__DIR__ . '/../../helpers');
@@ -169,6 +178,15 @@ class ServicerServiceProvider extends ServiceProvider
                     'name' => trans('servicer::booking.name'),
                     'icon' => null,
                     'url' => route('booking.list'),
+                    'permissions' => [],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-lock-servicer',
+                    'priority' => 5,
+                    'parent_id' => 'cms-plugins-servicer',
+                    'name' => trans('servicer::lock.name'),
+                    'icon' => null,
+                    'url' => route('lock-servicer.list'),
                     'permissions' => [],
                 ]);
         });

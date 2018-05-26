@@ -2,51 +2,51 @@
 
 namespace Botble\Servicer\Http\Controllers;
 
-use Botble\Servicer\Http\Requests\PromotionRequest;
-use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
+use Botble\Servicer\Http\Requests\LockServicerRequest;
+use Botble\Servicer\Repositories\Interfaces\LockServicerInterface;
 use Botble\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Exception\Exception;
-use Botble\Servicer\Tables\PromotionTable;
+use Botble\Servicer\Tables\LockServicerTable;
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Events\DeletedContentEvent;
 use Botble\Base\Events\UpdatedContentEvent;
 use Botble\Base\Http\Responses\AjaxResponse;
-use Botble\Servicer\Forms\PromotionForm;
+use Botble\Servicer\Forms\LockServicerForm;
 use Botble\Base\Forms\FormBuilder;
 use Auth;
 use Botble\Servicer\Services\StorePromotionService;
 use Assets;
 
-class PromotionController extends BaseController
+class LockServicerController extends BaseController
 {
     /**
-     * @var PromotionInterface
+     * @var LockServicerInterface
      */
-    protected $promotionRepository;
+    protected $lockServicerRepository;
 
     /**
-     * ApartmentController constructor.
-     * @param PromotionInterface $promotionRepository
+     * LockServicerController constructor.
+     * @param LockServicerInterface $lockServicerRepository
      * @author Anh Ngo
      */
-    public function __construct(PromotionInterface $promotionRepository)
+    public function __construct(LockServicerInterface $lockServicerRepository)
     {
-        $this->promotionRepository = $promotionRepository;
+        $this->lockServicerRepository = $lockServicerRepository;
     }
 
     /**
      * Display all service
-     * @param PromotionTable $dataTable
+     * @param LockServicerTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * @author Anh Ngo
      */
-    public function getList(PromotionTable $dataTable)
+    public function getList(LockServicerTable $dataTable)
     {
 
-        page_title()->setTitle(trans('servicer::promotion.list'));
+        page_title()->setTitle(trans('servicer::lock.list'));
 
-        return $dataTable->renderTable(['title' => trans('servicer::promotion.list')]);
+        return $dataTable->renderTable(['title' => trans('servicer::lock.list')]);
     }
 
     /**
@@ -56,35 +56,37 @@ class PromotionController extends BaseController
      */
     public function getCreate(FormBuilder $formBuilder)
     {
-        page_title()->setTitle(trans('servicer::promotion.create'));
+        page_title()->setTitle(trans('servicer::lock.create'));
 
         Assets::addStylesheetsDirectly('vendor/core/packages/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css');
         Assets::addJavascriptDirectly(['vendor/core/packages/bootstrap-datetimepicker/moment.min.js', 'vendor/core/packages/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js', '/vendor/core/plugins/events/js/events.js']);
 
-        return $formBuilder->create(PromotionForm::class)->renderForm();
+        return $formBuilder->create(LockServicerForm::class)->renderForm();
     }
 
     /**
      * Insert new Service into database
      *
-     * @param PromotionRequest $request
+     * @param LockServicerRequest $request
      * @return \Illuminate\Http\RedirectResponse
      * @author Anh Ngo
      */
-    public function postCreate(PromotionRequest $request, StorePromotionService $service)
+    public function postCreate(LockServicerRequest $request)
     {
-        $promotion = $this->promotionRepository->createOrUpdate(array_merge($request->input(),[
+
+        $lock = $this->lockServicerRepository->createOrUpdate(array_merge($request->input(),[
+            'servicer_id' => $request->input('is_hotel')?0:$request->input('servicer_id'),
+            'service_type_id' => $request->input('is_hotel')?$request->input('service_type_id'):0,
             'user_id' => Auth::user()->getKey(),
         ]));
 
-        event(new CreatedContentEvent(PROMOTION_MODULE_SCREEN_NAME, $request, $promotion));
+        event(new CreatedContentEvent(LOCK_SERVICER_MODULE_SCREEN_NAME, $request, $lock));
 
-        $service->execute($request, $promotion);
 
         if ($request->input('submit') === 'save') {
-            return redirect()->route('promotion.list')->with('success_msg', trans('core.base::notices.create_success_message'));
+            return redirect()->route('lock-servicer.list')->with('success_msg', trans('core.base::notices.create_success_message'));
         } else {
-            return redirect()->route('promotion.edit', $promotion->id)->with('success_msg', trans('core.base::notices.create_success_message'));
+            return redirect()->route('lock-servicer.edit', $lock->id)->with('success_msg', trans('core.base::notices.create_success_message'));
         }
     }
 
@@ -98,43 +100,44 @@ class PromotionController extends BaseController
      */
     public function getEdit($id, FormBuilder $formBuilder)
     {
-        $promotion = $this->promotionRepository->findById($id);
-        if (empty($promotion)) {
+        $lock = $this->lockServicerRepository->findById($id);
+        if (empty($lock)) {
             abort(404);
         }
 
-        page_title()->setTitle(trans('servicer::promotion.edit') . ' #' . $id);
+        page_title()->setTitle(trans('servicer::lock.edit') . ' #' . $id);
 
         Assets::addStylesheetsDirectly('vendor/core/packages/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css');
         Assets::addJavascriptDirectly(['vendor/core/packages/bootstrap-datetimepicker/moment.min.js', 'vendor/core/packages/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js', '/vendor/core/plugins/events/js/events.js']);
 
-        return $formBuilder->create(PromotionForm::class)->setModel($promotion)->renderForm();
+        return $formBuilder->create(LockServicerForm::class)->setModel($lock)->renderForm();
     }
 
     /**
      * @param $id
-     * @param PromotionRequest $request
+     * @param LockServicerRequest $request
      * @return \Illuminate\Http\RedirectResponse
      * @author Anh Ngo
      */
-    public function postEdit($id, PromotionRequest $request, StorePromotionService $service)
+    public function postEdit($id, LockServicerRequest $request)
     {
-        $promotion = $this->promotionRepository->findById($id);
-        if (empty($promotion)) {
+        $lock = $this->lockServicerRepository->findById($id);
+        if (empty($lock)) {
             abort(404);
         }
-        $promotion->fill($request->input());
 
-        $this->promotionRepository->createOrUpdate($promotion);
+        $lock->fill($request->input());
 
-        event(new UpdatedContentEvent(PROMOTION_MODULE_SCREEN_NAME, $request, $promotion));
+        $lock->servicer_id = $request->input('is_hotel')?0:$request->input('servicer_id');
+        $lock->service_type_id = $request->input('is_hotel')?$request->input('service_type_id'):0;
+        $this->lockServicerRepository->createOrUpdate($lock);
 
-        $service->execute($request, $promotion);
+        event(new UpdatedContentEvent(LOCK_SERVICER_MODULE_SCREEN_NAME, $request, $lock));
 
         if ($request->input('submit') === 'save') {
-            return redirect()->route('promotion.list')->with('success_msg', trans('core.base::notices.update_success_message'));
+            return redirect()->route('lock-servicer.list')->with('success_msg', trans('core.base::notices.update_success_message'));
         } else {
-            return redirect()->route('promotion.edit', $id)->with('success_msg', trans('core.base::notices.update_success_message'));
+            return redirect()->route('lock-servicer.edit', $id)->with('success_msg', trans('core.base::notices.update_success_message'));
         }
     }
 
@@ -147,13 +150,13 @@ class PromotionController extends BaseController
     public function getDelete(Request $request, $id, AjaxResponse $response)
     {
         try {
-            $promotion = $this->promotionRepository->getFirstBy(['id' => $id]);
-            if (empty($promotion)) {
+            $lock = $this->lockServicerRepository->getFirstBy(['id' => $id]);
+            if (empty($lock)) {
                 abort(404);
             }
-            $this->promotionRepository->delete($promotion);
+            $this->lockServicerRepository->delete($lock);
 
-            event(new DeletedContentEvent(PROMOTION_MODULE_SCREEN_NAME, $request, $promotion));
+            event(new DeletedContentEvent(LOCK_SERVICER_MODULE_SCREEN_NAME, $request, $lock));
 
             return $response->setMessage(trans('core.base::notices.delete_success_message'));
         } catch (Exception $e) {
@@ -175,9 +178,9 @@ class PromotionController extends BaseController
         }
 
         foreach ($ids as $id) {
-            $promotion = $this->promotionRepository->findById($id);
-            $this->promotionRepository->delete($promotion);
-            event(new DeletedContentEvent(PROMOTION_MODULE_SCREEN_NAME, $request, $promotion));
+            $lock = $this->lockServicerRepository->findById($id);
+            $this->lockServicerRepository->delete($lock);
+            event(new DeletedContentEvent(LOCK_SERVICER_MODULE_SCREEN_NAME, $request, $lock));
         }
 
         return $response->setMessage(trans('core.base::notices.delete_success_message'));
@@ -197,11 +200,11 @@ class PromotionController extends BaseController
         }
 
         foreach ($ids as $id) {
-            $promotion = $this->promotionRepository->findById($id);
-            $promotion->status = $request->input('status');
-            $this->promotionRepository->createOrUpdate($promotion);
+            $lock = $this->lockServicerRepository->findById($id);
+            $lock->status = $request->input('status');
+            $this->lockServicerRepository->createOrUpdate($lock);
 
-            event(new UpdatedContentEvent(PROMOTION_MODULE_SCREEN_NAME, $request, $promotion));
+            event(new UpdatedContentEvent(LOCK_SERVICER_MODULE_SCREEN_NAME, $request, $lock));
         }
 
         return $response->setMessage(trans('core.base::notices.update_success_message'))->setData($request->input('status'));

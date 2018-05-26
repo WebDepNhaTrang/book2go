@@ -10,6 +10,7 @@ use Botble\Servicer\Repositories\Interfaces\TourInterface;
 use Botble\Servicer\Repositories\Interfaces\ApartmentInterface;
 use Botble\Servicer\Repositories\Interfaces\ServiceTypeInterface;
 use Botble\Servicer\Repositories\Interfaces\PromotionInterface;
+use Botble\Servicer\Repositories\Interfaces\LockServicerInterface;
 use Menu;
 use Botble\Dashboard\Repositories\Interfaces\DashboardWidgetInterface;
 use Botble\Dashboard\Repositories\Interfaces\DashboardWidgetSettingInterface;
@@ -71,7 +72,7 @@ class HookServiceProvider extends ServiceProvider
                             $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, $checkin, $checkout);    
                         }
 
-                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, null, null);                        
+                        $promotion = app(PromotionInterface::class)->getPromotionById($post->id, TOUR_MODULE_SCREEN_NAME, null, null);
 
                         $data = [
                             'template' => config('plugins.servicer.servicer.tour-template'),
@@ -94,6 +95,7 @@ class HookServiceProvider extends ServiceProvider
                         
                         $booking = false;
                         $promotion_by_date = false;
+                        $locker = false;
                         if($checkin && $checkout){
                            $booking = true;
                            // Get all servicers with total of servicers booked
@@ -107,7 +109,12 @@ class HookServiceProvider extends ServiceProvider
                                }
                            }
 
-                           $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, APARTMENT_MODULE_SCREEN_NAME, $checkin, $checkout);
+                           $locker = app(LockServicerInterface::class)->getLockerServiceById($post->id, $slug->reference, $checkin, $checkout);
+                           
+                            if(!$locker){
+                                $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, APARTMENT_MODULE_SCREEN_NAME, $checkin, $checkout);
+                            }
+                           
 
                         }
 
@@ -116,7 +123,7 @@ class HookServiceProvider extends ServiceProvider
                         $data = [
                             'template' => config('plugins.servicer.servicer.apartment-template'),
                             'view' => config('plugins.servicer.servicer.apartment-view'),
-                            'data' => compact('post', 'checkin', 'checkout', 'booking', 'promotion', 'promotion_by_date'),
+                            'data' => compact('post', 'checkin', 'checkout', 'booking', 'promotion', 'promotion_by_date', 'locker'),
                         ];
                     }
                     break;
@@ -135,6 +142,7 @@ class HookServiceProvider extends ServiceProvider
 
                         $room_types = $post->roomTypeActive;
                         $promotion_by_date = false;
+                        $locker = false;
                         if($checkin && $checkout){
                             // Get all servicers with total of servicers booked
                             $total_of_servicers = app(BookingInterface::class)->getTotalOfServicer($room_types->pluck('id')->toArray(), $checkin, $checkout)->pluck('total', 'servicer_id')->toArray();
@@ -148,7 +156,11 @@ class HookServiceProvider extends ServiceProvider
                                     }
                                 }
                             }
-                            $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, $checkin, $checkout);
+
+                            $locker = app(LockServicerInterface::class)->getLockerServiceById($post->id, $slug->reference, $checkin, $checkout);
+                            if(!$locker){
+                                $promotion_by_date = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, $checkin, $checkout);
+                            }
                         }
 
                         $promotion = app(PromotionInterface::class)->getPromotionById($post->id, HOTEL_MODULE_SCREEN_NAME, null, null);
@@ -156,7 +168,7 @@ class HookServiceProvider extends ServiceProvider
                          $data = [
                              'template' => config('plugins.servicer.servicer.hotel-template'),
                              'view' => config('plugins.servicer.servicer.hotel-view'),
-                             'data' => compact('post', 'room_types', 'checkin', 'checkout', 'promotion', 'promotion_by_date'),
+                             'data' => compact('post', 'room_types', 'checkin', 'checkout', 'promotion', 'promotion_by_date', 'locker'),
                          ];
                      }
                      break;
@@ -179,6 +191,10 @@ class HookServiceProvider extends ServiceProvider
         $promotion = app(PromotionInterface::class)->getPromotionById($servicer->id, $servicer->format_type, $booking->checkin, $booking->checkout);
         $promotion_extension = [];
         if($promotion){
+            // Remove note
+            $booking->fill(['notes' => null]);
+            $booking->save();
+            
             switch ($servicer->format_type) {
                 case TOUR_MODULE_SCREEN_NAME:
                     $befor_discount = $booking->subtotal * $promotion->cost;
@@ -191,11 +207,12 @@ class HookServiceProvider extends ServiceProvider
                         $start = date('Y-m-d', strtotime($promotion->start_date));
                     }
                     $end = $booking->checkout;
-                    if($end > $promotion->end_date){
+                    if($end > $promotion->end_date && $start != date('Y-m-d', strtotime($promotion->end_date))){
                         $end = date('Y-m-d', strtotime($promotion->end_date));
                     }
                     $promotion_extension = ['promotion_start_date' => $start, 'promotion_end_date' => $end];
                     $total_date = $this->totalDate($start, $end);
+
                     $befor_discount = $servicer->price * $booking->total_of_servicer * $total_date * $promotion->cost;
                     $befor_discount = $befor_discount / 100;
                     break;
