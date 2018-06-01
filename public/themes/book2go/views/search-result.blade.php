@@ -56,7 +56,7 @@
                                 </div>
                             @else
                                 <td class="col-alert-notification">
-                                    <span class="alert alert-danger">Vui lòng liên hệ</span>
+                                    <p class="alert alert-danger">Vui lòng liên hệ </br>{{ setting('contact_hotline') }}</p>
                                 </td>
                             @endif
                         </div>
