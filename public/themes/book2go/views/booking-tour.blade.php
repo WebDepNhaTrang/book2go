@@ -94,7 +94,7 @@
                                             $promotion_discount = number_format_price_nohtml($value['promotion_discount']);
                                          $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
                                     @endforeach
-                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:</span><br>
+                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:</span>
                                 @endif
                             </span><br>
                             <span>
