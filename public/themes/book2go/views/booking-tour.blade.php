@@ -99,16 +99,16 @@
                                     {!! number_format_price($booking->amount_adults * $servicer->price, true) !!}
                                 </div>
                             </div>
-<<<<<<< HEAD
+
                             
                             <div class="price-show price_discount">
                                 {!! number_format_price($booking->subtotal - $booking->discount, true) !!}
-=======
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-7">
                                 <span>Trẻ em ({{$requests['children']}} khách):</span><br>
->>>>>>> c08c1bf7657eb6c87ec5569ded4570cef8e773b0
+
                             </div>
                             <div class="col-5">
                                 <div class="price-show">
