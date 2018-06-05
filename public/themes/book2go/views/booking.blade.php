@@ -84,51 +84,83 @@
                         </div>
 
                     </div>
-                    <div class="row price-detail">
-                        <div class="col-6">
-                            <span>Loại phòng:</span><br>
-                            <span>Giá gốc:</span><br>
-                            <span>Khuyến mãi 
-                                @if($booking->discount)
-                                    @php $notes = null; @endphp
-                                    @foreach(json_decode($booking->notes, true) as $value)
-                                        @php
-                                            $promotion_discount = number_format_price_nohtml($value['promotion_discount']);
-                                         $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
-                                    @endforeach
-                                    <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:
-                                @endif
-                            </span><br>
-                            <span>
-                                Phí dịch vụ : 10%
-                            </span><br>
-                            <span>
-                                <input type="checkbox" name="include_vat" class="include_vat" value="{{$booking->tax}}"> VAT 10%
-                            </span><br>
-                            <span>Giá tiền:</span>
+                    <div class="price-detail">
+                        <div class="row">
+                            <div class="col-6">
+                                <span>Loại phòng:</span>
+                            </div>
+                            <div class="col-6">
+                                <span>{{$requests['number_of_servicer']}} x <a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <span>{{$requests['number_of_servicer']}} x <a target="_blank" href="{{route('public.single',  $servicer->slug)}}">{{$servicer->name}}</a></span><br>
-                            <div @if($booking->discount) class="price-through" @endif.>
-                                {!! number_format_price($booking->subtotal) !!}
+                        <div class="row">
+                            <div class="col-6">
+                                <span>Giá gốc:</span>
                             </div>
-                            <div class="price">
-                                {!! number_format_price($booking->discount, true) !!}
+                            <div class="col-6">
+                                <div @if($booking->discount) class="price-through" @endif>
+                                    {!! number_format_price($booking->subtotal) !!}
+                                </div>  
                             </div>
-                            <div class="price booking_service_charge">
-                                {!! number_format_price($booking->service_charge) !!}
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>Khuyến mãi 
+                                    @if($booking->discount)
+                                        @php $notes = null; @endphp
+                                        @foreach(json_decode($booking->notes, true) as $value)
+                                            @php
+                                                $promotion_discount = number_format_price_nohtml($value['promotion_discount']);
+                                            $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
+                                        @endforeach
+                                        <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:
+                                    @endif
+                                </span>
                             </div>
-                            <div class="price-vat booking_vat" >
-                                {!! number_format_price(0, true) !!}
+                            <div class="col-6">
+                                <div class="price">
+                                    {!! number_format_price($booking->discount, true) !!}
+                                </div>
                             </div>
-                            <div class="price-show booking_total_hotel" >
-                                {!! number_format_price($booking->total) !!}
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>
+                                    Phí dịch vụ : 10%
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <div class="price booking_service_charge">
+                                    {!! number_format_price($booking->service_charge) !!}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>
+                                    <input type="checkbox" name="include_vat" class="include_vat" value="{{$booking->tax}}"> VAT 10%
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <div class="price-vat booking_vat" >
+                                    {!! number_format_price(0, true) !!}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>Giá tiền:</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="price-show booking_total_hotel" >
+                                    {!! number_format_price($booking->total) !!}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row price-final">
                         <div class="col-6">
-                            <span class="giatien">Giá tiền: <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"></i></span><br>
+                            <span class="giatien">Giá tiền: <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Giá đã bao gồm: Phí dịch vụ 10%"></i></span><br>
                             {{-- <span class="baogom">Giá đã bao gồm: Phí dịch vụ 5%, Thuế 10%</span> --}}
                         </div>
                         <div class="col-6">

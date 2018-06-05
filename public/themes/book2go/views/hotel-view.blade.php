@@ -55,7 +55,7 @@
                 @if($promotion)
                     <div class="col-md-4">
                         <button type="button" class="btn btn-sm btn-danger" disabled>{{$promotion->promotion_name}}</button>
-                        <label class="badge badge-info">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }} đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                        <label class="badge badge-info tu-ng-den-ng">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }}<br>đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
                     </div>
                 @endif
             </div>
