@@ -2951,8 +2951,16 @@ footer .footer-social a:hover .fa-linkedin-in{
     color: #333;
 }
 
-
-
 #map-canvas {
   height: 400px;
+}
+
+.noti-vui-long-lien-he{
+    padding: 5px;
+    font-size: 13px;
+}
+
+.tu-ng-den-ng{
+    line-height: 1.5;
+    margin-top: 5px;
 }
