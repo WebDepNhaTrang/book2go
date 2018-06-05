@@ -97,6 +97,18 @@
     #section-destinations .destinations-list .col-7, #section-destinations .destinations-list .col-5{
         display: none;
     }
+    #ks-booking .ks-booking-info .date-time{
+        font-size: 15px;
+    }
+    #ks-booking .ks-booking-info .price-detail{
+        font-size: 13px;
+    }
+    #ks-booking .ks-booking-info .price-final .giatien{
+        font-size: 15px;
+    }
+    #ks-booking .ks-booking-info .price-final .price-total{
+        font-size: 15px;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */

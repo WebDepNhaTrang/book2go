@@ -55,7 +55,7 @@
                 @if($promotion)
                     <div class="col-md-4">
                         <button type="button" class="btn btn-sm btn-danger" disabled>{{$promotion->promotion_name}}</button>
-                        <label class="badge badge-info">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }} đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                        <label class="badge badge-info tu-ng-den-ng">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }}<br>đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
                     </div>
                 @endif
             </div>
@@ -161,7 +161,7 @@
                             </td>
                             @if($locker)
                                 <td class="col-alert-notification">
-                                    <span class="alert alert-danger">Vui lòng liên hệ</span>
+                                    <p class="alert alert-danger">Vui lòng liên hệ </br>{{ setting('contact_hotline') }}</p>
                                 </td>
                             @elseif($checkin && $checkout)
                                 <td class="col-gia-phong">
@@ -251,7 +251,7 @@
                                                 <li class="d-none"><img src="{{ url($value2['img']) }}"/></li>
                                             @endforeach
                                         @endif
-                                        <!-- <li class="d-none"><img src="{{ get_object_image($room->image, 'featured') }}"/></li> -->
+                                        
                                     </ul>
                                     <p class="view-all-pic">Xem tất cả ảnh</p>
                                 </div>
@@ -260,7 +260,11 @@
                                 <span class="badge">Còn trống {{$room->number_of_servicer}} phòng</span>
                             </div>
                         </td>
-                        @if($checkin && $checkout)
+                        @if($locker)
+                            <td class="col-alert-notification">
+                                <p class="alert alert-danger">Vui lòng liên hệ </br>{{ setting('contact_hotline') }}</p>
+                            </td>
+                        @elseif($checkin && $checkout)
                         <td class="col-chi-tiet-mb" style="width: 50%;">
                             <form action="{{route('public.booking')}}" method="get">
                                 <input type="hidden" name="checkin" value="{{$checkin}}">

@@ -40,7 +40,7 @@
                                 @if($promotion)
                                     <div class="tiet-kiem-ngay">
                                         <span>{{$promotion->promotion_name}}</span><br/>
-                                        <label class="badge badge-info">Form {{date('d/m/Y', strtotime($promotion->start_date)) }} to {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
+                                        <label class="badge badge-info tu-ng-den-ng">Từ {{date('d/m/Y', strtotime($promotion->start_date)) }}<br>đến {{date('d/m/Y', strtotime($promotion->end_date)) }}</label>
                                     </div>
                                 @endif
                                 <div>
@@ -56,7 +56,7 @@
                                 </div>
                             @else
                                 <td class="col-alert-notification">
-                                    <span class="alert alert-danger">Vui lòng liên hệ</span>
+                                    <p class="alert alert-danger noti-vui-long-lien-he">Vui lòng liên hệ </br>{{ setting('contact_hotline') }}</p>
                                 </td>
                             @endif
                         </div>
