@@ -114,7 +114,7 @@
                             </div>
                             
                             <div class="price-show price_discount">
-                                {!! number_format_price($booking->discount, true) !!}
+                                {!! number_format_price($booking->subtotal - $booking->discount, true) !!}
                             </div>
                             <div class="price booking_service_charge">
                                 {!! number_format_price($booking->service_charge) !!}
