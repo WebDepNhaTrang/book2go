@@ -137,6 +137,16 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
+                                <span>Giá tiền:</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="price-show booking_total_hotel" >
+                                    {!! number_format_price($booking->total) !!}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
                                 <span>
                                     <input type="checkbox" name="include_vat" class="include_vat" value="{{$booking->tax}}"> VAT 10%
                                 </span>
@@ -147,16 +157,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <span>Giá tiền:</span>
-                            </div>
-                            <div class="col-6">
-                                <div class="price-show booking_total_hotel" >
-                                    {!! number_format_price($booking->total) !!}
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="row price-final">
                         <div class="col-6">

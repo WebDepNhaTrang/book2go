@@ -247,7 +247,7 @@ class HookServiceProvider extends ServiceProvider
         $tax = ($booking->subtotal + $service_charge) * 10 / 100;
 
         // Mặc định ko bao gồm VAT;
-        $total = $booking->subtotal + $service_charge;
+        $total = $booking->total + $service_charge;
 
         $booking->fill(['tax' => $tax, 'service_charge' => $service_charge, 'total' => $total]);
         $booking->save();

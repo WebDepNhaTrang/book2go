@@ -240,13 +240,13 @@ $(document).ready(function() {
                 $('form#booking-available input[name=include_vat]').val('1');
                 $('.booking_vat span.price').html(parseInt($(this).val()).format(2, 3, ',', '.'));
                 var total_price = parseInt($('.price-total.booking_total').data('price')) + parseInt($(this).val());
-                $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
+                // $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
                 $('.booking_total span.price').html(total_price.format(2, 3, ',', '.'));
             }else{
                 $('form#booking-available input[name=include_vat]').val('');
                 $('.booking_vat span.price').html(0);
                 var total_price = parseInt($('.price-total.booking_total').data('price'));
-                $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
+                // $('.booking_total_hotel span.price').html(total_price.format(2, 3, ',', '.'));
                 $('.booking_total span.price').html(total_price.format(2, 3, ',', '.'));
             }
         });
