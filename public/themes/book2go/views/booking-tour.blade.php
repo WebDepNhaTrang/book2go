@@ -99,11 +99,6 @@
                                     {!! number_format_price($booking->amount_adults * $servicer->price, true) !!}
                                 </div>
                             </div>
-
-                            
-                            <div class="price-show price_discount">
-                                {!! number_format_price($booking->subtotal - $booking->discount, true) !!}
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-7">
@@ -132,7 +127,7 @@
                             </div>
                             <div class="col-5">
                                 <div class="price-show price_discount">
-                                    {!! number_format_price($booking->discount, true) !!}
+                                    {!! number_format_price($booking->subtotal - $booking->discount, true) !!}
                                 </div>
                             </div>
                         </div>
