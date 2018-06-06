@@ -98,7 +98,7 @@
                                 <span>Giá gốc:</span>
                             </div>     
                             <div class="col-6">
-                                <div @if($booking->discount) class="price-through" @endif>
+                                <div class="price-through">
                                     {!! number_format_price($booking->subtotal) !!}
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="col-6">
                                 <div class="price">
-                                    {!! number_format_price($booking->discount, true) !!}
+                                    {!! number_format_price($booking->subtotal - $booking->discount, true) !!}
                                 </div>
                             </div>
                         </div>
