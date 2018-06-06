@@ -243,7 +243,7 @@ class HookServiceProvider extends ServiceProvider
     public function checkServiceVatBeforeShow(Eloquent $booking, $servicer, $screen)
     {
         
-        $service_charge = $booking->subtotal * 10 / 100;
+        $service_charge = ($booking->subtotal - $booking->discount) * 10 / 100;
         $tax = ($booking->subtotal + $service_charge) * 10 / 100;
 
         // Mặc định ko bao gồm VAT;
