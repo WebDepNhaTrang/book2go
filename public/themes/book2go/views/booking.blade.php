@@ -135,6 +135,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
                         <div class="row">
                             <div class="col-6">
                                 <span>Giá tiền:</span>
@@ -145,6 +146,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-6">
                                 <span>

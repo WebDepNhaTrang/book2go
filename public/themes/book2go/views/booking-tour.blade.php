@@ -143,6 +143,18 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-7">
+                                <span>Giá tiền:</span>
+                            </div>
+                            <div class="col-5">
+                                <div class="price-show booking_total_hotel" >
+                                    {!! number_format_price($booking->total) !!}
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="row">
                             <div class="col-7">
                                 <span>
