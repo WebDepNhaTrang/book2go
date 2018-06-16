@@ -345,9 +345,9 @@ if (!function_exists('number_format_price')) {
     function number_format_price($price = null, $show = false)
     {  
         if($show)
-            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';
+            return '<span class="price">'.number_format($price, 0).'</span><span class="currency">₫</span>';
         if($price) 
-            return '<span class="price">'.number_format($price, 2).'</span><span class="currency">₫</span>';
+            return '<span class="price">'.number_format($price, 0).'</span><span class="currency">₫</span>';
         return null;
     }
 }
@@ -359,7 +359,7 @@ if (!function_exists('number_format_price_nohtml')) {
      */
     function number_format_price_nohtml($price = null)
     {  
-        return number_format($price, 2) . '₫';
+        return number_format($price, 0) . '₫';
     }
 }
 
@@ -371,7 +371,7 @@ if (!function_exists('number_format_vat')) {
     function number_format_vat($price = null)
     {  
         if($price) 
-            return '<span class="price">'.number_format($price * 10 / 100, 2).'</span><span class="currency">₫</span>';
+            return '<span class="price">'.number_format($price * 10 / 100, 0).'</span><span class="currency">₫</span>';
         return null;
     }
 }
