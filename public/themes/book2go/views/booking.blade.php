@@ -114,6 +114,8 @@
                                             $notes = $notes . 'Khuyến mãi ' . $value['promotion_name'] . ': ' . $promotion_discount . '<br/>'; @endphp
                                         @endforeach
                                         <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="{!! $notes !!}"></i>:
+                                    @else
+                                        <i class="fas fa-info-circle" data-html="true" data-toggle="tooltip" data-placement="bottom" title="Ngày bạn check-in không có khuyến mãi !"></i>:
                                     @endif
                                 </span>
                             </div>
