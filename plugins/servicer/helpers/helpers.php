@@ -140,7 +140,7 @@ if (!function_exists('render_facebook_social')) {
     {
         if($route){
             $data = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=' .$route. '&layout=button_count&size=small&mobile_iframe=true&appId=1635619343393030&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=' .$route. '&layout=standard&action=like&size=small&show_faces=false&share=false&height=35&appId=1635619343393030" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=' .$route. '&layout=button_count&action=like&size=small&show_faces=false&share=false&height=35&appId=1635619343393030" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
             return $data;
         }
         return null;
