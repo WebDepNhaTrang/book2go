@@ -46,32 +46,38 @@ class RenderingJsonFeedListener
         $posts = $this->postRepository->getAllPosts(true);
 
         foreach ($posts as $post) {
-            JsonFeedManager::addItem('posts', [
-                'id' => $post->id,
-                'title' => $post->name,
-                'url' => route('public.single', $post->slug),
-                'image' => $post->image,
-                'content_html' => $post->content,
-                'date_published' => $post->created_at->tz('UTC')->toRfc3339String(),
-                'date_modified' => $post->updated_at->tz('UTC')->toRfc3339String(),
-                'author' => [
-                    'name' => $post->author ? $post->author->name : null,
-                ],
-            ]);
+            if($post->slug){
+                JsonFeedManager::addItem('posts', [
+                    'id' => $post->id,
+                    'title' => $post->name,
+                    'url' => route('public.single', $post->slug),
+                    'image' => $post->image,
+                    'content_html' => $post->content,
+                    'date_published' => $post->created_at->tz('UTC')->toRfc3339String(),
+                    'date_modified' => $post->updated_at->tz('UTC')->toRfc3339String(),
+                    'author' => [
+                        'name' => $post->author ? $post->author->name : null,
+                    ],
+                ]);
+            }
+            
         }
 
         $categories = $this->categoryRepository->getAllCategories(['status' => 1]);
 
         foreach ($categories as $category) {
-            JsonFeedManager::addItem('categories', [
-                'id' => $category->id,
-                'title' => $category->name,
-                'url' => route('public.single', $category->slug),
-                'image' => null,
-                'content_html' => $category->description,
-                'date_published' => $category->created_at->tz('UTC')->toRfc3339String(),
-                'date_modified' => $category->updated_at->tz('UTC')->toRfc3339String(),
-            ]);
+            if($category->slug){
+                JsonFeedManager::addItem('categories', [
+                    'id' => $category->id,
+                    'title' => $category->name,
+                    'url' => route('public.single', $category->slug),
+                    'image' => null,
+                    'content_html' => $category->description,
+                    'date_published' => $category->created_at->tz('UTC')->toRfc3339String(),
+                    'date_modified' => $category->updated_at->tz('UTC')->toRfc3339String(),
+                ]);
+            }
+            
         }
 
         $tags = $this->tagRepository->getAllTags(true);

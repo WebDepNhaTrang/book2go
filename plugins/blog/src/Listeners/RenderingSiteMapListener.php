@@ -48,7 +48,9 @@ class RenderingSiteMapListener
         $posts = $this->postRepository->getDataSiteMap();
 
         foreach ($posts as $post) {
-            SiteMapManager::add(route('public.single', $post->slug), $post->updated_at, '0.8', 'daily');
+            if($post->slug){
+                SiteMapManager::add(route('public.single', $post->slug), $post->updated_at, '0.8', 'daily');
+            }
         }
 
         // get all categories from db
@@ -56,7 +58,9 @@ class RenderingSiteMapListener
 
         // add every category to the site map
         foreach ($categories as $category) {
-            SiteMapManager::add(route('public.single', $category->slug), $category->updated_at, '0.8', 'daily');
+            if($category->slug){
+                SiteMapManager::add(route('public.single', $category->slug), $category->updated_at, '0.8', 'daily');
+            }
         }
 
         // get all tags from db
