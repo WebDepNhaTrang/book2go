@@ -27,6 +27,9 @@
                         <span>{{ $post->name }}</span>
                     </h2>
                 </div>
+                <div class="fb-social" style="text-align: right;">
+                    {!! render_facebook_social(route('public.single', $post->slug)) !!}
+                </div>
                 <div>
                     {!! $post->content !!}
                 </div>
