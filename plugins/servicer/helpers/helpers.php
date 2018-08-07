@@ -139,8 +139,9 @@ if (!function_exists('render_facebook_social')) {
     function render_facebook_social($route = null)
     {
         if($route){
-            $data = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=' .$route. '&layout=button_count&size=small&mobile_iframe=true&appId=1635619343393030&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=' .$route. '&layout=button_count&action=like&size=small&show_faces=false&share=false&height=35&appId=1635619343393030" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+            // $data = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=' .$route. '&layout=button_count&size=small&mobile_iframe=true&appId=864589303929278&width=111&height=20" width="300" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    // <iframe src="https://www.facebook.com/plugins/like.php?href=' .$route. '&layout=button_count&action=like&size=small&show_faces=false&share=false&height=35&appId=864589303929278" width="350" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+            $data = '<div class="fb-like" data-href="'. $route .'" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>';
             return $data;
         }
         return null;
