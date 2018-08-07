@@ -34,7 +34,9 @@ class RenderingSiteMapListener
         $galleries = $this->galleryRepository->getDataSiteMap();
 
         foreach ($galleries as $gallery) {
-            SiteMapManager::add(route('public.single', $gallery->slug), $gallery->updated_at, '0.8', 'daily');
+            if($gallery->slug){
+                SiteMapManager::add(route('public.single', $gallery->slug), $gallery->updated_at, '0.8', 'daily');
+            }
         }
     }
 }
