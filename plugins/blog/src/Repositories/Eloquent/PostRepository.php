@@ -85,7 +85,7 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
             ->select('posts.*')
             ->distinct()
             ->orderBy('posts.order', 'asc')
-            ->orderBy('posts.created_at', 'asc');
+            ->orderBy('posts.created_at', 'desc');
         $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, POST_MODULE_SCREEN_NAME);
         if ($paginate != 0) {
             return $data->paginate($paginate);
