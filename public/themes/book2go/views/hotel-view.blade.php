@@ -3,6 +3,7 @@
         <ul class="sub-banner photo-gallery">
             @php
                 $galleries = gallery_meta_data($post->id, HOTEL_MODULE_SCREEN_NAME);
+                
             @endphp
             @if($galleries)
                 @foreach($galleries as $key => $gallery)
@@ -138,7 +139,7 @@
                                     @endphp
                                     <ul class="clearfix photo-gallery">
                                         <li><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
-                                        @if($galleries)
+                                        @if($galleries_room)
                                             @foreach($galleries_room as $key2 => $value2)
                                                 <li class="d-none"><img src="{{ url($value2['img']) }}"/></li>
                                             @endforeach
@@ -246,7 +247,7 @@
                                     @endphp
                                     <ul class="clearfix photo-gallery">
                                         <li><img src="{{ get_object_image($room->image, 'featured') }}"/></li>
-                                        @if($galleries)
+                                        @if($galleries_room)
                                             @foreach($galleries_room as $key2 => $value2)
                                                 <li class="d-none"><img src="{{ url($value2['img']) }}"/></li>
                                             @endforeach
