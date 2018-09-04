@@ -2216,8 +2216,8 @@ footer .footer-social a:hover .fa-linkedin-in{
     height: 90px;
 }
 #news-detail .about-content img{
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
 /* End / News Detail Page */
 
